@@ -1,0 +1,666 @@
+/*RESET CSS*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: "Poppins", sans-serif;
+    background-color: #ffffff;
+    color: #232323;
+    line-height: 1.6;
+    height: 100vh;
+    width: 100%;
+}
+
+/*TIPOGRAFIA*/
+h1,
+h2,
+h3 {
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+    color: #242424;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #555555;
+}
+
+/*BASES QUE SE REPITEN*/
+/*DISPLAY*/
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.row{
+    flex-direction: row;
+}
+
+/* CLASES UTILES COLORES */
+.fondo-blanco {
+    background-color: #ffffff;
+}
+
+.fondo-negro {
+    background-color: #1c1c1c;
+}
+
+.texto-negro {
+    color: #1c1c1c;
+}
+
+.texto-gris{
+    color: #999999
+}
+
+/* CLASES UTILES ALINEACIONES */
+.align-c {
+    align-items: center;
+}
+
+.justify-c {
+    justify-content: center;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.sa {
+    justify-content: space-around;
+}
+
+.sb {
+    justify-content: space-between;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+/* CLASES UTILES WIDTH */
+.w30 {
+    width: 30%;
+}
+
+.w80 {
+    width: 80%;
+}
+
+.w100 {
+    width: 100px;
+}
+
+/* CLASES UTILES PADDING */
+
+/* CLASES UTILES MARGINS */
+
+/* OTROS */
+.no-style{
+    list-style: none;
+    text-decoration: none;
+    text-transform: none;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+/* BACKGROUND */
+.norepeat {
+    background-repeat: no-repeat;
+}
+
+.cover{
+    background-size: cover;
+}
+
+/*HEADER*/
+header {
+    /*position: relative; se queda en su lugar*/
+    top: 0;
+    width: 100%;
+    z-index: 1000;/* Asegura que la navbar esté siempre encima de otros elementos */
+}
+
+header .header-negro h4 {
+    display: flex;
+    font-weight: 400;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+
+}
+
+header .header-negro .menu2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    text-decoration: none;
+    margin-right: 5%;
+}
+
+.menu2 a {
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.menu2 li {
+    border-right: solid #999999 1px;
+}
+
+.menu2 a:hover {
+    color: #999999;
+}
+
+.redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-left: 5%;
+}
+
+.redes a {
+    font-size: 1.4em;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+}
+
+.redes a:hover {
+    opacity: 0.8;
+}
+
+header .header-blanco {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex; 
+    justify-content: space-between; /* Asegura espacio entre las columnas */
+    align-items: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+}
+
+header .header-blanco .logo-hongo,
+header .header-blanco .menu,
+header .header-blanco .symbols {
+    display: flex; /* Permitir la alineación de los hijos */
+    flex-direction: column; /* Colocar los hijos en columna */
+    align-items: center; /* Alinear los elementos al centro */
+    margin-left: 5%;/* Puedes ajustar el margen según sea necesario */
+}
+
+header .header-blanco .logo-hongo {
+    width: 8%; /* Ajustar tamaño si es necesario */
+}
+
+header .header-blanco .menu {
+    margin: 0 40px; /* Espacio horizontal entre columnas */
+}
+
+header .header-blanco .symbols {
+    flex-direction: row; /* Cambiar a fila para los iconos */
+    align-items: center; 
+}
+
+header .header-blanco .symbols ul {
+    display: flex; 
+    padding: 0; 
+    margin: 0; 
+    list-style: none; 
+}
+
+header .header-blanco .symbols li {
+    margin: 0 10px; /* Espaciado entre los iconos */
+}
+
+header .header-blanco .symbols a {
+    color: #1c1c1c;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+nav a {
+    font-size: 1.4em;
+    color: #232323;
+    padding: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #999999;
+}
+
+
+/*SLIDER*/
+
+#slider {
+    background-image: url("../assets/fotos/furniture-collection1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.slider-texto {
+    padding-top: 25em;
+    margin-right: 10em;
+    margin-left: 90em;
+}
+
+#slider h2 {
+    font-weight: 600;
+    font-size: 65px;
+    /*o 5em*/
+    margin-bottom: 20px;
+    line-height: 0.90em;
+    letter-spacing: 0.02em;
+}
+
+#slider h5 {
+    font-weight: 500;
+    font-size: 12px;
+    margin-bottom: 15px;
+    position: relative;
+    /* Necesario para que ::before se posicione correctamente */
+    display: inline-block;
+    /* Para que solo el texto esté afectado */
+    padding-left: 30px;
+}
+
+#slider h5::before {
+    content: " ";
+    /* Pseudo-elemento vacío para la línea */
+    position: absolute;
+    left: 3px;
+    /* Ajusta la distancia que deseas que esté del texto */
+    top: 50%;
+    /* Alinea la línea verticalmente con el texto */
+    transform: translateY(-50%);
+    /* Centra la línea */
+    width: 20px;
+    /* largo de la línea */
+    height: 0.75px;
+    /* Grosor de la línea */
+    background-color: #000;
+}
+
+#slider p {
+    font-weight: 300;
+    font-size: 14px;
+    /*1.6em?*/
+    margin-bottom: 30px;
+    line-height: 1.3em;
+    /*queda justificar*/
+}
+
+#slider .boton {
+    font-weight: 500;
+    font-size: 11px;
+    /*1.4em?*/
+    padding: 10px 30px;
+    background-color: #232323;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#slider .boton:hover {
+    background-color: #ffffff;
+    color: #232323;
+    border: 1px solid #232323;
+}
+
+/* SECTION 1*/
+
+#section1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 18px;
+}
+
+#img1-section1 {
+    grid-column: span 2;
+    grid-row: span 2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 300px;
+    background-image: url("../assets/fotos/decor-banner-01.jpg");
+}
+
+#img2-section1 {
+    grid-column: 3 / span 2;
+    grid-row: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../assets/fotos/decor-banner-03.jpg.webp");
+    min-height: 300px;
+}
+
+.sale50off {
+    grid-column: 3;
+    grid-row: 2;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+#img3-section1 {
+    grid-column: 4;
+    grid-row: 2;
+    background-image: url("../assets/fotos/decor-banner-05.jpg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 150px;
+}
+
+/*SECTION 2*/
+
+#section2 {
+    display: flex;
+    /* Usamos flexbox */
+    flex-direction: column;
+    /* Asegura que los hijos estén en columna */
+    align-items: center;
+    /* Centra horizontalmente */
+    margin: 35px;
+    /* Centramos la sección */
+    width: 95%;
+    /* Ajuste del ancho */
+    grid-gap: 18px;
+    /* Espaciado entre las imágenes */
+    text-align: center;
+    /* Centra el texto del contenido */
+
+}
+
+#section2 div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#section2 article {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 200px;
+    max-height: 300px;
+    display: flex;
+    align-items: flex-end; /* Coloca el texto en la parte inferior */
+    justify-content: center;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#section2 h5 {
+    padding: 5px;
+    font-size: 0.8rem;
+    border-radius: 3px;
+    margin: 0;
+    color: #000;
+    font-weight: 400;
+}
+
+
+#section2 a {
+    /* estilo para los enlaces: sin subrayado ni color azul */
+    text-decoration: none;
+    /* elimina el subrayado */
+    color: inherit;
+}
+
+
+#section2 h4 {
+    grid-column: span 3; /* Hace que el título abarque las 3 columnas*/
+    margin-bottom: 20px;
+    font-weight: 575;
+    font-size: 0.9rem;
+    padding-top: 6rem; /*el espacio de arriba del shop by category*/
+    padding-bottom: 2rem; /*el espacio de abajo del shop by category*/
+}
+
+
+#foto1-section2 {
+    background-image: url("../assets/fotos/cotton-sofas.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#foto2-section2 {
+    background-image: url("../assets/fotos/design-furniture.webp");
+}
+
+#foto3-section2 {
+    background-image: url("../assets/fotos/design-stools.webp");
+}
+
+#foto4-section2 {
+    background-image: url("../assets/fotos/modern-chair.webp");
+}
+
+#foto5-section2 {
+    background-image: url("../assets/fotos/modern-table.webp");
+}
+
+#foto6-section2 {
+    background-image: url("../assets/fotos/night-lamp.webp");
+}
+
+#section4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 18px;
+}
+ 
+#section4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);/* 4 columnas iguales */
+    gap: 10px;   /* Espacio entre las fotos */
+}
+
+#section4 a img {
+    width: 100%;
+    height: 90%;
+}
+
+.foto-creative-designer-chair {
+    grid-column: span 2; /* Ocupa 2 columnas, 50% */
+}
+
+.foto-bigsale50,
+.foto-handmade {
+    grid-column: span 1; /* Ocupan 1 columna, 25% cada una */
+}
+
+#section5 h4 {
+    margin-bottom: 20px;
+    font-weight: 575;
+    font-size: 0.9rem;
+    padding-top: 6rem; /*el espacio de arriba del shop by category*/
+    padding-bottom: 2rem; /*el espacio de abajo del shop by category*/
+    text-align: center;
+}
+
+/*css de la card*/
+#grid1, #grid2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card1, .card2 {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+}
+
+.titulo {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.precio {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #232323;
+    color: #ffffff;
+    position: relative;
+    padding: 40px 0;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    justify-content: left;
+}
+
+footer a:hover {
+    color: #e0e0e0;
+}
+
+footer h5 {
+    font-size: 0.75rem;
+    color: #e0e0e0;
+    font-weight: 400;
+    padding-bottom: 16px;
+    line-height: 1.5rem;
+
+}
+
+footer p {
+    font-size: 0.75rem;
+    color: #999999;
+    line-height: 1.5rem;
+}
+
+.footer-articles {
+    display: grid;
+    margin: 5%;
+    font-size: 0.75rem;
+    color: #999999;
+    text-decoration: none;
+    line-height: 1.5rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+#section6 {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que las imágenes se ajusten si la pantalla es pequeña */
+    justify-content: center;
+    /* Centra las imágenes horizontalmente */
+    background-color: lightgrey;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#section6 a {
+    margin: 10px;
+    /*espacio entre las imágenes*/
+}
+
+.instagram-decor {
+    grid-column: span 2;
+    /* Hace que el texto ocupe el ancho de las 2 columnas */
+    background-color: white;
+    padding: 10px;
+    /* Espacio interno para el rectángulo */
+    text-align: center;
+    /* Centra el texto */
+}
+
+#section6 img {
+    width: 100px;
+    height: auto;
+    /*mantiene la proporción de las imágenes*/
+    margin: 1px;
+}
+
+
+/*media queries*/
+@media (max-width: 768px) {
+    #section2 {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columnas en pantallas medianas */
+        grid-template-rows: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    #section2 {
+        grid-template-columns: 1fr;
+        /*1 columna en pantallas pequeñas */
+    }
+}
