@@ -136,7 +136,7 @@ p {
 
 /*HEADER*/
 header {
-    /*position: relative; se queda en su lugar*/
+   /*position: relative; se queda en su lugar*/
     top: 0;
     width: 100%;
     z-index: 1000;/* Asegura que la navbar esté siempre encima de otros elementos */
@@ -149,6 +149,13 @@ header .header-negro h4 {
     align-items: center;
     justify-content: center;
 
+}
+
+header .header-negro{
+    display: flex;
+    justify-content: space-between; 
+    font-size: 11px;
+    min-height: 35px;
 }
 
 header .header-negro .menu2 {
@@ -168,12 +175,16 @@ header .header-negro .menu2 {
     margin: 10px;
 }
 
-.menu2 li {
+.menu2 li:not(:last-child)::after {
     border-right: solid #999999 1px;
 }
 
 .menu2 a:hover {
     color: #999999;
+}
+
+.menu2{
+    gap: 15px;
 }
 
 .redes {
@@ -288,8 +299,7 @@ nav a:hover {
 
 #slider h2 {
     font-weight: 600;
-    font-size: 65px;
-    /*o 5em*/
+    font-size: 65px; /*o 5em*/
     margin-bottom: 20px;
     line-height: 0.90em;
     letter-spacing: 0.02em;
@@ -299,43 +309,33 @@ nav a:hover {
     font-weight: 500;
     font-size: 12px;
     margin-bottom: 15px;
-    position: relative;
-    /* Necesario para que ::before se posicione correctamente */
-    display: inline-block;
-    /* Para que solo el texto esté afectado */
+    position: relative;  /* Necesario para que ::before se posicione correctamente */
+    display: inline-block; /* Para que solo el texto esté afectado */
     padding-left: 30px;
 }
 
 #slider h5::before {
-    content: " ";
-    /* Pseudo-elemento vacío para la línea */
+    content: " "; /* Pseudo-elemento vacío para la línea */
     position: absolute;
-    left: 3px;
-    /* Ajusta la distancia que deseas que esté del texto */
-    top: 50%;
-    /* Alinea la línea verticalmente con el texto */
-    transform: translateY(-50%);
-    /* Centra la línea */
-    width: 20px;
-    /* largo de la línea */
-    height: 0.75px;
-    /* Grosor de la línea */
+    left: 3px; /* Ajusta la distancia que deseas que esté del texto */
+    top: 50%; /* Alinea la línea verticalmente con el texto */
+    transform: translateY(-50%); /* Centra la línea */
+    width: 20px;/* largo de la línea */
+    height: 0.75px; /* Grosor de la línea */
     background-color: #000;
 }
 
 #slider p {
     font-weight: 300;
-    font-size: 14px;
-    /*1.6em?*/
+    font-size: 14px; /*1.6em?*/
     margin-bottom: 30px;
-    line-height: 1.3em;
+    line-height: 1.3em; 
     /*queda justificar*/
 }
 
 #slider .boton {
     font-weight: 500;
-    font-size: 11px;
-    /*1.4em?*/
+    font-size: 11px; /*1.4em?*/
     padding: 10px 30px;
     background-color: #232323;
     color: #ffffff;
@@ -398,24 +398,40 @@ nav a:hover {
     min-height: 150px;
 }
 
+.boton2{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: inherit;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.section1-texto{
+    font-weight: 10px;
+    margin-top: 40px;
+    line-height: 0.90em;
+    letter-spacing: 0.02em;
+    padding-top: 2em;
+    margin-right: 1em;
+    margin-left: 5em;
+}
+.section1-texto h3{
+    font-weight: 500;
+    font-size: 20px; 
+    line-height: 1.2em;
+    margin-bottom: 20px;
+}
+
 /*SECTION 2*/
 
 #section2 {
-    display: flex;
-    /* Usamos flexbox */
-    flex-direction: column;
-    /* Asegura que los hijos estén en columna */
-    align-items: center;
-    /* Centra horizontalmente */
-    margin: 35px;
-    /* Centramos la sección */
-    width: 95%;
-    /* Ajuste del ancho */
-    grid-gap: 18px;
-    /* Espaciado entre las imágenes */
+    display: flex; /* Usamos flexbox */
+    flex-direction: column; /* Asegura que los hijos estén en columna */
+    align-items: center; /* Centra horizontalmente */
+    margin: 35px; /* Centramos la sección */
+    width: 95%; /* Ajuste del ancho */
+    grid-gap: 18px; /* Espaciado entre las imágenes */
     text-align: center;
-    /* Centra el texto del contenido */
-
 }
 
 #section2 div {
@@ -449,10 +465,8 @@ nav a:hover {
 }
 
 
-#section2 a {
-    /* estilo para los enlaces: sin subrayado ni color azul */
-    text-decoration: none;
-    /* elimina el subrayado */
+#section2 a { /* estilo para los enlaces: sin subrayado ni color azul */
+    text-decoration: none; /* elimina el subrayado */
     color: inherit;
 }
 
@@ -554,6 +568,33 @@ nav a:hover {
     color: #000000;
 }
 
+#section6 {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten si la pantalla es pequeña */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    background-color: lightgrey;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+#section6 a {
+    margin: 10px; /*espacio entre las imágenes*/
+}
+
+.instagram-decor {
+    grid-column: span 2; /* Hace que el texto ocupe el ancho de las 2 columnas */
+    background-color: white;
+    padding: 10px; /* Espacio interno para el rectángulo */
+    text-align: center; /* Centra el texto */
+}
+
+#section6 img {
+    width: 100px;
+    height: auto; /*mantiene la proporción de las imágenes*/
+    margin: 1px;
+}
+
 /* FOOTER */
 
 footer {
@@ -615,37 +656,43 @@ footer ul {
     margin: 0;
 }
 
-#section6 {
+/* Estilos para el formulario de suscripción */
+.footer-articles form {
     display: flex;
-    flex-wrap: wrap;
-    /* Permite que las imágenes se ajusten si la pantalla es pequeña */
-    justify-content: center;
-    /* Centra las imágenes horizontalmente */
-    background-color: lightgrey;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    align-items: center;
+    gap: 10px;
+    background-color: #333; 
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 15px;
 }
 
-#section6 a {
-    margin: 10px;
-    /*espacio entre las imágenes*/
-}
-
-.instagram-decor {
-    grid-column: span 2;
-    /* Hace que el texto ocupe el ancho de las 2 columnas */
-    background-color: white;
+.footer-articles input[type="email"] {
+    flex: 1;
     padding: 10px;
-    /* Espacio interno para el rectángulo */
-    text-align: center;
-    /* Centra el texto */
+    border: none;
+    background-color: #333; 
+    color: #999999; 
+    outline: none;
 }
 
-#section6 img {
-    width: 100px;
-    height: auto;
-    /*mantiene la proporción de las imágenes*/
-    margin: 1px;
+.footer-articles input[type="email"]::placeholder {
+    color: #777;
+}
+
+.footer-articles button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #999999;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer-articles button::after {
+    content: "→"; 
+    margin-left: 5px;
+    font-size: 1rem; 
 }
 
 
