@@ -545,27 +545,72 @@ nav a:hover {
 }
 
 /*css de la card*/
-#grid1, #grid2 {
+
+
+#grid1{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
-.card1, .card2 {
+.card1{
     border: 1px solid #ccc;
     padding: 15px;
     text-align: center;
 }
 
+
+
+#grid2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 3px;
+    padding: 0 15px;
+}
+
+.card2 {
+    padding: 15px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+
+}
+/*
+.card2:first-child {
+    margin-left: 10px;
+}
+
+.card2:last-child {
+    margin-right: 10px;
+} */
+
+
+.card2 img {
+    width: 100%; /* Increase image size */
+    height: auto;
+    margin: 0 auto 10px; /* Center the image and add space below */
+    border-radius: 10px; 
+}
+
 .titulo {
-    font-size: 18px;
+    font-size: 14px;
     margin: 10px 0;
+    font-weight: 500; /* Lighter font weight */
+    letter-spacing: 0px;
 }
 
 .precio {
-    font-size: 16px;
-    font-weight: bold;
-    color: #000000;
+    font-size: 13px;
+    font-weight: 300;
+    color: gray;
+    margin-top: 5px;
+}
+
+.h4_seccion5 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
 #section6 {

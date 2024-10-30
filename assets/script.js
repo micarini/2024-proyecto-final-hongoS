@@ -107,8 +107,8 @@ for(let i = 0; i < productos2.length; i ++){
     precio.setAttribute("class", "precio"); // Clase para estilizar después
     precio.textContent = productos2[i].precio; // Agregar el precio desde el array
 
-    card2.appendChild(titulo);
     card2.appendChild(img);
+    card2.appendChild(titulo);
     card2.appendChild(precio)
 
     //ahora agarro el grid y le pongo las cards
