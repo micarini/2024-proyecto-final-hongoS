@@ -4,7 +4,6 @@ const seccion3 = document.querySelector("#section3");
 
 let h4_seccion3 = document.createElement("h4");
 h4_seccion3.textContent = "RECENT PRODUCTS";
-console.log(seccion3)
 seccion3.appendChild(h4_seccion3);
 
 let grid1 = document.createElement("div");
@@ -12,14 +11,14 @@ grid1.setAttribute("id","grid1"); //cambiandole el atributo id por el que quiero
 seccion3.appendChild(grid1);
 
 let productos1 = [
-    {titulo: "Charcoal Linen Stool", precio: "£510.00", img: "assets/fotos/foto1-galeria1.webp"},
-    {titulo: "Elton Arm Chair", precio: "£50.00", img: "assets/fotos/foto2-galeria1.webp"},
-    {titulo: "Valeria ArmChair", precio: "£20.00 - £50.00", img: "assets/fotos/foto3-galeria1.webp"},
-    {titulo: "Sampson Wood Chair", precio: "£200.00", img: "assets/fotos/foto4-galeria1.webp"},
-    {titulo: "Round Coffee Table", precio: "£265.00", img: "assets/fotos/foto5-galeria1.webp"},
-    {titulo: "Wooden Dining Chair", precio: "£255.00", img: "assets/fotos/foto6-galeria1.webp"},
-    {titulo: "Wood Mini Stool", precio: "£255.00", img: "assets/fotos/foto7-galeria1.webp"},
-    {titulo: "Classic Chairs", precio: "£255.00", img: "assets/fotos/foto8-galeria1.webp"},
+    {titulo: "Charcoal Linen Stool", precio: "£510.00", img: "assets/fotos/foto1-galeria1.webp", imgHover:"assets/fotos/foto1-galeria1-imghover.webp"},
+    {titulo: "Elton Arm Chair", precio: "£50.00", img: "assets/fotos/foto2-galeria1.webp", imgHover:"assets/fotos/foto2-galeria1-imghover.webp"},
+    {titulo: "Valeria ArmChair", precio: "£20.00 - £50.00", img: "assets/fotos/foto3-galeria1.webp", imgHover:"assets/fotos/foto3-galeria1-imghover.webp"},
+    {titulo: "Sampson Wood Chair", precio: "£200.00", img: "assets/fotos/foto4-galeria1.webp", imgHover:"assets/fotos/foto4-galeria1-imghover.webp"},
+    {titulo: "Round Coffee Table", precio: "£265.00", img: "assets/fotos/foto5-galeria1.webp", imgHover:"assets/fotos/foto5-galeria1-imghover.webp"},
+    {titulo: "Wooden Dining Chair", precio: "£255.00", img: "assets/fotos/foto6-galeria1.webp", imgHover:"assets/fotos/foto6-galeria1-imghover.webp"},
+    {titulo: "Wood Mini Stool", precio: "£255.00", img: "assets/fotos/foto7-galeria1.webp", imgHover:"assets/fotos/foto7-galeria1-imghover.webp"},
+    {titulo: "Classic Chairs", precio: "£255.00", img: "assets/fotos/foto8-galeria1.webp", imgHover:"assets/fotos/foto8-galeria1-imghover.webp"},
 ];
 
 let card1;
@@ -39,8 +38,18 @@ for(let i = 0; i < productos1.length; i++){
     precio.setAttribute("class", "precio"); 
     precio.textContent = productos1[i].precio; 
 
-    card1.appendChild(titulo);
+    // Evento mouseover para cambiar la imagen
+    img.addEventListener("mouseover", function() {
+        img.setAttribute("src", productos1[i].imgHover);
+    });
+
+    // Evento mouseout para restaurar la imagen original
+    img.addEventListener("mouseout", function() {
+        img.setAttribute("src", productos1[i].img);
+    });
+
     card1.appendChild(img);
+    card1.appendChild(titulo);
     card1.appendChild(precio)
 
     grid1.appendChild(card1);
@@ -70,14 +79,14 @@ seccion5.appendChild(grid2);//inserto en el body mi grid
 
 //array de titulos
 let productos2 = [
-    {titulo: "Zinnia Lamp", precio: "£150.00", img: "assets/fotos/foto1-galeria2.webp"},
-    {titulo: "Black Wood Lamp", precio: "£2500.00", img: "assets/fotos/foto2-galeria2.webp"},
-    {titulo: "White Metal Lamp", precio: "£150.00", img: "assets/fotos/foto3-galeria2.webp"},
-    {titulo: "Brown Crystal Vase", precio: "£250.00", img: "assets/fotos/foto4-galeria2.webp"},
-    {titulo: "Aether Vase", precio: "£600.00", img: "assets/fotos/foto5-galeria2.webp"},
-    {titulo: "Antic Brown Vase", precio: "£480.00", img: "assets/fotos/foto6-galeria2.webp"},
-    {titulo: "Harrington Style Stool", precio: "£320.00", img: "assets/fotos/foto7-galeria2.webp"},
-    {titulo: "Fabric Table Lamp", precio: "£600.00", img: "assets/fotos/foto8-galeria2.webp"}
+    {titulo: "Zinnia Lamp", precio: "£150.00", img: "assets/fotos/foto1-galeria2.webp", imgHover:"assets/fotos/foto1-galeria2-imghover.webp"},
+    {titulo: "Black Wood Lamp", precio: "£2500.00", img: "assets/fotos/foto2-galeria2.webp", imgHover:"assets/fotos/foto2-galeria2-imghover.webp"},
+    {titulo: "White Metal Lamp", precio: "£150.00", img: "assets/fotos/foto3-galeria2.webp", imgHover:"assets/fotos/foto3-galeria2-imghover.webp"},
+    {titulo: "Brown Crystal Vase", precio: "£250.00", img: "assets/fotos/foto4-galeria2.webp", imgHover:"assets/fotos/foto4-galeria2-imghover.webp"},
+    {titulo: "Aether Vase", precio: "£600.00", img: "assets/fotos/foto5-galeria2.webp", imgHover:"assets/fotos/foto5-galeria2-imghover.webp"},
+    {titulo: "Antic Brown Vase", precio: "£480.00", img: "assets/fotos/foto6-galeria2.webp", imgHover:"assets/fotos/foto6-galeria2-imghover.webp"},
+    {titulo: "Harrington Style Stool", precio: "£320.00", img: "assets/fotos/foto7-galeria2.webp", imgHover:"assets/fotos/foto7-galeria2-imghover.webp"},
+    {titulo: "Fabric Table Lamp", precio: "£600.00", img: "assets/fotos/foto8-galeria2.webp", imgHover:"assets/fotos/foto8-galeria2-imghover.webp"}
 ];
 //ahora tengo que crear la card y que esta se replique 16 veces
 //como se que tengo 16 imagenes BIEN ROTULADAS, 
