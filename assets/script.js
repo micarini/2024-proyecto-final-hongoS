@@ -2,8 +2,51 @@
 
 const seccion3 = document.querySelector("#section3");
 
+function mostrar_grid(){         /* sin parametros por el eventlist*/
+    const filter = this.getAttribute("select_grid");
+    let data_ref;
+    switch(filter){
+        case "recent":
+            data_ref = productos1;
+            break;
+        case "featured":
+            data_ref = productos3;
+            break;
+        case "best":
+            data_ref = productos4;
+            break;
+    }
+    const container = document.querySelector("#contenedor_img");
+    let content=0;
+    for (const producto of data_ref) {
+        /*let article = document.createElement("article");
+        const img = '<img class="card1" src="'+producto.img+'">';
+        const title = '<h3 class="titulo">'+producto.titulo+'</h3>';
+        const precio = '<p class="precio">'+producto.precio+'</p>';
+        article.innerHTML = img + title + precio;
+        content.appendChild(article);*/
+        const article = `
+            <article>
+                <img class="card1" src="${producto.img}">
+                <h3 class="titulo">${producto.titulo}</h3>
+                <p class="precio">${producto.precio}</p>
+            </article>`
+        if(content===0){
+            content = article;
+        } else{
+            content+=article;
+        }
+    }
+    container.innerHTML = content;
+}
+
+let productos3 = [];
+let productos4 = [];
+
 let h4_seccion3 = document.createElement("h4");
 h4_seccion3.textContent = "RECENT PRODUCTS";
+h4_seccion3.addEventListener("click", mostrar_grid); 
+h4_seccion3.setAttribute("select_grid", "recent");
 seccion3.appendChild(h4_seccion3);
 
 let grid1 = document.createElement("div");
@@ -22,7 +65,7 @@ let productos1 = [
 ];
 
 let card1;
-for(let i = 0; i < productos1.length; i++){
+/*for(let i = 0; i < productos1.length; i++){
     card1 = document.createElement("div"); 
     card1.setAttribute("class","card1"); 
 
@@ -53,7 +96,9 @@ for(let i = 0; i < productos1.length; i++){
     card1.appendChild(precio)
 
     grid1.appendChild(card1);
-}  
+}  // una funcion que reciba como parametro el array que quiero imprimir dinamicamente
+
+*/
 
 
 
