@@ -1,0 +1,417 @@
+/*RESET CSS*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: "Poppins", sans-serif;
+    background-color: #ffffff;
+    color: #232323;
+    line-height: 1.6;
+    height: 100vh;
+    width: 100%;
+}
+
+/*TIPOGRAFIA*/
+h1,
+h2,
+h3 {
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+    color: #242424;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #555555;
+}
+
+/*BASES QUE SE REPITEN*/
+/*DISPLAY*/
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.row{
+    flex-direction: row;
+}
+
+/* CLASES UTILES COLORES */
+.fondo-blanco {
+    background-color: #ffffff;
+}
+
+.fondo-negro {
+    background-color: #1c1c1c;
+}
+
+.texto-negro {
+    color: #1c1c1c;
+}
+
+.texto-gris{
+    color: #999999
+}
+
+/* CLASES UTILES ALINEACIONES */
+.align-c {
+    align-items: center;
+}
+
+.justify-c {
+    justify-content: center;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.sa {
+    justify-content: space-around;
+}
+
+.sb {
+    justify-content: space-between;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+/* CLASES UTILES WIDTH */
+.w30 {
+    width: 30%;
+}
+
+.w80 {
+    width: 80%;
+}
+
+.w100 {
+    width: 100px;
+}
+
+/* CLASES UTILES PADDING */
+
+/* CLASES UTILES MARGINS */
+
+/* OTROS */
+.no-style{
+    list-style: none;
+    text-decoration: none;
+    text-transform: none;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+/* BACKGROUND */
+.norepeat {
+    background-repeat: no-repeat;
+}
+
+.cover{
+    background-size: cover;
+}
+
+
+/*HEADER*/
+header {
+    /*position: relative; se queda en su lugar*/
+     top: 0;
+     width: 100%;
+     z-index: 1000;/* Asegura que la navbar esté siempre encima de otros elementos */
+ }
+ 
+ header .header-negro h4 {
+     display: flex;
+     font-weight: 400;
+     color: #ffffff;
+     align-items: center;
+     justify-content: center;
+ 
+ }
+ 
+ header .header-negro{
+     display: flex;
+     justify-content: space-between; 
+     font-size: 11px;
+     min-height: 35px;
+ }
+ 
+ header .header-negro .menu2 {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     list-style: none;
+     text-decoration: none;
+     margin-right: 5%;
+ }
+ 
+ .menu2 a {
+     color: #ffffff;
+     text-transform: uppercase;
+     text-decoration: none;
+     justify-content: space-between;
+     margin: 10px;
+ }
+ 
+ .menu2 li:not(:last-child)::after {
+     border-right: solid #999999 1px;
+ }
+ 
+ .menu2 a:hover {
+     color: #999999;
+ }
+ 
+ .menu2{
+     gap: 15px;
+ }
+ 
+ .redes {
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-start;
+     align-items: center;
+     gap: 15px;
+     flex-wrap: wrap;
+     margin-left: 5%;
+ }
+ 
+ .redes a {
+     font-size: 1.4em;
+     color: #ffffff;
+     text-decoration: none;
+     text-transform: uppercase;
+     transition: opacity 0.3s ease;
+ }
+ 
+ .redes a:hover {
+     opacity: 0.8;
+ }
+ 
+ header .header-blanco {
+     padding-top: 15px;
+     padding-bottom: 15px;
+     display: flex; 
+     justify-content: space-between; /* Asegura espacio entre las columnas */
+     align-items: center;
+     background-color: #ffffff;
+     border-bottom: 1px solid #e0e0e0;
+     backdrop-filter: blur(10px);
+     transition: background-color 0.3s ease;
+ }
+ 
+ header .header-blanco .logo-hongo,
+ header .header-blanco .menu,
+ header .header-blanco .symbols {
+     display: flex; /* Permitir la alineación de los hijos */
+     flex-direction: column; /* Colocar los hijos en columna */
+     align-items: center; /* Alinear los elementos al centro */
+     margin-left: 5%;/* Puedes ajustar el margen según sea necesario */
+ }
+ 
+ header .header-blanco .logo-hongo {
+     width: 8%; /* Ajustar tamaño si es necesario */
+ }
+ 
+ header .header-blanco .menu {
+     margin: 0 40px; /* Espacio horizontal entre columnas */
+ }
+ 
+ header .header-blanco .symbols {
+     flex-direction: row; /* Cambiar a fila para los iconos */
+     align-items: center; 
+ }
+ 
+ header .header-blanco .symbols ul {
+     display: flex; 
+     padding: 0; 
+     margin: 0; 
+     list-style: none; 
+ }
+ 
+ header .header-blanco .symbols li {
+     margin: 0 10px; /* Espaciado entre los iconos */
+ }
+ 
+ header .header-blanco .symbols a {
+     color: #1c1c1c;
+ }
+ 
+ nav ul li {
+     list-style: none;
+     display: inline-block;
+ }
+ 
+ nav a {
+     font-size: 1.4em;
+     color: #232323;
+     padding: 15px;
+     text-decoration: none;
+     transition: color 0.3s ease;
+ }
+ 
+ nav a:hover {
+     color: #999999;
+ }
+
+ 
+ /*BANNER*/
+
+ #banner {
+    background-image: url("../assets/fotos/decor-shop-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 60vh; 
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    text-align: left;
+    padding: 0 2rem; 
+   
+}
+
+.banner-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    padding-left: 6rem; 
+    padding-top: 11rem;
+}
+
+.banner-texto h4 {
+    font-size: 0.8rem;
+    font-weight: 200;
+    color: #555;
+    margin: 0;
+}
+
+.banner-texto h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+/* FOOTER */
+
+footer {
+    background-color: #232323;
+    color: #ffffff;
+    position: relative;
+    padding: 40px 0;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    justify-content: left;
+}
+
+footer a:hover {
+    color: #e0e0e0;
+}
+
+footer h5 {
+    font-size: 0.75rem;
+    color: #e0e0e0;
+    font-weight: 400;
+    padding-bottom: 16px;
+    line-height: 1.5rem;
+
+}
+
+footer p {
+    font-size: 0.75rem;
+    color: #999999;
+    line-height: 1.5rem;
+}
+
+.footer-articles {
+    display: grid;
+    margin: 5%;
+    font-size: 0.75rem;
+    color: #999999;
+    text-decoration: none;
+    line-height: 1.5rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* Estilos para el formulario de suscripción */
+.footer-articles form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #333; 
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.footer-articles input[type="email"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: #333; 
+    color: #999999; 
+    outline: none;
+}
+
+.footer-articles input[type="email"]::placeholder {
+    color: #777;
+}
+
+.footer-articles button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #999999;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer-articles button::after {
+    content: "→"; 
+    margin-left: 5px;
+    font-size: 1rem; 
+}
+

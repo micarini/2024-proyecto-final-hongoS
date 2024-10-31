@@ -80,8 +80,9 @@ let card1;
     let precio = document.createElement("p");
     precio.setAttribute("class", "precio"); 
     precio.textContent = productos1[i].precio; 
-
-    // Evento mouseover para cambiar la imagen
+    */
+/*
+    //Evento mouseover para cambiar la imagen
     img.addEventListener("mouseover", function() {
         img.setAttribute("src", productos1[i].imgHover);
     });
@@ -90,7 +91,8 @@ let card1;
     img.addEventListener("mouseout", function() {
         img.setAttribute("src", productos1[i].img);
     });
-
+    */
+/*
     card1.appendChild(img);
     card1.appendChild(titulo);
     card1.appendChild(precio)
@@ -99,7 +101,6 @@ let card1;
 }  // una funcion que reciba como parametro el array que quiero imprimir dinamicamente
 
 */
-
 
 
 /*GALERIA 2 HOME*/
@@ -133,6 +134,18 @@ let productos2 = [
     {titulo: "Harrington Style Stool", precio: "£320.00", img: "assets/fotos/foto7-galeria2.webp", imgHover:"assets/fotos/foto7-galeria2-imghover.webp"},
     {titulo: "Fabric Table Lamp", precio: "£600.00", img: "assets/fotos/foto8-galeria2.webp", imgHover:"assets/fotos/foto8-galeria2-imghover.webp"}
 ];
+
+/*
+//Evento mouseover para cambiar la imagen
+img.addEventListener("mouseover", function() {
+    img.setAttribute("src", productos2[i].imgHover);
+});
+
+// Evento mouseout para restaurar la imagen original
+img.addEventListener("mouseout", function() {
+    img.setAttribute("src", productos2[i].img);
+});
+*/
 //ahora tengo que crear la card y que esta se replique 16 veces
 //como se que tengo 16 imagenes BIEN ROTULADAS, 
 //aca es muy importante la ruta y la nomenclatura de los archivos
@@ -168,3 +181,6 @@ for(let i = 0; i < productos2.length; i ++){
     //ahora agarro el grid y le pongo las cards
     grid2.appendChild(card2); //esta accion tiene que estar adentro del for para que por cada vuelta se inserte la card de cada vuelta
 }  
+
+
+
