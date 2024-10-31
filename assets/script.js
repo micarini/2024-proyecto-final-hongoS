@@ -183,4 +183,43 @@ for(let i = 0; i < productos2.length; i ++){
 }  
 
 
+/*slider*/
+    const sliderContent = ['../assets/fotos/furniture-collection1.webp', '../assets/fotos/furniture-collection2.jpg', '../assets/fotos/furniture-collection3.jpg'];
+
+    /* CONSIGNA: Escribir el código necesario para que al hacer click en su respectivo botón se circule la imagen de fondo del tag <main> con id "slider-background". Para esto deberán asignar eventos a los botones de la forma que prefieran, crear una función para iterar sobre el array "sliderContent" (si el usuario hace click para una dirección pero está en la posición final del array, la función deberá volver al primer item y viceversa) y editar el la propiedad "background-image" de nuestro <main> con id "slider-background" */
+
+
+    let currentIndex = 0;
+    const foto = document.getElementById('slider');
+
+    //funcion para actualizar la img de fondo
+    function updateSlider(){
+        foto.style.backgroundImage = `url(${sliderContent[currentIndex]})`;
+    } 
+
+    //inicializa al cargar la pagina
+    updateSlider();
+
+    // para ir a la imagen 01
+    function goToImage01() {
+        currentIndex = 0; 
+        updateSlider();   
+    }
+
+    // para ir a la imagen 02
+    function goToImage02() {
+        currentIndex = 1; 
+        updateSlider();
+    }
+
+    // para ir a la imagen 03
+    function goToImage03() {
+        currentIndex = 2; 
+        updateSlider();
+    }
+
+    // botones
+    document.getElementById('01-button').addEventListener("click", goToImage01);
+    document.getElementById('02-button').addEventListener("click", goToImage02);
+    document.getElementById('03-button').addEventListener("click", goToImage03);
 
