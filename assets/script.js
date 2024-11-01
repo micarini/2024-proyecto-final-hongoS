@@ -40,8 +40,12 @@ function mostrar_grid(){         /* sin parametros por el eventlist*/
     container.innerHTML = content;
 }
 
-let productos3 = [];
-let productos4 = [];
+let productos3 = [
+    {}
+];
+let productos4 = [
+    {}
+];
 
 let h4_seccion3 = document.createElement("h4");
 h4_seccion3.textContent = "RECENT PRODUCTS";
@@ -190,7 +194,7 @@ for(let i = 0; i < productos2.length; i ++){
 
 
     let currentIndex = 0;
-    const foto = document.getElementById('slider');
+    const foto = document.getElementById('#slider');
 
     //funcion para actualizar la img de fondo
     function updateSlider(){
