@@ -105,6 +105,10 @@ p {
     justify-content: space-between;
 }
 
+.alignself-start{
+    align-self: flex-start;
+}
+
 .flex-start{
     justify-content: flex-start;
 }
@@ -128,7 +132,7 @@ p {
 }
 
 .w100 {
-    width: 100px;
+    width: 100%;
 }
 
 /* CLASES UTILES PADDING */
@@ -143,6 +147,18 @@ p {
 
 .margin0{
     margin: 0;
+}
+
+.margin-r5{
+    margin-right: 5%;
+}
+
+.gap15 {
+    gap: 15px;
+}
+
+.gap10{
+    gap: 10px;
 }
 
 /* OTROS */
@@ -175,34 +191,20 @@ p {
 
 /*HEADER*/
 header {
-   /*position: relative; se queda en su lugar*/
     top: 0;
-    width: 100%;
     z-index: 1000;/* Asegura que la navbar esté siempre encima de otros elementos */
 }
 
 header .header-negro h4 {
-    /*display: flex;*/
     font-weight: 400;
-    /*color: #ffffff;
-    align-items: center;
-    justify-content: center;*/
-
 }
 
 header .header-negro{
-    /*display: flex;
-    justify-content: space-between; */
     font-size: 11px;
     min-height: 35px;
 }
 
 header .header-negro .menu2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    list-style: none;
-    text-decoration: none;
     margin-right: 5%;
 }
 
@@ -223,17 +225,11 @@ header .header-negro .menu2 {
 }
 
 .menu2{
-    gap: 15px;
+    /*gap: 15px;*/
 }
 
 .redes {
-    /*display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: 5%;*/
-    gap: 15px;
+    /*gap: 15px;*/
 }
 
 .redes a {
@@ -251,22 +247,10 @@ header .header-negro .menu2 {
 header .header-blanco {
     padding-top: 15px;
     padding-bottom: 15px;
-    /*display: flex; 
-    justify-content: space-between; 
-    align-items: center;
-    background-color: #ffffff;*/
     border-bottom: 1px solid #e0e0e0;
     backdrop-filter: blur(10px);
     transition: background-color 0.3s ease;
 }
-
-/*header .header-blanco .logo-hongo,
-header .header-blanco .menu {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    margin-left: 5%;
-}*/
 
 header .header-blanco .logo-hongo {
     width: 8%; 
@@ -275,20 +259,6 @@ header .header-blanco .logo-hongo {
 header .header-blanco .menu {
     margin: 0 40px; 
 }
-
-/*header .header-blanco .symbols {
-    display: flex;
-    flex-direction: row; 
-    align-items: center; 
-    margin-left: 5%;
-}*/
-
-/*header .header-blanco .symbols ul {
-    display: flex; 
-    padding: 0; 
-    margin: 0; 
-    list-style: none; 
-}*/
 
 header .header-blanco .symbols li {
     margin: 0 10px; /* Espaciado entre los iconos */
@@ -320,12 +290,6 @@ nav a:hover {
 
 #slider {
     background-image: url("../assets/fotos/furniture-collection1.webp");
-    /*background-repeat: no-repeat;
-    background-size: cover;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
-    background-position: center;*/
     width: 100%;
     height: 100vh;
     margin-bottom: 20px;
@@ -349,7 +313,6 @@ nav a:hover {
     font-weight: 500;
     font-size: 12px;
     margin-bottom: 15px;
-    /*position: relative;   Necesario para que ::before se posicione correctamente */
     display: inline-block; /* Para que solo el texto esté afectado */
     padding-left: 30px;
 }
@@ -556,7 +519,7 @@ nav a:hover {
 }
  
 #section4 {
-    display: grid;
+    /*display: grid;*/
     grid-template-columns: repeat(4, 1fr);/* 4 columnas iguales */
     gap: 10px;   /* Espacio entre las fotos */
 }
@@ -585,14 +548,12 @@ nav a:hover {
 }
 
 /*css de la card*/
-
-
 #grid1{
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 items per row */
     gap: 3px;
     padding: 0 15px;
-    background-color: lightgray;
+    background-color: #ECECEC;
 }
 
 .card1{
@@ -645,14 +606,6 @@ nav a:hover {
     box-shadow: none;
 
 }
-/*
-.card2:first-child {
-    margin-left: 10px;
-}
-
-.card2:last-child {
-    margin-right: 10px;
-} */
 
 
 .card2 img {
@@ -693,18 +646,30 @@ nav a:hover {
 
 
 #section6 a {
-    margin: 10px; /*espacio entre las imágenes*/
+    margin: 5px; /*espacio entre las imágenes*/
 }
 
 .instagram-decor {
-    grid-column: span 2; /* Hace que el texto ocupe el ancho de las 2 columnas */
+    grid-column: span 2; /*Hace que el texto ocupe el ancho de las 2 columnas */
     background-color: white;
-    padding: 10px; /* Espacio interno para el rectángulo */
-    text-align: center; /* Centra el texto */
+    padding: 0.7rem; /* Espacio interno para el rectángulo */
+    text-align: center; 
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    margin-top: 3rem;
+
 }
 
+.instagram-decor p {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+}
 #section6 img {
-    width: 100px;
+    width: 20vh;
     height: auto; /*mantiene la proporción de las imágenes*/
     margin: 1px;
 }
@@ -809,24 +774,6 @@ footer ul {
 }
 
 
-/*media queries*/
-@media (max-width: 768px) {
-    #section2 {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 columnas en pantallas medianas */
-        grid-template-rows: auto;
-    }
-}
-
-@media (max-width: 480px) {
-    #section2 {
-        grid-template-columns: 1fr;
-        /*1 columna en pantallas pequeñas */
-    }
-}
-
-
-
 
 /*css shop
 
@@ -866,8 +813,6 @@ footer ul {
     margin-top: 0.5rem;
     font-weight: 500;
 }
-
-
 
 /*css store
 #banner-store {
@@ -986,10 +931,6 @@ footer ul {
     margin-right: 15px;
 }
 
-
-
-
-
 #banner-blog {
     background-image: url("../assets/fotos/banner-blog.jpg");
     background-repeat: no-repeat;
@@ -1043,4 +984,21 @@ footer ul {
 
 .breadcrumb-blog a:hover {
     color: #333;
+}
+
+
+/*media queries*/
+@media (max-width: 768px) {
+    #section2 {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columnas en pantallas medianas */
+        grid-template-rows: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    #section2 {
+        grid-template-columns: 1fr;
+        /*1 columna en pantallas pequeñas */
+    }
 }
