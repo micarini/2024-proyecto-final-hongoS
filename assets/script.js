@@ -60,15 +60,38 @@ grid1.setAttribute("id", "grid1"); //cambiandole el atributo id por el que quier
 seccion3.appendChild(grid1);
 
 let productos1 = [
-    { titulo: "Charcoal Linen Stool", precio: "£510.00", img: "assets/fotos/foto1-galeria1.webp", imgHover: "assets/fotos/foto1-galeria1-imghover.webp" },
-    { titulo: "Elton Arm Chair", precio: "£50.00", img: "assets/fotos/foto2-galeria1.webp", imgHover: "assets/fotos/foto2-galeria1-imghover.webp" },
-    { titulo: "Valeria ArmChair", precio: "£20.00 - £50.00", img: "assets/fotos/foto3-galeria1.webp", imgHover: "assets/fotos/foto3-galeria1-imghover.webp" },
-    { titulo: "Sampson Wood Chair", precio: "£200.00", img: "assets/fotos/foto4-galeria1.webp", imgHover: "assets/fotos/foto4-galeria1-imghover.webp" },
-    { titulo: "Round Coffee Table", precio: "£265.00", img: "assets/fotos/foto5-galeria1.webp", imgHover: "assets/fotos/foto5-galeria1-imghover.webp" },
-    { titulo: "Wooden Dining Chair", precio: "£255.00", img: "assets/fotos/foto6-galeria1.webp", imgHover: "assets/fotos/foto6-galeria1-imghover.webp" },
-    { titulo: "Wood Mini Stool", precio: "£255.00", img: "assets/fotos/foto7-galeria1.webp", imgHover: "assets/fotos/foto7-galeria1-imghover.webp" },
-    { titulo: "Classic Chairs", precio: "£255.00", img: "assets/fotos/foto8-galeria1.webp", imgHover: "assets/fotos/foto8-galeria1-imghover.webp" },
+    { titulo: "Charcoal Linen Stool", precio: "£510.00", img: "assets/fotos/foto1-galeria1.webp", imgHover: "../assets/fotos/foto1-galeria1-imghover.webp" },
+    { titulo: "Elton Arm Chair", precio: "£50.00", img: "assets/fotos/foto2-galeria1.webp", imgHover: "../assets/fotos/foto2-galeria1-imghover.webp" },
+    { titulo: "Valeria ArmChair", precio: "£20.00 - £50.00", img: "assets/fotos/foto3-galeria1.webp", imgHover: "../assets/fotos/foto3-galeria1-imghover.webp" },
+    { titulo: "Sampson Wood Chair", precio: "£200.00", img: "assets/fotos/foto4-galeria1.webp", imgHover: "../assets/fotos/foto4-galeria1-imghover.webp" },
+    { titulo: "Round Coffee Table", precio: "£265.00", img: "assets/fotos/foto5-galeria1.webp", imgHover: "../assets/fotos/foto5-galeria1-imghover.webp" },
+    { titulo: "Wooden Dining Chair", precio: "£255.00", img: "assets/fotos/foto6-galeria1.webp", imgHover: "../assets/fotos/foto6-galeria1-imghover.webp" },
+    { titulo: "Wood Mini Stool", precio: "£255.00", img: "assets/fotos/foto7-galeria1.webp", imgHover: "../assets/fotos/foto7-galeria1-imghover.webp" },
+    { titulo: "Classic Chairs", precio: "£255.00", img: "assets/fotos/foto8-galeria1.webp", imgHover: "../assets/fotos/foto8-galeria1-imghover.webp" },
 ];
+
+let productos3 = [
+    { titulo: "Antique Wood Chair", precioOriginal: "£150.00", precio: "£130.00", img: "../assets/fotos/foto1-featuredp.webp", imgHover: "../assets/fotos/foto1-featuredp-imghover.webp" },
+    { titulo: "Paige Backless Stool", precioOriginal: "£10.00 – £100.00", precio: "£10.00 – £100.00", img: "../assets/fotos/foto2-featuredp.webp", imgHover: "../assets/fotos/foto2-featuredp-imghover.webp" },
+    { titulo: "Viola Table Lamp", precioOriginal: "£50.00", precio: "£25.00", img: "../assets/fotos/foto3-featuredp.webp", imgHover: "../assets/fotos/foto3-featuredp-imghover.webp" },
+    { titulo: "Grey Brown Chair", precioOriginal: "£180.00", precio: "£150.00", img: "../assets/fotos/foto4-featuredp.webp", imgHover: "../assets/fotos/foto4-featuredp-imghover.webp" },
+    { titulo: "Lounge Accent Chair", precioOriginal: "£240.00", precio: "£220.00", img: "../assets/fotos/foto5-featuredp.webp", imgHover: "../assets/fotos/foto5-featuredp-imghover.webp" },
+    { titulo: "Wood Mini Stool", precioOriginal: "£240.00", precio: "£220.00", img: "../assets/fotos/foto6-featuredp.webp", imgHover: "../assets/fotos/foto6-featuredp-imghover.webp" },
+    { titulo: "Wooden Dining Chair", precioOriginal: "£240.00", precio: "£220.00", img: "../assets/fotos/foto7-featuredp.webp", imgHover: "../assets/fotos/foto7-featuredp-imghover.webp" },
+    { titulo: "Round Coffee Table", precioOriginal: "£240.00", precio: "£220.00", img: "../assets/fotos/foto8-featuredp.webp", imgHover: "../assets/fotos/foto8-featuredp-imghover.webp" }
+];
+
+let productos4 = [
+    { titulo: "Black Brown Chair", precioOriginal: "£180.00", precio: "£150.00", img: "../assets/fotos/foto1-bests.webp", imgHover: "../assets/fotos/foto1-bests-imghover.webp" },
+    { titulo: "Coal Paige Stool", precioOriginal: "£50.00", precio: "£25.00", img: "../assets/fotos/foto2-bests.webp", imgHover: "../assets/fotos/foto2-bests-imghover.webp" },
+    { titulo: "Normal Wood Chair", precioOriginal: "£10.00 – £100.00", precio: "£10.00 – £100.00", img: "../assets/fotos/foto3-bests.webp", imgHover: "../assets/fotos/foto3-bests-imghover.webp" },
+    { titulo: "Oscar Wood Stool", precioOriginal: "£150.00", precio: "£130.00", img: "../assets/fotos/foto4-bests.webp", imgHover: "../assets/fotos/foto4-bests-imghover.webp" },
+    { titulo: "Sitting Chair", precioOriginal: "", precio: "£255.00", img: "../assets/fotos/foto5-bests.webp", imgHover: "../assets/fotos/foto5-bests-imghover.webp" },
+    { titulo: "Outdoor Armchair", precioOriginal: "", precio: "£255.00", img: "../assets/fotos/foto6-bests.webp", imgHover: "../assets/fotos/foto6-bests-imghover.webp" },
+    { titulo: "Wooden Living Stool", precioOriginal: "", precio: "£255.00", img: "../assets/fotos/foto7-bests.webp", imgHover: "../assets/fotos/foto7-bests-imghover.webp" },
+    { titulo: "Bar Stools", precioOriginal: "", precio: "£255.00", img: "../assets/fotos/foto8-bests.webp", imgHover: "../assets/fotos/foto8-bests-imghover.webp" }
+];
+
 
 let card1;
 for (let i = 0; i < productos1.length; i++) {
@@ -142,6 +165,7 @@ let productos2 = [
     { titulo: "Harrington Style Stool", precio: "£320.00", img: "assets/fotos/foto7-galeria2.webp", imgHover: "assets/fotos/foto7-galeria2-imghover.webp" },
     { titulo: "Fabric Table Lamp", precio: "£600.00", img: "assets/fotos/foto8-galeria2.webp", imgHover: "assets/fotos/foto8-galeria2-imghover.webp" }
 ];
+
 
 
 //ahora tengo que crear la card y que esta se replique 16 veces
