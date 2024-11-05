@@ -15,60 +15,62 @@
     <script src="https://kit.fontawesome.com/74915e9a34.js" crossorigin="anonymous"></script>
     <title>Hongo - Proyecto Final</title>
 </head>
-    <body>
-        <header id="top" class="relative">
-            <!--HEADER NEGRO-->
-            <div class="header-negro flex sb fondo-negro">
-                <ul class="redes flex row wrap flex-start align-c margin-l5">
-                    <li><a href="facebook.html"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="x.html"><i class="fa-brands fa-x-twitter"></i></a></li>
-                    <li><a href="linkedin.html"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                    <li><a href="instagram.html"><i class="fa-brands fa-instagram"></i></a></li>
-                </ul>
-                <h4 class="center txtblanco">CUSTOMER SUPPORT 0123-456-789</h4>
-                <ul class="menu2">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="store.html">Store</a></li>
-                    <li><a href="newsletter.html">Newsletter</a></li>
-                    <li><a href="faqs.html">FAQs</a></li>
-                </ul>
+    
+<body>
+    <header id="top" class="relative w100">
+        <!--HEADER NEGRO-->
+        <div class="header-negro flex sb fondo-negro">
+            <ul class="redes flex row wrap flex-start align-c margin-l5 gap15">
+                <li><a href="facebook.html"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="x.html"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="linkedin.html"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                <li><a href="instagram.html"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+            <h4 class="center txtblanco">CUSTOMER SUPPORT 0123-456-789</h4>
+            <ul class="menu2 flex row no-style sa margin-r5 gap15">
+                <li><a href="about.html">About</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+            </ul>
+        </div>
+        <!--HEADER NEGRO-->
+        <!--HEADER BLANCO-->
+        <div class="header-blanco flex sb align-c fondo-blanco">
+            <div class="logo-hongo flex margin-l5 align-c column">
+                <img src="assets/fotos/logo-hongo.png" alt="logo hongo">
             </div>
-            <!--HEADER NEGRO-->
-            <!--HEADER BLANCO-->
-            <div class="header-blanco flex sb align-c fondo-blanco">
-                <div class="logo-hongo flex margin-l5 align-c column">
-                    <img src="assets/fotos/logo-hongo.png" alt="logo hongo">
-                </div>
-                <div class="menu flex margin-l5 align-c column">
-                    <nav>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="shop.html">Shop</a></li>
-                            <li><a href="store_locator.html">Store Locator</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="symbols flex margin-l5 align-c row">
-                    <ul class="flex padding0 margin0 no-list-style">
-                        <li><a href="index.html">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </a></li>
-                        <li><a href="shop.html">
-                                <i class="fa-regular fa-user"></i>
-                            </a></li>
-                        <li><a href="store_locator.html">
-                                <i class="fa-regular fa-heart"></i>
-                            </a></li>
-                        <li><a href="contact.html">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </a></li>
+            <div class="menu flex margin-l5 align-c column">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="store_locator.html">Store Locator</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
                     </ul>
-                </div>
+                </nav>
             </div>
-            <!--HEADER BLANCO-->
-        </header>
+            <div class="symbols flex margin-l5 align-c row">
+                <ul class="flex padding0 margin0 no-list-style">
+                    <li><a href="index.html">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a></li>
+                    <li><a href="shop.html">
+                            <i class="fa-regular fa-user"></i>
+                        </a></li>
+                    <li><a href="store_locator.html">
+                            <i class="fa-regular fa-heart"></i>
+                        </a></li>
+                    <li><a href="contact.html">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+        <!--HEADER BLANCO-->
+    </header>
+
         <main>
              <!--BANNER-->
         <section id="banner-blog">
@@ -77,15 +79,19 @@
                 <h2>BLOG LEFT SIDEBAR</h2>
             </div>
         </section>
+            <!--BANNER-->
+            <nav class="breadcrumb">
+                <a href="#">Home</a> | <a href="#">Blog left sidebar</a>
+            </nav> 
 
-        <nav class="breadcrumb-blog">
-            <a href="#">Home</a> | <a href="#">Blog left sidebar</a>
-        </nav>
-</body>
+            <div class="container-blog fondo-gris">
 
-<main>
-    <!--BANNER-->
-            <div class="container-blog">
+            <div class="search-form">
+                <input type="text" placeholder="Enter your keywords..." name="keywords" />
+                <button type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
                 <div class="sidebar">
                  <h3>ABOUT ME</h3>
                  <img alt="pfp picture of Melody Rose" height="100" src="assets/fotos/iconmelody.jpg" width="100">
@@ -102,10 +108,10 @@
             <div class="main-content">
                 <div class="post">
                   <img alt="Preview image of the post" height="400" src="assets/fotos/blog-img1.webp" width="600">
-                  <div class="meta">Standard • 27 August 2018</div>
-                  <h2>This is a standard post with a preview image</h2>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                  <a class="read-more" href="#">CONTINUE READING</a>
+                  <div class="meta justify-c align-c txt-c">Standard • 27 August 2018</div>
+                  <h2 class="post-h2 justify-c align-c txt-c">This is a standard post with a <br> preview image</h2>
+                  <p class="post-p justify-c align-c txt-c">Lorem Ipsum is simply dummy text of the printing and typesetting <br> industry. Lorem Ipsum has been the standard dummy text. Lorem Ipsum <br> is simply dummy text of the printing and typesetting industry.</p>
+                  <a class="boton-continuer align-c justify-c txt-c" href="#">CONTINUE READING</a>
                   <div class="post-footer">
                         <div class="author"><i class="fas fa-user"></i>
                             By Alexis Richards
@@ -121,7 +127,7 @@
                   </div>
                  </div>
                 </div>
-               </div>
+            </div>
             
         </main>
         <footer>
