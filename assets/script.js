@@ -219,3 +219,28 @@ document.getElementById('01-button').addEventListener("click", goToImage01());
 document.getElementById('02-button').addEventListener("click", goToImage02());
 document.getElementById('03-button').addEventListener("click", goToImage03());
 
+/* intento slider blog*/
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+
+function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+nextButton.addEventListener('click', nextSlide);
+prevButton.addEventListener('click', prevSlide);
+
+showSlide(currentSlide);
