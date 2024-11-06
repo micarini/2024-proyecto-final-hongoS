@@ -36,53 +36,49 @@ p {
     color: #555555;
 }
 
-/*BASES QUE SE REPITEN*/
+/*CLASES UTILES DE BASES QUE SE REPITEN*/
 /*DISPLAY*/
 .flex {
     display: flex;
 }
-
 .grid {
     display: grid;
 }
-
 .row{
     flex-direction: row;
 }
-
 .column{
     flex-direction: column; 
 }
-
 .wrap{
     flex-wrap: wrap;
 }
 
-/* CLASES UTILES COLORES */
+/* COLORES */
 .fondo-blanco {
     background-color: #ffffff;
 }
-
 .fondo-negro {
     background-color: #1c1c1c;
 }
-
+.fondo-grisosc {
+    background-color: #232323;
+}
 .fondo-gris {
     background-color: #f3f3f3;
 }
-
 .txtnegro {
     color: #1c1c1c;
 }
-
 .txtgris{
     color: #999999
 }
-
 .txtblanco {
     color: #ffffff;
 }
-
+.txtgrisb {
+    color: #b7b7b7;
+}
 .inherit{
     color: inherit;
 }
@@ -91,41 +87,32 @@ p {
 .align-c {
     align-items: center;
 }
-
 .txt-c {
     text-align: center;
 }
-
 .justify-c {
     justify-content: center;
 }
-
 .center {
     align-items: center;
     justify-content: center;
 }
-
 .sa {
     justify-content: space-around;
 }
-
 .sb {
     justify-content: space-between;
 }
-
 .alignself-start{
     align-self: flex-start;
 }
-
 .flex-start{
     justify-content: flex-start;
 }
 
-
 .relative {
     position: relative;
 }
-
 .absolute {
     position: absolute;
 }
@@ -134,29 +121,33 @@ p {
 .w30 {
     width: 30%;
 }
-
 .w80 {
     width: 80%;
 }
-
 .w100 {
     width: 100%;
 }
 
-/* CLASES UTILES PADDING */
+/* CLASES UTILES PADDING MARGIN GAP*/
 .padding0{
     padding: 0;
 }
+.padtop25{
+    padding-top: 2.5em;
+}
+.pad5{
+    padding: 5%;
+}
+.padbot25{
+    padding-bottom: 2.5em;
+}
 
-/* CLASES UTILES MARGINS */
 .margin-l5{
     margin-left: 5%;
 }
-
 .margin0{
     margin: 0;
 }
-
 .margin-r5{
     margin-right: 5%;
 }
@@ -164,9 +155,11 @@ p {
 .gap15 {
     gap: 15px;
 }
-
 .gap10{
     gap: 10px;
+}
+.gap2{
+    gap: 2em;
 }
 
 /* OTROS */
@@ -183,17 +176,34 @@ p {
 .underline{
     text-decoration: underline;
 }
-
+/*SIZE EM O REM*/
+.em075{
+    font-size: 0.75em;
+}
 .em1{
     font-size: 1em;
 }
-
+.em12{
+    font-size: 1.2em;
+}
+.em15{
+    font-size: 1.5em;
+}
 .em2{
     font-size: 2em;
 }
 .em4{
     font-size: 4em;
 }
+
+.rem1{
+    font-size: 1rem;
+}
+
+.lh2{
+    line-height: 2em;
+}
+
 /* BACKGROUND */
 .norepeat {
     background-repeat: no-repeat;
@@ -212,9 +222,7 @@ p {
     font-family: "niveau-grotesk", sans-serif;
     font-style: normal;
 }
-.rem1{
-    font-size: 1rem;
-}
+
 
 
 /*HEADER*/
@@ -441,10 +449,8 @@ nav a:hover {
 /*SECTION 2*/
 
 #section2 {
-    margin: 35px; /* Centramos la sección */
-    width: 95%; /* Ajuste del ancho */
-    grid-gap: 18px; /* Espaciado entre las imágenes */
-    text-align: center;
+    margin: 35px;
+    grid-gap: 18px; 
 }
 
 #section2 div {
@@ -454,9 +460,10 @@ nav a:hover {
 
 #section2 article {
     width: 100%;
-    min-height: 200px;
-    max-height: 300px;
+    min-height: 150px;
+    max-height: 250px;
     align-items: flex-end; /* Coloca el texto en la parte inferior */
+    text-align: left;
     padding: 10px;
     transition: transform 0.3s ease-in-out;
 }
@@ -471,7 +478,7 @@ nav a:hover {
 }
 
 
-#section2 a { /* estilo para los enlaces: sin subrayado ni color azul */
+#section2 a { 
     text-decoration: none; /* elimina el subrayado */
     color: inherit;
 }
@@ -512,15 +519,8 @@ nav a:hover {
 }
 
 #section4 {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    gap: 18px;
-}
- 
-#section4 {
-    grid-template-columns: repeat(4, 1fr);/* 4 columnas iguales */
-    gap: 10px;   /* Espacio entre las fotos */
 }
 
 #section4 a img {
@@ -603,7 +603,6 @@ nav a:hover {
     background-color: transparent;
     border: none;
     box-shadow: none;
-
 }
 
 .card4 img {
@@ -626,6 +625,7 @@ nav a:hover {
     background-color: lightgrey;
     padding-top: 40px;
     padding-bottom: 40px;
+    /*clases utiles: flex wrap justify-c fondo-grisb*/
 }
 
 
@@ -654,26 +654,21 @@ nav a:hover {
 }
 #section6 img {
     width: 20vh;
-    height: auto; /*mantiene la proporción de las imágenes*/
+    height: auto; 
     margin: 1px;
 }
 /* FOOTER */
 
 footer {
-    background-color: #232323;
-    color: #ffffff;
-    position: relative;
     padding: 40px 0;
-    text-decoration: none;
-    align-items: center;
-    justify-content: center;
 }
 
 footer a {
-    color: #ffffff;
+    color: #999999;
     text-decoration: none;
     transition: color 0.3s ease;
     justify-content: left;
+    line-height: 2.5em;
 }
 
 footer a:hover {
@@ -684,54 +679,25 @@ footer h5 {
     font-size: 0.75rem;
     color: #e0e0e0;
     font-weight: 400;
-    padding-bottom: 16px;
     line-height: 1.5rem;
-
-}
-
-footer p {
-    font-size: 0.75rem;
-    color: #999999;
-    line-height: 1.5rem;
-}
-
-.footer-articles {
-    display: grid;
-    margin: 5%;
-    font-size: 0.75rem;
-    color: #999999;
-    text-decoration: none;
-    line-height: 1.5rem;
+    padding-bottom: 1em;
 }
 
 .footer-container {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
-footer ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-}
-
-/* Estilos para el formulario de suscripción */
 .footer-articles form {
-    display: flex;
-    align-items: center;
-    gap: 10px;
     background-color: #333; 
     padding: 5px;
-    border-radius: 5px;
     margin-top: 15px;
 }
 
 .footer-articles input[type="email"] {
     flex: 1;
-    padding: 10px;
+    padding: 5px;
     border: none;
     background-color: #333; 
     color: #999999; 
@@ -743,7 +709,7 @@ footer ul {
 }
 
 .footer-articles button {
-    padding: 10px 20px;
+    padding-right: 1em;
     background-color: #333;
     color: #999999;
     border: none;
@@ -755,6 +721,7 @@ footer ul {
     content: "→"; 
     margin-left: 5px;
     font-size: 1rem; 
+    font-weight: bold;
 }
 
 /*css blog*/
@@ -1225,4 +1192,3 @@ padding: 0 2rem;
 .right-text-locator{
     width: 480px;
 }
-
