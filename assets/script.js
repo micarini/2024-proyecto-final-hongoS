@@ -1,45 +1,5 @@
 /*GALERIA 1 HOME */
 
-/* function mostrar_grid(){        
-    const filter = this.getAttribute("select_grid");
-    let data_ref;
-    switch(filter){
-        case "recent":
-            data_ref = productos1;
-            break;
-        case "featured":
-            data_ref = productos3;
-            break;
-        case "best":
-            data_ref = productos4;
-            break;
-    }
-    const container1 = document.querySelector("#contenedor_img");
-    container1.setAttribute("id","container1");
-    let content=0; */
-//for (const producto of data_ref)  */
-/*let article = document.createElement("article");
-const img = '<img class="card1" src="'+producto.img+'">';
-const title = '<h3 class="titulo">'+producto.titulo+'</h3>';
-const precio = '<p class="precio">'+producto.precio+'</p>';
-article.innerHTML = img + title + precio;
-content.appendChild(article);*/
-/* const article = `
-     <article class="card1>
-         <img class="card1" src="${producto.img}">
-         <h3 class="titulo">${producto.titulo}</h3>
-         <p class="precio">${producto.precio}</p>
-     </article>`
- if(content===0){
-     content = article;
- } else{
-     content+=article;
- }
-}
-container1.innerHTML = content;
-} */
-
-
 // hacer una funcion que forma galeria2 y adentro vamos a tener galeria armada y esa funcion la vamos a poner adentro del boton2 y cuando toque el boton 2 va a llamar a esa funcion y va a mostrar esa galeria. adentro de esa funcion vamos a tener que ponerle que a la galeria1 le cambie el style y se oculte STYLE DISPLAY NONE y asi hacer con todas! (muerte)
 //boton.onclick addeventlist etcetc
 
@@ -151,127 +111,8 @@ document.getElementById("boton3").addEventListener("click", function () {
 // Ocultar todas las galerías al inicio excepto la primera
 mostrarGaleria("grid1");
 
-/*let h4_seccion = document.createElement("h4");
-h4_seccion.textContent = "RECENT PRODUCTS";
-//h4_seccion.addEventListener("click",);
-//h4_seccion.setAttribute("select_grid", "recent");
-seccion3.appendChild(h4_seccion);
-
-let grid1 = document.createElement("div");
-grid1.setAttribute("id", galeriaId); //cambiandole el atributo id por el que quiero
-grid.setAttribute("class", "galeria"); //clase para todas las galerias
-seccion.appendChild(grid1);
-
-
-let card1;
-for (let i = 0; i < productos1.length; i++) {
-    card1 = document.createElement("div");
-    card1.setAttribute("class", "card1");
-
-    let titulo = document.createElement("h3");
-    titulo.setAttribute("class", "titulo");
-    titulo.textContent = productos1[i].titulo;
-
-    let img = document.createElement("img");
-    img.setAttribute("src", productos1[i].img);
-    img.setAttribute("class", "foto");
-
-    let precio = document.createElement("p");
-    precio.setAttribute("class", "precio");
-    precio.textContent = productos1[i].precio;
-
-    card1.appendChild(img);
-    card1.appendChild(titulo);
-    card1.appendChild(precio)
-
-    grid1.appendChild(card1);
-
-    //Evento mouseover para cambiar la imagen
-    img.addEventListener("mouseover", function () {
-        img.setAttribute("src", productos1[i].imgHover);
-    });
-
-    // Evento mouseout para restaurar la imagen original
-    img.addEventListener("mouseout", function () {
-        img.setAttribute("src", productos1[i].img);
-    });
-
-}
-
-
-function galeria2() {
-    const seccion3 = document.querySelector("#section3");
-
-    // Limpiar sección antes de crear galería2, en caso de que ya exista
-    seccion3.innerHTML = '';
-
-    let h4_seccion3 = document.createElement("h4");
-    h4_seccion3.textContent = "FEATURED PRODUCTS";
-    //h4_seccion3.addEventListener("click",);
-    //h4_seccion3.setAttribute("select_grid", "recent");
-    seccion3.appendChild(h4_seccion3);
-
-    let grid2 = document.createElement("div");
-    grid2.setAttribute("id", "grid2"); //cambiandole el atributo id por el que quiero
-    grid2.setAttribute("class", "galeria2"); // Clase para identificar todas las galerías
-    seccion3.appendChild(grid2);
-
-
-
-    let card2;
-    for (let i = 0; i < productos2.length; i++) {
-        card2 = document.createElement("div");
-        card2.setAttribute("class", "card1");
-
-        let titulo = document.createElement("h3");
-        titulo.setAttribute("class", "titulo");
-        titulo.textContent = productos2[i].titulo;
-
-        let img = document.createElement("img");
-        img.setAttribute("src", productos2[i].img);
-        img.setAttribute("class", "foto");
-
-        let precio = document.createElement("p");
-        precio.setAttribute("class", "precio");
-        precio.textContent = productos2[i].precio;
-
-        card2.appendChild(img);
-        card2.appendChild(titulo);
-        card2.appendChild(precio)
-
-        grid2.appendChild(card2);
-
-        //Evento mouseover para cambiar la imagen
-        img.addEventListener("mouseover", function () {
-            img.setAttribute("src", productos2[i].imgHover);
-        });
-
-        // Evento mouseout para restaurar la imagen original
-        img.addEventListener("mouseout", function () {
-            img.setAttribute("src", productos2[i].img);
-        });
-
-        // Ocultar otras galerías
-        document.querySelectorAll('.galeria').forEach(galeria => {
-            galeria.style.display = 'none';
-
-        // Evento de clic en el botón para mostrar la galería2
-            document.getElementById("boton2").addEventListener("click", galeria2);
-        });
-
-
-    }
-
-
-}
-
-//3
-*/
-// una funcion que reciba como parametro el array que quiero imprimir dinamicamente
 
 /*GALERIA 2 HOME*/
-
-/* la seccion5 va a crear un div que sera un grid, por otro lado se va a crear un div que sera una card para el grid, la cual constara de una foto y un titulo*/
 
 //guardo el body en una variable
 const seccion5 = document.querySelector("#section5");
@@ -285,11 +126,6 @@ let grid4 = document.createElement("div");
 grid4.setAttribute("id", "grid4"); //cambiandole el atributo id por el que quiero
 seccion5.appendChild(grid4);//inserto en el body mi grid
 
-//ahora tengo que crear las cards, para eso necesito un div que contenga una imagen y un titulo
-//para los titulos tenemos dos opciones, podemos crear un array con los titulos,
-//o hacer uno generico que podamos manejar con el indice del for
-
-//array de titulos
 let productos4 = [
     { titulo: "Zinnia Lamp", precio: "£150.00", img: "assets/fotos/foto1-galeria2.webp", imgHover: "assets/fotos/foto1-galeria2-imghover.webp" },
     { titulo: "Black Wood Lamp", precio: "£2500.00", img: "assets/fotos/foto2-galeria2.webp", imgHover: "assets/fotos/foto2-galeria2-imghover.webp" },
@@ -302,8 +138,6 @@ let productos4 = [
 ];
 
 //ahora tengo que crear la card y que esta se replique 16 veces
-//como se que tengo 16 imagenes BIEN ROTULADAS, 
-//aca es muy importante la ruta y la nomenclatura de los archivos
 //voy a hacer un for para meter adentro de esa card un titulo y una imagen
 
 let card4;
