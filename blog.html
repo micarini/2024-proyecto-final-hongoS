@@ -85,7 +85,7 @@
             </nav> 
             <section class="container-blog fondo-gris">
                 <!-- SIDEBAR -->
-                <section class="sidebar">
+                <section class="sidebar fondo-blanco">
                     <div class="search-form">
                         <input type="text" placeholder="Enter your keywords..." name="keywords">
                         <button type="submit">
@@ -179,25 +179,27 @@
                 <!-- POSTS -->
                 <section class="posts flex column">
                     <!-- POST 1 -->
-                    <div class="post-imagen">
+                    <div class="post-imagen borde">
                         <img alt="Preview image of the post" height="400" src="assets/fotos/blog-img1.webp" width="600">
                         <p class="meta justify-c align-c txt-c">Standard • 25 August 2018</p>
-                        <h2 class="post-h2 justify-c align-c txt-c">This is a standard post with a <br> preview image</h2>
-                        <p class="post-p justify-c align-c txt-c">Lorem Ipsum is simply dummy text of the printing and typesetting <br> industry. Lorem Ipsum has been the standard dummy text. Lorem Ipsum <br> is simply dummy text of the printing and typesetting industry..</p>
+                        <h2 class="post-h2 justify-c align-c txt-c">This is a standard post with a <br> preview image</h2> 
+                        <p class="post-p justify-c align-c txt-c">Lorem Ipsum is simply dummy text of the printing and typesetting <br> industry. Lorem Ipsum has been the standard dummy text. Lorem Ipsum <br> is simply dummy text of the printing and typesetting industry.</p>
                         <button class="post-btn align-c justify-c txt-c" href="#">CONTINUE READING</button>
                         <div class="post-footer">
                             <div class="author"><i class="by"></i> By Alexis Richards </div>
                             <div class="likes-comments">
-                                <span><i class="likes"></i> 58 Likes </span>
+                                <span><i class="likes"></i> 52 Likes </span>
                                 <span><i class="comments"></i>Leave a comment</span>
                             </div>
                         </div>
                     </div>
+                    
+                    
             
                     <!-- POST 2-->
                     <div class="post-slider">
                         <div class="slider">
-                            <div class="slide active">
+                            <div class="slide active borde">
                                 <img src="assets/fotos/blog-slider-1.webp" alt="Imagen 1">
                             </div>
                             <div class="slide">
@@ -227,7 +229,7 @@
                     </div>
 
                     <!-- POST 3 -->
-                    <div class="post-audio">
+                    <div class="post-audio borde">
                         <img alt="Preview image of the post" height="400" src="assets/fotos/blog-img1.webp" width="600">
                         <div class="meta justify-c align-c txt-c">Standard • 25 August 2018</div>
                         <h2 class="post-h2 justify-c align-c txt-c">This is a standard post with a audio</h2>
@@ -244,19 +246,23 @@
                     </div>
 
                     <!--POST 4-->
-                    <div class="post-blockquote">
+                    <div class="post-blockquote borde">
                         <div class="quote">
                             <i class="fa-solid fa-quote-left icon-large" style="color: #d39763;"></i> 
-                            <p class="quote-text txtblanco txt-l em2">It's very important to feel good in my clothes. I like fashion that <br> suits me. I love fashion & there is no easier way to express than <br> through the clothes you wear.</p>
-                            <h5 class="author">SARA SMITH</h5>
+                            <div> <!-- Contenedor para el texto y el autor juntos -->
+                                <p class="quote-text txtblanco em2">
+                                    It's very important to feel good in my clothes. I like fashion that <br> 
+                                    suits me. I love fashion & there is no easier way to express than <br>
+                                    through the clothes you wear.
+                                </p>
+                                <h5 class="author">- SARA SMITH</h5> <!-- En la misma línea -->
+                            </div>
                         </div>
-                        
-                        
-                        <div class="meta justify-c align-c txt-c">Standard • 25 August 2018</div>
-                        <h2 class="post-h2 justify-c align-c txt-c">This is a standard post with a blockquote</h2>
-                        <p class="post-p justify-c align-c txt-c">Lorem Ipsum is simply dummy text of the printing and typesetting <br> industry. Lorem Ipsum has been the standard dummy text. Lorem Ipsum <br> is simply dummy text of the printing and typesetting industry.</p>
-                        <a class="post-btn align-c justify-c txt-c" href="#">CONTINUE READING</a>
-                        <div class="post-footer">
+                        <div class="meta justify-c align-c txt-c fondo-blanco">Standard • 25 August 2018</div>
+                        <h2 class="post-h2 justify-c align-c txt-c fondo-blanco">This is a standard post with a <br> blockquote</h2>
+                        <p class="post-p justify-c align-c txt-c fondo-blanco">Lorem Ipsum is simply dummy text of the printing and typesetting <br> industry. Lorem Ipsum has been the standard dummy text. Lorem Ipsum <br> is simply dummy text of the printing and typesetting industry.</p>
+                        <a class="post-btn align-c justify-c txt-c fondo-negro" href="#">CONTINUE READING</a>
+                        <div class="post-footer fondo-blanco">
                             <div class="author"><i class="by"></i> By Alexis Richards </div>
                             <div class="likes-comments">
                                 <span><i class="likes"></i> 50 Likes </span>
@@ -264,12 +270,16 @@
                             </div>
                         </div>
                     </div>
+                    </div>
+                        
+                        
+                       
 
                     <!-- POST 5 -->
-                    <div class="post-video">
+                    <div class="post-video borde">
                         <div class="embedded-video" style="background-image: url(&quot;https://i.vimeocdn.com/video/584273715-d146e224d747f502c950fd4f12422bf7af6b7a9d89b83b55670886ccd2f681ee-d?mw=900&amp;mh=506&amp;q=70&quot;);"></div>
                         <div class="meta justify-c align-c txt-c">Standard • 27 August 2018</div>
-                        <h2 class="post-h2 justify-c align-c txt-c">This is a standard post with an embedded video</h2>
+                        <h2 class="post-h2 justify-c align-c txt-c">This is a standard post with an <br>embedded video</h2>
                         <p class="post-p justify-c align-c txt-c">Lorem Ipsum is simply dummy text of the printing and typesetting <br> industry. Lorem Ipsum has been the standard dummy text. Lorem Ipsum <br> is simply dummy text of the printing and typesetting industry.</p>
                         <a class="post-btn align-c justify-c txt-c" href="#">CONTINUE READING</a>
                         <div class="post-footer">
@@ -284,10 +294,10 @@
                     <div class="ytp-cued-thumbnail-overlay-image" style="background-image: url(&quot;https://i.ytimg.com/vi_webp/sU3FkzUKHXU/sddefault.webp&quot;);"></div>
             
                     <!-- POST 6 -->
-                    <div class="post-ytvideo">
+                    <div class="post-ytvideo borde">
                         <div class="yt-video" style="background-image: url(&quot;https://i.ytimg.com/vi_webp/sU3FkzUKHXU/sddefault.webp&quot;);"></div>
                         <div class="meta justify-c align-c txt-c">Standard • 27 August 2018</div>
-                        <h2 class="post-h2 justify-c align-c txt-c">This is a standard post with a youtube video</h2>
+                        <h2 class="post-h2 justify-c align-c txt-c">This is a standard post with a <br> youtube video</h2>
                         <p class="post-p justify-c align-c txt-c">Lorem Ipsum is simply dummy text of the printing and typesetting <br> industry. Lorem Ipsum has been the standard dummy text. Lorem Ipsum <br> is simply dummy text of the printing and typesetting industry.</p>
                         <a class="post-btn align-c justify-c txt-c" href="#">CONTINUE READING</a>
                         <div class="post-footer">
@@ -300,14 +310,14 @@
                     </div>
 
                     <!-- POST 7 -->
-                    <div class="post-htmlvideo">
+                    <div class="post-htmlvideo borde">
                         <div class="yt-video">
                             <source src="https://hongo.themezaa.com/videos/video.mp4" type="video/mp4">
                             <source src="https://hongo.themezaa.com/videos/video.ogg" type="video/ogg">
                             <source src="https://hongo.themezaa.com/videos/video.webm" type="video/webm">
                         </div>
                         <div class="meta justify-c align-c txt-c">Standard • 27 August 2018</div>
-                        <h2 class="post-h2 justify-c align-c txt-c">This is a standard post with a HTML5 video</h2>
+                        <h2 class="post-h2 justify-c align-c txt-c">This is a standard post with a HTML5 <br> video</h2>
                         <p class="post-p justify-c align-c txt-c">Lorem Ipsum is simply dummy text of the printing and typesetting <br> industry. Lorem Ipsum has been the standard dummy text. Lorem Ipsum <br> is simply dummy text of the printing and typesetting industry.</p>
                         <a class="post-btn align-c justify-c txt-c" href="#">CONTINUE READING</a>
                         <div class="post-footer">
@@ -320,10 +330,10 @@
                     </div>
 
                     <!-- POST 8 -->
-                    <div class="post-gallery">
+                    <div class="post-gallery borde">
                         <div class="gallery"></div>
                         <div class="meta justify-c align-c txt-c">Standard • 27 August 2018</div>
-                        <h2 class="post-h2 justify-c align-c txt-c">This is a standard post with a image gallery</h2>
+                        <h2 class="post-h2 justify-c align-c txt-c">This is a standard post with a image <br> gallery</h2>
                         <p class="post-p justify-c align-c txt-c">Lorem Ipsum is simply dummy text of the printing and typesetting <br> industry. Lorem Ipsum has been the standard dummy text. Lorem Ipsum <br> is simply dummy text of the printing and typesetting industry.</p>
                         <a class="post-btn align-c justify-c txt-c" href="#">CONTINUE READING</a>
                         <div class="post-footer">
@@ -339,6 +349,7 @@
             </section>
 
         </main>
+</body>
 
             
 

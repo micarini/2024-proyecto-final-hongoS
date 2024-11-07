@@ -180,6 +180,10 @@ p {
 .underline{
     text-decoration: underline;
 }
+
+.borde {
+    border: 1px solid #e6e6e6;
+}
 /*SIZE EM O REM*/
 .em075{
     font-size: 0.75em;
@@ -767,7 +771,6 @@ footer h5 {
 .sidebar {
     width: 22%;
     padding: 3em;
-    background-color: #fff;
     border-right: 1px solid #e6e6e6;
     margin: 3em;
 }
@@ -811,6 +814,9 @@ footer h5 {
     box-sizing: border-box;
     margin: auto;
     background-color: transparent; 
+    padding-right: 7em;
+    padding-left: 5em;
+  
 }
 
 .post-imagen {
@@ -872,6 +878,39 @@ footer h5 {
 }
 .posts .post-footer .likes-comments span {
     margin-right: 15px;
+}
+
+.posts .post-footer {
+    display: flex; /* Use flexbox to align items horizontally */
+    justify-content: space-between; /* Space out author and likes/comments */
+    align-items: center; /* Center items vertically */
+    margin-top: 20px; /* Space above the footer */
+    font-size: 14px; /* Text size for the footer */
+    color: #999; /* Text color */
+    border-top: 0.9px solid rgba(0, 0, 0, 0.2); /* Top border for separation */
+    padding-top: 10px; /* Padding to give space above the content */
+}
+
+.posts .post-footer .author {
+    display: flex; /* Flex to align the icon with the text */
+    align-items: center; /* Center icon and text vertically */
+}
+
+.posts .post-footer .author i {
+    margin-right: 5px; /* Space between the icon and the text */
+}
+
+.posts .post-footer .likes-comments {
+    display: flex; /* Flex to align likes and comments horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+.posts .post-footer .likes-comments i {
+    margin-right: 5px; /* Space between the icon and the text */
+}
+
+.posts .post-footer .likes-comments span {
+    margin-right: 15px; /* Space between the likes and comments */
 }
 
 .post-video,
@@ -963,15 +1002,19 @@ footer h5 {
 
 .slide.active {
     display: block;
+    height: auto;
+    padding: 4em;
 }
 
 .controls {
     position: absolute;
-    top: 50%;
+    top: 100%;
     width: 100%;
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
+    padding-left: 4em;
+    padding-right: 4em;
 }
 
 .controls span {
@@ -1015,38 +1058,41 @@ p {
 .btn-read-more:hover {
     background-color: #555;
 }
-
-.quote{
+.quote {
     background-color: #000;
-    padding: 2em;
-    margin: 2em;
+    padding: 3em;
+    margin: 4em;
     font-weight: 200;
-    text-align: left;
-   
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 1em;
+    padding-left: 4em;
 }
 
 .icon-large {
     font-size: 40px;
-    margin-bottom: 10px;
+    align-self: start;
+    padding-top: 0.3em;
 }
 
 .quote-text {
-    text-align: center;
     font-size: 16px;
-    color: #fff;
     line-height: 1.5;
     margin: 0;
+    padding-left: 1em;
+    padding-top: 1em;
 }
 
 .author {
-    margin-top: 10px;
-    font-size: 14px;
+    margin: 0;
+    font-size: 1em;
     color: #aaa;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-weight: 200;
+    white-space: nowrap; /* Evita el salto de línea */
+    padding-top: 1em;
+    padding-left: 1.8em;
 }
 
 /*store*/
