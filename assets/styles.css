@@ -765,14 +765,14 @@ footer h5 {
     padding: 3em;
     background-color: #fff;
     border-right: 1px solid #e6e6e6;
-    margin: 4em;
+    margin: 3em;
 }
 .sidebar h2 {
     font-size: 18px;
     text-align: center;
     margin-bottom: 20px;
 }
-.sidebar img {
+.sidebar .pfp {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -799,24 +799,26 @@ footer h5 {
     color: #666;
     font-size: 18px;
 }
-
+.img-fashionweek {
+  
+}
 .posts {
     width: 75%;
     padding: 3em;
     margin-left: 3em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Línea de separación */
+    box-sizing: border-box;
+    margin: auto;
+    background-color: transparent; 
 }
 
-.post {
-    background-color: #fff;
-    padding: 2em;
-    margin-bottom: 20px;
-}
-.post img {
+.post-imagen {
     width: 100%;
-    height: auto;
-    padding: 2em;
+    height: 100%;
+    padding: 5em;
+    box-sizing: border-box;
 }
-.post .meta {
+.posts .meta {
     font-size: 1.1em;
     color: #999;
     margin: 10px 0;
@@ -844,7 +846,7 @@ footer h5 {
     text-decoration: none;
     margin-top: 10px;
 }
-.post .post-footer {
+.posts .post-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -853,22 +855,46 @@ footer h5 {
     color: #999;
     border-top: 0.9px solid rgba(0, 0, 0, 0.2);
 }
-.post .post-footer .author {
+.posts .post-footer .author {
     display: flex;
     align-items: center;
 }
-.post .post-footer .author i {
+.posts .post-footer .author i {
     margin-right: 5px;
 }
-.post .post-footer .likes-comments {
+.posts .post-footer .likes-comments {
     display: flex;
     align-items: center;
 }
-.post .post-footer .likes-comments i {
+.posts .post-footer .likes-comments i {
     margin-right: 5px;
 }
-.post .post-footer .likes-comments span {
+.posts .post-footer .likes-comments span {
     margin-right: 15px;
+}
+
+.post-video,
+.post-footer,
+.post-slider,
+.post-slider2,
+.post-audio,
+.post-imagen,
+.post-ytvideo,
+.post-text,
+.post-quote, 
+.post-gallery,
+.post-htmlvideo, 
+.post-blockquote,
+.about-me,
+.social-icons, 
+.img-fashionweek,
+.categories,
+.popular-post,
+.tags-cloud,
+.archive,
+.newsletter {
+    margin-bottom: 4em;
+    background-color: #fff; 
 }
 
 #banner-blog {
@@ -987,6 +1013,19 @@ p {
 
 .btn-read-more:hover {
     background-color: #555;
+}
+
+.quote p{
+    background-color: #000;
+    padding: 2em;
+    margin: 2em;
+    font-size: 2em;
+    font-weight: 300;
+    text-align: left;
+}
+
+.icon-large {
+    font-size: 40px;
 }
 
 /*store*/
