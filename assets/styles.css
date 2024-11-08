@@ -1114,6 +1114,8 @@ p {
     overflow: hidden;
     height: 100%;
     max-width: 400px; /* Limita el ancho de cada tarjeta */
+    margin-top: 6em;
+    margin-bottom: 6em;
 }
 
 .card-store-locator .card {
@@ -1256,30 +1258,35 @@ p {
 
 
 .article1-section1 h4 {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     color: #D48131; 
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: 0;
     font-weight: 300;
     padding-top: 4rem;
-    padding-left: 4rem;
+    padding-left: 7rem;
+    align-self: left;
 }
 
 .article1-section1 h2 {
-    font-size: 1.3rem;
+    font-size: 20px;
     color: #333;
     margin-top: 0.5rem;
     line-height: 1.5;
     max-width: 600px; /* controla el ancho del texto */
     font-weight: 500;
-    padding-left: 4rem;
+    padding-left: 7rem;
+    padding-right: 3%;
 }
 
 .article2-section1 {
     text-align: left;
 }
-
+.article2-section1 p {
+    font-weight: 300;
+    padding-top: 6em;
+}
 .article2-section1 h3 {
     font-size: 0.7rem;
     font-weight: 300;
@@ -1296,12 +1303,12 @@ p {
     width: 100%;
     height: 100%;
 }
-
 .store-locator-mapa {
     height: 70vh; /* Ocupa la altura total de la pantalla */
     background-color: #f5f5f5;
     padding-top: 100px;
     max-width: 100vw;
+    position: relative; /* Hacer el contenedor relativo para posicionar elementos dentro */
 }
 
 .imagen-mapa-store-locator {
@@ -1309,16 +1316,23 @@ p {
     height: 100%;
     background: url("../assets/fotos/foto-mapa.jpg") no-repeat center center;
     background-size: contain; /* Ajusta la imagen para que se vea completa */
-    justify-content: center;
-    align-items: flex-end; /* Coloca el texto en la parte inferior */
+    display: flex; /* Usar flexbox para alinear los elementos */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: flex-start; /* Coloca el texto en la parte superior */
     color: white; /* Asegura que el texto sea visible */
     padding: 10px;
     box-sizing: border-box; /* Para que el padding no aumente el tamaño total */
+    position: relative; /* Para posicionamiento de los hijos */
 }
 
-.imagen-mapa-store-locator p{
+.imagen-mapa-store-locator p {
     width: 370px;
+    position: absolute; /* Coloca el texto en una posición específica */
+    left: 50%;
+    transform: translateX(-50%); /* Centra el texto horizontalmente */
+    align-self: flex-end;
 }
+
 
 .div-btn-store {
     background-color: #f5f5f5;
@@ -1346,10 +1360,8 @@ p {
 .store-locator-stores{
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    height: auto;
     background-color: white;
     padding: 10%;
-    max-width: 100vw;
 }
 
 .left-number-locator, .right-text-locator{
