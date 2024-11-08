@@ -219,28 +219,27 @@ document.getElementById('01-button').addEventListener("click", goToImage01());
 document.getElementById('02-button').addEventListener("click", goToImage02());
 document.getElementById('03-button').addEventListener("click", goToImage03());
 
-/* intento slider blog*/
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
+//accordion store locator
 
-function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    slides[index].classList.add('active');
+let acc = document.getElementsByClassName("accordion");
+let i;
+
+for (let i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    // cerrar todos los paneles
+    for (let j = 0; j < acc.length; j++) {
+      let panel = acc[j].nextElementSibling;
+      acc[j].classList.remove("active");
+      panel.style.maxHeight = null;
+    }
+
+    // activar el panel seleccionado
+    this.classList.toggle("active");
+    let panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null; // cerrar el panel si ya estaba abierto
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px"; // abrir el panel seleccionado
+    }
+  });
 }
-
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-}
-
-function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-}
-
-nextButton.addEventListener('click', nextSlide);
-prevButton.addEventListener('click', prevSlide);
-
-showSlide(currentSlide);
