@@ -833,6 +833,127 @@ footer h5 {
     color: #666;
     font-size: 18px;
 }
+
+.categories, .archive, .tags-cloud {
+    width: 90%;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.categories h3, .archive h3, .tags-cloud h3{
+    margin-bottom: 15px;
+}
+
+.categories ul, .archive ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.categories li, .archive li {
+    display: flex;
+    color: #808080;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 5px 0;
+}
+.categories li:hover, .archive li:hover{
+    color: #d39663;
+}
+
+.categories li:hover .num-categories, .archive li:hover .num-categories {
+    color: #808080; /* mantiene el color gris de los números en el hover */
+}
+
+.tagcloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: left;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.tagcloud a {
+    display: inline-block;
+    padding: 8px 15px;
+    font-size: 1em;
+    color: #808080;
+    background-color: #f3f3f3;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.tagcloud a:hover {
+    background-color: #1c1c1c;
+    color: #ffffff;
+}
+
+.newsletter {
+    padding: 20px;
+}
+
+.newsletter h3 {
+    margin-bottom: 2em;
+}
+
+.newsletter p {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 20px;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.input-mail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+    color: #1c1c1c;
+}
+
+.input-mail input[type="email"] {
+    padding: 10px;
+    width: 90%;
+    font-size: 0.9em;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.input-mail input[type="email"]::placeholder {
+    color: #aaa;
+}
+
+.input-mail-btn button {
+    background-color: #333;
+    width: 90%;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.input-mail-btn button:hover {
+    background-color: #555;
+}
+
+.input-mail-btn i {
+    font-size: 0.9em;
+}
+
+
 .posts {
     width: 75%;
     padding: 3em;
@@ -1009,29 +1130,28 @@ footer h5 {
     object-fit: cover;
 }
 
-.slide .active {
-    display: block;
-    height: auto;
-    padding: 4em;
-}
-
-.controls {
+.prev, .next {
     position: absolute;
-    top: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+    top: 50%;
     transform: translateY(-50%);
-    padding-left: 4em;
-    padding-right: 4em;
+    color: black; /*cambiar a blanco cuando se vean las imagenes*/
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
 }
 
-.controls span {
-    cursor: pointer;
-    font-size: 24px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
+.prev {
+    left: 10px; /* Posiciona el botón de retroceso a la izquierda */
+}
+
+.next {
+    right: 10px; /* Posiciona el botón de avance a la derecha */
+}
+
+.prev:hover, .next:hover {
+    color: rgba(255, 255, 255, 0.7); 
 }
 
 .post-content {

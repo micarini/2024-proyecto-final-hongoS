@@ -179,7 +179,7 @@ for (let i = 0; i < productos4.length; i++) {
 }
 
 
-/*slider*/
+/*slider home*/
 const sliderContent = ['../assets/fotos/furniture-collection1.webp', '../assets/fotos/furniture-collection2.jpg', '../assets/fotos/furniture-collection3.jpg'];
 
 /* CONSIGNA: Escribir el código necesario para que al hacer click en su respectivo botón se circule la imagen de fondo del tag <main> con id "slider-background". Para esto deberán asignar eventos a los botones de la forma que prefieran, crear una función para iterar sobre el array "sliderContent" (si el usuario hace click para una dirección pero está en la posición final del array, la función deberá volver al primer item y viceversa) y editar el la propiedad "background-image" de nuestro <main> con id "slider-background" */
@@ -219,7 +219,70 @@ document.getElementById('01-button').addEventListener("click", goToImage01());
 document.getElementById('02-button').addEventListener("click", goToImage02());
 document.getElementById('03-button').addEventListener("click", goToImage03());
 
-//accordion store locator
+/*slider blog*/
+
+const sliderBlog = ['../assets/fotos/blog-slider-1.webp', '../assets/fotos/blog-slider-2.webp', '../assets/fotos/blog-slider-3.webp'];
+
+let currentIndex2 = 0;
+const img = document.getElementById('slider-background');
+let automatizado;
+
+//funcion para actualizar la img de fondo
+function updateFondo(){
+    img.style.backgroundImage = `url(${sliderBlog[currentIndex2]})`;
+}
+
+//inicializa el fondo al cargar la pagina
+updateFondo();
+
+// funcion para ir a la img anterior
+function anterior(){
+    currentIndex2--;
+    if(currentIndex2<0){
+        currentIndex2 = sliderBlog.length-1;
+    }
+    updateFondo();
+    pauseAutomatizado();
+}
+
+//funcion para ir a la img posterior
+function posterior(){
+    currentIndex2++;
+    if(currentIndex2 > sliderBlog.length -1){
+        currentIndex2 = 0;
+    }
+    updateFondo();
+    pauseAutomatizado();
+}
+
+//botones
+document.getElementById('prev').addEventListener("click", anterior);
+document.getElementById('next').addEventListener("click", posterior);
+
+
+//intervalo para que la img se cambia sola cada 5 segundos
+function startAutomatizado() {
+    automatizado = setInterval(() => {
+    posterior(); 
+}, 1000); //5000 ms son 5 segundos
+}
+
+//pausar el desplazamiento automático por unos segundos
+function pauseAutomatizado() {
+    clearInterval(automatizado); 
+    setTimeout(() => {
+    startAutomatizado(); 
+}, 10000); //reinicio dsp de 5 segundos
+}
+
+
+//inicio automatizacion al cargar la pagina
+startAutomatizado();
+
+
+
+
+/*accordion store locator*/
 
 let acc = document.getElementsByClassName("accordion");
 let i;
