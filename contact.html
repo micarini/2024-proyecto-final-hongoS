@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/74915e9a34.js" crossorigin="anonymous"></script>
     <title>Hongo - Proyecto Final</title>
 </head>
-
 <body>
+    <!-- HEADER -->
     <header id="top" class="relative w100 fondo-negro">
-        <!-- HEADER NEGRO -->
+        <!-- Black Header -->
         <div class="header-negro flex sa center">
             <ul class="redes flex row wrap flex-start align-c gap15">
                 <li><a href="facebook.html"><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -30,22 +29,20 @@
                 <li><a href="faqs.html">FAQs</a></li>
             </ul>
         </div>
-        <!-- HEADER BLANCO -->
+        <!-- White Header -->
         <div class="header-blanco flex sb align-c fondo-blanco">
             <div class="logo-hongo flex margin-l5 align-c column">
                 <img src="assets/fotos/logo-hongo.png" alt="logo hongo">
             </div>
-            <div class="menu flex margin-l5 align-c column">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="shop.html">Shop</a></li>
-                        <li><a href="store_locator.html">Store Locator</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <nav class="menu flex margin-l5 align-c column">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="store_locator.html">Store Locator</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
             <div class="symbols flex margin-l5 align-c row">
                 <ul class="flex padding0 margin0 no-list-style">
                     <li><a href="index.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
@@ -57,99 +54,109 @@
         </div>
     </header>
 
+    <!-- MAIN CONTENT -->
     <main>
-        <!-- BANNER -->
+        <!-- Banner Section -->
         <section id="banner-contact" class="banner-contact norepeat cover bgcenter w100 relative justify-c align-c txt-l">
             <div class="banner-contact-texto">
                 <h4>Crafted with care from quality</h4>
                 <h2>CONTACT CLASSIC</h2>
             </div>
         </section>
-        <!-- BREADCRUMB -->
+
+        <!-- Breadcrumb Navigation -->
         <nav class="breadcrumb">
             <a href="#">Home</a> | <a href="#">Blog left sidebar</a>
-        </nav> 
-        <!-- BLOG SECTION -->
-        <section class="container-blog fondo-gris">
-            <div id="section1-contact">
-                <article class="article-section1 justify-c txt-c align-c">
-                    <h4 class="h4 em1 fw400 txtnaranja txt-c">STAY TOUCH WITH US</h4>
-                    <h2 class="justify-c fw400 txt-c">Contact us to find out more or how <br> we can help you</h2>
-                </article>
-            </section>
+        </nav>
 
-            <!-- STORE LOCATOR CARDS -->
-            <div id="paises-card-background-contact" class="flex w100">
-                <section class="container-contact">
-                    <!-- CARD 1 -->
-                    <article class="card-contact">
-                        <img alt="" src="assets/fotos/foto1-card.jpg">
-                        <div class="card-content-contact">
-                            <h3 class="margin0 padding0 flex justify-c txt-c align-c em1">
-                                <img alt="Australia flag" src="assets/fotos/australia.webp">
-                                AUSTRALIA
-                            </h3>
-                            <p class="color-gris rem1">301 Greenhouse, Custard fashion factory, Prospect drive, Australia</p>
-                            <div class="contact-info-contact">
-                                <p class="color-gris rem1">Phone: +44 12345 67890</p>
-                                <p class="color-gris rem1">Email: info@hongo.com</p>
-                            </div>
+        <!-- Blog Section -->
+        <section class="container-contact fondo-gris">
+            <div id="section1-contact">
+                <article class="article-section1">
+                    <h4 class="h4 em12 fw400 txtnaranja">STAY TOUCH WITH US</h4>
+                    <br>
+                    <h2 class="section1-contact-h2 fw400">Contact us to find out more or how<br> we can help you</h2>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact Cards Section -->
+        <section class="section2-contact fondo-gris">
+            <div class="card-container-contact">
+                <!-- Contact Card 1: Iceland -->
+                <div class="card-contact">
+                    <img src="assets/fotos/foto1-card.jpg" alt="Iceland Store" class="card-image-contact">
+                    <div class="card-info-contact">
+                        <img class="flag-contact" src="assets/fotos/iceland.webp" alt="Iceland Flag">
+                        <div class="country-data-contact">
+                            <h2 class="em06 txtgris">hongo fashion inc</h2>
+                            <h3 class="country-name-contact">Iceland</h3>
                         </div>
-                    </article>
-                    <!-- CARD 2 -->
-                    <article class="card-contact">
-                        <img alt="" src="assets/fotos/foto2-card.jpg">
-                        <div class="card-content-contact">
-                            <h3 class="margin0 padding0 flex justify-c txt-c align-c em1">
-                                <img alt="Switzerland flag" src="assets/fotos/suiza.webp">
-                                SWITZERLAND
-                            </h3>
-                            <p class="color-gris rem1">Maria Reichenbach, Green Hill Drive, Zürich 8022, Switzerland</p>
-                            <div class="contact-info-contact">
-                                <p class="color-gris rem1">Phone: +44 12345 67890</p>
-                                <p class="color-gris rem1">Email: info@hongo.com</p>
-                            </div>
+                        <address>
+                            401 Broadway, 24th Floor<br>
+                            Iceland, Iceland 10013<br>
+                            Phone: 1-800-222-000<br>
+                            Email: info@domain.com
+                        </address>
+                    </div>
+                </div>
+                <!-- Contact Card 2: Switzerland -->
+                <div class="card-contact">
+                    <img src="assets/fotos/foto2-card.jpg" alt="Switzerland Store" class="card-image-contact">
+                    <div class="card-info-contact">
+                        <img class="flag-contact" src="assets/fotos/suiza.webp" alt="Switzerland Flag">
+                        <div class="country-data-contact">
+                            <h2 class="em06 txtgris">hongo fashion inc</h2>
+                            <h3 class="country-name-contact">Switzerland</h3>
                         </div>
-                    </article>
-                    <!-- CARD 3 -->
-                    <article class="card-contact">
-                        <img alt="" src="assets/fotos/foto3-card.jpg">
-                        <div class="card-content-contact">
-                            <h3 class="margin0 padding0 flex justify-c txt-c align-c em1">
-                                <img alt="Iceland flag" src="assets/fotos/iceland.webp">
-                                ICELAND
-                            </h3>
-                            <p class="color-gris rem1">401 Broadway, 24th Floor, Glenwood Lane, North Brunswick, Iceland</p>
-                            <div class="contact-info-contact">
-                                <p class="color-gris rem1">Phone: +44 12345 67890</p>
-                                <p class="color-gris rem1">Email: info@hongo.com</p>
-                            </div>
+                        <address>
+                            10 Raffles Place, 22-00<br>
+                            Geneva, Switzerland 048620<br>
+                            Phone: 1-800-333-000<br>
+                            Email: info@domain.com
+                        </address>
+                    </div>
+                </div>
+                <!-- Contact Card 3: France -->
+                <div class="card-contact">
+                    <img src="assets/fotos/foto3-card.jpg" alt="France Store" class="card-image-contact">
+                    <div class="card-info-contact">
+                        <img class="flag-contact" src="assets/fotos/france.webp" alt="France Flag">
+                        <div class="country-data-contact">
+                            <h2 class="em06 txtgris">hongo fashion inc</h2>
+                            <h3 class="country-name-contact">France</h3>
                         </div>
-                    </article>
-                    <!-- CARD 4 -->
-                    <article class="card-contact">
-                        <img alt="" src="assets/fotos/foto4-card.jpg">
-                        <div class="card-content-contact">
-                            <h3 class="margin0 padding0 flex  justify-c txt-c align-c em1">
-                                <img alt="France flag" src="assets/fotos/france.webp">
-                                FRANCE
-                            </h3>
-                            <p class="color-gris rem1">West 14th North Street, Hamilton Lane, Suite 21, Netherlands</p>
-                            <div class="contact-info-contact">
-                                <p class="color-gris rem1">Phone: +44 12345 67890</p>
-                                <p class="color-gris rem1">Email: info@hongo.com</p>
-                            </div>
+                        <address>
+                            20 Rue de la Paix<br>
+                            Paris, France 75002<br>
+                            Phone: 1-800-444-000<br>
+                            Email: info@domain.com
+                        </address>
+                    </div>
+                </div>
+                <!-- Contact Card 4: Australia -->
+                <div class="card-contact">
+                    <img src="assets/fotos/foto4-card.jpg" alt="Australia Store" class="card-image-contact">
+                    <div class="card-info-contact">
+                        <img class="flag-contact" src="assets/fotos/australia.webp" alt="Australia Flag">
+                        <div class="country-data-contact">
+                            <h2 class="em06 txtgris">hongo fashion inc</h2>
+                            <h3 class="country-name-contact">Australia</h3>
                         </div>
-                    </article>
-                </section>
+                        <address>
+                            150 George Street<br>
+                            Sydney, Australia 2000<br>
+                            Phone: 1-800-555-000<br>
+                            Email: info@domain.com
+                        </address>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="relative fondo-grisosc txtgrisb no-style center pad5">
         <div class="footer-container grid gap2">
-            <!-- FOOTER ARTICLE 1 -->
             <article class="footer-articles grid margin-r5 txtgris no-style em12 lh2">
                 <h5>Company overview</h5>
                 <ul class="no-list-style margin0 padding0">
@@ -161,9 +168,45 @@
                     <li>Contact information</li>
                 </ul>
             </article>
-            <!-- FOOTER ARTICLE 2 -->
             <article class="footer-articles grid margin-r5 txtgris no-style em12 lh2">
                 <h5>Customer information</h5>
                 <ul class="no-list-style margin0 padding0">
                     <li>Help and support</li>
-                    <li>Shipping
+                    <li>Shipping and delivery</li>
+                    <li>Payment method</li>
+                    <li>Terms and conditions</li>
+                    <li>Returns and refunds</li>
+                    <li>Privacy policy</li>
+                </ul>
+            </article>
+            <article class="footer-articles grid margin-r5 txtgris no-style em12 lh2">
+                <h5>On social networks</h5>
+                <ul class="no-list-style margin0 padding0">
+                    <li><a href="facebook.html"><i class="fa-brands fa-facebook-f " style="color: #0056d6;"> </i>
+                            Facebook</a></li>
+                    <li><a href="x.html"><i class="fa-brands fa-x-twitter " style="color: #aaaaaa;"> </i> Twitter</a></li>
+                    <li><a href="linkedin.html"><i class="fa-brands fa-linkedin-in " style="color: #3a88fe;"> </i>
+                            LinkedIn</a></li>
+                    <li><a href="instagram.html"><i class="fa-brands fa-instagram " style="color: #ff4013;"> </i>
+                            Instagram</a></li>
+                    <li><a href="pinterest.html"><i class="fa-brands fa-pinterest-p " style="color: #e32400;"> </i>
+                            Pinterest</a></li>
+                </ul>
+            </article>
+            <article class="footer-articles grid margin-r5 txtgris no-style em12 lh2">
+                <h5>Subscribe to our newsletter</h5>
+                <p class="grid margin-r5 txtgris no-style em1 lh2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <form class="flex align-c gap10 em1">
+                        <input type="email" id="email" name="email" placeholder="Enter your email...">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p class="grid margin-r5 txtgris no-style em1 lh2 padtop25">© 2024 HONGO. All rights reserved.</p>
+                    </p>
+            </article>
+        </div>
+    </footer>
+
+
+</html>
+
+
