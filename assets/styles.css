@@ -802,11 +802,8 @@ footer h5 {
     padding: 3em;
     margin: 3em;
 }
-.sidebar h2 {
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 20px;
-}
+
+
 .sidebar .pfp {
     width: 100px;
     height: 100px;
@@ -1001,9 +998,6 @@ footer h5 {
     margin-top: 10px;
 }
 .posts .post-footer {
-    /* display: flex; 
-    justify-content: space-between; 
-    align-items: center; */
     font-size: 14px;
     color: #999;
     border-top: 0.9px solid rgba(0, 0, 0, 0.2);
