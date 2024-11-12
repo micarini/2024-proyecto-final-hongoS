@@ -158,7 +158,7 @@ p {
     padding-bottom: 2.5em;
 }
 
-.padding5 {
+.padding5{
     padding: 5em;
 }
 
@@ -172,7 +172,7 @@ p {
     margin-right: 5%;
 }
 
-.gap15 {
+.gap15{
     gap: 15px;
 }
 .gap10{
@@ -1615,7 +1615,6 @@ p {
     margin-bottom: 10px;
 }
 
-
 .container-contact {
     min-height: 300px; /* Ajusta el valor según sea necesario */
     display: flex;
@@ -1630,7 +1629,6 @@ p {
 .h4, .section1-contact-h2 {
     margin: 0; /* Esto elimina márgenes innecesarios que puedan afectar el alineamiento */
 }
-
 
 .card-container-contact {
     /*display: flex;*/
@@ -1718,4 +1716,59 @@ address {
     padding: 5rem 0;
     color: white;
     height: 37.5rem;
+}
+
+.sec3-contact{
+    margin: 10%;
+    line-height: 3.5em;
+}
+
+.sec3-contact article {
+    padding: 3em 8em;
+}
+
+.sec3-contact article:hover {
+    border: 3px solid #d39663; 
+}
+
+.sec4-contact {
+    padding: 5em 10%;
+    gap: 2em;
+}
+
+.image-sec4-contact {
+    width: 50%; 
+}
+
+.image-sec4-contact img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.slider-sec4-contact {
+    width: 50%; 
+    margin: auto;
+}
+
+.sec5-contact {
+    margin: 10%;
+    padding: 1em;
+    gap: 12em;
+    box-sizing: border-box;
+}
+
+.text-contact {
+    width: 48%; 
+}
+
+.text-contact.left p {
+    font-size: 2.2em;
+    line-height: 1.4em;
+}
+
+.text-contact.right p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.4em;
+    color: #808080; 
 }
