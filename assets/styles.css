@@ -158,6 +158,10 @@ p {
     padding-bottom: 2.5em;
 }
 
+.padding5 {
+    padding: 5em;
+}
+
 .margin-l5{
     margin-left: 5%;
 }
@@ -997,44 +1001,59 @@ footer h5 {
     text-decoration: none;
     margin-top: 10px;
 }
+
+/* Estilización general para el pie de la publicación */
 .posts .post-footer {
     font-size: 14px;
     color: #999;
-    border-top: 0.9px solid rgba(0, 0, 0, 0.2);
-    margin-top: 20px; 
-    border-top: 0.9px solid rgba(0, 0, 0, 0.2); 
-    padding-top: 10px; 
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between; /* Separa autor y likes/comments */
+    align-items: center; /* Alineación vertical */
 }
-.posts .post-footer .author {
+
+/* Estilización del autor */
+.author {
     display: flex;
     align-items: center;
-}
-.posts .post-footer .author i {
-    margin-right: 5px;
-}
-
-.posts .post-footer .likes-comments i {
-    margin-right: 5px;
-}
-.posts .post-footer .likes-comments span {
-    margin-right: 15px;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 1em;
 }
 
-.posts .post-footer .author i {
-    margin-right: 5px; 
+.divlikes{
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+
 }
 
+.post-btn{
+    background-color: #000;
+    color: white;
+}
+
+
+/* Contenedor principal para likes y comentarios */
 .posts .post-footer .likes-comments {
-    display: flex; /* Flex to align likes and comments horizontally */
-    align-items: center; /* Center items vertically */
+    display: flex; /* Flex para alinear horizontalmente */
+    align-items: center; /* Alineación vertical */
+    gap: 20px; /* Espacio entre los divs de likes y comments */
 }
 
-.posts .post-footer .likes-comments i {
-    margin-right: 5px; /* Space between the icon and the text */
+/* Estilización de likes y comments */
+.posts .post-footer .divlikes,
+.posts .post-footer .divcomments {
+    display: flex;
+    align-items: center; /* Asegura que el icono y el texto estén alineados */
 }
 
-.posts .post-footer .likes-comments span {
-    margin-right: 15px; /* Space between the likes and comments */
+.divcomments{
+    border-left:1px solid rgba(0, 0, 0, 0.2); ;
+}
+
+.posts .post-footer .divlikes i,
+.posts .post-footer .divcomments i {
+    margin-right: 5px; /* Espacio entre el icono y el texto */
 }
 
 .post-video,
