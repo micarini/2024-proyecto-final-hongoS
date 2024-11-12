@@ -306,3 +306,77 @@ for (let i = 0; i < acc.length; i++) {
     }
   });
 }
+
+/*SLIDER CONTACT*/
+const sliderTexts = [
+    {
+        number: "01",
+        subtitle: "LET'S MAKE SOMETHING BEAUTIFUL",
+        title: "Unlimited power and customization possibilities",
+        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.",
+        buttonText: "ABOUT COMPANY"
+    },
+    {
+        number: "02",
+        subtitle: "WE ARE DIGITAL MEDIA AGENCY",
+        title: "We are delivering beautiful digital products for you",
+        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry's standard dummy text since. Lorem Ipsum is simply dummy text of the typesetting industry.",
+        buttonText: "ABOUT COMPANY"
+    },
+    {
+        number: "03",
+        subtitle: "WE CREATE DESIGNS AND TECHNOLOGY",
+        title: "We provide high quality and cost effective services",
+        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry's standard dummy text since. Lorem Ipsum is simply dummy text of the typesetting industry.",
+        buttonText: "ABOUT COMPANY"
+    }
+];
+
+let currentInd = 0;
+const slideNumber = document.getElementById('slide-number');
+const slideSubtitle = document.getElementById('slide-subtitle');
+const slideTitle = document.getElementById('slide-title');
+const slideContent = document.getElementById('slide-content');
+const slideButton = document.getElementById('slide-button');
+let auto3s;
+
+function updateContent() { //para actualizar el texto
+    const currentText = sliderTexts[currentInd];
+    slideNumber.textContent = currentText.number;
+    slideSubtitle.textContent = currentText.subtitle;
+    slideTitle.textContent = currentText.title;
+    slideContent.textContent = currentText.content;
+    slideButton.textContent = currentText.buttonText;
+}
+
+updateContent(); // inicializa texto al cargar la página
+
+
+function anterior() {
+    currentInd--;
+    if (currentInd < 0) {
+        currentInd = sliderTexts.length - 1;
+    }
+    updateContent();
+}
+
+
+function posterior() {
+    currentInd++;
+    if (currentInd >= sliderTexts.length) {
+        currentInd = 0;
+    }
+    updateContent();
+}
+
+// Botones para controlar el slider
+document.getElementById('prev').addEventListener("click", anterior);
+document.getElementById('next').addEventListener("click", posterior);
+
+// Intervalo para que la imagen cambie sola cada 5 segundos
+function startAuto() {
+    auto3s = setInterval(posterior, 3000); // 5000 ms son 5 segundos
+}
+
+// Inicia la automatización al cargar la página
+startAuto();
