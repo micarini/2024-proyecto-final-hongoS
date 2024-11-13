@@ -220,64 +220,66 @@ document.getElementById('02-button').addEventListener("click", goToImage02());
 document.getElementById('03-button').addEventListener("click", goToImage03());
 
 /*slider blog*/
-
-const sliderBlog = ['../assets/fotos/blog-slider-1.webp', '../assets/fotos/blog-slider-2.webp', '../assets/fotos/blog-slider-3.webp'];
+const sliderBlog = [
+    '../assets/fotos/blog-slider-1.webp',
+    '../assets/fotos/blog-slider-2.webp',
+    '../assets/fotos/blog-slider-post-3.webp',
+];
 
 let currentIndex2 = 0;
 const img = document.getElementById('slider-background');
 let automatizado;
 
-//funcion para actualizar la img de fondo
-function updateFondo(){
+// Función para actualizar la imagen de fondo
+function updateFondo() {
     img.style.backgroundImage = `url(${sliderBlog[currentIndex2]})`;
 }
 
-//inicializa el fondo al cargar la pagina
+// Inicializa el fondo al cargar la página
 updateFondo();
 
-// funcion para ir a la img anterior
-function anterior(){
+// Función para ir a la imagen anterior
+function anterior() {
     currentIndex2--;
-    if(currentIndex2<0){
-        currentIndex2 = sliderBlog.length-1;
+    if (currentIndex2 < 0) {
+        currentIndex2 = sliderBlog.length - 1;
     }
     updateFondo();
     pauseAutomatizado();
 }
 
-//funcion para ir a la img posterior
-function posterior(){
+// Función para ir a la imagen posterior
+function posterior() {
     currentIndex2++;
-    if(currentIndex2 > sliderBlog.length -1){
+    if (currentIndex2 > sliderBlog.length - 1) {
         currentIndex2 = 0;
     }
     updateFondo();
     pauseAutomatizado();
 }
 
-//botones
+// Botones
 document.getElementById('prev').addEventListener("click", anterior);
 document.getElementById('next').addEventListener("click", posterior);
 
-
-//intervalo para que la img se cambia sola cada 5 segundos
+// Intervalo para que la imagen se cambie sola cada 5 segundos
 function startAutomatizado() {
     automatizado = setInterval(() => {
-    posterior(); 
-}, 1000); //5000 ms son 5 segundos
+        posterior();
+    }, 5000); // 5000 ms son 5 segundos
 }
 
-//pausar el desplazamiento automático por unos segundos
+// Pausar el desplazamiento automático por unos segundos
 function pauseAutomatizado() {
-    clearInterval(automatizado); 
+    clearInterval(automatizado);
     setTimeout(() => {
-    startAutomatizado(); 
-}, 10000); //reinicio dsp de 5 segundos
+        startAutomatizado();
+    }, 5000); // 5000 ms son 5 segundos
 }
 
-
-//inicio automatizacion al cargar la pagina
+// Inicia la automatización al cargar la página
 startAutomatizado();
+
 
 
 

@@ -73,6 +73,7 @@ p {
 .txtgris{
     color: #999999
 }
+
 .txtblanco {
     color: #ffffff;
 }
@@ -223,6 +224,10 @@ p {
 .em06 {
     font-size: 0.6em;
 }
+
+.em08 {
+    font-size: 0.8em;
+}
 .rem1{
     font-size: 1rem;
 }
@@ -261,14 +266,6 @@ p {
 .bgcenter{
     background-position: center;
 }
-
-/* txt cambiar desp */
-.niveau{
-    font-family: "niveau-grotesk", sans-serif;
-    font-style: normal;
-}
-
-
 
 /*HEADER*/
 header {
@@ -1131,6 +1128,13 @@ footer h5 {
     height: 300px;
 }
 
+.slider-background {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
 .slide {
     display: none;
     width: 100%;
@@ -1143,11 +1147,11 @@ footer h5 {
     object-fit: cover;
 }
 
-.prev, .next {
+#prev, #next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    color: black; /*cambiar a blanco cuando se vean las imagenes*/
+    color: black; /* Cambiar a blanco cuando se vean las imágenes */
     border: none;
     font-size: 24px;
     padding: 10px;
@@ -1155,16 +1159,16 @@ footer h5 {
     user-select: none;
 }
 
-.prev {
+#prev {
     left: 10px; /* Posiciona el botón de retroceso a la izquierda */
 }
 
-.next {
+#next {
     right: 10px; /* Posiciona el botón de avance a la derecha */
 }
 
-.prev:hover, .next:hover {
-    color: rgba(255, 255, 255, 0.7); 
+#prev:hover, #next:hover {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .post-content {
@@ -1308,6 +1312,48 @@ p {
     padding: 0 2rem; 
    
 }
+
+.range-slider {
+    position: relative;
+    width: 100%;
+}
+
+.range {
+    -webkit-appearance: none; /*le saca la apariencia predeterminada que tienen algunos navegadores*/
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    outline: none;
+    border-radius: 10px;
+}
+
+/*fijarse que hace esto*/
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #4CAF50;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.range-value {
+    /*display: flex;
+    justify-content: space-between;*/
+    margin-top: 10px;
+}
+
+.stars {
+    color: gold;
+}
+
+.num-categories {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
 
 /*STORE LOCATOR CSS*/
 
@@ -1562,6 +1608,152 @@ p {
     content: "\2796"; /*- en unicode*/
   }
 
+  /*section cards*/
+  .store-locator-store-cards{
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.store-locator-store-card{
+    background-color: white;
+    margin: 10px;
+    width: 100%;
+    max-width: 423px;
+    height: 350px;
+    overflow: hidden;
+    flex-direction: row;
+}
+
+.store-locator-store-card img{
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.store-locator-store-card-content{
+    padding: 20px;
+    width: 50%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sale-badge{
+    background-color: #cca47e;
+    color: white;
+    align-self: flex-start;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.store-locator-store-card-content h3{
+    margin: 0 0 10px 0;
+}
+
+.store-locator-store-card-content p{
+    margin: 0 0 20px 0;
+}
+
+.store-locator-store-card-content a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.location-button{
+    display: inline-block;
+    width: 80px;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+@media (max-width: 768px) {
+    .banner4-fotos {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner4-fotos {
+        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+    }
+}
+
+
+
+/* Ajustes para los store-locator-store-card */
+@media (max-width: 768px) {
+    .store-locator-store-card {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .store-locator-store-card img {
+        width: 100%;
+        height: 250px; /* Altura fija para la imagen */
+        object-fit: cover;
+    }
+
+    .store-locator-store-card-content {
+        width: 100%;
+        padding: 15px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sale-badge {
+        align-self: center;
+    }
+}
+
+/* Ajustes para features-shipping en pantallas pequeñas */
+@media (max-width: 768px) {
+    .features-shipping {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item-shipping {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .store-locator-store-card-content {
+        padding: 10px;
+    }
+
+    .features-shipping {
+        padding: 20px 10px;
+    }
+}
+
+
+.icon-grid{ 
+    justify-content: space-around;
+    width: 80%;
+}
+
+.icon-item img{
+    width: 100px;
+    height: 100px;
+    transition: opacity 0.3s ease;
+}
+
+.icon-item img:hover{
+    opacity: 0.5;
+}
+
+.five-icons-foot{
+    height: 50vh;
+    background-color: white;
+}
 
 /*CONTACT*/
 
@@ -1930,3 +2122,4 @@ address {
     width: 1px;
     background-color: #ccc;
 }
+
