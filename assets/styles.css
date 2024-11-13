@@ -1354,6 +1354,27 @@ p {
     font-weight: bold;
 }
 
+/*css de la card*/
+#gridShop{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 3px;
+    padding: 0 15px;
+    background-color: #ECECEC;
+}
+
+.cardShop{
+    padding: 15px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+.cardShop img{
+    width: 100%; 
+    height: auto;
+    margin: 0 auto 10px; 
+}
 
 /*STORE LOCATOR CSS*/
 
