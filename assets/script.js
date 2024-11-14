@@ -341,57 +341,35 @@ startAutomatizado();
 
 
 
-/*accordion store locator
+/*accordion store locator*/
+let botonAccordion = document.getElementById("btn-accordion")
 
-let acc = document.getElementsByClassName("accordion");
-let i;
-
-for (let i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    // cerrar todos los paneles
-    for (let j = 0; j < acc.length; j++) {
-      let panel = acc[j].nextElementSibling;
-      acc[j].classList.remove("active");
-      panel.style.maxHeight = null;
-    }
-
-    // activar el panel seleccionado
-    this.classList.toggle("active");
-    let panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null; // cerrar el panel si ya estaba abierto
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px"; // abrir el panel seleccionado
-    }
-  });
-} */
-
-  document.addEventListener("DOMContentLoaded", function() {
+function funAccordion() {
     let acc = document.getElementsByClassName("accordion");
 
-    // Asegurarse de que el evento se ejecute cuando el DOM esté listo
     for (let i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
-        console.log(this); // Verifica si el clic se ejecuta correctamente
+        acc[i].addEventListener("click", function() {
+            console.log("Accordion clicked:", this); 
 
-        // Cerrar todos los paneles
-        for (let j = 0; j < acc.length; j++) {
-          let panel = acc[j].nextElementSibling;
-          acc[j].classList.remove("active");
-          panel.style.maxHeight = null;
-        }
+            for (let j = 0; j < acc.length; j++) {
+                let panel = acc[j].nextElementSibling;
+                acc[j].classList.remove("active");
+                panel.style.maxHeight = null;
+            }
 
-        // Activar o desactivar el panel seleccionado
-        this.classList.toggle("active");
-        let panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null; // Cerrar el panel
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px"; // Abrir el panel
-        }
-      });
+            this.classList.toggle("active");
+            let panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
     }
-  });
+};
+
+botonAccordion.addEventListener("click", funAccordion);
+
   
 /*SLIDER CONTACT*/
 const sliderTexts = [
