@@ -55,6 +55,9 @@ p {
 }
 
 /* COLORES */
+.fondo-naranja {
+    background-color: #d39663;
+}
 .fondo-blanco {
     background-color: #ffffff;
 }
@@ -113,6 +116,14 @@ p {
 }
 .alignself-start{
     align-self: flex-start;
+}
+
+.alignitems-start {
+    align-items: flex-start
+}
+  
+.alignitems-end {
+    align-items: flex-end
 }
 .alignself-l{
     align-self: left;
@@ -595,7 +606,6 @@ nav a:hover {
 
 .card1, .card2, .card3{
     padding: 15px;
-    text-align: center;
     background-color: transparent;
     border: none;
     box-shadow: none;
@@ -622,7 +632,6 @@ nav a:hover {
 }
 
 .h4_seccion3 {
-    text-align: center;
     font-weight: 600;
     margin-bottom: 20px;
 }
@@ -637,7 +646,6 @@ nav a:hover {
 
 .card4 {
     padding: 15px;
-    text-align: center;
     background-color: transparent;
     border: none;
     box-shadow: none;
@@ -673,21 +681,12 @@ nav a:hover {
 
 .instagram-decor {
     grid-column: span 2; /*Hace que el texto ocupe el ancho de las 2 columnas */
-    background-color: white;
-    padding: 0.7rem; /* Espacio interno para el rectángulo */
-    text-align: center; 
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    display: grid;
+    padding: 0.7rem; /* Espacio interno para el rectángulo */ 
     margin-top: 3rem;
 
 }
 
 .instagram-decor p {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     font-size: 1rem;
 }
 #section6 img {
@@ -813,7 +812,6 @@ footer h5 {
     margin: 0 auto 10px;
 }
 .sidebar p {
-    text-align: center;
     font-size: 14px;
     color: #666;
 }
@@ -823,7 +821,6 @@ footer h5 {
     margin-top: 10px;
 }
 .sidebar .social-icons {
-    text-align: center;
     margin-top: 20px;
 }
 .sidebar .social-icons a {
@@ -1148,7 +1145,6 @@ footer h5 {
 }
 
 #prev, #next {
-    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     color: black; /* Cambiar a blanco cuando se vean las imágenes */
@@ -1171,15 +1167,6 @@ footer h5 {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.post-content {
-    padding: 20px;
-    text-align: center;
-}
-
-.post-meta {
-    color: #777;
-    font-size: 14px;
-}
 
 h2 {
     font-size: 2em;
@@ -1244,19 +1231,15 @@ p {
 /*store*/
 
 .container-store-locator {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 10px;
-    background-color: #f5f5f5;
     padding-right: 2rem;
     padding-left: 2rem ; 
 }
 
 .card-store-locator {
-    display: flex;
     flex-direction: column;
-    background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     height: 100%;
@@ -1270,20 +1253,16 @@ p {
     font-size: 1rem; /* Ajusta el tamaño del texto si es necesario */
 }
 .card-store-locator img {
-    width: 100%;
     height: 100%; /* Ajusta la altura para uniformidad */
 }
 
 .card-content-store-locator {
-    display: flex;
     flex-direction: column;
     padding: 15px;
     flex-grow: 1;
 }
 
 .card-content-store-locator h3 {
-    display: flex;
-    align-items: center;
     gap: 10px;
     font-size: 1.2em;
     color: #333;
@@ -1494,45 +1473,31 @@ p {
 }
 .store-locator-mapa {
     height: 70vh; /* Ocupa la altura total de la pantalla */
-    background-color: #f5f5f5;
     padding-top: 100px;
     max-width: 100vw;
-    position: relative; /* Hacer el contenedor relativo para posicionar elementos dentro */
 }
 
 .imagen-mapa-store-locator {
-    width: 100%;
     height: 100%;
     background: url("../assets/fotos/foto-mapa.jpg") no-repeat center center;
     background-size: contain; /* Ajusta la imagen para que se vea completa */
-    display: flex; /* Usar flexbox para alinear los elementos */
-    justify-content: center; /* Centra el contenido horizontalmente */
     align-items: flex-start; /* Coloca el texto en la parte superior */
     color: white; /* Asegura que el texto sea visible */
     padding: 10px;
     box-sizing: border-box; /* Para que el padding no aumente el tamaño total */
-    position: relative; /* Para posicionamiento de los hijos */
 }
 
 .imagen-mapa-store-locator p {
     width: 370px;
-    position: absolute; /* Coloca el texto en una posición específica */
     left: 50%;
     transform: translateX(-50%); /* Centra el texto horizontalmente */
     align-self: flex-end;
 }
 
 
-.div-btn-store {
-    background-color: #f5f5f5;
-    width: 100%; /* Opción para ocupar el ancho completo del contenedor */
-}
-
 .btn-store-locator {
-    background-color: white; 
     width: 50px;
     height: 50px;
-    color: black; /* Color del texto del botón */
     border: none; /* Sin borde */
     border-radius: 50%; /* Bordes redondeados */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
@@ -1749,81 +1714,12 @@ p {
     text-decoration: none;
 }
 
-
-
-@media (max-width: 768px) {
-    .banner4-fotos {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
-    }
-}
-
-@media (max-width: 480px) {
-    .banner4-fotos {
-        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
-    }
-}
-
-
-
-/* Ajustes para los store-locator-store-card */
-@media (max-width: 768px) {
-    .store-locator-store-card {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .store-locator-store-card img {
-        width: 100%;
-        height: 250px; /* Altura fija para la imagen */
-        object-fit: cover;
-    }
-
-    .store-locator-store-card-content {
-        width: 100%;
-        padding: 15px;
-        align-items: center;
-        text-align: center;
-    }
-
-    .sale-badge {
-        align-self: center;
-    }
-}
-
-/* Ajustes para features-shipping en pantallas pequeñas */
-@media (max-width: 768px) {
-    .features-shipping {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .feature-item-shipping {
-        width: 100%;
-        max-width: 300px;
-        margin-bottom: 20px;
-    }
-}
-
-/* Ajustes adicionales para pantallas muy pequeñas */
-@media (max-width: 480px) {
-    .store-locator-store-card-content {
-        padding: 10px;
-    }
-
-    .features-shipping {
-        padding: 20px 10px;
-    }
-}
-
-
 .icon-grid{ 
-    justify-content: space-around;
     width: 80%;
 }
 
 .icon-item img{
-    width: 100px;
-    height: 100px;
+    height: 100%;
     transition: opacity 0.3s ease;
 }
 
@@ -1833,8 +1729,27 @@ p {
 
 .five-icons-foot{
     height: 50vh;
-    background-color: white;
 }
+  
+.features-shipping {
+    height: 100%;
+    padding: 50px 10% 50px 10%;
+}
+.feature-item-shipping {
+    width: 26%;
+    text-align: center;
+    padding: 50px;
+    box-sizing: border-box; 
+}
+
+.feature-item-shipping i {
+    margin-bottom: 20px;
+}
+
+.feature-item-shipping h3 {
+    margin-bottom: 10px;
+}
+
 
 /*CONTACT*/
 
@@ -1845,9 +1760,6 @@ p {
 }
 
 .banner-contact-texto {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
     padding-left: 6rem; 
     padding-top: 11rem;
 }
@@ -1865,38 +1777,9 @@ p {
     margin-top: 0.5rem;
     font-weight: 500;
 }
-  
-.features-shipping {
-    height: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 50px 10% 50px 10%;
-    background-color: #F6F6F6;
-}
-.feature-item-shipping {
-    width: 26%;
-    text-align: center;
-    padding: 50px;
-    box-sizing: border-box; 
-}
-
-.feature-item-shipping i {
-    margin-bottom: 20px;
-}
-
-.feature-item-shipping h3 {
-    margin-bottom: 10px;
-}
 
 .container-contact {
     min-height: 300px; /* Ajusta el valor según sea necesario */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.article-section1 {
-    text-align: center;
 }
 
 .h4, .section1-contact-h2 {
@@ -1905,11 +1788,8 @@ p {
 
 .card-container-contact {
     /*display: flex;*/
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
-    flex-wrap: wrap;
-    gap: 1.563rem;
-    justify-content: center;
+    gap: 1.5rem;
     padding-right: 1em;
     padding-left: 3em;
     padding-bottom: 12em;
@@ -1917,34 +1797,22 @@ p {
 }
 
 .card-contact {
-    position: relative;
     width: 18rem;
     height: 25rem;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
     overflow: hidden;
 }
 
 .card-image-contact {
-    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
     object-fit: cover;
     z-index: 1;
 }
 
 .card-info-contact {
-    position: absolute;
     bottom: 0;
     right: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: white;
     padding: 1.25rem;
     width: 68%;
     height: 12rem;
@@ -2014,7 +1882,6 @@ address {
 }
 
 .image-sec4-contact img {
-    width: 100%;
     height: auto;
     object-fit: cover;
 }
@@ -2048,11 +1915,9 @@ address {
 
 .sec6-contact {
     padding: 50px;
-    text-align: center;
     background-image: url("../assets/fotos/furniture-collection1.webp");
     background-blend-mode: overlay;
     opacity: 0.8;
-    background: #d39763;
 }
 
 .sec6-header h2 {
@@ -2080,9 +1945,7 @@ address {
 }
 
 .sec6-content {
-    justify-content: center;
     gap: 2em;
-    background-color: #fff;
     width: 80%;
 }
 
@@ -2097,17 +1960,11 @@ address {
     display: block;
 }
 
-.video {
-    position: relative;
-}
-
 .play-button {
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 2rem;
-    color: #fff;
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
     border-radius: 50%;
@@ -2117,8 +1974,6 @@ address {
 .contact-form {
     width: 300px;
     padding: 20px;
-    background-color: #1e1e1e;
-    color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -2132,20 +1987,14 @@ address {
 }
 
 .contact-form input{
-    width: 100%;
     padding: 10px;
     margin: 5px 0;
-    background: #333;
     border: none;
-    color: #fff;
     font-size: 1rem;
 }
 
 .contact-form button {
-    width: 100%;
     padding: 10px;
-    background: #fff;
-    color: #1e1e1e;
     font-size: 1rem;
     border: none;
     cursor: pointer;
@@ -2173,12 +2022,9 @@ address {
 
 .sec7-contact p {
     font-size: 14px;
-    color: #666;
 }
   
 .shop-btn {
-    background-color: #000;
-    color: #fff;
     border: none;
     padding: 10px 20px;
     font-size: 14px;
@@ -2191,16 +2037,14 @@ address {
   
 .sec7-contact article:first-child {
     padding-right: 20px;
-    position: relative;
 }
   
 .sec7-contact article:first-child::after {
     content: "";
-    position: absolute;
     right: 0;
     top: 0;
     bottom: 0;
     width: 1px;
-    background-color: #ccc;
+    position: absolute;
 }
 
