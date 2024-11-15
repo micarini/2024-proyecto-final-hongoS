@@ -53,6 +53,12 @@ p {
 .wrap{
     flex-wrap: wrap;
 }
+.block{
+    display: block;
+}
+.inlineblock{
+    display: inline-block;
+}
 
 /* COLORES */
 .fondo-naranja {
@@ -76,7 +82,6 @@ p {
 .txtgris{
     color: #999999
 }
-
 .txtblanco {
     color: #ffffff;
 }
@@ -91,10 +96,6 @@ p {
 }
 
 /* CLASES UTILES ALINEACIONES */
-.align-c {
-    align-items: center;
-}
-
 .txt-c {
     text-align: center;
 }
@@ -114,24 +115,24 @@ p {
 .sb {
     justify-content: space-between;
 }
+.flex-start{
+    justify-content: flex-start;
+}
 .alignself-start{
     align-self: flex-start;
 }
-
+.align-c {
+    align-items: center;
+}
 .alignitems-start {
     align-items: flex-start
-}
-  
+} 
 .alignitems-end {
     align-items: flex-end
 }
 .alignself-l{
     align-self: left;
 }
-.flex-start{
-    justify-content: flex-start;
-}
-
 .relative {
     position: relative;
 }
@@ -139,12 +140,15 @@ p {
     position: absolute;
 }
 
-/* CLASES UTILES WIDTH */
+/* CLASES UTILES WIDTH Y HEIGHT */
 .w20 {
     width: 20%;
 }
 .w30 {
     width: 30%;
+}
+.w50 {
+    width: 50%;
 }
 .w80 {
     width: 80%;
@@ -155,7 +159,12 @@ p {
 .w90{
     width: 90%;
 }
-
+.hauto{
+    height: auto;
+}
+.h100{
+    height: 100%;
+}
 /* CLASES UTILES PADDING MARGIN GAP*/
 .padding0{
     padding: 0;
@@ -169,21 +178,21 @@ p {
 .padbot25{
     padding-bottom: 2.5em;
 }
-
 .padding5{
     padding: 5em;
 }
-
 .margin-l5{
     margin-left: 5%;
 }
 .margin0{
     margin: 0;
 }
+.mauto{
+    margin: auto;
+}
 .margin-r5{
     margin-right: 5%;
 }
-
 .gap15{
     gap: 15px;
 }
@@ -200,18 +209,25 @@ p {
     text-decoration: none;
     text-transform: none;
 }
-
 .no-list-style{
     list-style: none;
 }
-
 .underline{
     text-decoration: underline;
 }
-
 .borde {
     border: 1px solid #e6e6e6;
 }
+.noborder {
+    border: none;
+}
+.borderbox{
+    box-sizing: border-box;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+
 /*SIZE EM O REM*/
 .em075{
     font-size: 0.75em;
@@ -231,18 +247,15 @@ p {
 .em4{
     font-size: 4em;
 }
-
 .em06 {
     font-size: 0.6em;
 }
-
 .em08 {
     font-size: 0.8em;
 }
 .rem1{
     font-size: 1rem;
 }
-
 .lh2{
     line-height: 2em;
 }
@@ -269,13 +282,14 @@ p {
 .norepeat {
     background-repeat: no-repeat;
 }
-
 .cover{
     background-size: cover;
 }
-
 .bgcenter{
     background-position: center;
+}
+.objectcover{
+    object-fit: cover;
 }
 
 /*HEADER*/
@@ -611,16 +625,16 @@ nav a:hover {
     box-shadow: none;
 }
 .card1 img, .card2 img, .card3 img {
-    width: 100%; /* Increase image size */
+    width: 100%; 
     height: auto;
-    margin: 0 auto 10px; /* Center the image and add space below */
+    margin: 0 auto 10px; 
     border-radius: 10px; 
 }
 
 .titulo {
     font-size: 14px;
     margin: 10px 0;
-    font-weight: 500; /* Lighter font weight */
+    font-weight: 500; 
     letter-spacing: 0px;
 }
 
@@ -652,9 +666,9 @@ nav a:hover {
 }
 
 .card4 img {
-    width: 100%; /* Increase image size */
+    width: 100%; 
     height: auto;
-    margin: 0 auto 10px; /* Center the image and add space below */
+    margin: 0 auto 10px; 
     border-radius: 10px; 
 }
 
@@ -767,7 +781,7 @@ footer h5 {
     width: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 5em;
-    background-color: #f0f0f0; /* Fondo gris */
+    background-color: #f0f0f0; 
 }
 
 .search-form {
@@ -1827,7 +1841,6 @@ p {
 
 .country-name-contact {
     font-size: 0.813rem;
-    text-transform: uppercase;
     padding-bottom: 0.800rem;
 }
 
@@ -1838,25 +1851,6 @@ p {
 
 .adress-container-contact {
     padding-bottom: 40px;
-}
-
-address {
-    font-style: normal;
-    font-size: 0.875rem;
-    color: #333;
-    border-top: 1px solid #e0e0e0;
-    padding-top: 0.600em;
-}
-
-.overlay {
-    position: relative;
-    text-align: center;
-    background-image: url('./pictures/playa.jpeg');
-    background-size: cover;
-    background-position: center;
-    padding: 5rem 0;
-    color: white;
-    height: 37.5rem;
 }
 
 .sec3-contact{
@@ -1877,25 +1871,10 @@ address {
     gap: 2em;
 }
 
-.image-sec4-contact {
-    width: 50%; 
-}
-
-.image-sec4-contact img {
-    height: auto;
-    object-fit: cover;
-}
-
-.slider-sec4-contact {
-    width: 50%; 
-    margin: auto;
-}
-
 .sec5-contact {
     margin: 10%;
     padding: 1em;
     gap: 12em;
-    box-sizing: border-box;
 }
 
 .text-contact {
@@ -1915,14 +1894,14 @@ address {
 
 .sec6-contact {
     padding: 50px;
-    background-image: url("../assets/fotos/furniture-collection1.webp");
+    background-image: url("../assets/fotos/pareja.jpg");
     background-blend-mode: overlay;
     opacity: 0.8;
+    gap: 2em;
 }
 
 .sec6-header h2 {
     font-size: 7em;
-    display: inline-block;
     margin: 5%;
 }
 
@@ -1944,21 +1923,15 @@ address {
     right: -30px;
 }
 
-.sec6-content {
-    gap: 2em;
-    width: 80%;
+.article-img {
+    width: 30%;
 }
-
-.article-item {
-    width: 30em;
-    max-width: 30em;
-}
-
+/*
 .article-item img, .video iframe {
     width: 30%;
     height: auto;
     display: block;
-}
+} */
 
 .play-button {
     top: 50%;
@@ -1989,14 +1962,12 @@ address {
 .contact-form input{
     padding: 10px;
     margin: 5px 0;
-    border: none;
     font-size: 1rem;
 }
 
 .contact-form button {
     padding: 10px;
     font-size: 1rem;
-    border: none;
     cursor: pointer;
 }
 
@@ -2048,3 +2019,7 @@ address {
     position: absolute;
 }
 
+.product-image{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}

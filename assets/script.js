@@ -276,7 +276,7 @@ for (let i = 0; i < productosShop.length; i++) {
     });
 }
 
-/*SLIDER BLOG*/
+/*SLIDER BLOG
 const sliderBlog = [
     '../assets/fotos/blog-slider-1.webp',
     '../assets/fotos/blog-slider-2.webp',
@@ -335,7 +335,45 @@ function pauseAutomatizado() {
 }
 
 // Inicia la automatización al cargar la página
-startAutomatizado();
+startAutomatizado(); */
+const sliderBlog = document.getElementById("contenedorSlider");
+        const botonIzquierdo = document.createElement("button");
+        botonIzquierdo.textContent = ">";
+        const botonDerecho = document.createElement("button");
+        botonDerecho.textContent = "<";
+        botonDerecho.setAttribute("class", "boton");
+        botonIzquierdo.classList = "boton";
+
+        contenedorSlider.appendChild(botonIzquierdo);
+        contenedorSlider.appendChild(botonDerecho);
+
+        const miArrayImg = [
+            'https://picsum.photos/1920/1200?random=1', 
+            'https://picsum.photos/1920/1200?random=2', 
+            'https://picsum.photos/1920/1200?random=3'
+        ];
+
+        let i = 0;
+
+        function updateImg() {
+            contenedorSlider.style.backgroundImage = `url(${miArrayImg[i]})`;
+        }
+
+        function nextImg() {
+            i = (i + 1) % miArrayImg.length;
+            updateImg();
+        }
+
+        function prevImg() {
+            i = (i - 1 + miArrayImg.length) % miArrayImg.length;
+            updateImg();
+        }
+
+        botonIzquierdo.addEventListener('click', prevImg);
+        botonDerecho.addEventListener('click', nextImg);
+
+        // Inicializar con la primera imagen
+        updateImg();
 
 
 
