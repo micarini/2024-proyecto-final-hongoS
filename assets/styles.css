@@ -150,17 +150,23 @@ p {
 .w30 {
     width: 30%;
 }
+.w40 {
+    width: 40%;
+}
 .w50 {
     width: 50%;
+}
+.w60 {
+    width: 60%;
 }
 .w80 {
     width: 80%;
 }
-.w100 {
-    width: 100%;
-}
 .w90{
     width: 90%;
+}
+.w100 {
+    width: 100%;
 }
 .hauto{
     height: auto;
@@ -230,6 +236,9 @@ p {
 .uppercase{
     text-transform: uppercase;
 }
+.sourcesans{
+    font-family: "Source Sans Pro", sans-serif;
+}
 
 /*SIZE EM O REM*/
 .em075{
@@ -243,6 +252,9 @@ p {
 }
 .em15{
     font-size: 1.5em;
+}
+.em18{
+    font-size: 1.8em;
 }
 .em2{
     font-size: 2em;
@@ -1672,46 +1684,41 @@ p {
 .store-locator-store-cards{
     justify-content: center;
     align-items: flex-start;
-    padding: 20px;
 }
 
 .store-locator-store-card{
     background-color: white;
     margin: 10px;
-    width: 100%;
-    max-width: 423px;
-    height: 350px;
+    max-width: 42em;
+    height: 35em;
     overflow: hidden;
-    flex-direction: row;
 }
 
 .store-locator-store-card img{
-    width: 50%;
     height: 100%;
-    object-fit: cover;
 }
 
 .store-locator-store-card-content{
     padding: 20px;
-    width: 50%;
-    justify-content: center;
-    flex-direction: column;
+    gap: 2em;
 }
 
 .sale-badge{
-    background-color: #d39663;
-    color: white;
     align-self: flex-start;
-    padding: 5px 10px;
-    margin-bottom: 5em;
+    padding: 8px 15px;
+    margin-bottom: 2em;
 }
 
 .location-button{
     display: inline-block;
-    width: 80px;
-    border: 1px solid #000;
-    text-align: center;
-    text-decoration: none;
+    width: 8em;
+    border: 2px solid #000;
+    padding: 6px 13px;
+}
+.location-button:hover{
+    color: #ffffff;
+    background-color: #000;
+    transition: 0.3s ease;
 }
 
 .icon-grid{ 
@@ -1729,6 +1736,7 @@ p {
 
 .five-icons-foot{
     height: 50vh;
+    margin-top: 15em;
 }
   
 .features-shipping {
