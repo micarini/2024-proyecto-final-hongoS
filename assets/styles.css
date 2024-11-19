@@ -80,13 +80,16 @@ p {
     color: #1c1c1c;
 }
 .txtgris{
-    color: #999999
+    color: #999999;
 }
 .txtblanco {
     color: #ffffff;
 }
 .txtgrisb {
     color: #b7b7b7;
+}
+.txtgrisc {
+    color: #333;
 }
 .txtnaranja{
     color: #d39663
@@ -1277,9 +1280,6 @@ p {
 }
 
 .card-content-store-locator h3 {
-    gap: 10px;
-    font-size: 1.2em;
-    color: #333;
     margin-bottom: 10px;
 }
 
@@ -1413,7 +1413,7 @@ p {
 .breadcrumb {
     font-size: 0.6rem;
     color: #888;
-    font-weight: 200;
+    font-weight: 300;
     grid-column: 1 / 3; 
     padding-left: 7rem;
     padding-top: 1.2em;
@@ -1533,7 +1533,7 @@ p {
 }
 
 .store-locator-stores .p2 {
-    padding-left: 25%;
+    padding-left: 20%;
 }
 
 .left-number-locator, .right-text-locator{
@@ -1668,8 +1668,8 @@ p {
     line-height: 1.6;
 }
 
-  /*section cards*/
-  .store-locator-store-cards{
+/*section cards*/
+.store-locator-store-cards{
     justify-content: center;
     align-items: flex-start;
     padding: 20px;
@@ -1699,25 +1699,11 @@ p {
 }
 
 .sale-badge{
-    background-color: #cca47e;
+    background-color: #d39663;
     color: white;
     align-self: flex-start;
     padding: 5px 10px;
-    border-radius: 3px;
-    margin-bottom: 10px;
-}
-
-.store-locator-store-card-content h3{
-    margin: 0 0 10px 0;
-}
-
-.store-locator-store-card-content p{
-    margin: 0 0 20px 0;
-}
-
-.store-locator-store-card-content a{
-    text-decoration: none;
-    font-weight: bold;
+    margin-bottom: 5em;
 }
 
 .location-button{
@@ -1750,10 +1736,11 @@ p {
     padding: 50px 10% 50px 10%;
 }
 .feature-item-shipping {
-    width: 26%;
+    width: 30%;
     text-align: center;
-    padding: 50px;
+    padding: 3em;
     box-sizing: border-box; 
+    margin-bottom: 15em;
 }
 
 .feature-item-shipping i {
