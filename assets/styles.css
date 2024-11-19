@@ -259,6 +259,9 @@ p {
 .em2{
     font-size: 2em;
 }
+.em3{
+    font-size: 3em;
+}
 .em4{
     font-size: 4em;
 }
@@ -1788,11 +1791,12 @@ p {
 }
 
 .container-contact {
-    min-height: 300px; /* Ajusta el valor según sea necesario */
+    min-height: 300px; 
 }
 
-.h4, .section1-contact-h2 {
-    margin: 0; /* Esto elimina márgenes innecesarios que puedan afectar el alineamiento */
+.section1-contact-h2{
+    justify-content: center;
+    align-items: center;
 }
 
 .card-container-contact {
