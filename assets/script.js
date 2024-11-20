@@ -4,6 +4,7 @@
 //boton.onclick addeventlist etcetc
 
 //1
+if(document.getElementById("section3")){
 let seccion3 = document.querySelector("#section3");
 
 // Función para crear una galería y agregarla al DOM
@@ -111,10 +112,13 @@ document.getElementById("boton3").addEventListener("click", function () {
 // Ocultar todas las galerías al inicio excepto la primera
 mostrarGaleria("grid1");
 
+}
 
 /*GALERIA 2 HOME*/
 
 //guardo el body en una variable
+
+if(document.getElementById("section5")){
 const seccion5 = document.querySelector("#section5");
 
 let h4_seccion5 = document.createElement("h4");
@@ -177,51 +181,51 @@ for (let i = 0; i < productos4.length; i++) {
         img.setAttribute("src", productos4[i].img);
     });
 }
-
+}
 
 /*SLIDER HOME*/
-const sliderContent = ['../assets/fotos/furniture-collection1.webp', '../assets/fotos/furniture-collection2.jpg', '../assets/fotos/furniture-collection3.jpg'];
+if (document.getElementById("slider")) {
+    const sliderContent = [
+        'assets/fotos/furniture-collection1.webp',
+        'assets/fotos/furniture-collection2.jpg',
+        'assets/fotos/furniture-collection3.jpg'
+    ];
 
-/* CONSIGNA: Escribir el código necesario para que al hacer click en su respectivo botón se circule la imagen de fondo del tag <main> con id "slider-background". Para esto deberán asignar eventos a los botones de la forma que prefieran, crear una función para iterar sobre el array "sliderContent" (si el usuario hace click para una dirección pero está en la posición final del array, la función deberá volver al primer item y viceversa) y editar el la propiedad "background-image" de nuestro <main> con id "slider-background" */
+    let currentIndex = 0;
+    const foto = document.getElementById('slider'); // Corrige la selección del elemento
 
+    // Función para actualizar la imagen de fondo
+    function updateSlider() {
+        foto.style.backgroundImage = `url(${sliderContent[currentIndex]})`;
+    }
 
-let currentIndex = 0;
-const foto = document.getElementById('#slider');
-
-//funcion para actualizar la img de fondo
-function updateSlider() {
-    foto.style.backgroundImage = `url(${sliderContent[currentIndex]})`;
-}
-
-//inicializa al cargar la pagina
-updateSlider();
-
-// para ir a la imagen 01
-function goToImage01() {
-    currentIndex = 0;
+    // Inicializa el fondo al cargar la página
     updateSlider();
-}
 
-// para ir a la imagen 02
-function goToImage02() {
-    currentIndex = 1;
-    updateSlider();
-}
+    // Funciones para cambiar las imágenes
+    function goToImage01() {
+        currentIndex = 0;
+        updateSlider();
+    }
 
-// para ir a la imagen 03
-function goToImage03() {
-    currentIndex = 2;
-    updateSlider();
-}
+    function goToImage02() {
+        currentIndex = 1;
+        updateSlider();
+    }
 
-// botones
-document.getElementById('01-button').addEventListener("click", goToImage01());
-document.getElementById('02-button').addEventListener("click", goToImage02());
-document.getElementById('03-button').addEventListener("click", goToImage03());
+    function goToImage03() {
+        currentIndex = 2;
+        updateSlider();
+    }
+
+    // Asignar eventos a los botones
+    document.getElementById('01-button').addEventListener("click", goToImage01);
+    document.getElementById('02-button').addEventListener("click", goToImage02);
+    document.getElementById('03-button').addEventListener("click", goToImage03);
+}
 
 /*GALERIA SHOP CONTAINER */
-
-//guardo el body en una variable
+if(document.getElementById("shop-container")){
 const shopContainer = document.querySelector("#shop-container");
 
 let gridShop = document.createElement("div");
@@ -242,7 +246,6 @@ let productosShop = [
 //ahora tengo que crear la card y que esta se replique 16 veces
 //voy a hacer un for para meter adentro de esa card un titulo y una imagen
 
-let cardShop;
 for (let i = 0; i < productosShop.length; i++) {
     cardShop = document.createElement("div"); 
     cardShop.setAttribute("class", "cardShop"); 
@@ -261,28 +264,21 @@ for (let i = 0; i < productosShop.length; i++) {
 
     cardShop.appendChild(img);
     cardShop.appendChild(titulo);
-    cardShop.appendChild(precio)
+    cardShop.appendChild(precio);
 
-    gridShop.appendChild(cardShop); 
+    gridShop.appendChild(cardShop);
 
-    //Evento mouseover para cambiar la imagen
-    img.addEventListener("mouseover", function () {
+    // Evento mouseover para cambiar la imagen
+    img.addEventListener("mouseover", () => {
         img.setAttribute("src", productosShop[i].imgHover);
     });
 
     // Evento mouseout para restaurar la imagen original
-    img.addEventListener("mouseout", function () {
+    img.addEventListener("mouseout", () => {
         img.setAttribute("src", productosShop[i].img);
     });
-
-
 }
-console.log(gridShop);
-console.log(cardShop);
-console.log("Producto:", productosShop[i]);
-console.log("Producto:", productosShop[i]);
-
-
+}
 /*SLIDER BLOG
 const sliderBlog = [
     '../assets/fotos/blog-slider-1.webp',
@@ -343,6 +339,7 @@ function pauseAutomatizado() {
 
 // Inicia la automatización al cargar la página
 startAutomatizado(); */
+if(document.getElementById("contenedorSlider")){
 const sliderBlog = document.getElementById("contenedorSlider");
         const botonIzquierdo = document.createElement("button");
         botonIzquierdo.textContent = ">";
@@ -351,8 +348,8 @@ const sliderBlog = document.getElementById("contenedorSlider");
         botonDerecho.setAttribute("class", "boton");
         botonIzquierdo.classList = "boton";
 
-        contenedorSlider.appendChild(botonIzquierdo);
-        contenedorSlider.appendChild(botonDerecho);
+        sliderBlog.appendChild(botonIzquierdo);
+        sliderBlog.appendChild(botonDerecho);
 
         const miArrayImg = [
             'https://picsum.photos/1920/1200?random=1', 
@@ -363,7 +360,7 @@ const sliderBlog = document.getElementById("contenedorSlider");
         let i = 0;
 
         function updateImg() {
-            contenedorSlider.style.backgroundImage = `url(${miArrayImg[i]})`;
+            sliderBlog.style.backgroundImage = `url(${miArrayImg[i]})`;
         }
 
         function nextImg() {
@@ -383,40 +380,51 @@ const sliderBlog = document.getElementById("contenedorSlider");
         updateImg();
 
 
-
+    }
 
 
 /*accordion store locator*/
-let botonAccordion = document.getElementById("btn-accordion")
+let acc = document.getElementsByClassName("accordion");
 
 function funAccordion() {
-    let acc = document.getElementsByClassName("accordion");
+  // Contenidos para los paneles, definidos en JS (si los necesitas más adelante)
+  const panelContents = [
+    "Contenido del panel 1: información detallada.",
+    "Contenido del panel 2: más información interesante.",
+    "Contenido del panel 3: datos adicionales sobre este acordeón."
+  ];
 
-    for (let i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            console.log("Accordion clicked:", this); 
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      console.log("Accordion clicked:", this);
 
-            for (let j = 0; j < acc.length; j++) {
-                let panel = acc[j].nextElementSibling;
-                acc[j].classList.remove("active");
-                panel.style.maxHeight = null;
-            }
+      // Verifica si el acordeón clicado ya estaba activo
+      const isActive = this.classList.contains("active");
 
-            this.classList.toggle("active");
-            let panel = this.nextElementSibling;
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            }
-        });
-    }
-};
+      // Cierra todos los paneles
+      for (let j = 0; j < acc.length; j++) {
+        let panel = acc[j].nextElementSibling;
+        acc[j].classList.remove("active");
+        panel.style.maxHeight = "0"; // Cerrar todos los paneles
+      }
 
-botonAccordion.addEventListener("click", funAccordion);
+      // Si no estaba activo, abrir este y agregar su contenido
+      if (!isActive) {
+        this.classList.add("active");
+        let panel = this.nextElementSibling;
+        panel.style.maxHeight = panel.scrollHeight + "px"; // Abrir panel
+      }
+    });
+  }
+}
+
+// Llama la función para asignar los eventos de clic
+funAccordion();
+
 
   
 /*SLIDER CONTACT*/
+// Datos del slider
 const sliderTexts = [
     {
         number: "01",
@@ -441,15 +449,21 @@ const sliderTexts = [
     }
 ];
 
+// Inicializa el índice actual
 let currentInd = 0;
+
+// Referencias a los elementos del slider
 const slideNumber = document.getElementById('slide-number');
 const slideSubtitle = document.getElementById('slide-subtitle');
 const slideTitle = document.getElementById('slide-title');
 const slideContent = document.getElementById('slide-content');
 const slideButton = document.getElementById('slide-button');
-let auto3s;
 
-function updateContent() { //para actualizar el texto
+// Referencia al contenedor del slider para manejar el hover
+const sliderContainer = document.getElementById('slider-sec4');
+
+// Función para actualizar el contenido del slider
+function updateContent() {
     const currentText = sliderTexts[currentInd];
     slideNumber.textContent = currentText.number;
     slideSubtitle.textContent = currentText.subtitle;
@@ -458,9 +472,10 @@ function updateContent() { //para actualizar el texto
     slideButton.textContent = currentText.buttonText;
 }
 
-updateContent(); // inicializa texto al cargar la página
+// Inicializa el contenido del slider al cargar la página
+updateContent();
 
-
+// Función para ir al slide anterior
 function anterior() {
     currentInd--;
     if (currentInd < 0) {
@@ -469,7 +484,7 @@ function anterior() {
     updateContent();
 }
 
-
+// Función para ir al siguiente slide
 function posterior() {
     currentInd++;
     if (currentInd >= sliderTexts.length) {
@@ -482,10 +497,21 @@ function posterior() {
 document.getElementById('prev').addEventListener("click", anterior);
 document.getElementById('next').addEventListener("click", posterior);
 
-// Intervalo para que la imagen cambie sola cada 5 segundos
+// Intervalo para que el slider cambie automáticamente cada 3 segundos
+let auto3s;
 function startAuto() {
-    auto3s = setInterval(posterior, 3000); // 5000 ms son 5 segundos
+    auto3s = setInterval(posterior, 3000); // 3000 ms son 3 segundos
 }
 
 // Inicia la automatización al cargar la página
 startAuto();
+
+// Detiene el intervalo cuando el mouse pasa sobre el slider
+sliderContainer.addEventListener("mouseenter", () => {
+    clearInterval(auto3s);
+});
+
+// Reinicia el intervalo cuando el mouse sale del slider
+sliderContainer.addEventListener("mouseleave", () => {
+    startAuto();
+});
