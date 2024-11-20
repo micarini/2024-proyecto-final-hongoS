@@ -4,6 +4,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+    list-style-type: none;
 }
 
 img {
@@ -96,6 +100,9 @@ p {
 }
 .inherit{
     color: inherit;
+}
+.bordeblanco {
+    border: 3px solid white;
 }
 
 /* CLASES UTILES ALINEACIONES */
