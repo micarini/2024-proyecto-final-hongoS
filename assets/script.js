@@ -44,7 +44,7 @@ function crearGaleria(productos, gridId) {
     }
 
     // Agregar el grid a la sección
-    seccion3.appendChild(grid);
+ seccion3.appendChild(grid)
 }
 
 // Datos de productos
@@ -219,7 +219,7 @@ document.getElementById('01-button').addEventListener("click", goToImage01());
 document.getElementById('02-button').addEventListener("click", goToImage02());
 document.getElementById('03-button').addEventListener("click", goToImage03());
 
-/* GALERIA SHOP CONTAINER */
+/*GALERIA SHOP CONTAINER */
 
 //guardo el body en una variable
 const shopContainer = document.querySelector("#shop-container");
@@ -229,14 +229,14 @@ gridShop.setAttribute("id", "gridShop");
 shopContainer.appendChild(gridShop);
 
 let productosShop = [
-    { titulo: "Zinnia Lamp", precio: "£150.00", img: "../assets/fotos/foto1-galeria2.webp", imgHover: "../assets/fotos/foto1-galeria2-imghover.webp" },
-    { titulo: "Black Wood Lamp", precio: "£2500.00", img: "../assets/fotos/foto2-galeria2.webp", imgHover: "../assets/fotos/foto2-galeria2-imghover.webp" },
-    { titulo: "White Metal Lamp", precio: "£150.00", img: "../assets/fotos/foto3-galeria2.webp", imgHover: "../assets/fotos/foto3-galeria2-imghover.webp" },
-    { titulo: "Brown Crystal Vase", precio: "£250.00", img: "../assets/fotos/foto4-galeria2.webp", imgHover: "../assets/fotos/foto4-galeria2-imghover.webp" },
-    { titulo: "Aether Vase", precio: "£600.00", img: "../assets/fotos/foto5-galeria2.webp", imgHover: "../assets/fotos/foto5-galeria2-imghover.webp" },
-    { titulo: "Antic Brown Vase", precio: "£480.00", img: "../assets/fotos/foto6-galeria2.webp", imgHover: "../assets/fotos/foto6-galeria2-imghover.webp" },
-    { titulo: "Harrington Style Stool", precio: "£320.00", img: "../assets/fotos/foto7-galeria2.webp", imgHover: "../assets/fotos/foto7-galeria2-imghover.webp" },
-    { titulo: "Fabric Table Lamp", precio: "£600.00", img: "../assets/fotos/foto8-galeria2.webp", imgHover: "../assets/fotos/foto8-galeria2-imghover.webp" }
+    { titulo: "Zinnia Lamp", precio: "£150.00", img: "assets/fotos/foto1-galeria2.webp", imgHover: "assets/fotos/foto1-galeria2-imghover.webp" },
+    { titulo: "Black Wood Lamp", precio: "£2500.00", img: "assets/fotos/foto2-galeria2.webp", imgHover: "assets/fotos/foto2-galeria2-imghover.webp" },
+    { titulo: "White Metal Lamp", precio: "£150.00", img: "assets/fotos/foto3-galeria2.webp", imgHover: "assets/fotos/foto3-galeria2-imghover.webp" },
+    { titulo: "Brown Crystal Vase", precio: "£250.00", img: "assets/fotos/foto4-galeria2.webp", imgHover: "assets/fotos/foto4-galeria2-imghover.webp" },
+    { titulo: "Aether Vase", precio: "£600.00", img: "assets/fotos/foto5-galeria2.webp", imgHover: "assets/fotos/foto5-galeria2-imghover.webp" },
+    { titulo: "Antic Brown Vase", precio: "£480.00", img: "assets/fotos/foto6-galeria2.webp", imgHover: "assets/fotos/foto6-galeria2-imghover.webp" },
+    { titulo: "Harrington Style Stool", precio: "£320.00", img: "assets/fotos/foto7-galeria2.webp", imgHover: "assets/fotos/foto7-galeria2-imghover.webp" },
+    { titulo: "Fabric Table Lamp", precio: "£600.00", img: "assets/fotos/foto8-galeria2.webp", imgHover: "assets/fotos/foto8-galeria2-imghover.webp" }
 ];
 
 //ahora tengo que crear la card y que esta se replique 16 veces
@@ -274,7 +274,14 @@ for (let i = 0; i < productosShop.length; i++) {
     img.addEventListener("mouseout", function () {
         img.setAttribute("src", productosShop[i].img);
     });
+
+
 }
+console.log(gridShop);
+console.log(cardShop);
+console.log("Producto:", productosShop[i]);
+console.log("Producto:", productosShop[i]);
+
 
 /*SLIDER BLOG
 const sliderBlog = [

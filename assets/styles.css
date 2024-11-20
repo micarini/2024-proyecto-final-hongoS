@@ -143,6 +143,9 @@ p {
     position: absolute;
 }
 
+.justify-l {
+    justify-content: left;
+}
 /* CLASES UTILES WIDTH Y HEIGHT */
 .w20 {
     width: 20%;
@@ -196,6 +199,10 @@ p {
 .margin0{
     margin: 0;
 }
+
+.marginbot4em {
+    margin-bottom: 4em;
+}
 .mauto{
     margin: auto;
 }
@@ -239,7 +246,9 @@ p {
 .sourcesans{
     font-family: "Source Sans Pro", sans-serif;
 }
-
+.cursorp {
+    cursor: pointer;
+}
 /*SIZE EM O REM*/
 .em075{
     font-size: 0.75em;
@@ -734,9 +743,7 @@ footer {
 
 footer a {
     color: #999999;
-    text-decoration: none;
     transition: color 0.3s ease;
-    justify-content: left;
     line-height: 2.5em;
 }
 
@@ -781,8 +788,6 @@ footer h5 {
     padding-right: 1em;
     background-color: #333;
     color: #999999;
-    border: none;
-    cursor: pointer;
     transition: background-color 0.3s;
 }
 
@@ -934,14 +939,8 @@ footer h5 {
 }
 
 .input-mail {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
     margin-top: 10px;
-    justify-content: center;
-    color: #1c1c1c;
 }
 
 .input-mail input[type="email"] {
@@ -958,15 +957,10 @@ footer h5 {
 
 .input-mail-btn button {
     background-color: #333;
-    width: 90%;
-    color: #fff;
     padding: 10px 20px;
     font-size: 0.9em;
     font-weight: bold;
-    border: none;
     cursor: pointer;
-    display: flex;
-    align-items: center;
     gap: 5px;
     transition: background-color 0.3s;
     font-family: "Source Sans Pro", sans-serif;
@@ -985,7 +979,6 @@ footer h5 {
     width: 75%;
     padding: 3em;
     margin-left: 3em;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Línea de separación */
     box-sizing: border-box;
     margin: auto;
     background-color: transparent; 
@@ -1019,14 +1012,6 @@ footer h5 {
     line-height: 1.6;
     font-weight: 300;
 }
-.post .boton-continuer {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #000;
-    color: #fff;
-    text-decoration: none;
-    margin-top: 10px;
-}
 
 /* Estilización general para el pie de la publicación */
 .posts .post-footer {
@@ -1035,15 +1020,9 @@ footer h5 {
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     margin-top: 20px;
-    display: flex;
-    justify-content: space-between; /* Separa autor y likes/comments */
-    align-items: center; /* Alineación vertical */
 }
 
-/* Estilización del autor */
 .author {
-    display: flex;
-    align-items: center;
     border-right: 1px solid rgba(0, 0, 0, 0.2);
     padding: 1em;
 }
@@ -1053,24 +1032,9 @@ footer h5 {
 
 }
 
-.post-btn{
-    background-color: #000;
-    color: white;
-}
-
-
 /* Contenedor principal para likes y comentarios */
 .posts .post-footer .likes-comments {
-    display: flex; /* Flex para alinear horizontalmente */
-    align-items: center; /* Alineación vertical */
     gap: 20px; /* Espacio entre los divs de likes y comments */
-}
-
-/* Estilización de likes y comments */
-.posts .post-footer .divlikes,
-.posts .post-footer .divcomments {
-    display: flex;
-    align-items: center; /* Asegura que el icono y el texto estén alineados */
 }
 
 .divcomments{
@@ -1082,48 +1046,13 @@ footer h5 {
     margin-right: 5px; /* Espacio entre el icono y el texto */
 }
 
-.post-video,
-.post-footer,
-.post-slider,
-.post-slider2,
-.post-audio,
-.post-imagen,
-.post-ytvideo,
-.post-text,
-.post-quote, 
-.post-gallery,
-.post-htmlvideo, 
-.post-blockquote,
-.about-me,
-.social-icons, 
-.img-fashionweek,
-.categories,
-.popular-post,
-.tags-cloud,
-.archive,
-.newsletter {
-    margin-bottom: 4em;
-    background-color: #fff; 
-}
-
 #banner-blog {
     background-image: url("../assets/fotos/banner-blog.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
     height: 60vh; 
-    align-items: center;
-    justify-content: center;
-    position: relative; 
-    text-align: left;
     padding: 0 2rem; 
 }
 
 .banner-blog-texto {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
     padding-left: 6rem; 
     padding-top: 11rem;
 }
@@ -1142,45 +1071,14 @@ footer h5 {
     font-weight: 500;
 }
 
-.post-container {
-    background-color: white;
-    overflow: hidden;
-    width: 100%;
-    padding: 3em;
-    margin-bottom: 6em;
-    padding-bottom: 10em;
-}
-
 .slider {
-    position: relative;
-    width: 100%;
     height: 300px;
 }
 
-.slider-background {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-}
-
-.slide {
-    display: none;
-    width: 100%;
-    height: 100%;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 #prev, #next {
     top: 50%;
     transform: translateY(-50%);
-    color: black; /* Cambiar a blanco cuando se vean las imágenes */
-    border: none;
     font-size: 24px;
     padding: 10px;
     cursor: pointer;
@@ -1228,7 +1126,6 @@ p {
     padding: 3em;
     margin: 4em;
     font-weight: 200;
-    display: grid;
     grid-template-columns: 50px 1fr;
     gap: 1em;
     padding-left: 4em;
@@ -1271,10 +1168,8 @@ p {
 }
 
 .card-store-locator {
-    flex-direction: column;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    height: 100%;
     max-width: 400px; /* Limita el ancho de cada tarjeta */
     margin-top: 6em;
     margin-bottom: 6em;
@@ -1283,9 +1178,6 @@ p {
 .card-store-locator .card {
     padding: 16px; /* Ajusta el padding interno de cada card para un diseño más compacto */
     font-size: 1rem; /* Ajusta el tamaño del texto si es necesario */
-}
-.card-store-locator img {
-    height: 100%; /* Ajusta la altura para uniformidad */
 }
 
 .card-content-store-locator {
@@ -1348,8 +1240,6 @@ p {
 }
 
 .range-value {
-    /*display: flex;
-    justify-content: space-between;*/
     margin-top: 10px;
 }
 
@@ -1437,7 +1327,6 @@ p {
 }
 
 .breadcrumb a {
-    text-decoration: none;
     color: #888;
     margin-right: 0.5rem;
 }
@@ -2022,3 +1911,8 @@ p {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
 }
+
+
+
+
+
