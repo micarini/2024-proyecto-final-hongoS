@@ -237,6 +237,7 @@ p {
     list-style: none;
     text-decoration: none;
     text-transform: none;
+    font-style: normal;
 }
 .no-list-style{
     list-style: none;
@@ -1747,7 +1748,6 @@ p {
     bottom: 0;
     right: 0;
     padding: 1.25rem;
-    width: 68%;
     height: 12rem;
     margin: 0;
     z-index: 2;
@@ -1755,12 +1755,6 @@ p {
 
 .flag-contact {
     width: 2.2rem;
-    margin-bottom: 0.625rem;
-}
-
-.country-name-contact {
-    font-size: 0.813rem;
-    padding-bottom: 0.800rem;
 }
 
 .country-data-contact {
@@ -1770,6 +1764,11 @@ p {
 
 .adress-container-contact {
     padding-bottom: 40px;
+}
+.divider-contact{
+    border: none; 
+    border-top: 1px solid #e0e0e0; 
+    width: 100%; 
 }
 
 .sec3-contact{
