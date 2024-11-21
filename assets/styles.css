@@ -104,7 +104,9 @@ p {
 .bordeblanco {
     border: 3px solid white;
 }
-
+.txtgrisd {
+    color: #808080;
+}
 /* CLASES UTILES ALINEACIONES */
 .txt-c {
     text-align: center;
@@ -127,6 +129,10 @@ p {
 }
 .flex-start{
     justify-content: flex-start;
+}
+
+.flex-end {
+    justify-content: flex-end;
 }
 .alignself-start{
     align-self: flex-start;
@@ -275,6 +281,9 @@ p {
 .em2{
     font-size: 2em;
 }
+.em25{
+    font-size: 2.5em;
+}
 .em3{
     font-size: 3em;
 }
@@ -420,12 +429,21 @@ nav a:hover {
 
 
 /*SLIDER*/
-
 #slider {
     background-image: url("../assets/fotos/furniture-collection1.webp");
-    width: 100%;
     height: 100vh;
     margin-bottom: 20px;
+}
+
+.botones-container {
+    bottom: 0; /* Fija los botones en la parte inferior */
+    padding: 10px 0; /* Añade un pequeño margen superior e inferior para que no estén pegados al borde */
+}
+
+.button {
+    margin: 0 10px; /* Espacio entre los botones */
+    padding: 10px 20px; /* Tamaño de los botones */
+    font-size: 1em; 
 }
 
 .slider-texto {
@@ -436,7 +454,7 @@ nav a:hover {
 
 #slider h2 {
     font-weight: 600;
-    font-size: 65px; /*o 5em*/
+    font-size: 65px; 
     margin-bottom: 20px;
     line-height: 0.90em;
     letter-spacing: 0.02em;
@@ -456,25 +474,23 @@ nav a:hover {
     left: 3px; /* Ajusta la distancia que deseas que esté del texto */
     top: 50%; /* Alinea la línea verticalmente con el texto */
     transform: translateY(-50%); /* Centra la línea */
-    width: 20px;/* largo de la línea */
+    width: 20px; /* Largo de la línea */
     height: 0.75px; /* Grosor de la línea */
     background-color: #000;
 }
 
 #slider p {
     font-weight: 300;
-    font-size: 14px; /*1.6em?*/
+    font-size: 14px; 
     margin-bottom: 30px;
-    line-height: 1.3em; 
-    /*queda justificar*/
+    line-height: 1.3em;
 }
 
 #slider .boton {
     font-weight: 500;
-    font-size: 11px; /*1.4em?*/
+    font-size: 11px; 
     padding: 10px 30px;
     background-color: #232323;
-    /*color: #ffffff;*/
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -483,6 +499,7 @@ nav a:hover {
     color: #232323;
     border: 1px solid #232323;
 }
+
 
 /* SECTION 1*/
 
@@ -615,9 +632,14 @@ nav a:hover {
     background-image: url("../assets/fotos/night-lamp.webp");
 }
 
+#section3 {
+    background-color: #ececec;
+}
+
 #section4 {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 1fr);
+    padding-top: 2em;
 }
 
 #section4 a img {
@@ -980,6 +1002,7 @@ footer h5 {
 .input-mail-btn i {
     font-size: 0.9em;
 }
+
 
 
 .posts {
@@ -1922,84 +1945,256 @@ p {
 
 
 
-
-
 .sec4-contact {
     width: 100%;
     padding: 50px;
-    background-color: #f9f9f9;
 }
 
-
-/* Slider content */
+/* Slider container */
 .slider-sec4-contact {
     max-width: 500px;
 }
 
-.text-slide {
-    margin-bottom: 20px;
+
+/* Contenedor del número */
+.number-container {
+    position: relative;
+    display: inline-flex;
 }
 
-.slide-number {
-    font-size: 1.2rem;
-    color: #c0a16b;
-}
-
+/* Subtítulo superpuesto */
 .slide-subtitle {
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
     color: #c0a16b;
-    margin-bottom: 10px;
+    top: 50%; /* Centrado vertical */
+    transform: translateY(-100%); /* Mueve el subtítulo arriba sobre el número */
+}
+
+
+/* Text content with navigation buttons */
+.text-slide {
+    gap: 20px;
+}
+
+.text-content {
+    flex: 1;
 }
 
 #slide-title {
-    font-size: 1.8rem;
-    font-weight: bold;
+    line-height: 40px;
     margin-bottom: 15px;
 }
 
 #slide-content {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #555;
+    line-height: 24px;
     margin-bottom: 20px;
+
 }
 
 .btn-slide {
     padding: 10px 20px;
-    background-color: black;
-    color: white;
-    border: none;
-    cursor: pointer;
 }
 
 .btn-slide:hover {
     background-color: white;
-    border: #000;
+    border: 2px solid #000;
     color: #000;
 }
 
-/* Slider buttons */
-.slider-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
+/* Buttons (prev/next) */
 .prev, .next {
-    background-color: #f0f0f0;
     color: #333;
-    border: none;
     font-size: 1.5rem;
-    cursor: pointer;
     width: 40px;
     height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .prev:hover, .next:hover {
     background-color: #ddd;
+}
+
+/*parte que esta entre dos secciones*/
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 25.471rem);
+    /* 3 columnas */
+    gap: 0px;
+    margin: 0 auto;
+    justify-content: center;
+    max-width: calc(3 * 25.471rem + 10px);
+    margin-top: 4rem;
+    position: relative;
+}
+
+.imagenes-grid-contact-1,
+.solid-box {
+    object-fit: cover;
+    background-color: #232323;
+    transform: translateY(50%);
+    border-top: 0.938rem solid white;
+    border-bottom: 0.938rem solid white;
+    height: 28.507rem;
+}
+
+.imagenes-grid-contact-1 {
+    border-left: 0.938rem solid white;
+    border-right: 0.438rem solid white;
+    width: 25.471rem;
+}
+
+.solid-box {
+    width: 25.471rem;
+    height: 28.507rem;
+    background-color: #232323;
+    border-left: 0.438rem solid white;
+    border-right: 0.938rem solid white;
+}
+
+.overlay {
+    position: relative;  
+    text-align: center;
+    background-image: url("../assets/fotos/pareja.jpg");
+    /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 0;
+    color: white;
+    height: 37.5rem;
+}
+
+
+
+/*PRODUCT*/
+.product-section{
+    margin-top: 6%;
+    margin-bottom: 10%;
+}
+.product-image{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-left: 7%;
+}
+
+.product-side{
+    margin-left: 2%;
+    margin-right: 3%;
+}
+
+.breadcrumb-prod {
+    font-size: 0.7em;
+    margin-bottom: 20px;
+    color: #7a7a7a;
+}
+
+.breadcrumb-prod a {
+    text-decoration: none;
+    color: #7a7a7a;
+}
+
+.breadcrumb-prod a:hover {
+    color: #d39663;
+}
+
+.product-price, .product-description {
+    margin-bottom: 1.5em;
+}
+
+.product-price del {
+    margin-right: 0.5em;
+    text-decoration: line-through;
+}
+
+.quantity-buttons {
+    margin-bottom: 20px;
+}
+
+.quantity-buttons span.quantity {
+    padding: 0 10px;
+}
+
+.grid-botones{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.add-to-cart {
+    margin: 5px 0;
+    padding: 10px 20px;
+    border: 2px solid black;
+}
+
+.add-to-cart:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.add-to-wishlist, .add-to-compare {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: none;
+    border: none; 
+    text-transform: uppercase;
+}
+
+.add-to-wishlist:hover, .add-to-compare:hover {
+    color: #d39663;
+}
+
+.social-links {
+    justify-content: flex-start;
+}
+
+.social-links a {
+    color: #000;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.fa-facebook-f:hover{
+    color: #0056d6;
+}
+.fa-x-twitter:hover{
+    color: #333;  
+}
+.fa-linkedin-in:hover{
+    color: #3a88fe;
+}
+.fa-pinterest-p:hover{
+    color: #e32400;
+}
+
+.related-products h2{
+    letter-spacing: 1px;
+    margin-top: 20%;
+    margin-bottom: 10%;
+}
+
+.divider {
+    border: none; 
+    border-top: 1px solid #e0e0e0; 
+    margin: 20px 0; 
+    width: 100%; 
+}
+
+.accordion-boton{
+    border: none;
+    background-color: transparent;
+    margin-bottom: 2%;
+}
+
+.accordion-boton:hover{
+    color: #1c1c1c;
+}
+
+.prod-accordion{
+    margin-top: 20%;
+}
+
+.prod-image img{
+    border-radius: 5px;
+}
+
+.product-image2 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }

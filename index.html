@@ -73,18 +73,22 @@
 
     <main>
         <!--BANNER-->
-        <section id="slider" class="norepeat cover center padding0 bgcenter">
+        <section id="slider" class="norepeat cover center padding0 bgcenter relative w100">
             <div class="slider-texto">
                 <h5 class="relative">BEST OFFER FOR YOU</h5>
                 <h2>Furniture collection</h2>
                 <p>Modern furniture online shopping destination furniture getting the right furniture for home.</p>
                 <a class="boton txtblanco" href="shop.html">EXPLORE NOW</a>
-                
-                <button id="01-button">01</button>
-                <button id="02-button">02</button>
-                <button id="03-button">03</button>
+            </div>
+        
+            <!-- Contenedor para los botones en fila -->
+            <div class="botones-container absolute flex justify-c w100">
+                <button id="button1" class="button">01</button>
+                <button id="button2" class="button">02</button>
+                <button id="button3" class="button">03</button>
             </div>
         </section>
+        
         <!--BANNER-->
         <!--SECTION 1-->
         <section id="section1" class="grid">
@@ -154,9 +158,9 @@
         <section id="section3">
             <!--SECTION 3-->
             <h2>featured products</h2>
-            <button id="boton1">RECENT PRODUCTS</button>
-            <button id="boton2">FEATURED PRODUCTS</button>
-            <button id="boton3">BEST SELLING PRODUCTS</button>
+            <button id="boton1" class="justify-c align-c">RECENT PRODUCTS</button>
+            <button id="boton2" class="justify-c align-c">FEATURED PRODUCTS</button>
+            <button id="boton3" class="justify-c align-c">BEST SELLING PRODUCTS</button>
             <!--SECTION 3-->
         </section>
         <!--SECTION 4-->

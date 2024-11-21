@@ -77,78 +77,117 @@
     </header>
 
     <main>
-        <section class="product-section">
-            <div class="product-image grid">
-                <img src="assets/fotos/foto8-galeria2.webp">
-                <img src="assets/fotos/foto8-galeria2-imghover.webp">
-                <img src="assets/fotos/foto3-galeria2-imghover..webp">
-                <img src="assets/fotos/foto3-galeria2.webp">
+        <section class="product-section flex">
+            <div class="product-grid-fotos w60">
+                <div class="product-image grid gap2">
+                    <img src="assets/fotos/foto8-galeria2.webp">
+                    <img src="assets/fotos/foto8-galeria2-imghover.webp">
+                    <img src="assets/fotos/foto3-galeria2-imghover..webp">
+                    <img src="assets/fotos/foto3-galeria2.webp">
+                </div>
             </div>
+            <div class="product-side flex column w40">
             <div class="product-details">
-                <h1>Fabric Table Lamp</h1>
-                <p class="product-price">£750.00 £600.00</p>
-                <p class="product-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                <div class="quantity-buttons">
-                    <button>-</button>
-                    <span class="quantity">1</span>
-                    <button>+</button>
+                 <!-- BREADCRUMB -->
+                <nav class="breadcrumb-prod uppercase">
+                    <a href="index.html">Home</a> > <a href="shop.html">Shop</a> > <a href="product.html">Product</a>
+                </nav>
+                <div class="flex row sb">
+                    <h1 class="fw500 em2 txtnegro">Fabric Table Lamp</h1><span class="txtgris em12 fw300"><b class="txtnegro fw500">SKU:</b> 492536</span>
                 </div>
-                <button class="add-to-cart">ADD TO CART</button>
-                <button class="add-to-wishlist">ADD TO WISHLIST</button>
-                <button class="add-to-compare">ADD TO COMPARE</button>
-                <div class="product-categories">
-                    <p>CATEGORIES: ACCESSORIES, BASIC POPLIN SHIRT, BLOOSAM 360 SPEAKER, CAMERA, GADGETS, UNATEGORIZED</p>
-                    <p>TAG: COATS</p>
+                <p class="product-price em15 txtnegro fw500"><del class="txtnegro">£750.00</del> <b class="fw600">£600.00</b></p>
+                <p class="product-description em12 fw400 txtgrisd">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+
+                <div class="divider"></div>
+
+                <div class="grid-botones grid w50 wrap">
+                    <div class="quantity-buttons flex center">
+                        <button>-</button>
+                        <span class="quantity em1 fw600">1</span>
+                        <button>+</button>
+                    </div>
+                <button class="add-to-cart txtblanco fondo-negro inlineblock cursorp txt-c em15 fw500">ADD TO CART</button>
+                <button class="add-to-wishlist txtgris inlineblock cursorp em1 fw500"><i class="fa-solid fa-heart"></i>ADD TO WISHLIST</button>
+                <button class="add-to-compare txtgris inlineblock cursorp em1 fw500"><i class="fa-solid fa-shuffle"></i>ADD TO COMPARE</button>
                 </div>
-                <div class="social-links">
-                    <a href="#"><i class="fa-brands fa-facebook-f "></i></a>
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+
+                <div class="divider"></div>
+
+                <div class="product-categ flex row sb">
+                    <div class="flex column w60">
+                        <p class="txtgrisd em12 fw300"><b class="txtnegro fw500">CATEGORIES:</b> ACCESSORIES, BASIC POPLIN SHIRT, BLOOSAM 360 SPEAKER, CAMERA, GADGETS, UNCATEGORIZED</p>
+                        <p class="txtgrisd em12 fw300"><b class="txtnegro fw500">TAG:</b> COATS</p>
+                    </div>
+                    <div class="social-links flex gap15">
+                        <a href="#"><i class="fa-brands fa-facebook-f "></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"> </i>
+                        <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                    </div>
                 </div>
             </div>
-        </section>
-        <section class="related-products-section">
-            <h2>YOU MAY ALSO LIKE</h2>
-            <div class="product-image">
-                <article class="product">
-                    <div class="prod-image">
-                        <img src="assets/fotos/foto8-galeria1.webp">
-                    </div>
-                    <div class="product-details">
-                        <h3>Classic Chairs</h3>
-                        <p class="price">£255.00</p>
-                    </div>
-                </article>
-                <article class="product">
-                    <div class="prod-image">
-                        <img src="assets/fotos/foto6-galeria1.webp">
-                    </div>
-                    <div class="product-details">
-                        <h3>Wooden Dining Chair</h3>
-                        <p class="price">£255.00</p>
-                    </div>
-                </article>
-                <article class="product">
-                    <div class="prod-image">
-                        <img src="assets/fotos/foto7-galeria1.webp">
-                    </div>
-                    <div class="product-details">
-                        <h3>Sampson Wood Chair</h3>
-                        <p class="price">£200.00</p>
-                    </div>
-                </article>
-                <article class="product">
-                    <div class="prod-image">
-                        <img src="assets/fotos/foto4-galeria1.webp">
-                    </div>
-                    <div class="product-details">
-                        <h3>Wood Mini Stool</h3>
-                        <p class="price">£255.00</p>
-                    </div>
-                </article>
+
+            <div class="prod-accordion">
+                <button class="accordion-boton txtgrisd uppercase txt-l fw500">Description</button>
+                <div class="prod-panel">
+                <p class="em12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis and montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis. Maecenas tellus mi. Proin tincidunt, lectus volutpat mattis, ante metus lacinia tellus, vitae condimentum nulla enim bibendum nibh. Praesent turpis interdum nec venenatis id, pretium sit amet purus.</p>
+                </div>
+
+                <div class="divider"></div>
+
+                <button class="accordion-boton txtgrisd uppercase txt-l fw500">Additional information</button>
+                <div class="panel"></div>
+
+                <div class="divider"></div>
+
+                <button class="accordion-boton txtgrisd uppercase txt-l fw500">Reviews (0)</button>
+                <div class="panel"></div>
+            </div>
+
+            <div class="related-products">
+                <h2 class="em12 fw500 txtnegro">YOU MAY ALSO LIKE</h2>
+                <div class="product-image2 grid gap2">
+                    <article class="product">
+                        <div class="prod-image">
+                            <img src="assets/fotos/foto6-galeria1.webp">
+                        </div>
+                        <div class="product-desc">
+                            <h3 class="titulo flex center"><b class="fw600">Wooden Dining Chair</b></h3>
+                            <p class="precio flex center">£255.00</p>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <div class="prod-image">
+                            <img src="assets/fotos/foto7-galeria1.webp">
+                        </div>
+                        <div class="product-desc">
+                            <h3 class="titulo flex center"><b class="fw600">Wood Mini Stool</b></h3>
+                            <p class="precio flex center">£255.00</p>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <div class="prod-image">
+                            <img src="assets/fotos/foto8-galeria1.webp">
+                        </div>
+                        <div class="product-desc">
+                            <h3 class="titulo flex center"><b class="fw600">Classic Chairs</b></h3>
+                            <p class="precio flex center">£255.00</p>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <div class="prod-image">
+                            <img src="assets/fotos/foto4-galeria1.webp">
+                        </div>
+                        <div class="product-desc">
+                            <h3 class="titulo flex center"><b class="fw600">Sampson Wood Chair</b></h3>
+                            <p class="precio flex center">£200.00</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
             </div>
         </section>
+          
     </main>
 
 

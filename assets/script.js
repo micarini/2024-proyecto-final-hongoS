@@ -219,9 +219,9 @@ if (document.getElementById("slider")) {
     }
 
     // Asignar eventos a los botones
-    document.getElementById('01-button').addEventListener("click", goToImage01);
-    document.getElementById('02-button').addEventListener("click", goToImage02);
-    document.getElementById('03-button').addEventListener("click", goToImage03);
+    document.getElementById('button1').addEventListener("click", goToImage01);
+    document.getElementById('button2').addEventListener("click", goToImage02);
+    document.getElementById('button3').addEventListener("click", goToImage03);
 }
 
 /*GALERIA SHOP CONTAINER */
@@ -279,66 +279,8 @@ for (let i = 0; i < productosShop.length; i++) {
     });
 }
 }
-/*SLIDER BLOG
-const sliderBlog = [
-    '../assets/fotos/blog-slider-1.webp',
-    '../assets/fotos/blog-slider-2.webp',
-    '../assets/fotos/blog-slider-post-3.webp',
-];
 
-let currentIndex2 = 0;
-const img = document.getElementById('slider-background');
-let automatizado;
 
-// Función para actualizar la imagen de fondo
-function updateFondo() {
-    img.style.backgroundImage = `url(${sliderBlog[currentIndex2]})`;
-}
-
-// Inicializa el fondo al cargar la página
-updateFondo();
-
-// Función para ir a la imagen anterior
-function anterior() {
-    currentIndex2--;
-    if (currentIndex2 < 0) {
-        currentIndex2 = sliderBlog.length - 1;
-    }
-    updateFondo();
-    pauseAutomatizado();
-}
-
-// Función para ir a la imagen posterior
-function posterior() {
-    currentIndex2++;
-    if (currentIndex2 > sliderBlog.length - 1) {
-        currentIndex2 = 0;
-    }
-    updateFondo();
-    pauseAutomatizado();
-}
-
-// Botones
-document.getElementById('prev').addEventListener("click", anterior);
-document.getElementById('next').addEventListener("click", posterior);
-
-// Intervalo para que la imagen se cambie sola cada 5 segundos
-function startAutomatizado() {
-    automatizado = setInterval(() => {
-        posterior();
-    }, 5000); // 5000 ms son 5 segundos
-}
-
-// Pausar el desplazamiento automático por unos segundos
-function pauseAutomatizado() {
-    clearInterval(automatizado);
-    setTimeout(() => {
-        startAutomatizado();
-    }, 5000); // 5000 ms son 5 segundos
-}
-
-// Inicia la automatización al cargar la página
-startAutomatizado(); */
 if(document.getElementById("contenedorSlider")){
 const sliderBlog = document.getElementById("contenedorSlider");
         const botonIzquierdo = document.createElement("button");
@@ -430,21 +372,21 @@ const sliderTexts = [
         number: "01",
         subtitle: "LET'S MAKE SOMETHING BEAUTIFUL",
         title: "Unlimited power and customization possibilities",
-        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.",
+        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum has been the industry's standard dummy text since. Lorem Ipsum is simply dummy text of the typesetting industry.",
         buttonText: "ABOUT COMPANY"
     },
     {
         number: "02",
         subtitle: "WE ARE DIGITAL MEDIA AGENCY",
         title: "We are delivering beautiful digital products for you",
-        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry's standard dummy text since. Lorem Ipsum is simply dummy text of the typesetting industry.",
+        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum has been the industry's standard dummy text since. Lorem Ipsum is simply dummy text of the typesetting industry.",
         buttonText: "ABOUT COMPANY"
     },
     {
         number: "03",
         subtitle: "WE CREATE DESIGNS AND TECHNOLOGY",
         title: "We provide high quality and cost effective services",
-        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry's standard dummy text since. Lorem Ipsum is simply dummy text of the typesetting industry.",
+        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum has been the industry's standard dummy text since. Lorem Ipsum is simply dummy text of the typesetting industry.",
         buttonText: "ABOUT COMPANY"
     }
 ];
