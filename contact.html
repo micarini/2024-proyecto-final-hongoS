@@ -144,7 +144,7 @@
                 <div class="card-contact relative column flex alignitems-end">
                     <img src="assets/fotos/foto4-card.jpg" alt="Australia Store"
                         class="card-image-contact absolute w100">
-                        <div class="card-info-contact absolute flex fondo-blanco column alignitems-start">
+                    <div class="card-info-contact absolute flex fondo-blanco column alignitems-start">
                         <img class="flag-contact" src="assets/fotos/australia.webp" alt="Australia Flag">
                         <div class="country-data-contact">
                             <h2 class="em1 txtgrisd sourcesans">hongo fashion inc</h2>
@@ -191,9 +191,9 @@
                     <button id="prev" class="prev cursorp noborder flex align-c justify-c fondo-gris">❮</button>
                     <div class="text-content txt-c flex column align-c justify-c">
                         <!-- Contenedor para número y subtítulo -->
-                        <div class="number-container">
-                            <p id="slide-subtitle" class="slide-subtitle fw300 em1 absolute"></p>
-                            <span id="slide-number" class="slide-number em4 txtgrisb"></span>
+                        <div class="number-container relative align-c justify-c txt-c">
+                            <p id="slide-subtitle" class="slide-subtitle fw300 em1 absolute txtnaranja">Subtítulo</p>
+                            <span id="slide-number" class="slide-number em4 txtgrisb relative">123</span>
                         </div>
 
                         <h2 id="slide-title" class="fw500 2em"></h2>
@@ -204,10 +204,6 @@
                 </div>
             </article>
         </section>
-
-
-
-
 
         <!--SECTION 5-->
         <section class="sec5-contact flex sb flex-start">
@@ -225,112 +221,116 @@
         </section>
 
         <!--SECTION 6 FORM-->
+<!--SECTION 6 FORM-->
 
-        <section class="sec6-contact w100 txtblanco relative txt-c fondo-naranja">
-            <div class="sec6-header">
-                <h2 class="txtblanco relative inlineblock">we would love</h2>
-            </div>
+<section class="sec6-contact w100 cover bgcenter txtblanco relative txt-c fondo-naranja">
+    <div class="sec6-header">
+    <h2 class="txtblanco relative txt-c inlineblock marginbot4em">we would love</h2>
+</div>
 
-            <div class="sec6-content flex flex-start justify-c fondo-gris">
-                <article class="article-img">
-                    <img src="assets/fotos/planta.jpg" alt="">
-                </article>
+<div class="sec6-content flex wrap flex-start sb fondo-gris">
+    <article class="article-img">
+        <img src="assets/fotos/planta.jpg" alt="" class="vh100">
+    </article>  
 
-                <article class="article-item video relative">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/sU3FkzUKHXU?si=jBZRHDmdfDPuOszM"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen"></iframe>
-                    <div class="play-button absolute">&#9658;</div>
-                </article>
+    <article class="article-item video relative">
+        <img src="assets/fotos/contact-classic-07.jpg" class="vh100">
+        <a class="play-button absolute cursorp em2" href="https://www.youtube.com/watch?v=sU3FkzUKHXU"><span><i class="fas fa-play icon-medium"></i></span></a>">&#9658;</a>
+    </article>
 
-                <article class="contact-form fondo-negro txtblanco">
-                    <h3 class="txtnaranja em1">Fill out the form and we'll get back soon!</h3>
-                    <p class="txtblanco em3">Contact us to find out more or how we can help</p>
+    <article class="contact-form txtblanco align-l">
+        <h3 class="txtnaranja em1 align-l">Fill out the form and we'll get back soon!</h3>
+        <p class="txtblanco em3 align-l">Contact us to find out more or how we can help</p>
 
-                    <form>
-                        <input type="text" name="name" placeholder="Name*" required
-                            class="w100 txtblanco fondo-negro noborder">
-                        <input type="email" name="email" placeholder="E-mail*" required
-                            class="w100 txtblanco fondo-negro noborder">
-                        <input type="text" name="subject" placeholder="Subject"
-                            class="w100 txtblanco fondo-negro noborder">
-                        <input type="text" name="message" placeholder="Your Message"
-                            class="w100 txtblanco fondo-negro noborder"></input>
-                        <button type="submit" class="w100 fondo-blanco txtnegro"
-                            class="w100 txtblanco fondo-negro noborder">Send Message</button>
-                    </form>
-                </article>
-            </div>
-        </section>
-        <!--SECTION 7 SHIPPING-->
-        <section class="sec7-contact margin-top flex center">
-            <article class="flex align-c relative">
-                <h2 class="fw600 txtgrisosc">FREE SHIPPING</h2>
-            </article>
-            <article class="flex align-c">
-                <p class="txtgrisosc">Easy return-free shipping on all orders over £99</p>
-                <button class="shop-btn fondo-negro txtblanco">SHOP COLLECTIONS</button>
-            </article>
-        </section>
-    </main>
+        <form>
+            <input type="text" name="name" placeholder="Name*" required
+                class="w100 txtblanco noborder">
+            <input type="email" name="email" placeholder="E-mail*" required
+                class="w100 txtblanco noborder">
+            <input type="text" name="subject" placeholder="Subject"
+                class="w100 txtblanco noborder">
+            <input type="text" name="message" placeholder="Your Message"
+                class="w100 txtblanco noborder"></input>
+            <button type="submit" class="em12 fondo-blanco txtnegro uppercase cursorp flex align-l">Send Message</button>
+        </form>
+    </article>
+</div>
+</article>
 
-    <footer class="relative fondo-grisosc txtgrisb no-style center pad5">
-        <div class="footer-container grid gap2">
-            <article class="footer-articles grid margin-r5 txtgris no-style em12 lh2">
-                <h5>Company overview</h5>
-                <ul class="no-list-style margin0 padding0">
-                    <li>About company</li>
-                    <li>Our services</li>
-                    <li>Get the voucher</li>
-                    <li>Store locator</li>
-                    <li>Testimonials</li>
-                    <li>Contact information</li>
-                </ul>
-            </article>
-            <article class="footer-articles grid margin-r5 txtgris no-style em12 lh2">
-                <h5>Customer information</h5>
-                <ul class="no-list-style margin0 padding0">
-                    <li>Help and support</li>
-                    <li>Shipping and delivery</li>
-                    <li>Payment method</li>
-                    <li>Terms and conditions</li>
-                    <li>Returns and refunds</li>
-                    <li>Privacy policy</li>
-                </ul>
-            </article>
-            <article class="footer-articles grid margin-r5 txtgris no-style em12 lh2">
-                <h5>On social networks</h5>
-                <ul class="no-list-style margin0 padding0">
-                    <li><a href="facebook.html" class="no-style justify-l"><i class="fa-brands fa-facebook-f"
-                                style="color: #0056d6;"> </i>
-                            Facebook</a></li>
-                    <li><a href="x.html" class="no-style justify-l"><i class="fa-brands fa-x-twitter"
-                                style="color: #aaaaaa;"> </i> Twitter</a></li>
-                    <li><a href="linkedin.html" class="no-style justify-l"><i class="fa-brands fa-linkedin-in"
-                                style="color: #3a88fe;"> </i>
-                            LinkedIn</a></li>
-                    <li><a href="instagram.html" class="no-style justify-l"><i class="fa-brands fa-instagram"
-                                style="color: #ff4013;"> </i>
-                            Instagram</a></li>
-                    <li><a href="pinterest.html" class="no-style justify-l"><i class="fa-brands fa-pinterest-p"
-                                style="color: #e32400;"> </i>
-                            Pinterest</a></li>
-                </ul>
-            </article>
-            <article class="footer-articles grid margin-r5 txtgris no-style em12 lh2">
-                <h5>Subscribe to our newsletter</h5>
-                <p class="grid margin-r5 txtgris no-style em1 lh2">Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.</p>
-                <form class="flex align-c gap10 em1">
-                    <input type="email" id="email" name="email" placeholder="Enter your email...">
-                    <button type="submit" class="cursorp noborder">Subscribe</button>
-                </form>
-                <p class="grid margin-r5 txtgris no-style em1 lh2 padtop25">© 2024 HONGO. All rights reserved.</p>
-                </p>
-            </article>
-        </div>
-    </footer>
-    <script src="assets/script.js"></script>
+</section>
+
+<section id="sectionvacia" class="fondo-blanco"></section>
+
+<!--SECTION 7 SHIPPING-->
+<section class="sec7-contact margin-top flex center">
+<article class="flex align-c relative">
+    <h2 class="fw600 txtgrisosc">FREE SHIPPING</h2>
+</article>
+<article class="flex align-c">
+    <p class="txtgrisosc">Easy return-free shipping on all orders over £99</p>
+    <button class="shop-btn fondo-negro txtblanco">SHOP COLLECTIONS</button>
+</article>
+</section>
+
+</main>
+
+
+<footer class="relative fondo-grisosc txtgrisb no-style center pad5">
+<div class="footer-container grid gap2">
+<article class="footer-articles grid margin-r5 txtgris no-style em12 lh2">
+    <h5>Company overview</h5>
+    <ul class="no-list-style margin0 padding0">
+        <li>About company</li>
+        <li>Our services</li>
+        <li>Get the voucher</li>
+        <li>Store locator</li>
+        <li>Testimonials</li>
+        <li>Contact information</li>
+    </ul>
+</article>
+<article class="footer-articles grid margin-r5 txtgris no-style em12 lh2">
+    <h5>Customer information</h5>
+    <ul class="no-list-style margin0 padding0">
+        <li>Help and support</li>
+        <li>Shipping and delivery</li>
+        <li>Payment method</li>
+        <li>Terms and conditions</li>
+        <li>Returns and refunds</li>
+        <li>Privacy policy</li>
+    </ul>
+</article>
+<article class="footer-articles grid margin-r5 txtgris no-style em12 lh2">
+    <h5>On social networks</h5>
+    <ul class="no-list-style margin0 padding0">
+        <li><a href="facebook.html" class="no-style justify-l"><i class="fa-brands fa-facebook-f"
+                    style="color: #0056d6;"> </i>
+                Facebook</a></li>
+        <li><a href="x.html" class="no-style justify-l"><i class="fa-brands fa-x-twitter"
+                    style="color: #aaaaaa;"> </i> Twitter</a></li>
+        <li><a href="linkedin.html" class="no-style justify-l"><i class="fa-brands fa-linkedin-in"
+                    style="color: #3a88fe;"> </i>
+                LinkedIn</a></li>
+        <li><a href="instagram.html" class="no-style justify-l"><i class="fa-brands fa-instagram"
+                    style="color: #ff4013;"> </i>
+                Instagram</a></li>
+        <li><a href="pinterest.html" class="no-style justify-l"><i class="fa-brands fa-pinterest-p"
+                    style="color: #e32400;"> </i>
+                Pinterest</a></li>
+    </ul>
+</article>
+<article class="footer-articles grid margin-r5 txtgris no-style em12 lh2">
+    <h5>Subscribe to our newsletter</h5>
+    <p class="grid margin-r5 txtgris no-style em1 lh2">Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry.</p>
+    <form class="flex align-c gap10 em1">
+        <input type="email" id="email" name="email" placeholder="Enter your email...">
+        <button type="submit" class="cursorp noborder">Subscribe</button>
+    </form>
+    <p class="grid margin-r5 txtgris no-style em1 lh2 padtop25">© 2024 HONGO. All rights reserved.</p>
+    </p>
+</article>
+</div>
+</footer>
+<script src="assets/script.js"></script>
 
 </html>
