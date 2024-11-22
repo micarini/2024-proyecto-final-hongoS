@@ -296,6 +296,10 @@ p {
 .em4{
     font-size: 4em;
 }
+
+.em05 {
+    font-size: 0.5em;
+}
 .em06 {
     font-size: 0.6em;
 }
@@ -442,14 +446,46 @@ nav a:hover {
 }
 
 .botones-container {
-    bottom: 0; /* Fija los botones en la parte inferior */
-    padding: 10px 0; /* Añade un pequeño margen superior e inferior para que no estén pegados al borde */
+    bottom: 0; 
+    padding: 0;
+    padding-bottom: 2em; 
+    width: 100vw;
+    margin: 0;
 }
 
-.button {
-    margin: 0 10px; /* Espacio entre los botones */
-    padding: 10px 20px; /* Tamaño de los botones */
-    font-size: 1em; 
+.botones-container button {
+    margin: 0 10px; 
+    padding: 0 0.5em;  
+    background-color: transparent;
+    border: none;
+    position: relative;
+}
+
+.botones-container button::before,
+.botones-container button::after {
+    content: "";
+    position: absolute;
+    width: 11px; 
+    height: 0.5px; 
+    background-color: #555555; 
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.botones-container button::before {
+    left: -20px; 
+}
+
+.botones-container button::after {
+    right: -20px; 
+}
+
+.botones-container button:first-child::before {
+    display: none;
+}
+
+.botones-container button:last-child::after {
+    display: none;
 }
 
 .slider-texto {
@@ -569,8 +605,9 @@ nav a:hover {
 /*SECTION 2*/
 
 #section2 {
-    margin: 35px;
+    margin: 4em;
     grid-gap: 18px; 
+    margin-bottom: 10em;
 }
 
 #section2 div {
@@ -641,6 +678,34 @@ nav a:hover {
 #section3 {
     background-color: #ececec;
 }
+
+#section3 h2 {
+    font-size: 12em;
+    z-index: 0;
+    margin-bottom: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} 
+  
+.btn-prod {
+    font-size: 1rem;
+    color: #333;
+    border: none;
+    background: transparent;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.btn-prod:focus {
+    outline: none;
+}
+  
+#boton1 {
+    text-decoration: underline;
+    font-weight: 500;
+}
+
 
 #section4 {
     grid-template-columns: repeat(4, 1fr);
@@ -843,31 +908,28 @@ footer h5 {
 }
 
 .search-form {
-    display: flex;
-    align-items: center;
     gap: 0.5em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-    padding: 0.5em;
-    width: 22%;
+    max-width: 300px; /* Limita el tamaño máximo */
+    margin: 0 auto; /* Centra horizontalmente */
+    margin-bottom: 2em;
 }
 
 .search-form input {
     padding: 10px;
     font-size: 16px;
-    font-weight: 100;
     flex: 1;
-    border: none;
     outline: none;
 }
 
 .search-form button {
-    background-color: transparent;
     font-size: 18px;
-    cursor: pointer;
     padding: 0 10px;
 }
+
+.search-form button:hover {
+    color: #333; /* Color más oscuro al pasar el cursor */
+}
+
 
 .sidebar {
     width: 22%;
@@ -879,12 +941,10 @@ footer h5 {
 .sidebar .pfp {
     width: 100px;
     height: 100px;
-    border-radius: 50%;
     display: block;
     margin: 0 auto 10px;
 }
 .sidebar p {
-    font-size: 14px;
     color: #666;
 }
 .sidebar .signature {
@@ -901,36 +961,81 @@ footer h5 {
     font-size: 18px;
 }
 
-.categories, .archive, .tags-cloud {
-    width: 90%;
-    font-family: "Source Sans Pro", sans-serif;
-}
+/* Estilo para las secciones generales */
+.categories, .archive, .popular-post {
+    margin-bottom: 2em; /* Espacio entre secciones */
+  }
+  
+  /* Asegurar separación en los contenedores */
+  .categories {
+    margin-top: 2em; /* Opcional: espacio superior para categories */
+  }
+  
+  .archive {
+    margin-top: 2em; /* Opcional: espacio superior para archive */
+  }
+  
+  .popular-post {
+    margin-top: 2em; /* Opcional: espacio superior para popular post */
+  }
 
-.categories h3, .archive h3, .tags-cloud h3{
-    margin-bottom: 15px;
-}
+  .newsletter {
+    margin-top: 2em;
+  }
+  
 
-.categories ul, .archive ul {
-    list-style-type: none;
+/* Estilo general para categorías y archivo */
+.categories, .archive {
+    width: 100%;
+    max-width: 300px; /* Mismo ancho máximo que CATEGORIES */
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 1.5em;
+    background-color: #fff; /* Fondo blanco */
+  }
+  
+  /* Títulos */
+  .categories h3, .archive h3 {
+    text-align: center; /* Centrado */
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 1em;
+    color: #000;
+  }
+  
+  /* Lista */
+  .categories ul, .archive ul {
+    list-style-type: none; /* Sin viñetas */
     padding: 0;
     margin: 0;
-}
-
-.categories li, .archive li {
-    display: flex;
-    color: #808080;
+  }
+  
+  .categories li, .archive li {
+    display: flex; /* Alineación en línea entre texto y números */
     justify-content: space-between;
-    font-size: 14px;
-    padding: 5px 0;
-}
-.categories li:hover, .archive li:hover{
-    color: #d39663;
-}
-
-.categories li:hover .num-categories, .archive li:hover .num-categories {
-    color: #808080; /* mantiene el color gris de los números en el hover */
-}
-
+    align-items: center;
+    font-size: 1.2em;
+    color: #808080;
+    padding: 0.5em 0; /* Espaciado entre elementos */
+  }
+  
+  .categories li:last-child, .archive li:last-child {
+    border-bottom: none; /* Sin línea en el último elemento */
+  }
+  
+  .categories li:hover, .archive li:hover {
+    color: #d39663; /* Color hover */
+  }
+  
+  /* Números */
+  .categories .num-categories, .archive .num-categories {
+    color: #808080;
+    font-weight: 400;
+  }
+  
+  .categories li:hover .num-categories, .archive li:hover .num-categories {
+    color: #808080; /* Mantener el color de los números */
+  }
+  
 .tagcloud {
     display: flex;
     flex-wrap: wrap;
@@ -1008,6 +1113,74 @@ footer h5 {
 .input-mail-btn i {
     font-size: 0.9em;
 }
+
+/* Contenedor principal */
+.popular-post {
+    background-color: #fff;
+    padding: 1.5em;
+  }
+  
+  /* Título */
+  .popular-post h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5em;
+  }
+  
+  /* Estilo del primer elemento grande */
+  .popular-item-large {
+    text-align: center; /* Centrar texto e imagen */
+    margin-bottom: 1.5em;
+  }
+  
+  .popular-item-large img {
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 0.5em;
+  }
+  
+  .popular-item-large p {
+    margin: 0.5em 0;
+    text-align: left;
+  }
+  
+  /* Elementos pequeños */
+  .popular-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1em;
+    margin-bottom: 1.5em;
+  }
+  
+  .popular-item img {
+    width: 80px; /* Tamaño de imágenes pequeñas */
+    height: 80px;
+    object-fit: cover;
+  }
+  
+  /* Información del texto */
+  .popular-info {
+    flex: 1;
+  }
+  
+  .popular-info p {
+    margin: 0;
+  }
+  
+  .popular-info .date-blog {
+    color: #777;
+    font-size: 0.875em;
+    margin-top: 0.5em;
+  }
+  
+  /* Línea separadora */
+  .separator {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 1em 0;
+  }
+  
 
 .posts {
     width: 75%;
@@ -1230,13 +1403,11 @@ p {
 
 
 /*store*/
-
 .container-store-locator {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 10px;
-    padding-right: 2rem;
-    padding-left: 2rem ; 
+    padding: 10px 2rem;
+    justify-items: center; /* Centra las tarjetas dentro de las columnas */
 }
 
 .card-store-locator {
@@ -1247,13 +1418,7 @@ p {
     margin-bottom: 6em;
 }
 
-.card-store-locator .card {
-    padding: 16px; /* Ajusta el padding interno de cada card para un diseño más compacto */
-    font-size: 1rem; /* Ajusta el tamaño del texto si es necesario */
-}
-
 .card-content-store-locator {
-    flex-direction: column;
     padding: 15px;
     flex-grow: 1;
 }
@@ -1330,7 +1495,7 @@ p {
     grid-template-columns: repeat(4, 1fr); /* 4 items per row */
     gap: 3px;
     padding: 0 15px;
-    background-color: #ECECEC;
+    
 }
 
 .cardShop{
@@ -1503,8 +1668,6 @@ p {
 
 .store-locator-stores{
     grid-template-columns: 1fr 1fr;
-    align-items: center;
-    background-color: white;
     padding: 10%;
 }
 
@@ -1513,18 +1676,14 @@ p {
 }
 
 .left-number-locator, .right-text-locator{
-    position: relative;
     padding: 20px;
 }
 .left-number-locator{
     border-right: 1px solid #e0e0e0;
-    text-align: center;
     margin-left: 200px;
 }
 .left-number-locator h1{
-    position: absolute;
     font-size: 120px;
-    color: #f0f0f0;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1536,7 +1695,6 @@ p {
     padding-right: 25%;
 }
 .left-number-locator p{
-    position: relative;
     font-weight: bold;
     z-index: 2;
 }
@@ -1574,9 +1732,6 @@ p {
     padding: 0.8em 1.5em;
     margin-top: 20px;
     width: 16em;
-    border: none;
-    cursor: pointer;
-    font-size: 1em;
     transition: background-color 0.3s ease;
 }
 
@@ -1591,12 +1746,11 @@ p {
 }
 
 .art2-sect5 img {
+    height: 100vh;
     width: 100%;
-    height: auto;
 }
 
 .art3-sect5 {
-    color: #232323;
     padding: 40px;
     width: 40%;
     gap: 15px;
@@ -1610,12 +1764,8 @@ p {
 
 .accordion {
     background-color: #232323;
-    cursor: pointer;
     padding: 15px;
-    width: 100%;
-    text-align: left;
     font-size: 16px;
-    border: none;
     outline: none;
     transition: background-color 0.4s ease;
     margin-top: 10px;
@@ -1703,17 +1853,22 @@ p {
 .five-icons-foot{
     height: 50vh;
 }
-  
+
 .features-shipping {
     height: 100%;
-    padding: 50px 10% 50px 10%;
+    padding: 50px 10%;
+    display: flex;                /* Enable flexbox */
+    justify-content: center;      /* Center horizontally */
+    align-items: center;          /* Center vertically */
+    gap: 2rem;                    /* Add space between the items */
 }
+
 .feature-item-shipping {
     width: 30%;
     text-align: center;
     padding: 3em;
     box-sizing: border-box; 
-    margin-bottom: 15em;
+    margin-bottom: 0;             /* Remove margin at the bottom */
 }
 
 .feature-item-shipping i {
@@ -1765,10 +1920,9 @@ p {
     /*display: flex;*/
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
-    padding-right: 1em;
-    padding-left: 3em;
     padding-bottom: 12em;
     padding-top: 4em;
+    justify-items: center;
 }
 
 .card-contact {
@@ -2238,3 +2392,149 @@ p {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
 }
+
+
+
+/* Galería dinámica */
+#gridShop {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 15px; /* Espacio entre los elementos */
+    flex: 1; /* Ocupa el resto del espacio disponible */
+}
+
+/* Tarjetas de productos */
+.cardShop {
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cardShop:hover {
+    transform: translateY(-5px); /* Efecto de levitación */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cardShop img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.cardShop .titulo {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.cardShop .precio {
+    font-size: 14px;
+    color: #888;
+}
+
+
+/* Contenedor principal (flex) */
+.container-shop {
+    display: flex; /* Flex para colocar la barra lateral y la galería */
+    gap: 20px; /* Espacio entre barra lateral y galería */
+    padding: 20px;
+}
+
+/* Barra lateral */
+.sidebar-shop {
+    width: 250px; /* Ajusta a un ancho fijo */
+    padding: 20px;
+    border-radius: 8px;
+    position: sticky; /* Para que permanezca visible al hacer scroll */
+    top: 20px; /* Espaciado desde el borde superior */
+    height: fit-content; /* Ajuste dinámico de la altura */
+}
+
+/* Secciones de filtro */
+.filter-section {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee; /* Líneas separadoras */
+}
+.filter-section:last-child {
+    border-bottom: none; /* Elimina la línea del último filtro */
+}
+
+.filter-section h3 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333; /* Color del texto */
+    margin-bottom: 15px;
+}
+
+/* Lista de opciones */
+.filter-section ul {
+    list-style: none; /* Elimina viñetas */
+    padding: 0;
+    margin: 0;
+}
+.filter-section ul li {
+    margin-bottom: 10px;
+}
+.filter-section label {
+    font-size: 13px;
+    color: #555;
+    cursor: pointer;
+}
+
+/* Filtro de precio */
+.price-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price-filter input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    background: #ddd;
+    outline: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.price-filter input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #333;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.price-filter input[type="text"] {
+    font-size: 12px;
+    color: #555;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    text-align: center;
+    background-color: #fff;
+}
+
+/* Estilo de los círculos de color */
+.color-circle {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px; /* Espacio entre el círculo y el texto */
+    border: 1px solid #ddd; /* Borde sutil */
+    vertical-align: middle;
+}
+
+/* Colores específicos */
+.color-circle.black { background-color: black; }
+.color-circle.blue { background-color: blue; }
+.color-circle.brown { background-color: brown; }
+.color-circle.green { background-color: green; }
+.color-circle.red { background-color: red; }
+.color-circle.silver { background-color: silver; }
+.color-circle.yellow { background-color: yellow; }

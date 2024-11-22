@@ -91,18 +91,21 @@
         <section class="container-blog fondo-gris">
             <!-- SIDEBAR -->
             <section class="sidebar">
-                <div class="search-form">
-                    <input type="text" placeholder="Enter your keywords..." name="keywords">
-                    <button type="submit">
+                <div class="search-form flex align-c w100">
+                    <input type="text" placeholder="Enter your keywords..." name="keywords" class="noborder fw100 em08">
+                    <button type="submit" class="cursorp noborder txtgris">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </div>
+                
                 <div class="about-me marginbot4em fondo-blanco">
                     <h3 class="em15 txt-c fw400">ABOUT ME</h3>
                     <img class="pfp" alt="pfp picture of Melody Rose" height="100" src="assets/fotos/iconmelody.jpg"
                         width="100">
-                    <h4 class="fw300 txt-c align-c em15">Melody Rose</h4>
-                    <p class="txt-c">Welcome to everyday my lifestyle I'm melody rose printing & typesetting industry.</p>
+                    <h4 class="fw400 txt-c align-c em15">Melody Rose</h4>
+                    <br>
+                    <p class="txt-c em15">Welcome to everyday my lifestyle I'm melody rose printing & typesetting industry.</p>
+                    <br>
                     <img class="txt-c" src="assets/fotos/melody-rose.png">
                 </div>
                 <div class="social-icons txt-c marginbot4em fondo-blanco">
@@ -114,6 +117,7 @@
                 <div class="fashionweek">
                     <img class="img-fashionweek marginbot4em fondo-blanco" src="assets/fotos/foto-sidebar-2019.webp">
                 </div>
+
                 <div class="categories marginbot4em fondo-blanco">
                     <h3 class="em15 txt-c fw600">CATEGORIES</h3>
                     <ul>
@@ -131,18 +135,41 @@
                         <li>Standard<span class="num-categories">08</span></li>
                     </ul>
                 </div>
+
                 <div class="popular-post marginbot4em fondo-blanco">
                     <h3 class="em15 txt-c fw600">POPULAR POST</h3>
-                    <img src="assets/fotos/mujer-panuelo.webp">
-                    <p>My inspiration for interior design is more...</p>
-                    <p class="date-blog">March 8, 2019</p>
-                    <img src="assets/fotos/tetera.webp">
-                    <p>My inspiration for interior design is more...</p>
-                    <p class="date-blog">March 8, 2019</p>
-                    <img src="assets/fotos/panadero.webp">
-                    <p>The three biggest fashion mistakes are cheap...</p>
-                    <p class="date-blog">March 8, 2019</p>
-                </div>
+                  
+                    <!-- Primer elemento grande -->
+                    <div class="popular-item-large">
+                      <img src="assets/fotos/mujer-panuelo.webp" alt="Post 1">
+                      <p class="em12">My inspiration for interior design is more...</p>
+                      <p class="date-blog em12 fw300">March 8, 2019</p>
+                    </div>
+                  
+                    <!-- Línea divisora -->
+                    <hr class="separator">
+                  
+                    <!-- Elementos pequeños -->
+                    <div class="popular-item">
+                      <img src="assets/fotos/tetera.webp" alt="Post 2">
+                      <div class="popular-info">
+                        <p class="em12">My inspiration for interior design is more...</p>
+                        <p class="date-blog em15">March 8, 2019</p>
+                      </div>
+                    </div>
+                  
+                    <hr class="separator">
+                  
+                    <div class="popular-item">
+                      <img src="assets/fotos/panadero.webp" alt="Post 3">
+                      <div class="popular-info">
+                        <p class="em12">The three biggest fashion mistakes are cheap...</p>
+                        <p class="date-blog em15">March 8, 2019</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
                 <div class="tags-cloud marginbot4em fondo-blanco">
                     <h3 class="em15 txt-c fw600">TAGS CLOUD</h3>
                     <div class="tagcloud">
