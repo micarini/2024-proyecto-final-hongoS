@@ -1,9 +1,50 @@
-/*GALERIA 1 HOME */
+/*HOME*/
+/*SLIDER*/
+if (document.getElementById("slider")) {
+    const sliderContent = [
+        'assets/fotos/furniture-collection1.webp',
+        'assets/fotos/furniture-collection2.jpg',
+        'assets/fotos/furniture-collection3.jpg'
+    ];
+
+    let currentIndex = 0;
+    const foto = document.getElementById('slider'); // Corrige la selección del elemento
+
+    // Función para actualizar la imagen de fondo
+    function updateSlider() {
+        foto.style.backgroundImage = `url(${sliderContent[currentIndex]})`;
+    }
+
+    // Inicializa el fondo al cargar la página
+    updateSlider();
+
+    // Funciones para cambiar las imágenes
+    function goToImage01() {
+        currentIndex = 0;
+        updateSlider();
+    }
+
+    function goToImage02() {
+        currentIndex = 1;
+        updateSlider();
+    }
+
+    function goToImage03() {
+        currentIndex = 2;
+        updateSlider();
+    }
+
+    // Asignar eventos a los botones
+    document.getElementById('button1').addEventListener("click", goToImage01);
+    document.getElementById('button2').addEventListener("click", goToImage02);
+    document.getElementById('button3').addEventListener("click", goToImage03);
+}
+
 
 // hacer una funcion que forma galeria2 y adentro vamos a tener galeria armada y esa funcion la vamos a poner adentro del boton2 y cuando toque el boton 2 va a llamar a esa funcion y va a mostrar esa galeria. adentro de esa funcion vamos a tener que ponerle que a la galeria1 le cambie el style y se oculte STYLE DISPLAY NONE y asi hacer con todas! (muerte)
 //boton.onclick addeventlist etcetc
 
-//1
+/*GALERIA 1*/
 if(document.getElementById("section3")){
 let seccion3 = document.querySelector("#section3");
 
@@ -114,7 +155,7 @@ mostrarGaleria("grid1");
 
 }
 
-/*GALERIA 2 HOME*/
+/*GALERIA 2*/
 
 //guardo el body en una variable
 
@@ -182,88 +223,3 @@ for (let i = 0; i < productos4.length; i++) {
     });
 }
 }
-
-/*SLIDER HOME*/
-if (document.getElementById("slider")) {
-    const sliderContent = [
-        'assets/fotos/furniture-collection1.webp',
-        'assets/fotos/furniture-collection2.jpg',
-        'assets/fotos/furniture-collection3.jpg'
-    ];
-
-    let currentIndex = 0;
-    const foto = document.getElementById('slider'); // Corrige la selección del elemento
-
-    // Función para actualizar la imagen de fondo
-    function updateSlider() {
-        foto.style.backgroundImage = `url(${sliderContent[currentIndex]})`;
-    }
-
-    // Inicializa el fondo al cargar la página
-    updateSlider();
-
-    // Funciones para cambiar las imágenes
-    function goToImage01() {
-        currentIndex = 0;
-        updateSlider();
-    }
-
-    function goToImage02() {
-        currentIndex = 1;
-        updateSlider();
-    }
-
-    function goToImage03() {
-        currentIndex = 2;
-        updateSlider();
-    }
-
-    // Asignar eventos a los botones
-    document.getElementById('button1').addEventListener("click", goToImage01);
-    document.getElementById('button2').addEventListener("click", goToImage02);
-    document.getElementById('button3').addEventListener("click", goToImage03);
-}
-
-
-if(document.getElementById("contenedorSlider")){
-const sliderBlog = document.getElementById("contenedorSlider");
-        const botonIzquierdo = document.createElement("button");
-        botonIzquierdo.textContent = ">";
-        const botonDerecho = document.createElement("button");
-        botonDerecho.textContent = "<";
-        botonDerecho.setAttribute("class", "boton");
-        botonIzquierdo.classList = "boton";
-
-        sliderBlog.appendChild(botonIzquierdo);
-        sliderBlog.appendChild(botonDerecho);
-
-        const miArrayImg = [
-            'https://picsum.photos/1920/1200?random=1', 
-            'https://picsum.photos/1920/1200?random=2', 
-            'https://picsum.photos/1920/1200?random=3'
-        ];
-
-        let i = 0;
-
-        function updateImg() {
-            sliderBlog.style.backgroundImage = `url(${miArrayImg[i]})`;
-        }
-
-        function nextImg() {
-            i = (i + 1) % miArrayImg.length;
-            updateImg();
-        }
-
-        function prevImg() {
-            i = (i - 1 + miArrayImg.length) % miArrayImg.length;
-            updateImg();
-        }
-
-        botonIzquierdo.addEventListener('click', prevImg);
-        botonDerecho.addEventListener('click', nextImg);
-
-        // Inicializar con la primera imagen
-        updateImg();
-
-
-    }
