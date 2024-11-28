@@ -779,6 +779,56 @@ nav a:hover {
     font-weight: 600;
     margin-bottom: 20px;
 }
+.card-icons {
+    position: absolute;
+    top: 10px;  
+    left: 10px; 
+    display: none;
+    transition: opacity 0.3s ease;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card:hover .card-icons {
+    display: flex;
+}
+
+.card-image:hover .card-icons {
+    opacity: 1; 
+}
+
+.card-icons i {
+    background-color: white;
+    border-radius: 50%;
+    padding: 8px;  /* Reducido el padding para hacer los iconos más pequeños */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;  /* Reducido el tamaño de la fuente para iconos más pequeños */
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-icons i:hover {
+    transform: scale(1.2); /* Aumentar ligeramente el tamaño al hacer hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.card-image img {
+    transition: all 0.3s ease;
+    filter: brightness(100%); 
+}
+
+.card-image:hover img {
+    filter: brightness(80%); 
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
 
 
 #grid4 {

@@ -54,36 +54,83 @@ function crearGaleria(productos, gridId) {
     grid.setAttribute("id", gridId);
     grid.classList.add("galeria");
 
-    for (let i=0; i<productos.length; i++) {
-        let card = document.createElement("div");
-        card.setAttribute("class", "card");
+for (let i = 0; i < productos.length; i++) {
+    // Crear la tarjeta
+    let card = document.createElement("div");
+    card.setAttribute("class", "card");
 
-        let titulo = document.createElement("h3");
-        titulo.className = "titulo";
-        titulo.textContent = productos[i].titulo;
+    // Contenedor de la imagen
+    let cardImage = document.createElement("div");
+    cardImage.className = "card-image";
 
-        let img = document.createElement("img");
-        img.src = productos[i].img;
-        img.className = "foto";
+    // Crear la imagen
+    let img = document.createElement("img");
+    img.src = productos[i].img;
+    img.className = "foto";
 
-        let precio = document.createElement("p");
-        precio.className = "precio";
-        precio.textContent = productos[i].precio;
+    // Eventos para cambiar la imagen al hacer hover
+    img.addEventListener("mouseover", function (e) {
+        e.target.src = productos[i].imgHover;
+    });
 
-        // Eventos para cambiar la imagen al hacer hover
-        img.addEventListener("mouseover", function(e) {
-            e.target.src = productos[i].imgHover;
-        });
+    img.addEventListener("mouseout", function (e) {
+        e.target.src = productos[i].img;
+    });
 
-        img.addEventListener("mouseout", function(e) {
-            e.target.src = productos[i].img;
-        });
+    // Agregar imagen al contenedor
+    cardImage.appendChild(img);
 
-        card.appendChild(img);
-        card.appendChild(titulo);
-        card.appendChild(precio);
-        grid.appendChild(card);
-    }
+    // Contenedor de los iconos
+    let iconContainer = document.createElement("div");
+    iconContainer.className = "card-icons";
+
+    // Icono de carrito
+    let iconCart = document.createElement("i");
+    iconCart.className = "fa-solid fa-cart-shopping";
+    iconCart.title = "Add to Cart";
+
+    // Icono de corazón
+    let iconHeart = document.createElement("i");
+    iconHeart.className = "fa-solid fa-heart";
+    iconHeart.title = "Add to Wishlist";
+
+    // Icono de ojo
+    let iconEye = document.createElement("i");
+    iconEye.className = "fa-solid fa-eye";
+    iconEye.title = "Quick View";
+
+    // Agregar los iconos al contenedor
+    iconContainer.appendChild(iconCart);
+    iconContainer.appendChild(iconHeart);
+    iconContainer.appendChild(iconEye);
+
+    // Agregar los iconos y la imagen a la tarjeta
+    card.appendChild(cardImage);
+    card.appendChild(iconContainer);
+
+    // Título del producto
+    let titulo = document.createElement("h3");
+    titulo.className = "titulo";
+    titulo.textContent = productos[i].titulo;
+
+    // Precio del producto
+    let precio = document.createElement("p");
+    precio.className = "precio";
+    precio.textContent = productos[i].precio;
+
+    // Agregar título y precio a la tarjeta
+    card.appendChild(titulo);
+    card.appendChild(precio);
+
+    // Agregar la tarjeta al grid
+    grid.appendChild(card);
+}
+
+    
+      
+     
+      
+      
 
     // Agregar el grid a la sección
  seccion3.appendChild(grid)
