@@ -448,7 +448,7 @@ nav a:hover {
 
 /*SLIDER*/
 #slider {
-    background-image: url("../assets/fotos/furniture-collection1.webp");
+    background-image: url("assets/fotos/furniture-collection1.webp");
     height: 100vh;
     margin-bottom: 20px;
 }
@@ -564,13 +564,13 @@ nav a:hover {
     grid-row: span 2;
     width: 100%;
     min-height: 300px;
-    background-image: url("../assets/fotos/decor-banner-01.jpg");
+    background-image: url("../fotos/decor-banner-01.jpg");
 }
 
 #img2-section1 {
     grid-column: 3 / span 2;
     grid-row: 1;
-    background-image: url("../assets/fotos/decor-banner-03.jpg.webp");
+    background-image: url("../fotos/decor-banner-03.jpg.webp");
     min-height: 300px;
 }
 
@@ -584,7 +584,7 @@ nav a:hover {
 #img3-section1 {
     grid-column: 4;
     grid-row: 2;
-    background-image: url("../assets/fotos/decor-banner-05.jpg.webp");
+    background-image: url("../fotos/decor-banner-05.jpg.webp");
     min-height: 150px;
 }
 
@@ -654,27 +654,27 @@ nav a:hover {
 
 
 #foto1-section2 {
-    background-image: url("../assets/fotos/cotton-sofas.webp");
+    background-image: url("../fotos/cotton-sofas.webp");
 }
 
 #foto2-section2 {
-    background-image: url("../assets/fotos/design-furniture.webp");
+    background-image: url("../fotos/design-furniture.webp");
 }
 
 #foto3-section2 {
-    background-image: url("../assets/fotos/design-stools.webp");
+    background-image: url("../fotos/design-stools.webp");
 }
 
 #foto4-section2 {
-    background-image: url("../assets/fotos/modern-chair.webp");
+    background-image: url("../fotos/modern-chair.webp");
 }
 
 #foto5-section2 {
-    background-image: url("../assets/fotos/modern-table.webp");
+    background-image: url("../fotos/modern-table.webp");
 }
 
 #foto6-section2 {
-    background-image: url("../assets/fotos/night-lamp.webp");
+    background-image: url("../fotos/night-lamp.webp");
 }
 
 #section3 {
