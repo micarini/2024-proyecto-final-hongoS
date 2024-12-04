@@ -163,7 +163,6 @@ let productos3 = [
     { titulo: "Bar Stools", precioOriginal: "", precio: "£255.00", img: "assets/fotos/foto8-bests.webp", imgHover: "assets/fotos/foto8-bests-imghover.webp" }
 ];
 
-
     // Crear las tres galerías
     crearGaleria(productos1, "grid1");
     crearGaleria(productos2, "grid2");
