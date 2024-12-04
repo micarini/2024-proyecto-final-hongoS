@@ -45,97 +45,90 @@ if (document.getElementById("slider")) {
 //boton.onclick addeventlist etcetc
 
 /*GALERIA 1*/
-if(document.getElementById("section3")){
-let seccion3 = document.querySelector("#section3");
+if (document.getElementById("section3")) {
+    let seccion3 = document.querySelector("#section3");
 
-// Función para crear una galería y agregarla al DOM
-function crearGaleria(productos, gridId) {
-    let grid = document.createElement("div");
-    grid.setAttribute("id", gridId);
-    grid.classList.add("galeria");
+    // Función para crear una galería y agregarla al DOM
+    function crearGaleria(productos, gridId) {
+        let grid = document.createElement("div");
+        grid.setAttribute("id", gridId);
+        grid.classList.add("galeria");
 
-for (let i = 0; i < productos.length; i++) {
-    // Crear la tarjeta
-    let card = document.createElement("div");
-    card.setAttribute("class", "card");
+        for (let i = 0; i < productos.length; i++) {
+            // Crear la tarjeta
+            let card = document.createElement("div");
+            card.setAttribute("class", "card");
 
-    // Contenedor de la imagen
-    let cardImage = document.createElement("div");
-    cardImage.className = "card-image";
+            // Contenedor de la imagen
+            let cardImage = document.createElement("div");
+            cardImage.className = "card-image";
 
-    // Crear la imagen
-    let img = document.createElement("img");
-    img.src = productos[i].img;
-    img.className = "foto";
+            // Crear la imagen
+            let img = document.createElement("img");
+            img.src = productos[i].img;
+            img.className = "foto";
 
-    // Eventos para cambiar la imagen al hacer hover
-    img.addEventListener("mouseover", function (e) {
-        e.target.src = productos[i].imgHover;
-    });
+            // Eventos para cambiar la imagen al hacer hover
+            img.addEventListener("mouseover", function (e) {
+                e.target.src = productos[i].imgHover;
+            });
 
-    img.addEventListener("mouseout", function (e) {
-        e.target.src = productos[i].img;
-    });
+            img.addEventListener("mouseout", function (e) {
+                e.target.src = productos[i].img;
+            });
 
-    // Agregar imagen al contenedor
-    cardImage.appendChild(img);
+            // Agregar imagen al contenedor
+            cardImage.appendChild(img);
 
-    // Contenedor de los iconos
-    let iconContainer = document.createElement("div");
-    iconContainer.className = "card-icons";
+            // Contenedor de los iconos
+            let iconContainer = document.createElement("div");
+            iconContainer.className = "card-icons";
 
-    // Icono de carrito
-    let iconCart = document.createElement("i");
-    iconCart.className = "fa-solid fa-cart-shopping";
-    iconCart.title = "Add to Cart";
+            // Iconos
+            let iconCart = document.createElement("i");
+            iconCart.className = "fa-solid fa-cart-shopping";
+            iconCart.title = "Add to Cart";
 
-    // Icono de corazón
-    let iconHeart = document.createElement("i");
-    iconHeart.className = "fa-solid fa-heart";
-    iconHeart.title = "Add to Wishlist";
+            let iconHeart = document.createElement("i");
+            iconHeart.className = "fa-solid fa-heart";
+            iconHeart.title = "Add to Wishlist";
 
-    // Icono de ojo
-    let iconEye = document.createElement("i");
-    iconEye.className = "fa-solid fa-eye";
-    iconEye.title = "Quick View";
+            let iconEye = document.createElement("i");
+            iconEye.className = "fa-solid fa-eye";
+            iconEye.title = "Quick View";
 
-    // Agregar los iconos al contenedor
-    iconContainer.appendChild(iconCart);
-    iconContainer.appendChild(iconHeart);
-    iconContainer.appendChild(iconEye);
+            // Agregar iconos al contenedor
+            iconContainer.appendChild(iconCart);
+            iconContainer.appendChild(iconHeart);
+            iconContainer.appendChild(iconEye);
 
-    // Agregar los iconos y la imagen a la tarjeta
-    card.appendChild(cardImage);
-    card.appendChild(iconContainer);
+            // Agregar los iconos y la imagen a la tarjeta
+            card.appendChild(cardImage);
+            card.appendChild(iconContainer);
 
-    // Título del producto
-    let titulo = document.createElement("h3");
-    titulo.className = "titulo";
-    titulo.textContent = productos[i].titulo;
+            // Título del producto
+            let titulo = document.createElement("h3");
+            titulo.className = "titulo";
+            titulo.textContent = productos[i].titulo;
 
-    // Precio del producto
-    let precio = document.createElement("p");
-    precio.className = "precio";
-    precio.textContent = productos[i].precio;
+            // Precio del producto
+            let precio = document.createElement("p");
+            precio.className = "precio";
+            precio.textContent = productos[i].precio;
 
-    // Agregar título y precio a la tarjeta
-    card.appendChild(titulo);
-    card.appendChild(precio);
+            // Agregar título y precio a la tarjeta
+            card.appendChild(titulo);
+            card.appendChild(precio);
 
-    // Agregar la tarjeta al grid
-    grid.appendChild(card);
-}
+            // Agregar la tarjeta al grid
+            grid.appendChild(card);
+        }
 
-    
-      
-     
-      
-      
+        // Agregar el grid a la sección
+        seccion3.appendChild(grid);
+    }
 
-    // Agregar el grid a la sección
- seccion3.appendChild(grid)
-}
-
+       
 // Datos de productos
 let productos1 = [
     { titulo: "Charcoal Linen Stool", precio: "£510.00", img: "assets/fotos/foto1-galeria1.webp", imgHover: "assets/fotos/foto1-galeria1-imghover.webp" },
@@ -170,37 +163,52 @@ let productos3 = [
     { titulo: "Bar Stools", precioOriginal: "", precio: "£255.00", img: "assets/fotos/foto8-bests.webp", imgHover: "assets/fotos/foto8-bests-imghover.webp" }
 ];
 
-// Crear las tres galerías
-crearGaleria(productos1, "grid1");
-crearGaleria(productos2, "grid2");
-crearGaleria(productos3, "grid3");
 
-// Función para mostrar la galería seleccionada y ocultar las demás
-function mostrarGaleria(id) {
-    let galerias = document.querySelectorAll(".galeria");
-    for (let i = 0; i < galerias.length; i++) {
-        galerias[i].style.display = "none";
+    // Crear las tres galerías
+    crearGaleria(productos1, "grid1");
+    crearGaleria(productos2, "grid2");
+    crearGaleria(productos3, "grid3");
+
+    // Función para mostrar la galería seleccionada y ocultar las demás
+    function mostrarGaleria(id) {
+        let galerias = document.querySelectorAll(".galeria");
+        for (let i = 0; i < galerias.length; i++) {
+            galerias[i].style.display = "none";
+        }
+        document.getElementById(id).style.display = "grid";
     }
-    document.getElementById(id).style.display = "grid";
-}
 
-// Asignar eventos a los botones para cambiar entre galerias
-document.getElementById("boton1").addEventListener("click", function () {
+    // Función para actualizar la clase activa en los botones
+    function actualizarBotonActivo(idBoton) {
+        let botones = document.querySelectorAll(".btn-prod");
+        botones.forEach((boton) => boton.classList.remove("active"));
+        document.getElementById(idBoton).classList.add("active");
+    }
+
+    // Asignar eventos a los botones para cambiar entre galerías
+    document.getElementById("boton1").addEventListener("click", function () {
+        mostrarGaleria("grid1");
+        actualizarBotonActivo("boton1");
+    });
+
+    document.getElementById("boton2").addEventListener("click", function () {
+        mostrarGaleria("grid2");
+        actualizarBotonActivo("boton2");
+    });
+
+    document.getElementById("boton3").addEventListener("click", function () {
+        mostrarGaleria("grid3");
+        actualizarBotonActivo("boton3");
+    });
+
+    // Inicializa la primera galería como visible y el primer botón como activo
     mostrarGaleria("grid1");
-}); 
-
-document.getElementById("boton2").addEventListener("click", function () {
-    mostrarGaleria("grid2");
-});
-
-document.getElementById("boton3").addEventListener("click", function () {
-    mostrarGaleria("grid3");
-});
-
-// Ocultar todas las galerías al inicio excepto la primera
-mostrarGaleria("grid1");
-
+    actualizarBotonActivo("boton1");
 }
+
+ 
+
+
 
 /*GALERIA 2*/
 
