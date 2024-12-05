@@ -802,27 +802,27 @@ nav a:hover {
 .card-icons i {
     background-color: white;
     border-radius: 50%;
-    padding: 8px;  /* Reducido el padding para hacer los iconos más pequeños */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    font-size: 14px;  /* Reducido el tamaño de la fuente para iconos más pequeños */
+    padding: 8px;  
+    font-size: 14px;  
     color: #333;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-icons i:hover {
-    transform: scale(1.2); /* Aumentar ligeramente el tamaño al hacer hover */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+    background-color: #333;
 }
-
 
 .card-image img {
     transition: all 0.3s ease;
     filter: brightness(100%); 
+    border-radius: 2em;
 }
 
 .card-image:hover img {
     filter: brightness(80%); 
+    transition: all 0.3s ease;
 }
 
 .card {
@@ -1038,83 +1038,70 @@ footer h5 {
 .social-icons a:hover {
     color: #000; 
 }
-
-/* Estilo para las secciones generales */
 .categories, .archive, .popular-post {
-    margin-bottom: 2em; /* Espacio entre secciones */
-  }
-  
-  /* Asegurar separación en los contenedores */
-  .categories {
+    margin-bottom: 2em; 
+}  
+.categories {
     margin-top: 2em; 
-  }
-  
-  .archive {
+}  
+.archive {
     margin-top: 2em; 
-  }
-  
-  .popular-post {
+}
+.popular-post {
     margin-top: 2em; 
-  }
-
-  .newsletter {
+}
+.newsletter {
     margin-top: 2em;
-  }
-  
-
-/* Estilo general para categorías y archivo */
+}  
 .categories, .archive {
     width: 100%;
     max-width: 300px; /* Mismo ancho máximo que CATEGORIES */
     margin: 0 auto; /* Centrado horizontal */
     padding: 1.5em;
-    background-color: #fff; /* Fondo blanco */
-  }
-  
-  /* Títulos */
-  .categories h3, .archive h3 {
-    text-align: center; /* Centrado */
+    background-color: #fff; 
+}
+
+.categories h3, .archive h3 {
+    text-align: center; 
     font-size: 1.5em;
     font-weight: 600;
     margin-bottom: 1em;
     color: #000;
-  }
+}
   
-  /* Lista */
-  .categories ul, .archive ul {
+.categories ul, .archive ul {
     list-style-type: none; /* Sin viñetas */
     padding: 0;
     margin: 0;
-  }
+}
   
-  .categories li, .archive li {
-    display: flex; /* Alineación en línea entre texto y números */
+.categories li, .archive li {
+    display: flex; /* alineación en línea entre texto y números */
     justify-content: space-between;
     align-items: center;
     font-size: 1.2em;
     color: #808080;
-    padding: 0.5em 0; /* Espaciado entre elementos */
-  }
+    padding: 0.5em 0; /* espaciado entre elementos */
+}
   
-  .categories li:last-child, .archive li:last-child {
-    border-bottom: none; /* Sin línea en el último elemento */
-  }
+.categories li:last-child, .archive li:last-child {
+    border-bottom: none; /* sin línea en el último elemento */
+}
   
-  .categories li:hover, .archive li:hover {
-    color: #d39663; /* Color hover */
-  }
+.categories li:hover, .archive li:hover {
+    color: #d39663; 
+}
   
-  /* Números */
-  .categories .num-categories, .archive .num-categories {
+.categories .num-categories, .archive .num-categories,  .filter-section .num-categories{
     color: #808080;
     font-weight: 400;
-  }
+}
   
-  .categories li:hover .num-categories, .archive li:hover .num-categories {
+.categories li:hover .num-categories, .archive li:hover .num-categories {
     color: #808080; 
-  }
+}
   
-  .tagcloud {
+.tagcloud {
     gap: 10px; 
     text-transform: uppercase; 
     padding: 10px 0; 
@@ -1131,9 +1118,6 @@ footer h5 {
     background-color: #1c1c1c; /* Fondo al pasar el cursor */
     color: #ffffff; /* Color del texto al pasar el cursor */
 }
-
-
-
 
 .newsletter {
     padding: 20px;
@@ -1186,73 +1170,66 @@ footer h5 {
     font-size: 0.9em;
 }
 
-/* Contenedor principal */
 .popular-post {
     background-color: #fff;
     padding: 1.5em;
-  }
+}
   
-  /* Título */
-  .popular-post h3 {
+.popular-post h3 {
     font-size: 1.5em;
     font-weight: 600;
     text-align: center;
     margin-bottom: 1.5em;
-  }
+}
   
-  /* Estilo del primer elemento grande */
-  .popular-item-large {
+.popular-item-large {
     text-align: center; /* Centrar texto e imagen */
     margin-bottom: 1.5em;
-  }
+}
   
-  .popular-item-large img {
+.popular-item-large img {
     height: auto;
     object-fit: cover;
     margin-bottom: 0.5em;
-  }
+}
   
-  .popular-item-large p {
+.popular-item-large p {
     margin: 0.5em 0;
     text-align: left;
-  }
-  
-  /* Elementos pequeños */
-  .popular-item {
+}
+
+.popular-item {
     display: flex;
     align-items: flex-start;
     gap: 1em;
     margin-bottom: 1.5em;
-  }
-  
-  .popular-item img {
+}
+
+.popular-item img {
     width: 80px; /* Tamaño de imágenes pequeñas */
     height: 80px;
     object-fit: cover;
-  }
+}
   
-  /* Información del texto */
-  .popular-info {
+.popular-info {
     flex: 1;
-  }
+}
   
-  .popular-info p {
+.popular-info p {
     margin: 0;
-  }
+}
   
-  .popular-info .date-blog {
+.popular-info .date-blog {
     color: #777;
     font-size: 0.875em;
     margin-top: 0.5em;
-  }
-  
-  /* Línea separadora */
-  .separator {
+}
+
+.separator {
     border: none;
     border-top: 1px solid #ddd;
     margin: 1em 0;
-  }
-  
+}
 
 .posts {
     width: 75%;
@@ -1472,8 +1449,6 @@ p {
     font-weight: 500;
 }
 
-
-
 /*store*/
 .container-store-locator {
     grid-template-columns: repeat(3, 1fr);
@@ -1515,73 +1490,7 @@ p {
     padding-top: 10px;
 }
 
-#banner-shop {
-    background-image: url("../fotos/decor-shop-bg.jpg");
-    height: 60vh; 
-    padding: 0 2rem; 
-   
-}
 
-.range-slider {
-    position: relative;
-    width: 100%;
-}
-
-.range {
-    -webkit-appearance: none; /*le saca la apariencia predeterminada que tienen algunos navegadores*/
-    appearance: none;
-    width: 100%;
-    height: 8px;
-    background: #ddd;
-    outline: none;
-    border-radius: 10px;
-}
-
-/*fijarse que hace esto*/
-.range::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #4CAF50;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.range-value {
-    margin-top: 10px;
-}
-
-.stars {
-    color: gold;
-}
-
-.num-categories {
-    margin-left: 5px;
-    font-weight: bold;
-}
-
-/*css de la card*/
-#gridShop{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
-    gap: 3px;
-    padding: 0 15px;
-    
-}
-
-.cardShop{
-    padding: 15px;
-    text-align: center;
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-}
-.cardShop img{
-    width: 100%; 
-    height: auto;
-    margin: 0 auto 10px; 
-}
 
 /*STORE LOCATOR CSS*/
 
@@ -1613,9 +1522,7 @@ p {
     font-weight: 500;
 }
 
-
 /* store locator SECTION1  */
-
 
 #section1-store-locator {
     grid-template-columns: 1fr 1fr;
@@ -1925,10 +1832,10 @@ p {
 .features-shipping {
     height: 100%;
     padding: 50px 10%;
-    display: flex;                /* Enable flexbox */
-    justify-content: center;      /* Center horizontally */
-    align-items: center;          /* Center vertically */
-    gap: 2rem;                    /* Add space between the items */
+    display: flex;  
+    justify-content: center; 
+    align-items: center; 
+    gap: 2rem;           
 }
 
 .feature-item-shipping {
@@ -2239,8 +2146,6 @@ p {
     grid-template-rows: repeat(2, 1fr);
 }
 
-
-
 .sec4-contact {
     width: 100%;
     padding: 50px;
@@ -2303,7 +2208,6 @@ p {
 }
 
 /*parte que esta entre dos secciones*/
-
 .parent {
     display: grid;
     grid-template-columns: repeat(3, 25.471rem);
@@ -2344,15 +2248,12 @@ p {
     position: relative;  
     text-align: center;
     background-image: url("../assets/fotos/pareja.jpg");
-    /* Imagen de fondo */
     background-size: cover;
     background-position: center;
     padding: 5rem 0;
     color: white;
     height: 37.5rem;
 }
-
-
 
 /*PRODUCT*/
 .product-section{
@@ -2489,40 +2390,42 @@ p {
     grid-template-rows: repeat(2, 1fr);
 }
 
-
+#banner-shop {
+    background-image: url("../fotos/decor-shop-bg.jpg");
+    height: 60vh; 
+    padding: 0 2rem; 
+   
+}
 
 /* Galería dinámica */
 #gridShop {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
-    gap: 15px; 
     flex: 1; 
 }
 
 /* Tarjetas de productos */
 .cardShop {
     text-align: center;
-    padding: 15px;
-    border-radius: 5px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.cardShop:hover {
-    transform: translateY(-5px); /* Efecto de levitación */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 1em;
 }
 
 .cardShop img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 1em;
 }
 
 .cardShop .titulo {
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 1.5em;
+    font-weight: 600;
     margin-bottom: 5px;
+}
+
+.cardShop .titulo:hover {
+    color: #d39663;
+    transition: 0.3s ease;
+    cursor: pointer;
 }
 
 .cardShop .precio {
@@ -2530,41 +2433,32 @@ p {
     color: #888;
 }
 
-
-/* Contenedor principal (flex) */
 .container-shop {
     display: flex; 
-    gap: 20px; 
-    padding: 20px;
+    gap: 5em; 
+    padding: 10em;
 }
 
-/* Barra lateral */
 .sidebar-shop {
-    width: 250px; 
-    padding: 20px;
-    border-radius: 8px;
-    top: 20px; 
+    width: 50%; 
+    padding: 2em; 
     height: fit-content; 
 }
 
-/* Secciones de filtro */
 .filter-section {
-    margin-bottom: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 2em;
     border-bottom: 1px solid #eee; 
 }
 .filter-section:last-child {
-    border-bottom: none; 
+    border-bottom: none; /*le saco la linea entre cada filtro al ultimo*/
 }
 
 .filter-section h3 {
-    font-size: 14px;
     font-weight: bold;
     color: #333; 
-    margin-bottom: 15px;
+    margin-bottom: 2em;
 }
 
-/* Lista de opciones */
 .filter-section ul {
     list-style: none; 
     padding: 0;
@@ -2574,16 +2468,21 @@ p {
     margin-bottom: 10px;
 }
 .filter-section label {
-    font-size: 13px;
-    color: #555;
+    font-size: 1.2em;
+    color: #808080;
     cursor: pointer;
+    vertical-align: middle;
 }
 
-/* Filtro de precio */
-.price-filter {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.filter-section label:hover {
+    color: #d39663;
+}
+.filter-section li {
+    display: flex; /* Alineación en línea entre texto y números */
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    color: #808080;
 }
 
 .price-filter input[type="range"] {
@@ -2614,21 +2513,23 @@ p {
     background-color: #fff;
 }
 
-/* Estilo de los círculos de color */
 .color-circle {
     display: inline-block;
-    width: 12px;
-    height: 12px;
+    width: 1.2em;
+    height: 1.2em;
     border-radius: 50%;
-    margin-right: 8px; /* Espacio entre el círculo y el texto */
-    border: 1px solid #ddd; /* Borde sutil */
+    margin-right: 0.8em; 
     vertical-align: middle;
 }
 
-.color-circle.black { background-color: black; }
-.color-circle.blue { background-color: blue; }
-.color-circle.brown { background-color: brown; }
-.color-circle.green { background-color: green; }
-.color-circle.red { background-color: red; }
-.color-circle.silver { background-color: silver; }
-.color-circle.yellow { background-color: yellow; }
+.color-circle.black { background-color: #363636; }
+.color-circle.blue { background-color: #657fa8; }
+.color-circle.brown { background-color: #936f5e; }
+.color-circle.green { background-color: #97a27f; }
+.color-circle.red { background-color: #b95b5b; }
+.color-circle.silver { background-color: #b7b5b5; }
+.color-circle.yellow { background-color: #d1ad6e; }
+
+.stars {
+    color: #fd9d38;
+}
