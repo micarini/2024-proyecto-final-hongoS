@@ -156,6 +156,9 @@ p {
     position: absolute;
 }
 
+.aligncontentc {
+    align-content: center;
+}
 .justify-l {
     justify-content: left;
 }
@@ -2536,8 +2539,37 @@ p {
 
 
 /*blog post */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Espacio entre contenido y sidebar */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+
+.main-content {
+    flex: 3; /* Más espacio para el contenido principal */
+    max-width: 60%; /* Asegura que el contenido principal no ocupe más del 70% del ancho */
+}
+
+/* Barra lateral */
 .sidebar-blogp {
-    width: 22%;
-    padding: 3em;
+    flex: 1; /* Menos espacio para la sidebar */
+    max-width: 300px; 
+    padding: 3em 3em 3em 3em; 
     margin: 3em 0 3em auto; /* Empuja la barra a la derecha */
+}
+
+.preview-image {
+    max-width: 100%; 
+    display: block;
+    margin: 0 auto;
+}
+
+blockquote-bp {
+    background-color: #f4f4f4;
+    padding: 1em;
+    border-left: 4px solid #ccc;
+    margin: 2em 0;
 }
