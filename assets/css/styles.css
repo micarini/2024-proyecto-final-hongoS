@@ -2533,3 +2533,11 @@ p {
 .stars {
     color: #fd9d38;
 }
+
+
+/*blog post */
+.sidebar-blogp {
+    width: 22%;
+    padding: 3em;
+    margin: 3em 0 3em auto; /* Empuja la barra a la derecha */
+}
