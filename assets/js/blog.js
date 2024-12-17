@@ -11,9 +11,11 @@ if(document.getElementById("contenedorSlider")){
             sliderBlog.appendChild(botonDerecho);
     
             const miArrayImg = [
-                'https://picsum.photos/1920/1200?random=1', 
-                'https://picsum.photos/1920/1200?random=2', 
-                'https://picsum.photos/1920/1200?random=3'
+                "assets/fotos/blog-slider-post.jpg",
+                "assets/fotos/blog-slider-2.webp",
+                "assets/fotos/blog-slider-post-3.jpg",
+                "assets/fotos/blog-slider-post-4.webp",
+                
             ];
     
             let i = 0;

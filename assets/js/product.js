@@ -70,7 +70,7 @@ if(document.getElementById("product-container2")){
         cardProd2.appendChild(titulo);
         cardProd2.appendChild(precio);
         
-        gridProd2.appendChild(cardProd2);
+        gridProduct2.appendChild(cardProd2);
         
         // Evento mouseover para cambiar la imagen
         img.addEventListener("mouseover", () => {

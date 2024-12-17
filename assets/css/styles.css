@@ -2285,7 +2285,6 @@ p {
 
 .add-to-cart {
     margin: 5px 0;
-    padding: 10px 20px;
     border: 2px solid black;
 }
 
@@ -2295,7 +2294,7 @@ p {
 }
 
 .add-to-wishlist, .add-to-compare {
-    padding: 10px 20px;
+    padding: 10px;
     margin-top: 10px;
     background: none;
     border: none; 
