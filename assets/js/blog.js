@@ -42,3 +42,13 @@ if(document.getElementById("contenedorSlider")){
     
     
         }
+
+        function validateEmail() {
+            const emailInput = document.getElementById("emailInput").value;
+        
+            if (emailInput.includes("@") && emailInput.endsWith(".com")) {
+                alert("¡Correo válido! Formulario enviado.");
+            } else {
+                alert("Por favor, ingresa un correo electrónico válido con '@' y que termine en '.com'.");
+            }
+        }

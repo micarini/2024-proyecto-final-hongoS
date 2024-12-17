@@ -197,16 +197,18 @@
                     <h3 class="em15 txt-c fw600">NEWSLETTER</h3>
                     <p>Subscribe to our newsletter and stay updated to our best offers and deals!</p>
                     <div class="input-mail flex column justify-c align-c txtnegro">
-                        <input type="email" placeholder="Enter your email..." name="email">
+                        <input type="email" id="emailInput" placeholder="Enter your email..." name="email">
                         <div class="input-mail-btn flex noborder align-c txtblanco w90">
-                            <button type="submit">
+                            <button type="button" onclick="validateEmail()">
                                 <span>Subscribe</span>
                                 <i class="fas fa-arrow-right"></i>
                             </button>
                         </div>
                     </div>
+                </div>
+                
             </section>
-
+          
             <!-- POSTS -->
             <section class="posts flex column mauto borderbox fw300 txt-c">
                 <!-- POST 1 -->
