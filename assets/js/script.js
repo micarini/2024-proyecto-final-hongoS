@@ -277,3 +277,23 @@ for (let i = 0; i < productos4.length; i++) {
     });
 }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Seleccionamos el formulario del footer
+    const newsletterForm = document.getElementById("newsletterForm");
+
+    // Agregamos un evento 'submit' al formulario
+    newsletterForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evitar el envío del formulario por defecto
+
+        const emailInput = document.getElementById("emailFooter").value;
+
+        // Validar si el correo contiene "@" y termina con ".com"
+        if (emailInput.includes("@") && emailInput.endsWith(".com")) {
+            alert("¡Correo válido! Formulario enviado.");
+            // Si necesitas enviar el formulario realmente, quita el event.preventDefault() de arriba
+        } else {
+            alert("Por favor, ingresa un correo electrónico válido con '@' y que termine en '.com'.");
+        }
+    });
+});
