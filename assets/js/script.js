@@ -205,9 +205,6 @@ let productos3 = [
     actualizarBotonActivo("boton1");
 }
 
- 
-
-
 
 /*GALERIA 2*/
 

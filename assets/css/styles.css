@@ -625,17 +625,41 @@ nav a:hover {
     text-align: left;
     padding: 10px;
     transition: transform 0.3s ease-in-out;
+    overflow: hidden;
 }
 
-#section2 h5 {
-    padding: 2em;
+#section2 article h5 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    text-align: left;
+    font-size: 1rem;
+    transition: all 0.3s ease; /* Animación suave */
+    z-index: 1;
+}
+
+#section2 article .items-count {
+    bottom: 10px; 
+    left: 20px;
+    font-size: 0.9rem;
+    color: #555;
+    opacity: 0; /*oculto al principio */
+    transition: all 0.3s ease; /* Animación suave */
+    z-index: 1;
 }
 
 #section2 a { 
-    text-decoration: none; 
     color: inherit;
 }
 
+/* Hover para el efecto */
+#section2 article:hover h5 {
+    bottom: 40px; /* Sube el texto principal */
+}
+
+#section2 article:hover .items-count {
+    opacity: 1; /* Se hace visible */
+}
 
 #section2 h4 {
     grid-column: span 3; /* Hace que el título abarque las 3 columnas*/
@@ -646,27 +670,21 @@ nav a:hover {
     padding-bottom: 2rem; /*el espacio de abajo del shop by category*/
 }
 
-
 #foto1-section2 {
     background-image: url("../fotos/cotton-sofas.webp");
 }
-
 #foto2-section2 {
     background-image: url("../fotos/design-furniture.webp");
 }
-
 #foto3-section2 {
     background-image: url("../fotos/design-stools.webp");
 }
-
 #foto4-section2 {
     background-image: url("../fotos/modern-chair.webp");
 }
-
 #foto5-section2 {
     background-image: url("../fotos/modern-table.webp");
 }
-
 #foto6-section2 {
     background-image: url("../fotos/night-lamp.webp");
 }
@@ -698,13 +716,11 @@ nav a:hover {
     outline: none;
 }
   
-
 .btn-prod.active {
     text-decoration: underline;
     font-weight: 500;
     color: #000; /* Color del texto cuando está activo */
 }
-
 
 #section4 {
     grid-template-columns: repeat(4, 1fr);
@@ -713,7 +729,6 @@ nav a:hover {
 }
 
 #section4 a img {
-    width: 100%;
     height: 90%;
 }
 
@@ -855,15 +870,10 @@ nav a:hover {
 }
 
 #section6 {
-    display: flex;
-    flex-wrap: wrap; /* Permite que las imágenes se ajusten si la pantalla es pequeña */
-    justify-content: center; /* Centra las imágenes horizontalmente */
     background-color: lightgrey;
     padding-top: 40px;
     padding-bottom: 40px;
-    /*clases utiles: flex wrap justify-c fondo-grisb*/
 }
-
 
 #section6 a {
     margin: 5px; /*espacio entre las imágenes*/
@@ -873,7 +883,6 @@ nav a:hover {
     grid-column: span 2; /*Hace que el texto ocupe el ancho de las 2 columnas */
     padding: 0.7rem; /* Espacio interno para el rectángulo */ 
     margin-top: 3rem;
-
 }
 
 .instagram-decor p {
@@ -885,7 +894,6 @@ nav a:hover {
     margin: 1px;
 }
 /* FOOTER */
-
 footer {
     padding: 40px 0;
 }
@@ -949,10 +957,8 @@ footer h5 {
 
 /*blog*/
 .container-blog {
-    display: flex;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 5em;
-    background-color: #f0f0f0; 
     place-self: center;
 }
 
@@ -1062,9 +1068,6 @@ footer h5 {
 }
   
 .categories li, .archive li {
-    display: flex; /* alineación en línea entre texto y números */
-    justify-content: space-between;
-    align-items: center;
     font-size: 1.2em;
     color: #808080;
     padding: 0.5em 0; /* espaciado entre elementos */
@@ -1152,24 +1155,16 @@ footer h5 {
     background-color: #555;
 }
 
-.input-mail-btn i {
-    font-size: 0.9em;
-}
-
 .popular-post {
     background-color: #fff;
     padding: 1.5em;
 }
   
 .popular-post h3 {
-    font-size: 1.5em;
-    font-weight: 600;
-    text-align: center;
     margin-bottom: 1.5em;
 }
   
 .popular-item-large {
-    text-align: center; /* Centrar texto e imagen */
     margin-bottom: 1.5em;
 }
   
@@ -1185,8 +1180,6 @@ footer h5 {
 }
 
 .popular-item {
-    display: flex;
-    align-items: flex-start;
     gap: 1em;
     margin-bottom: 1.5em;
 }
@@ -1212,7 +1205,6 @@ footer h5 {
 }
 
 .separator {
-    border: none;
     border-top: 1px solid #ddd;
     margin: 1em 0;
 }
@@ -1227,7 +1219,6 @@ footer h5 {
 }
 
 .post-imagen, .post-slider, .post-audio, .post-blockquote, .post-video, .post-ytvideo, .post-htmlvideo, .post-gallery {
-    background-color: #fff;
     border: 1px solid #e8e8e8; 
 }
 .posts .meta {
@@ -1275,7 +1266,6 @@ footer h5 {
 .post-footer li {
     padding: 1em; 
     flex: 1; 
-    text-align: center; 
     border-right: 1px solid rgba(0, 0, 0, 0.2); 
 }
 
@@ -1293,11 +1283,7 @@ footer h5 {
 .comments {
     border-right: 1px solid rgba(0, 0, 0, 0.2);
     padding: 1em;
-    font-size: 1em;
     color: #aaa;
-    font-weight: 300;
-    display: flex;
-    align-items: center;
     gap: 0.5em; 
     padding: 1em;
 }
@@ -1546,11 +1532,8 @@ p {
 
 .article1-section1 h4 {
     font-size: 0.7rem;
-    color: #D48131; 
-    text-transform: uppercase;
     letter-spacing: 1px;
     margin: 0;
-    font-weight: 300;
     padding-top: 4rem;
     padding-left: 7rem;
     align-self: left;
@@ -1562,16 +1545,11 @@ p {
     margin-top: 0.5rem;
     line-height: 1.5;
     max-width: 600px; /* controla el ancho del texto */
-    font-weight: 500;
     padding-left: 7rem;
     padding-right: 3%;
 }
 
-.article2-section1 {
-    text-align: left;
-}
 .article2-section1 p {
-    font-weight: 300;
     padding-top: 6em;
 }
 .article2-section1 h3 {
@@ -1583,8 +1561,6 @@ p {
     margin-top: 1.5rem;
     padding-left: 4rem; /* Espacio adicional en el lado izquierdo */
 }
-
-
 
 .store-locator-mapa {
     height: 100vh; /* Ocupa la altura total de la pantalla */
@@ -1609,11 +1585,9 @@ p {
     align-self: flex-end;
 }
 
-
 .btn-store-locator {
     width: 50px;
     height: 50px;
-    border: none; /* Sin borde */
     border-radius: 50%; /* Bordes redondeados */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.6); /* Sombra del botón */
@@ -2017,10 +1991,6 @@ p {
 
 .article-item {
     flex: 1 1 30%; /* Igual que la imagen */
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .article-item iframe {
