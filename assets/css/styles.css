@@ -957,7 +957,6 @@ footer h5 {
 
 /*blog*/
 .container-blog {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 5em;
     place-self: center;
 }
@@ -1261,6 +1260,7 @@ footer h5 {
 
 .post-contenido{
     padding: 3em;
+
 }
 
 .post-footer li {
@@ -1308,6 +1308,8 @@ p {
 .post-video video{
     padding-top: 3em;
     padding-bottom: 6em;
+    height: 500px;
+    width: 700px;
 }
 
 .slider {
@@ -1922,6 +1924,7 @@ p {
     margin: 10%;
     padding: 1em;
     gap: 12em;
+    margin-bottom: 0;
 }
 
 .text-contact {
@@ -1945,7 +1948,7 @@ p {
     background-blend-mode: overlay;
     opacity: 0.8;
     gap: 2em;
-    transform: translateY(400px);
+    transform: translateY(100px);
     height: 100vh;
 }
 
@@ -1977,7 +1980,7 @@ p {
     padding: 2em 0;
     max-width: 80%;
     margin: 0 auto; 
-    padding: 3em;
+    padding: 1em;
     align-items: stretch;
 }
 .article-img {
@@ -1986,7 +1989,6 @@ p {
 }
 .article-img img {
     width: 100%;
-    
 }
 
 .article-item {
@@ -2031,6 +2033,7 @@ p {
     margin: 5px 0;
     font-size: 1rem;
     background-color: #000;
+    border-bottom: 1px solid gray;
 }
 
 .contact-form button {
@@ -2050,6 +2053,7 @@ p {
 
 #sectionvacia {
     height: 100vh;
+    overflow: hidden;
 }
 
 .sec7-contact {
@@ -2573,4 +2577,12 @@ blockquote-bp {
     padding: 1em;
     border-left: 4px solid #ccc;
     margin: 2em 0;
+}
+
+#main-blog{
+    background-color: #f3f3f3;
+}
+
+.breadcrumb{
+    background-color: white;
 }
