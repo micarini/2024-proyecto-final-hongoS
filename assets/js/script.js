@@ -274,6 +274,36 @@ for (let i = 0; i < productos4.length; i++) {
     });
 }
 }
+if (document.getElementsByClassName("gallery")) {
+    const galleryItems = [
+        { url: "https://www.instagram.com/p/B2ByAQ8Hv-9/", imgSrc: "../2024-proyecto-final-hongo/assets/fotos/cactus-almohadon.jpg", alt: "cactus-almohadon" },
+        { url: "https://www.instagram.com/p/B2BxnN_nmMY/", imgSrc: "../2024-proyecto-final-hongo/assets/fotos/brazo-cama.jpg", alt: "brazo-cama" },
+        { url: "https://www.instagram.com/p/B2Bv0ryHV9v/", imgSrc: "../2024-proyecto-final-hongo/assets/fotos/mesita-de-luz.jpg", alt: "mesita-de-luz" },
+        { url: "https://www.instagram.com/p/B2BvqzQHT-1/", imgSrc: "../2024-proyecto-final-hongo/assets/fotos/planta-mesa.jpg", alt: "planta-mesa" },
+        { url: "https://www.instagram.com/p/B2Bu5u2nKs0/", imgSrc: "../2024-proyecto-final-hongo/assets/fotos/le-creuset-comida.jpg", alt: "le-creuset-comida" },
+        { url: "https://www.instagram.com/p/B2BuwxzngSY/", imgSrc: "../2024-proyecto-final-hongo/assets/fotos/flores-mesa.jpg", alt: "flores-mesa" },
+        { url: "https://www.instagram.com/p/B2Bt1heHo4O/", imgSrc: "../2024-proyecto-final-hongo/assets/fotos/silla-living.jpg", alt: "silla-living" },
+        { url: "https://www.instagram.com/p/B2BtXaRH50I/", imgSrc: "../2024-proyecto-final-hongo/assets/fotos/escritorio.jpg", alt: "escritorio" }
+    ];
+    
+    const galleryContainer = document.querySelector(".gallery");
+
+    for (let i = 0; i < galleryItems.length; i++) {
+    const item = galleryItems[i];
+    const link = document.createElement("a");
+    link.className = item.class;
+    link.href = item.url;
+    
+    const img = document.createElement("img");
+    img.src = item.imgSrc;
+    img.alt = item.alt;
+    
+    link.appendChild(img);
+    galleryContainer.appendChild(link);
+}
+
+}
+
 
 document.addEventListener("DOMContentLoaded", function () {
     // Seleccionamos el formulario del footer

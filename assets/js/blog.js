@@ -72,4 +72,25 @@ if(document.getElementById("contenedorSlider")){
                 }
             });
         });
+
+        const galleryPostItems = [
+            { class: "div1", imgSrc: "assets/fotos/blog-gallery-1.jpg.webp" },
+            { class: "div2", imgSrc: "assets/fotos/blog-gallery-4.jpg.webp" },
+            { class: "div3", imgSrc: "assets/fotos/blog-gallery-2.jpg.webp" },
+            { class: "div4", imgSrc: "assets/fotos/blog-gallery-5.jpg.webp" },
+            { class: "div5", imgSrc: "assets/fotos/blog-gallery-3.jpg.webp" }
+        ];
         
+        const galleryPostContainer = document.querySelector(".gallery-post");
+        
+        for (let i = 0; i < galleryPostItems.length; i++) {
+            const item = galleryPostItems[i];
+            const div = document.createElement("div");
+            div.className = item.class;
+            
+            const img = document.createElement("img");
+            img.src = item.imgSrc;
+            
+            div.appendChild(img);
+            galleryPostContainer.appendChild(div);
+        }
