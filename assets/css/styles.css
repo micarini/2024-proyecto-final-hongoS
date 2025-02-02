@@ -2810,3 +2810,19 @@ blockquote-bp {
     background-color: white;
 }
 
+
+.cardShop {
+    position: relative;
+    width: 255px; /* Ajusta según el tamaño del producto */
+    padding: 15px;
+    text-align: center;
+}
+
+.discount-badge {
+    background-color: green;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 5px 10px;
+    position: absolute;
+}
