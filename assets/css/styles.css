@@ -1174,9 +1174,6 @@ footer h5 {
 
 .categories h3,
 .archive h3 {
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: 500;
     margin-bottom: 1em;
 }
 
@@ -1563,6 +1560,41 @@ p {
     color: #222;
     margin-top: 0.5rem;
     font-weight: 500;
+}
+
+/*BLOG POST*/
+.main-title h1{
+    padding: 1.5em; 
+}
+
+.post-meta ul li {
+    color: #b7b7b7; 
+    font-size: 1.2em;
+    font-weight: 300;
+    position: relative; /* necesario como marco de referencia para las lineas, ya que hacen que despues el position absolute se posicione en relacion a este elemento padre*/
+    padding-left: 1.2em; /* espacio para la linea  */
+}
+
+.post-meta ul li a {
+    text-decoration: none; 
+}
+
+.post-meta ul li a:hover {
+    color: white;
+    transition: 0.3s ease;
+}
+
+.post-meta ul li:not(:first-child)::before { /*combinacion de un selector y un pseudo-elemento (aca estoy aplicandole lo siguiente a todos los li excepto el primero, y lo que aplico va "before" osea antes del elemento*/
+    content: ""; /* agrego la linea divisoria */
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    top: 50%; /* posicion inicial al centro */
+    transform: translateY(-50%); /* centrar verticalmente */
+    height: 50%; /*alto de la linea*/
+    width: 1px; /* width de la linea */
+    background-color: #b7b7b7; 
 }
 
 /*store*/
