@@ -287,6 +287,10 @@ p {
     margin-bottom: 4em;
 }
 
+.marginbot2em {
+    margin-bottom: 2em;
+}
+
 .mauto {
     margin: auto;
 }
@@ -1095,6 +1099,10 @@ footer h5 {
     place-self: center;
 }
 
+#main-blog {
+    background-color: #f3f3f3;
+}
+
 .search-form {
     max-width: 300px;
     /* Limita el tamaño máximo */
@@ -1119,18 +1127,18 @@ footer h5 {
     padding: 3em;
 }
 
-.sidebar .pfp {
+.sidebar .pfp, .sidebar-blogp .pfp {
     width: 100px;
     height: 100px;
     display: block;
     margin: 15% auto;
 }
 
-.sidebar p {
+.sidebar p, .sidebar-blogp p {
     color: #666;
 }
 
-.sidebar .signature {
+.sidebar .signature,  .sidebar-blogp .signature {
     font-family: 'Dancing Script', cursive;
     font-size: 24px;
     margin-top: 10px;
@@ -1393,7 +1401,6 @@ footer h5 {
 
 .post-contenido {
     padding: 3em;
-
 }
 
 .post-footer li {
@@ -1596,6 +1603,49 @@ p {
     width: 1px; /* width de la linea */
     background-color: #b7b7b7; 
 }
+
+.container-bp {
+    padding: 5em;
+    place-self: center;
+}
+
+.main-content {
+    width: 60%;
+    padding: 3em;
+}
+
+.sidebar-blogp {
+    width: 20%;
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+.preview-image {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.txt1-bp h5 {
+    margin-bottom: 0.8em;
+    margin-top: 3em;
+}
+
+.blockquote-bp {
+    max-width: 700px;
+    padding: 1.5em;
+    background: #f7f7f7;
+    border-left: 2px solid #ff7f50;
+    font-style: italic;
+    color: #444;
+    text-align: left;
+    margin-top: 0.8em;
+}
+
+.blockquote-bp p:last-child {
+    margin-top: 0.5em;
+}
+
+
 
 /*store*/
 .container-store-locator {
@@ -2751,45 +2801,6 @@ p {
 .stars {
     color: #fd9d38;
 }
-
-.container {
-    width: 100%;
-    overflow: hidden;
-}
-
-.main-content {
-    width: 70%;
-    float: left;
-    padding: 7% 10% 2%;
-}
-
-.sidebar-blogp {
-    width: 22%;
-    float: right;
-    padding: 7% 2%;
-}
-
-.preview-image {
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
-}
-
-blockquote-bp {
-    background-color: #f4f4f4;
-    padding: 1em;
-    border-left: 4px solid #ccc;
-    margin: 2em 0;
-}
-
-#main-blog {
-    background-color: #f3f3f3;
-}
-
-.breadcrumb {
-    background-color: white;
-}
-
 
 .cardShop {
     position: relative;
