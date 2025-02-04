@@ -291,6 +291,13 @@ p {
     margin-bottom: 2em;
 }
 
+.marginbot1em {
+    margin-bottom: 1em;
+}
+
+.marginbot05em {
+    margin-bottom: 0.5em;
+}
 .mauto {
     margin: auto;
 }
@@ -1610,12 +1617,12 @@ p {
 }
 
 .main-content {
-    width: 60%;
     padding: 3em;
+    width: 90%;
 }
 
 .sidebar-blogp {
-    width: 20%;
+    width: 30%;
     padding: 2em;
     box-sizing: border-box;
 }
@@ -1633,12 +1640,12 @@ p {
 .blockquote-bp {
     max-width: 700px;
     padding: 1.5em;
-    background: #f7f7f7;
     border-left: 2px solid #ff7f50;
     font-style: italic;
     color: #444;
     text-align: left;
-    margin-top: 0.8em;
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
 
 .blockquote-bp p:last-child {
@@ -2816,4 +2823,11 @@ p {
     font-weight: bold;
     padding: 5px 10px;
     position: absolute;
+}
+
+
+.cajatextos{
+    grid-template-columns: 1fr 1fr;
+    gap: 13px;
+    align-items: start;
 }
