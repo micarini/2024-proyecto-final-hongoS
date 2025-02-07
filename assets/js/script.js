@@ -40,6 +40,21 @@ if (document.getElementById("slider")) {
     document.getElementById('button3').addEventListener("click", goToImage03);
 }
 
+    if (document.getElementById("section2")) {
+    const section2 = document.getElementById("section2");
+
+    function fadeInOnScroll() {
+        const sectionPosition = section2.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3; // Ajusta la proporción si es necesario
+
+        if (sectionPosition < screenPosition) {
+            section2.classList.add("visible");
+        }
+    }
+
+    window.addEventListener("scroll", fadeInOnScroll);
+    fadeInOnScroll(); // Ejecuta una vez por si ya está visible al cargar
+};
 
 // hacer una funcion que forma galeria2 y adentro vamos a tener galeria armada y esa funcion la vamos a poner adentro del boton2 y cuando toque el boton 2 va a llamar a esa funcion y va a mostrar esa galeria. adentro de esa funcion vamos a tener que ponerle que a la galeria1 le cambie el style y se oculte STYLE DISPLAY NONE y asi hacer con todas! (muerte)
 //boton.onclick addeventlist etcetc
