@@ -2985,6 +2985,11 @@ p {
     color: #d39663;
 }
 
+.nombre {
+    display: block;
+    color: #232323;
+}
+
 .pfp {
     width: 100px;
     height: 100px;
@@ -2993,25 +2998,13 @@ p {
 }
 
 .author-bp {
-    display: flex;
-    align-items: center;
-    gap: 15px;
     padding: 20px;
     border: 1px solid #eaeaea; 
-    text-align: center;
-}
-    
-.author-content {
-    margin: 3em;
-    text-align: left;
-    display: flex;
-    flex-direction: column; 
-    flex-grow: 1; 
 }
 
-.nombre {
-    display: block;
-    color: #232323;
+.author-content {
+    flex: 1;
+    margin: 3em;
 }
     
 .post-btn-bp {
@@ -3030,10 +3023,6 @@ p {
     transition: 0.3s ease;
 }
 
-.relatedp {
-    display: block;
-}
-
 .related-posts-bp {
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -3047,29 +3036,42 @@ p {
     margin-bottom: 2em; 
     margin-top: 2em;
 }
-    
-.comments-bp::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: #ccc; 
-    margin-bottom: 4em; 
-    margin-top: 4em;
+
+.comments-bp{
+    border-top: 1px solid #eaeaea;
 }
+
+.comment1-bp, .comment2-bp, .comment3-bp {
+    border-top: 1px solid #eaeaea;
+    padding: 20px 0;
+}
+
+.comment2-bp {
+    margin-left: 5em;
+    padding-left: 1.5em;
+}
+
+.comment1-bp {
+    border-top: none;
+}
+
+/*a corregir*/
 
 .reply-bp {
     background: transparent;
-    border: 1px solid #333;
+    border: 1px solid #eaeaea;
     color: #333;
     padding: 5px 10px;
-    font-size: 0.8em;
-    text-transform: uppercase;
+    font-size: 1em;
     cursor: pointer;
-    margin-top: 10px;
     transition: 0.3s;
-    margin-left: auto; 
-    display: inline-block; 
+    display: inline-block;
+    margin-left: auto;
+    align-self: flex-end;
+    position: absolute;
+    right: 0; /* Aligns the button to the far right */
+    top: 0; /* Aligns it at the top */
+    margin: 0;
 }
 
 .reply-bp:hover {
@@ -3077,27 +3079,28 @@ p {
     color: #fff;
 }
 
-.comment-bp {
+.author-info {
     display: flex;
-    align-items: flex-start;
-    border-bottom: 1px solid #ddd;
-    padding: 20px 0;
-}
-    
-.comment-bp:last-child {
-    border-bottom: none;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align name and date to the left */
+    gap: 0.5em; /* Add spacing between stacked elements */
+    position: relative; /* Needed for Reply button alignment */
 }
 
-.comment1-bp, .comment2-bp, .comment3-bp {
-    display: flex;
-    align-items: flex-start;
-    border-bottom: 1px solid #ddd;
-    padding: 20px 0;
+.author-info a {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: #333;
+    margin: 0;
+    flex: 1; 
 }
-    
-.comment3-bp {
-    border-bottom: none;
+
+.date-bp {
+    display: block; 
+    margin: 0.2em 0;
 }
+
+/*hasta aca*/
     
 .forms-bp {
     max-width: 800px;
@@ -3127,17 +3130,24 @@ textarea {
     resize: none;
 }
 
+.input-group input:focus,
+textarea:focus {
+    border: 1px solid #ccc; 
+    outline: none; 
+}
+
+
 .submit-btn {
-    padding: 8px 14px;
-    border: 2px solid black;
+    padding: 6px 16px;
+    border: 2px solid #333;
     display: block;
-    margin: 4em auto;
-    background-color: #000;
+    margin: 2em auto;
+    background-color: #333;
     color: #fff;
 }
 
 .submit-btn:hover {
     background-color: white;
-    color: #000;
+    color: #333;
     transition: 0.3s ease;
 }
