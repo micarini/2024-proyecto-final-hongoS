@@ -16,12 +16,29 @@ if (document.getElementById("slider")) {
     let currentIndex = 0;
     const foto = document.getElementById('slider'); 
     const titulo = document.querySelector('#slider h2'); // selecciona el h2 dentro del slider
+    const button1 = document.getElementById('button1');
+    const button2 = document.getElementById('button2');
+    const button3 = document.getElementById('button3');
 
 
     // Función para actualizar la imagen de fondo
     function updateSlider() {
         foto.style.backgroundImage = `url(${sliderContent[currentIndex]})`;
         titulo.textContent = sliderTexts[currentIndex];
+
+        // Eliminar la clase 'active' de todos los botones
+        button1.classList.remove('active');
+        button2.classList.remove('active');
+        button3.classList.remove('active');
+
+        // Agregar la clase 'active' al botón correspondiente
+        if (currentIndex === 0) {
+            button1.classList.add('active');
+        } else if (currentIndex === 1) {
+            button2.classList.add('active');
+        } else if (currentIndex === 2) {
+            button3.classList.add('active');
+        }
     }
 
     // Función para avanzar automáticamente

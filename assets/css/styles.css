@@ -546,7 +546,6 @@ nav ul li a.active {
 
 /*SLIDER*/
 #slider {
-    background-image: url("assets/fotos/furniture-collection1.webp");
     height: 100vh;
     margin-bottom: 20px;
 }
@@ -562,9 +561,15 @@ nav ul li a.active {
 .botones-container button {
     margin: 0 10px;
     padding: 0 0.5em;
+    color: rgb(0, 0, 0, 0.5);
     background-color: transparent;
     border: none;
     position: relative;
+    transition: color 0.3s ease; 
+}
+
+.botones-container button.active {
+    color: rgb(0, 0, 0);
 }
 
 .botones-container button::before,
@@ -618,19 +623,13 @@ nav ul li a.active {
 }
 
 #slider h5::before {
-    content: " ";
-    /* Pseudo-elemento vacío para la línea */
+    content: " ";    /* Pseudo-elemento vacío para la línea */
     position: absolute;
-    left: 3px;
-    /* Ajusta la distancia que deseas que esté del texto */
-    top: 50%;
-    /* Alinea la línea verticalmente con el texto */
-    transform: translateY(-50%);
-    /* Centra la línea */
-    width: 20px;
-    /* Largo de la línea */
-    height: 0.75px;
-    /* Grosor de la línea */
+    left: 3px;    /* Ajusta la distancia que deseas que esté del texto */
+    top: 50%;    /* Alinea la línea verticalmente con el texto */
+    transform: translateY(-50%);    /* Centra la línea */
+    width: 20px;    /* Largo de la línea */
+    height: 0.75px;    /* Grosor de la línea */
     background-color: #000;
 }
 
@@ -655,8 +654,7 @@ nav ul li a.active {
     border: 1px solid #232323;
 }
 
-
-/* SECTION 1*/
+/* SECTION 1 HOME*/
 
 #section1 {
     grid-template-columns: repeat(4, 1fr);
