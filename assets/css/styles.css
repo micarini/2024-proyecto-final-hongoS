@@ -3087,8 +3087,8 @@ p {
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     align-items: flex-start; /* Align name and date to the left */
-    gap: 0.5em; /* Add spacing between stacked elements */
     position: relative; /* Needed for Reply button alignment */
+    gap: 0.2em;
 }
 
 .author-info a {
@@ -3101,7 +3101,6 @@ p {
 
 .date-bp {
     display: block; 
-    margin: 0.2em 0;
 }
 
 /*hasta aca*/
@@ -3140,7 +3139,6 @@ textarea:focus {
     outline: none; 
 }
 
-
 .submit-btn {
     padding: 6px 16px;
     border: 2px solid #333;
@@ -3154,4 +3152,14 @@ textarea:focus {
     background-color: white;
     color: #333;
     transition: 0.3s ease;
+}
+
+.first-letter {
+    float: left;
+    font-size: 45px;
+    margin: 0 20px 0 0;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    line-height: 42px;
 }
