@@ -1885,10 +1885,13 @@ p {
     padding-right: 25%;
 }
 
-.store-locator-stores .p1 {
-    padding-right: 25%;
+.store-locator-stores p {
+position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
 }
-
 .left-number-locator p {
     font-weight: bold;
     z-index: 2;
