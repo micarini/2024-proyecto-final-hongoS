@@ -94,3 +94,19 @@ if(document.getElementById("contenedorSlider")){
             div.appendChild(img);
             galleryPostContainer.appendChild(div);
         }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            //obtiene la URL de la página actual
+            let currentPage = window.location.pathname.split("/").pop();
+    
+            //selecciona todos los enlaces del menú
+            let menuLinks = document.querySelectorAll("nav ul li a");
+    
+            //recorre los enlaces con un bucle for
+            for (let i = 0; i < menuLinks.length; i++) {
+                if (menuLinks[i].getAttribute("href") === currentPage) {
+                    menuLinks[i].classList.add("active"); //agrega la clase "active"
+                    break; //sale del bucle cuando encuentra coincidencia
+                }
+            }
+        });

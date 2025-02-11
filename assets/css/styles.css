@@ -551,6 +551,12 @@ nav a:hover {
     color: #999999;
 }
 
+nav ul li a.active {
+    color: red;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 
 /*SLIDER*/
 #slider {
