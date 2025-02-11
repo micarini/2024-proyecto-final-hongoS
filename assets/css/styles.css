@@ -2832,12 +2832,13 @@ position: absolute;
 }
 
 .discount-badge {
-    background-color: green;
+    background-color: #17B169;
     color: white;
     font-size: 10px;
     font-weight: bold;
     padding: 5px 10px;
     position: absolute;
+    margin: 7%;
 }
 
 .cajatextos{
