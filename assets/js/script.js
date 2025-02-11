@@ -8,9 +8,9 @@ if (document.getElementById("slider")) {
     ];
 
     const sliderTexts = [
-        "Furniture Collection",
-        "Designer Wall Clock",
-        "Modern Hanging"
+        "Furniture collection",
+        "Designer wall clock",
+        "Modern hanging"
     ];
 
     let currentIndex = 0;
