@@ -2904,18 +2904,22 @@ p {
     
 .txt-block {
     position: absolute;
-    top: 20%;
-    left: 60%;
-    transform: translate(-40%, 0);
+    top: 12%;
+    left: 65%;
+    transform: translate(-25%, 0);
     background: white;
     padding: 15px;
-    max-width: 45%;
+    width: 50%;
     font-size: 1.2em;
     color: #999999;
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 30px;
 }
     
 .txt-block ul{
-    padding-left: 20px;
+    padding-left: 30px;
+    
     margin-top: 10px;
 }
     
