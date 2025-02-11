@@ -172,6 +172,7 @@ p {
 .align-l {
     align-items: left;
 }
+
 .alignitems-start {
     align-items: flex-start
 }
@@ -253,6 +254,7 @@ p {
 .padding-l2 {
     padding-left: 2em;
 }
+
 .padtop25 {
     padding-top: 2.5em;
 }
@@ -296,6 +298,7 @@ p {
 .margintop4em {
     margin-top: 4em;
 }
+
 .marginbot2em {
     margin-bottom: 2em;
 }
@@ -307,6 +310,7 @@ p {
 .marginbot05em {
     margin-bottom: 0.5em;
 }
+
 .mauto {
     margin: auto;
 }
@@ -734,7 +738,8 @@ nav ul li a.active {
 
 #section2 {
     opacity: 0;
-    transform: translateY(50px); /* Se inicia desplazado hacia abajo */
+    transform: translateY(50px);
+    /* Se inicia desplazado hacia abajo */
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
@@ -1161,18 +1166,21 @@ footer h5 {
     padding: 3em;
 }
 
-.sidebar .pfp, .sidebar-blogp .pfp {
+.sidebar .pfp,
+.sidebar-blogp .pfp {
     width: 100px;
     height: 100px;
     display: block;
     margin: 15% auto;
 }
 
-.sidebar p, .sidebar-blogp p {
+.sidebar p,
+.sidebar-blogp p {
     color: #666;
 }
 
-.sidebar .signature,  .sidebar-blogp .signature {
+.sidebar .signature,
+.sidebar-blogp .signature {
     font-family: 'Dancing Script', cursive;
     font-size: 24px;
     margin-top: 10px;
@@ -1210,7 +1218,10 @@ footer h5 {
     color: #000;
 }
 
-.categories, .archive, .popular-post, .newsletter{
+.categories,
+.archive,
+.popular-post,
+.newsletter {
     margin-top: 2em;
 }
 
@@ -1484,6 +1495,7 @@ p {
 .post-contenido {
     padding: 3em;
 }
+
 .slider {
     height: 300px;
     padding: 3em;
@@ -1602,20 +1614,22 @@ p {
 }
 
 /*BLOG POST*/
-.main-title h1{
-    padding: 1.5em; 
+.main-title h1 {
+    padding: 1.5em;
 }
 
 .post-meta ul li {
-    color: #b7b7b7; 
+    color: #b7b7b7;
     font-size: 1.2em;
     font-weight: 300;
-    position: relative; /* necesario como marco de referencia para las lineas, ya que hacen que despues el position absolute se posicione en relacion a este elemento padre*/
-    padding-left: 1.2em; /* espacio para la linea  */
+    position: relative;
+    /* necesario como marco de referencia para las lineas, ya que hacen que despues el position absolute se posicione en relacion a este elemento padre*/
+    padding-left: 1.2em;
+    /* espacio para la linea  */
 }
 
 .post-meta ul li a {
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 .post-meta ul li a:hover {
@@ -1623,17 +1637,23 @@ p {
     transition: 0.3s ease;
 }
 
-.post-meta ul li:not(:first-child)::before { /*combinacion de un selector y un pseudo-elemento (aca estoy aplicandole lo siguiente a todos los li excepto el primero, y lo que aplico va "before" osea antes del elemento*/
-    content: ""; /* agrego la linea divisoria */
+.post-meta ul li:not(:first-child)::before {
+    /*combinacion de un selector y un pseudo-elemento (aca estoy aplicandole lo siguiente a todos los li excepto el primero, y lo que aplico va "before" osea antes del elemento*/
+    content: "";
+    /* agrego la linea divisoria */
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
-    top: 50%; /* posicion inicial al centro */
-    transform: translateY(-50%); /* centrar verticalmente */
-    height: 50%; /*alto de la linea*/
-    width: 1px; /* width de la linea */
-    background-color: #b7b7b7; 
+    top: 50%;
+    /* posicion inicial al centro */
+    transform: translateY(-50%);
+    /* centrar verticalmente */
+    height: 50%;
+    /*alto de la linea*/
+    width: 1px;
+    /* width de la linea */
+    background-color: #b7b7b7;
 }
 
 .container-bp {
@@ -1797,7 +1817,8 @@ p {
     color: #333;
     margin-top: 0.5rem;
     line-height: 1.5;
-    max-width: 600px; /* controla el ancho del texto */
+    max-width: 600px;
+    /* controla el ancho del texto */
     padding-left: 7rem;
     padding-right: 3%;
 }
@@ -1811,13 +1832,16 @@ p {
     font-weight: 300;
     color: #777;
     line-height: 1.6;
-    max-width: 500px; /* Controla el ancho del segundo párrafo */
+    max-width: 500px;
+    /* Controla el ancho del segundo párrafo */
     margin-top: 1.5rem;
-    padding-left: 4rem; /* Espacio adicional en el lado izquierdo */
+    padding-left: 4rem;
+    /* Espacio adicional en el lado izquierdo */
 }
 
 .store-locator-mapa {
-    height: 100vh; /* Ocupa la altura total de la pantalla */
+    height: 100vh;
+    /* Ocupa la altura total de la pantalla */
     padding-top: 100px;
     max-width: 100vw;
 }
@@ -1848,23 +1872,18 @@ p {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    /* Bordes redondeados */
     cursor: pointer;
-    /* Cambia el cursor al pasar sobre el botón */
-    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.6);
-    /* Sombra del botón */
+    box-shadow: 5px 0px 7px black (0, 0, 0, 0.3);
     font-size: 16px;
     rotate: 90deg;
 }
 
 .btn-store-locator:hover {
     background-color: #d4af37;
-    /* Color de fondo en hover */
     color: white;
 }
 
 .store-locator-stores {
-    grid-template-columns: 1fr 1fr;
     padding: 10%;
 }
 
@@ -1883,7 +1902,7 @@ p {
 }
 
 .left-number-locator h1 {
-    font-size: 120px;
+    font-size: 12em;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1892,12 +1911,13 @@ p {
 }
 
 .store-locator-stores p {
-position: absolute;
+    position: absolute;
     right: 10%;
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
 }
+
 .left-number-locator p {
     font-weight: bold;
     z-index: 2;
@@ -1978,7 +1998,8 @@ position: absolute;
 
 .panel {
     color: white;
-    display: none; /* Ahora sí se puede usar correctamente */
+    display: none;
+    /* Ahora sí se puede usar correctamente */
     overflow: hidden;
     transition: max-height 0.4s ease;
     padding: 0 15px;
@@ -2558,7 +2579,8 @@ position: absolute;
     justify-content: flex-start;
 }
 
-.social-links a, .social-icons-bp a{
+.social-links a,
+.social-icons-bp a {
     color: #000;
     font-size: 1.2em;
     transition: color 0.3s ease-in-out;
@@ -2721,7 +2743,8 @@ position: absolute;
 }
 
 .filter-section:last-child {
-    border-bottom: none;  /*le saco la linea entre cada filtro al ultimo*/
+    border-bottom: none;
+    /*le saco la linea entre cada filtro al ultimo*/
 }
 
 .filter-section h3 {
@@ -2752,7 +2775,8 @@ position: absolute;
 }
 
 .filter-section li {
-    display: flex; /* Alineación en línea entre texto y números */
+    display: flex;
+    /* Alineación en línea entre texto y números */
     justify-content: space-between;
     align-items: center;
     font-size: 1.2em;
@@ -2832,7 +2856,8 @@ position: absolute;
 
 .cardShop {
     position: relative;
-    width: 255px; /* Ajusta según el tamaño del producto */
+    width: 255px;
+    /* Ajusta según el tamaño del producto */
     padding: 15px;
     text-align: center;
 }
@@ -2847,7 +2872,7 @@ position: absolute;
     margin: 7%;
 }
 
-.cajatextos{
+.cajatextos {
     grid-template-columns: 1fr 1fr;
     gap: 13px;
     align-items: start;
@@ -2856,38 +2881,38 @@ position: absolute;
 .content-wrapper {
     display: flex;
     align-items: flex-start;
-    max-width: 1100px; 
-    margin: auto; 
+    max-width: 1100px;
+    margin: auto;
 }
-    
+
 .img-left-bp {
     width: 50%;
     text-align: center;
     margin-right: 30px;
 }
-    
+
 .img-container {
     background-color: #ececec;
     padding: 20px;
     display: inline-block;
     width: 100%;
 }
-    
+
 .img-left-bp img {
     width: 100%;
     height: auto;
 }
-    
+
 .img-left-bp figcaption {
     font-size: 10px;
     margin-top: 8px;
 }
-    
+
 .txt6-bp {
     width: 50%;
     line-height: 1.6;
 }
-    
+
 .section3-bp {
     position: relative;
     justify-content: center;
@@ -2895,9 +2920,9 @@ position: absolute;
     max-width: 1200px;
     margin: auto;
 }
-    
+
 .img-container2 {
-    width: 65%; 
+    width: 65%;
     position: relative;
 }
 
@@ -2906,7 +2931,7 @@ position: absolute;
     height: auto;
     display: block;
 }
-    
+
 .txt-block {
     position: absolute;
     top: 12%;
@@ -2921,27 +2946,28 @@ position: absolute;
     padding-right: 30px;
     line-height: 30px;
 }
-    
-.txt-block ul{
+
+.txt-block ul {
     padding-left: 30px;
-    
+
     margin-top: 10px;
 }
-    
+
 .txt-block li {
-    margin-bottom: 8px; 
-    display: list-item !important; 
-    list-style-type: disc !important; 
+    margin-bottom: 8px;
+    display: list-item !important;
+    list-style-type: disc !important;
 }
-    
+
 .section4-bp {
     padding: 4em 0 4em;
     border-top: 1px solid #eaeaea;
 }
-    
+
 .tags-bp {
     padding: 10px 0;
 }
+
 .tags-bp a {
     display: inline-block;
     padding: 6px 14px;
@@ -2977,9 +3003,10 @@ position: absolute;
     color: #d39663;
 }
 
-.btn-bp-prev i{
+.btn-bp-prev i {
     margin-right: 10px;
 }
+
 .btn-bp-next i {
     margin-left: 10px;
 }
@@ -3008,24 +3035,24 @@ position: absolute;
 
 .author-bp {
     padding: 20px;
-    border: 1px solid #eaeaea; 
+    border: 1px solid #eaeaea;
 }
 
 .author-content {
     flex: 1;
     margin: 3em;
 }
-    
+
 .post-btn-bp {
     padding: 5px 10px;
     border: 2px solid black;
     margin: 1em 0;
     background-color: #000;
     justify-content: flex-start;
-    display: inline-block; 
+    display: inline-block;
     max-width: 120px;
 }
-    
+
 .post-btn-bp:hover {
     background-color: white;
     color: #000;
@@ -3036,21 +3063,24 @@ position: absolute;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.related-posts-bp p:last-of-type::after { /*se agrega solo al ultimo p */
+.related-posts-bp p:last-of-type::after {
+    /*se agrega solo al ultimo p */
     content: "";
     display: block;
-    width: 250px; 
-    height: 1px; 
+    width: 250px;
+    height: 1px;
     background-color: #ccc;
-    margin-bottom: 2em; 
+    margin-bottom: 2em;
     margin-top: 2em;
 }
 
-.comments-bp{
+.comments-bp {
     border-top: 1px solid #eaeaea;
 }
 
-.comment1-bp, .comment2-bp, .comment3-bp {
+.comment1-bp,
+.comment2-bp,
+.comment3-bp {
     border-top: 1px solid #eaeaea;
     padding: 20px 0;
 }
@@ -3078,8 +3108,10 @@ position: absolute;
     margin-left: auto;
     align-self: flex-end;
     position: absolute;
-    right: 0; /* Aligns the button to the far right */
-    top: 0; /* Aligns it at the top */
+    right: 0;
+    /* Aligns the button to the far right */
+    top: 0;
+    /* Aligns it at the top */
     margin: 0;
 }
 
@@ -3090,9 +3122,12 @@ position: absolute;
 
 .author-info {
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: flex-start; /* Align name and date to the left */
-    position: relative; /* Needed for Reply button alignment */
+    flex-direction: column;
+    /* Stack elements vertically */
+    align-items: flex-start;
+    /* Align name and date to the left */
+    position: relative;
+    /* Needed for Reply button alignment */
     gap: 0.2em;
 }
 
@@ -3101,15 +3136,15 @@ position: absolute;
     text-transform: uppercase;
     color: #333;
     margin: 0;
-    flex: 1; 
+    flex: 1;
 }
 
 .date-bp {
-    display: block; 
+    display: block;
 }
 
 /*hasta aca*/
-    
+
 .forms-bp {
     max-width: 800px;
     margin: 0 auto;
@@ -3140,8 +3175,8 @@ textarea {
 
 .input-group input:focus,
 textarea:focus {
-    border: 1px solid #ccc; 
-    outline: none; 
+    border: 1px solid #ccc;
+    outline: none;
 }
 
 .submit-btn {
@@ -3167,4 +3202,154 @@ textarea:focus {
     padding: 15px;
     font-weight: 600;
     line-height: 42px;
+}
+
+/* Responsive Mobile Styles for Store Locator */
+@media (max-width: 768px) {
+    #section1-store-locator {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .breadcrumb {
+        font-size: 0.7rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: center;
+    }
+
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .article1-section1 h4,
+    .article1-section1 h2,
+    .article2-section1 h3 {
+        padding-left: 0;
+        padding-right: 1rem;
+    }
+
+    .article2-section1 p {
+        padding-top: 1em;
+    }
+
+    .store-locator-mapa {
+        height: 300px;
+        padding-top: 2rem;
+    }
+
+    .imagen-mapa-store-locator {
+        background-size: cover;
+        padding: 20px;
+    }
+
+    .imagen-mapa-store-locator p {
+        width: 90%;
+        text-align: center;
+    }
+
+    .btn-store-locator {
+        width: 40px;
+        height: 40px;
+    }
+
+    .container-store-locator {
+        flex-direction: column;
+        display: flex;
+    }
+
+
+    .store-locator-stores {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 5%; /* Reduce padding for smaller screens */
+    }
+
+    .left-number-locator .p1 {
+        font-size: 1.2em;
+        font-weight: bold;
+        position: relative;
+        z-index: 2; /* Ensure it's above the number */
+    }
+
+    .left-number-locator {
+        border-right: none; /* Remove border */
+        margin-left: 0; /* Remove unnecessary left margin */
+        position: relative;
+    }
+
+    .left-number-locator h1 {
+        font-size: 10em; /* Reduce font size for smaller screens */
+        position: absolute; /* Remove absolute positioning */
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        z-index: 1; /* Keep the number in the background */
+    }
+
+    .store-locator-stores p {
+        position: static; /* Remove absolute positioning */
+        width: auto;
+        text-align: center;
+    }
+
+    .right-text-locator {
+        width: auto; /* Make text width flexible */
+        padding-top: 10em;
+    }
+
+    .store-locator-stores p.p2 {
+        font-size: 2em;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .art1-sect5,
+    .art2-sect5,
+    .art3-sect5 {
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .store-locator-store-cards {
+        padding: 3em 1em;
+    }
+
+    .store-locator-store-card {
+        width: 100%;
+        height: auto;
+    }
+
+    .store-locator-store-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .icon-grid {
+        width: 100%;
+    }
+
+    .five-icons-foot {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .features-shipping {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .feature-item-shipping {
+        width: 100%;
+        padding: 2em;
+    }
 }
