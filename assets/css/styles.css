@@ -1967,14 +1967,9 @@ p {
     border-radius: 4px;
 }
 
-.accordion.active {
-    background-color: #555;
-}
-
 .panel {
-    background-color: #555;
     color: white;
-    max-height: 0;
+    display: none; /* Ahora sí se puede usar correctamente */
     overflow: hidden;
     transition: max-height 0.4s ease;
     padding: 0 15px;
