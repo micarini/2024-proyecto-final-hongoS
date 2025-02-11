@@ -541,7 +541,6 @@ nav a:hover {
 
 nav ul li a.active {
     color: #fd9d38;
-    font-weight: bolder;
     text-decoration: underline;
 }
 

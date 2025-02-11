@@ -7,37 +7,64 @@ if (document.getElementById("slider")) {
         'assets/fotos/furniture-collection3.jpg'
     ];
 
+    const sliderTexts = [
+        "Furniture Collection",
+        "Designer Wall Clock",
+        "Modern Hanging"
+    ];
+
     let currentIndex = 0;
-    const foto = document.getElementById('slider'); // Corrige la selección del elemento
+    const foto = document.getElementById('slider'); 
+    const titulo = document.querySelector('#slider h2'); // selecciona el h2 dentro del slider
+
 
     // Función para actualizar la imagen de fondo
     function updateSlider() {
         foto.style.backgroundImage = `url(${sliderContent[currentIndex]})`;
+        titulo.textContent = sliderTexts[currentIndex];
     }
 
-    // Inicializa el fondo al cargar la página
-    updateSlider();
+    // Función para avanzar automáticamente
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % sliderContent.length;
+        updateSlider();
+    }
+
+    // Inicio la automatización del slider cada 5 segundos
+    let autoSlide = setInterval(nextSlide, 3000);
+
+    // Reinicio el intervalo cuando el usuario hace clic en un botón
+    function resetAutoSlide() {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(nextSlide, 3000);
+    }
 
     // Funciones para cambiar las imágenes
     function goToImage01() {
         currentIndex = 0;
         updateSlider();
+        resetAutoSlide();
     }
 
     function goToImage02() {
         currentIndex = 1;
         updateSlider();
+        resetAutoSlide();
     }
 
     function goToImage03() {
         currentIndex = 2;
         updateSlider();
+        resetAutoSlide();
     }
-
+    
     // Asignar eventos a los botones
     document.getElementById('button1').addEventListener("click", goToImage01);
     document.getElementById('button2').addEventListener("click", goToImage02);
     document.getElementById('button3').addEventListener("click", goToImage03);
+
+    // Inicializa el slider
+    updateSlider();
 }
 
     if (document.getElementById("section2")) {
@@ -56,8 +83,7 @@ if (document.getElementById("slider")) {
     fadeInOnScroll(); // Ejecuta una vez por si ya está visible al cargar
 };
 
-// hacer una funcion que forma galeria2 y adentro vamos a tener galeria armada y esa funcion la vamos a poner adentro del boton2 y cuando toque el boton 2 va a llamar a esa funcion y va a mostrar esa galeria. adentro de esa funcion vamos a tener que ponerle que a la galeria1 le cambie el style y se oculte STYLE DISPLAY NONE y asi hacer con todas! (muerte)
-//boton.onclick addeventlist etcetc
+
 
 /*GALERIA 1*/
 if (document.getElementById("section3")) {
@@ -321,19 +347,18 @@ if (document.getElementsByClassName("gallery")) {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Seleccionamos el formulario del footer
+    // selecciono el formulario del footer
     const newsletterForm = document.getElementById("newsletterForm");
 
-    // Agregamos un evento 'submit' al formulario
+    // agrego un evento 'submit' 
     newsletterForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // Evitar el envío del formulario por defecto
+        event.preventDefault(); // evito el envio del formulario por defecto
 
         const emailInput = document.getElementById("emailFooter").value;
 
-        // Validar si el correo contiene "@" y termina con ".com"
+        // valido si el correo contiene "@" y termina con ".com"
         if (emailInput.includes("@") && emailInput.endsWith(".com")) {
             alert("¡Correo válido! Formulario enviado.");
-            // Si necesitas enviar el formulario realmente, quita el event.preventDefault() de arriba
         } else {
             alert("Por favor, ingresa un correo electrónico válido con '@' y que termine en '.com'.");
         }
