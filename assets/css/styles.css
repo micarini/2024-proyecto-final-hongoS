@@ -384,6 +384,9 @@ p {
     font-size: 1.2em;
 }
 
+.em14 {
+    font-size: 1.4em;
+}
 .em15 {
     font-size: 1.5em;
 }
@@ -1726,7 +1729,7 @@ p {
     grid-template-columns: 1fr 1fr;
     padding-top: 4rem;
     column-gap: 2rem;
-    padding-bottom: 4rem;
+    padding-bottom: 8em;
 }
 
 .breadcrumb {
@@ -1756,6 +1759,9 @@ p {
     align-items: start;
 }
 
+.article1-section1 {
+    position: relative;
+}
 
 .article1-section1 h4 {
     font-size: 0.7rem;
@@ -1763,8 +1769,20 @@ p {
     margin: 0;
     padding-top: 4rem;
     padding-left: 7rem;
-    align-self: left;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
 }
+
+.article1-section1 h4::before {
+    content: "";
+    display: inline-block;
+    width: 10px; 
+    height: 2px;  
+    background-color: #d39663
+}
+
 
 .article1-section1 h2 {
     font-size: 20px;
@@ -1779,6 +1797,7 @@ p {
 
 .article2-section1 p {
     padding-top: 6em;
+    padding-right: 8em;
 }
 
 .article2-section1 h3 {
@@ -3173,6 +3192,7 @@ textarea:focus {
 
     .article2-section1 p {
         padding-top: 1em;
+        padding-right: 0 !important;
     }
 
     .store-locator-mapa {
