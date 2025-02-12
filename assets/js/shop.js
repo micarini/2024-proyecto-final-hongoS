@@ -24,6 +24,7 @@ if (document.getElementById("shop-container")) {
     for (let i = 0; i < productosShop.length; i++) {
         let cardShop = document.createElement("div");
         cardShop.setAttribute("class", "cardShop");
+        cardShop.setAttribute("data-id", i);  // Agregar un identificador único para cada card
 
         let titulo = document.createElement("h3");
         titulo.setAttribute("class", "titulo");
@@ -63,6 +64,11 @@ if (document.getElementById("shop-container")) {
         // Evento mouseout para restaurar la imagen original
         img.addEventListener("mouseout", () => {
             img.setAttribute("src", productosShop[i].img);
+        });
+
+        // Evento click para redirigir al producto
+        cardShop.addEventListener("click", () => {
+            window.location.href = `product.html?id=${i}`;
         });
     }
 }
