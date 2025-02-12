@@ -126,3 +126,39 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
+const contactForm = document.getElementById("formcontact");
+
+//evento 'submit' al formulario
+contactForm.addEventListener("submit", function (event) {
+    event.preventDefault(); //evita el envío del formulario por defecto
+
+    const nameInput = document.querySelector("input[name='name']").value;
+    const emailInput = document.querySelector("input[name='email']").value;
+    const subjectInput = document.querySelector("input[name='subject']").value;
+    const messageInput = document.querySelector("input[name='message']").value;
+
+    //validaciones
+    if (nameInput.trim() === "") { //.trim() se usa para asegurarse de que el usuario no ingrese solo espacios en los campos del formulario.
+        alert("Por favor, ingresa tu nombre.");
+        return;
+    }
+    
+    if (!emailInput.includes("@") || !emailInput.endsWith(".com")) {
+        alert("Por favor, ingresa un correo electrónico válido con '@' y que termine en '.com'.");
+        return;
+    }
+
+    if (subjectInput.trim() === "") {
+        alert("Por favor, ingresa un asunto.");
+        return;
+    }
+
+    if (messageInput.trim() === "") {
+        alert("Por favor, ingresa un mensaje.");
+        return;
+    }
+
+    alert("¡Formulario válido! Enviado correctamente.");
+    contactForm.submit();
+});
