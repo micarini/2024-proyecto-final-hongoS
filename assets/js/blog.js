@@ -1,14 +1,7 @@
 if(document.getElementById("contenedorSlider")){
     const sliderBlog = document.getElementById("contenedorSlider");
-    const botonIzquierdo = document.createElement("button");
-    botonIzquierdo.textContent = ">";
-    const botonDerecho = document.createElement("button");
-    botonDerecho.textContent = "<";
-    botonDerecho.setAttribute("class", "boton");
-    botonIzquierdo.classList = "boton";
-    
-    sliderBlog.appendChild(botonIzquierdo);
-    sliderBlog.appendChild(botonDerecho);
+    const botonIzquierdo = document.getElementById("prev");  
+    const botonDerecho = document.getElementById("next");   
     
     const miArrayImg = [
         "assets/fotos/blog-slider-post.jpg",
@@ -18,9 +11,12 @@ if(document.getElementById("contenedorSlider")){
     ];
     
     let i = 0;
+    let autoSlide = setInterval(nextImg, 1000); // empiezo auto-sliding
     
     function updateImg() {
         sliderBlog.style.backgroundImage = `url(${miArrayImg[i]})`;
+        sliderBlog.style.backgroundSize = "cover";  
+        sliderBlog.style.backgroundPosition = "center";
     }
     
     function nextImg() {
@@ -33,11 +29,24 @@ if(document.getElementById("contenedorSlider")){
         updateImg();
     }
     
-    botonIzquierdo.addEventListener('click', prevImg);
-    botonDerecho.addEventListener('click', nextImg);
+    // freno auto-slide permanentemente
+    function stopAutoSlide() {
+        clearInterval(autoSlide); 
+    }
     
-    // Inicializar con la primera imagen
+    botonIzquierdo.addEventListener("click", function() {
+        prevImg();
+        stopAutoSlide(); // freno auto-slide cuando se hace click
+    });
+    
+    botonDerecho.addEventListener("click", function() {
+        nextImg();
+        stopAutoSlide(); 
+    });
+    
+    // inicializo con la primer imagen
     updateImg();
+        
 }
 
     function validateEmail() {

@@ -47,7 +47,7 @@ if (document.getElementById("slider")) {
         updateSlider();
     }
 
-    // Inicio la automatización del slider cada 5 segundos
+    // Inicio la automatización del slider cada 3 segundos
     let autoSlide = setInterval(nextSlide, 3000);
 
     // Reinicio el intervalo cuando el usuario hace clic en un botón
