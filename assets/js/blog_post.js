@@ -24,22 +24,27 @@ document.addEventListener("DOMContentLoaded", function () {
     commentForm.addEventListener("submit", function (event) {
         event.preventDefault(); 
 
-        const name = commentForm.querySelector("input[type='text']").value.trim();
-        const email = commentForm.querySelector("input[type='email']").value.trim();
-        const comment = commentForm.querySelector("textarea").value.trim();
+        const nameInput = document.querySelector("input[name='name']").value.trim();
+        const emailInput = document.querySelector("input[name='email']").value.trim();
+        const commentInput = document.querySelector("textarea[name='comment']").value.trim();
 
-        //sin trim(), un usuario podría ingresar " " (solo espacios) en el campo de nombre y pasaría la validación
-
-        if (name === "" || email === "" || comment === "") {
-            alert("Por favor complete todos los campos requeridos.");
+        // Validaciones
+        if (nameInput === "") {
+            alert("Por favor, ingresa tu nombre.");
             return;
         }
 
-        if (!email.includes("@") && !email.endsWith(".com")) {
-            alert("Por favor, ingresa un correo electrónico válido con '@' y que termine en '.com'");
+        if (!emailInput.includes("@") || !emailInput.endsWith(".com")) {
+            alert("Por favor, ingresa un correo electrónico válido con '@' y que termine en '.com'.");
             return;
         }
 
-        alert("¡Formulario enviado exitosamente!");
+        if (commentInput === "") {
+            alert("Por favor, ingresa un comentario.");
+            return;
+        }
+
+        alert("¡Formulario válido! Enviado correctamente.");
+        commentForm.submit();
     });
 });
