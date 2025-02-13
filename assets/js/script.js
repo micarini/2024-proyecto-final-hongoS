@@ -385,8 +385,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     //obtiene la URL de la página actual
-    let currentPage = window.location.pathname.split("/").pop();
-
+    //window.location.pathname devuelve la ruta de la URL (por ejemplo, "/pagina1" si estamos en www.misitio.com/pagina1). .split("/") divide esta ruta en un arreglo, separando por cada barra (/). Por ejemplo, si la ruta es "/pagina1", esto devolvería ["", "pagina1"]. .pop() obtiene el último elemento del arreglo (en este caso, "pagina1"), que es el nombre del archivo o la página actual. Es útil para comparar si la URL coincide con algún enlace de la lista del menú.
+    let currentPage = window.location.pathname.split("/").pop(); //
+    console.log("window.location" + window.location)
+    console.log("window.location.pathname" + window.location.pathname)
     //selecciona todos los enlaces del menú
     let menuLinks = document.querySelectorAll("nav ul li a");
 
