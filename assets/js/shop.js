@@ -261,4 +261,3 @@ const toggleButton = document.getElementById("theme-toggle");
             precios[i].style.color = isDarkMode ? "#f4f3f3" : "";
         }
     }
-});
