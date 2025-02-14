@@ -387,6 +387,7 @@ p {
 .em14 {
     font-size: 1.4em;
 }
+
 .em15 {
     font-size: 1.5em;
 }
@@ -475,14 +476,14 @@ p {
 /*HEADER*/
 header {
     top: 0;
-    z-index: 1000; 
+    z-index: 1000;
 }
 
 header .header-negro {
     min-height: 35px;
     padding-left: 4em;
     padding-right: 4em;
-}  
+}
 
 .redes a {
     transition: opacity 0.3s ease;
@@ -492,7 +493,7 @@ header .header-negro {
     opacity: 0.8;
 }
 
-.header-negro h4{
+.header-negro h4 {
     left: 50%;
     transform: translateX(50%);
 }
@@ -503,7 +504,7 @@ header .header-negro {
 }
 
 .header-negro .menu2 li:not(:last-child)::after {
-    content: "|"; 
+    content: "|";
     color: #999999;
 }
 
@@ -568,7 +569,7 @@ nav ul li a.active {
     background-color: transparent;
     border: none;
     position: relative;
-    transition: color 0.3s ease; 
+    transition: color 0.3s ease;
 }
 
 .botones-container button.active {
@@ -626,13 +627,19 @@ nav ul li a.active {
 }
 
 #slider h5::before {
-    content: " ";    /* Pseudo-elemento vacío para la línea */
+    content: " ";
+    /* Pseudo-elemento vacío para la línea */
     position: absolute;
-    left: 3px;    /* Ajusta la distancia que deseas que esté del texto */
-    top: 50%;    /* Alinea la línea verticalmente con el texto */
-    transform: translateY(-50%);    /* Centra la línea */
-    width: 20px;    /* Largo de la línea */
-    height: 0.75px;    /* Grosor de la línea */
+    left: 3px;
+    /* Ajusta la distancia que deseas que esté del texto */
+    top: 50%;
+    /* Alinea la línea verticalmente con el texto */
+    transform: translateY(-50%);
+    /* Centra la línea */
+    width: 20px;
+    /* Largo de la línea */
+    height: 0.75px;
+    /* Grosor de la línea */
     background-color: #000;
 }
 
@@ -714,7 +721,6 @@ nav ul li a.active {
 }
 
 /*SECTION 2*/
-
 #section2 {
     opacity: 0;
     transform: translateY(50px);
@@ -758,7 +764,6 @@ nav ul li a.active {
     text-align: left;
     font-size: 1rem;
     transition: all 0.3s ease;
-    /* Animación suave */
     z-index: 1;
 }
 
@@ -798,7 +803,7 @@ nav ul li a.active {
     padding-top: 6rem;
     /*el espacio de arriba del shop by category*/
     padding-bottom: 2rem;
-    /*el espacio de abajo del shop by category*/
+    /*el espacio de abajo*/
 }
 
 #foto1-section2 {
@@ -856,7 +861,6 @@ nav ul li a.active {
     text-decoration: underline;
     font-weight: 500;
     color: #000;
-    /* Color del texto cuando está activo */
 }
 
 #section4 {
@@ -899,7 +903,7 @@ nav ul li a.active {
     grid-template-columns: repeat(4, 1fr);
     /* 4 items per row */
     gap: 3px;
-    padding: 0 15px;
+    padding: 0 15px 90px;
     background-color: #ECECEC;
 }
 
@@ -997,7 +1001,7 @@ nav ul li a.active {
     grid-template-columns: repeat(4, 1fr);
     /* 4 items per row */
     gap: 3px;
-    padding: 0 15px;
+    padding: 0 15px 90px;
 }
 
 .card4 {
@@ -1438,7 +1442,9 @@ footer h5 {
     color: #666;
 }
 
-.author, .likes, .comments {
+.author,
+.likes,
+.comments {
     border-right: 1px solid rgba(0, 0, 0, 0.2);
     padding: 1em;
     color: #aaa;
@@ -1446,7 +1452,9 @@ footer h5 {
     padding: 1em;
 }
 
-.likes:hover, .comments:hover, .post-footer i:hover {
+.likes:hover,
+.comments:hover,
+.post-footer i:hover {
     color: #d39663;
 }
 
@@ -1475,7 +1483,8 @@ p {
     padding: 3em;
 }
 
-#prev, #next {
+#prev,
+#next {
     top: 50%;
     transform: translateY(-50%);
     font-size: 24px;
@@ -1493,7 +1502,8 @@ p {
     right: 10px;
 }
 
-#prev:hover, #next:hover {
+#prev:hover,
+#next:hover {
     color: rgba(255, 255, 255, 0.3);
 }
 
@@ -1590,8 +1600,10 @@ p {
     color: #b7b7b7;
     font-size: 1.2em;
     font-weight: 300;
-    position: relative; /* necesario como marco de referencia para las lineas, ya que hacen que despues el position absolute se posicione en relacion a este elemento padre*/
-    padding-left: 1.2em; /* espacio para la linea  */
+    position: relative;
+    /* necesario como marco de referencia para las lineas, ya que hacen que despues el position absolute se posicione en relacion a este elemento padre*/
+    padding-left: 1.2em;
+    /* espacio para la linea  */
 }
 
 .post-meta ul li a {
@@ -1605,15 +1617,20 @@ p {
 
 .post-meta ul li:not(:first-child)::before {
     /*combinacion de un selector y un pseudo-elemento (aca estoy aplicandole lo siguiente a todos los li excepto el primero, y lo que aplico va "before" osea antes del elemento*/
-    content: ""; /* agrego la linea divisoria */
+    content: "";
+    /* agrego la linea divisoria */
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
-    top: 50%; /* posicion inicial al centro */
-    transform: translateY(-50%); /* centrar verticalmente */
-    height: 50%; /*alto de la linea*/
-    width: 1px; /* width de la linea */
+    top: 50%;
+    /* posicion inicial al centro */
+    transform: translateY(-50%);
+    /* centrar verticalmente */
+    height: 50%;
+    /*alto de la linea*/
+    width: 1px;
+    /* width de la linea */
     background-color: #b7b7b7;
 }
 
@@ -1754,7 +1771,8 @@ p {
 
 .content-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* dos columnas */
+    grid-template-columns: 1fr 1fr;
+    /* dos columnas */
     gap: 2rem;
     align-items: start;
 }
@@ -1772,14 +1790,14 @@ p {
     position: relative;
     display: flex;
     align-items: center;
-    gap: 10px; 
+    gap: 10px;
 }
 
 .article1-section1 h4::before {
     content: "";
     display: inline-block;
-    width: 10px; 
-    height: 2px;  
+    width: 10px;
+    height: 2px;
     background-color: #d39663
 }
 
@@ -1805,13 +1823,15 @@ p {
     font-weight: 300;
     color: #777;
     line-height: 1.6;
-    max-width: 500px; /* Controla el ancho del segundo párrafo */
+    max-width: 500px;
+    /* Controla el ancho del segundo párrafo */
     margin-top: 1.5rem;
     padding-left: 4rem;
 }
 
 .store-locator-mapa {
-    height: 100vh; /* Ocupa la altura total de la pantalla */
+    height: 100vh;
+    /* Ocupa la altura total de la pantalla */
     padding-top: 100px;
     max-width: 100vw;
 }
@@ -1823,13 +1843,15 @@ p {
     align-items: flex-start;
     color: white;
     padding: 10px;
-    box-sizing: border-box;/* Para que el padding no aumente el tamaño total */
+    box-sizing: border-box;
+    /* Para que el padding no aumente el tamaño total */
 }
 
 .imagen-mapa-store-locator p {
     width: 370px;
     left: 50%;
-    transform: translateX(-50%); /* Centra el texto horizontalmente */
+    transform: translateX(-50%);
+    /* Centra el texto horizontalmente */
     align-self: flex-end;
 }
 
@@ -1963,7 +1985,7 @@ p {
 
 .panel {
     color: white;
-    display: none; 
+    display: none;
     overflow: hidden;
     transition: max-height 0.4s ease;
     padding: 0 15px;
@@ -2222,6 +2244,7 @@ p {
 .sec6-header h2::after {
     right: -30px;
 }
+
 .sec6-contact {
     padding: 50px;
     background-image: url("../fotos/pareja.jpg");
@@ -2678,6 +2701,44 @@ p {
     margin: 0;
 }
 
+/*dark mode product */
+/* Modo Oscuro */
+.modo-oscuro {
+    background-color: #151515;
+    color: #f4f3f3;
+}
+
+.modo-oscuro .breadcrumb-prod, .modo-oscuro .breadcrumb-prod a, .modo-oscuro .txtnegro, .modo-oscuro .accordion-boton, .modo-oscuro .add-to-wishlist, .modo-oscuro .add-to-compare, .modo-oscuro .social-links a, .modo-oscuro .cardProd2 .titulo{
+    color: #92c5d9;
+}
+
+.modo-oscuro .add-to-cart {
+    border: 2px solid #89CFF0;
+    background-color: #1c1c1c;
+    color: #f4f3f3;
+}
+
+.modo-oscuro .add-to-cart {
+    background-color: #92c5d9;
+    color: #151515;
+}
+
+.modo-oscuro .add-to-wishlist:hover, .modo-oscuro .add-to-compare:hover, .modo-oscuro .cardProd2 .precio {
+    color: #f4f3f3;
+}
+
+.modo-oscuro .divider {
+    border-top: 1px solid #333;
+}
+
+.modo-oscuro #gridProduct .cardProd1 img, .modo-oscuro #gridProduct2 .cardProd2 img {
+    filter: brightness(0.8); /* Oscurece las imágenes */
+}
+
+.modo-oscuro .header-blanco {
+    filter: brightness(0.8); 
+    color:#000 
+}
 /*SHOP*/
 
 #banner-shop {
@@ -2725,11 +2786,12 @@ p {
 .container-shop {
     display: flex;
     gap: 5em;
-    padding: 10em;
+    padding-top: 10em;
 }
 
 .sidebar-shop {
-    width: 60%;
+    width: 20%;
+    max-width: 20%;
     padding: 2em;
     height: fit-content;
 }
@@ -2851,10 +2913,22 @@ p {
     color: #fd9d38;
 }
 
+.filter-color input[type="radio"],
+.filter-rating input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+/*.selected-filter::after {
+    content: " ✓";
+    font-size: 0.9em;
+    color: #555;
+    margin-left: 5px;
+}*/
+
 .cardShop {
     position: relative;
-    width: 255px;
-    /* Ajusta según el tamaño del producto */
+    width: 27em; /* Ajusta según el tamaño del producto */
     padding: 15px;
     text-align: center;
 }
@@ -2867,6 +2941,37 @@ p {
     padding: 5px 10px;
     position: absolute;
     margin: 7%;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.page-boton {
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    padding: 6px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.page-boton.active {
+    background-color: #a0a0a0; 
+    color: white;
+    font-weight: bold;
+}
+
+.siguiente {
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .cajatextos {
@@ -3197,6 +3302,74 @@ textarea:focus {
     line-height: 42px;
 }
 
+  /* Oculta el checkbox */
+  #theme-toggle {
+    display: none;
+  }
+  
+  /* Cambia el color cuando pasas el mouse */
+  .toggle-button:hover {
+    background: #d1d5db;
+  }
+
+  /* Estilos del botón */
+.toggle-button {
+    display: flex; /* Permite alinear los iconos dentro del botón */
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #e5e7eb; /* Color de fondo del botón */
+    border-radius: 50%; /* Lo hace redondo */
+    cursor: pointer; /* Cambia el cursor al pasar sobre él */
+    transition: 0.4s; /* Suaviza los cambios de color y rotación */
+    position: fixed; /* Fijado en la pantalla */
+    bottom: 20px; /* Espacio desde la parte inferior */
+    right: 20px; /* Espacio desde la parte derecha */
+    z-index: 1000; /* Asegura que el botón esté encima de otros elementos */
+}
+
+  /* Estilos de los iconos */
+  .icon {
+    position: absolute; /* Se superponen en la misma posición */
+    width: 24px;
+    height: 24px;
+    stroke: currentColor; /* Usa el color del texto */
+    transition: 0.4s; /* Suaviza la animación */
+  }
+  
+  /* Oculta el icono de la luna por defecto */
+  .moon {
+    opacity: 0;
+    transform: rotate(-180deg);
+  }
+  
+  /* Cuando se activa el checkbox, cambia el botón y el fondo */
+  #theme-toggle:checked + .toggle-button {
+    background: #374151; /* Color oscuro */
+    transform: rotate(-180deg); /* Rota el botón */
+  }
+  
+  /* Oculta el sol y muestra la luna */
+  #theme-toggle:checked + .toggle-button .sun {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+  
+  #theme-toggle:checked + .toggle-button .moon {
+    opacity: 1;
+    transform: rotate(180deg);
+  }
+  
+  /* Cambia el fondo y el color del texto en modo oscuro */
+  #theme-toggle:checked ~ body {
+    background: #111827;
+    color: #f3f4f6;
+  }
+  
+
+
+
 /* MEDIA QUERIES STORE LOCATOR */
 @media (max-width: 768px) {
     #section1-store-locator {
@@ -3261,30 +3434,34 @@ textarea:focus {
         flex-direction: column;
         align-items: center;
         position: relative;
-        padding: 5%; /* Reduce padding for smaller screens */
+        padding: 5%;
+        /* Reduce padding for smaller screens */
     }
 
     .left-number-locator .p1 {
         font-size: 1.2em;
         font-weight: bold;
         position: relative;
-        z-index: 2; /* Ensure it's above the number */
+        z-index: 2;
+        /* Ensure it's above the number */
     }
 
     .left-number-locator {
-        border-right: none; /* Remove border */
-        margin-left: 0; /* Remove unnecessary left margin */
+        border-right: none;
+        /* Remove border */
+        margin-left: 0;
+        /* Remove unnecessary left margin */
         position: relative;
     }
 
     .left-number-locator h1 {
-        font-size: 10em; 
+        font-size: 10em;
         position: absolute;
         transform: translate(-50%, -50%);
         top: 50%;
         left: 50%;
         text-align: center;
-        z-index: 1; 
+        z-index: 1;
     }
 
     .store-locator-stores p {
