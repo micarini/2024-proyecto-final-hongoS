@@ -424,3 +424,51 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    // Verifica si el usuario ya activó el modo oscuro previamente
+    if (localStorage.getItem("modo-oscuro") === "activado") {
+        body.classList.add("modo-oscuro");
+        toggleButton.checked = true;
+    }
+
+    // Función para alternar el modo oscuro
+    function cambiarModoOscuro() {
+        body.classList.toggle("modo-oscuro");
+
+        if (body.classList.contains("modo-oscuro")) {
+            localStorage.setItem("modo-oscuro", "activado");
+        } else {
+            localStorage.removeItem("modo-oscuro");
+        }
+
+        aplicarModoOscuroProductos();
+    }
+
+    // Aplicar modo oscuro en productos dinámicos
+    function aplicarModoOscuroProductos() {
+        let imagenes = document.querySelectorAll(".galeria .card img");
+        let titulos = document.querySelectorAll(".galeria .card .titulo");
+        let precios = document.querySelectorAll(".galeria .card .precio");
+
+        let isDarkMode = body.classList.contains("modo-oscuro");
+
+        for (let i = 0; i < imagenes.length; i++) {
+            imagenes[i].style.filter = isDarkMode ? "brightness(0.7)" : "brightness(1)";
+        }
+
+        for (let i = 0; i < titulos.length; i++) {
+            titulos[i].style.color = isDarkMode ? "#92c5d9" : "";
+        }
+
+        for (let i = 0; i < precios.length; i++) {
+            precios[i].style.color = isDarkMode ? "#f5f5f5" : "";
+        }
+    }
+
+    toggleButton.addEventListener("change", cambiarModoOscuro);
+});

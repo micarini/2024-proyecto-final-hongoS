@@ -902,8 +902,8 @@ nav ul li a.active {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     /* 4 items per row */
-    gap: 3px;
-    padding: 0 15px 90px;
+    gap: 15px;
+    padding: 50px 15px 90px;
     background-color: #ECECEC;
 }
 
@@ -1053,6 +1053,125 @@ nav ul li a.active {
     margin: 1px;
 }
 
+
+
+
+/* 🔲 Modo Oscuro - Fondo y textos */
+.modo-oscuro {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+/* 🔲 Modificaciones en textos */
+
+
+.modo-oscuro h2 {
+    color: gray
+}
+
+/* 🔲 Botones */
+.modo-oscuro .boton {
+    background-color: #1c1c1c;
+    color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+}
+
+.modo-oscuro .boton:hover {
+    background-color: #f5f5f5;
+    color: #121212;
+}
+
+/* 🔲 Fondos de secciones */
+.modo-oscuro #section3,
+.modo-oscuro #section6 {
+    background-color: #000;
+}
+
+.modo-oscuro #section1,
+.modo-oscuro #section2 {
+    filter: brightness(0.8);
+}
+
+.modo-oscuro #section2 h5 {
+    color: darkgray;
+}
+
+/* 🔲 Productos y galería */
+.modo-oscuro .galeria .card img {
+    filter: brightness(0.8);
+}
+
+.modo-oscuro .galeria .card .titulo {
+    color: #92c5d9;
+}
+
+.modo-oscuro .galeria .card .precio {
+    color: #f5f5f5;
+}
+
+/* 🔲 Slider */
+.modo-oscuro #slider {
+    background-color: #222;
+    filter: brightness(0.8);
+}
+
+.modo-oscuro #slider h2,
+.modo-oscuro #slider h5,
+.modo-oscuro #slider p {
+    color: #000;
+}
+
+/* 🔲 Botones de navegación */
+.modo-oscuro .botones-container button {
+    color: darkgray;
+}
+
+.modo-oscuro .botones-container button.active {
+    color: black;
+}
+
+/* 🔲 Instagram Gallery */
+.modo-oscuro .instagram-decor {
+    background-color: gray;
+    color: #92c5d9;
+}
+
+.modo-oscuro #grid1,
+#grid2,
+#grid3 {
+    background-color: #000;
+}
+
+/* Botones de la sección 3*/
+#section3 .btn-prod {
+    color: #fff;
+    /* Texto en blanco */
+    border: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+/* Modo oscuro: Ajustar contraste */
+.modo-oscuro #section3 .btn-prod {
+    color: #fff;
+}
+
+.modo-oscuro #section3 .btn-prod:hover {
+    background-color: #3a7f99;
+}
+
+.modo-oscuro #grid4 h3 {
+    color: #89CFF0;
+}
+
+.modo-oscuro #grid4 p {
+    color: #fff;
+}
+
+.modo-oscuro #grid4 {
+    filter: brightness(0.8); 
+}
 /* FOOTER */
 footer {
     padding: 40px 0;
@@ -2708,7 +2827,14 @@ p {
     color: #f4f3f3;
 }
 
-.modo-oscuro .breadcrumb-prod, .modo-oscuro .breadcrumb-prod a, .modo-oscuro .txtnegro, .modo-oscuro .accordion-boton, .modo-oscuro .add-to-wishlist, .modo-oscuro .add-to-compare, .modo-oscuro .social-links a, .modo-oscuro .cardProd2 .titulo{
+.modo-oscuro .breadcrumb-prod,
+.modo-oscuro .breadcrumb-prod a,
+.modo-oscuro .txtnegro,
+.modo-oscuro .accordion-boton,
+.modo-oscuro .add-to-wishlist,
+.modo-oscuro .add-to-compare,
+.modo-oscuro .social-links a,
+.modo-oscuro .cardProd2 .titulo {
     color: #92c5d9;
 }
 
@@ -2723,7 +2849,9 @@ p {
     color: #151515;
 }
 
-.modo-oscuro .add-to-wishlist:hover, .modo-oscuro .add-to-compare:hover, .modo-oscuro .cardProd2 .precio {
+.modo-oscuro .add-to-wishlist:hover,
+.modo-oscuro .add-to-compare:hover,
+.modo-oscuro .cardProd2 .precio {
     color: #f4f3f3;
 }
 
@@ -2731,14 +2859,17 @@ p {
     border-top: 1px solid #333;
 }
 
-.modo-oscuro #gridProduct .cardProd1 img, .modo-oscuro #gridProduct2 .cardProd2 img {
-    filter: brightness(0.8); /* Oscurece las imágenes */
+.modo-oscuro #gridProduct .cardProd1 img,
+.modo-oscuro #gridProduct2 .cardProd2 img {
+    filter: brightness(0.8);
+    /* Oscurece las imágenes */
 }
 
 .modo-oscuro .header-blanco {
-    filter: brightness(0.8); 
-    color:#000 
+    filter: brightness(0.8);
+    color: #000
 }
+
 /*SHOP*/
 
 #banner-shop {
@@ -2928,7 +3059,8 @@ p {
 
 .cardShop {
     position: relative;
-    width: 27em; /* Ajusta según el tamaño del producto */
+    width: 27em;
+    /* Ajusta según el tamaño del producto */
     padding: 15px;
     text-align: center;
 }
@@ -2962,10 +3094,78 @@ p {
 }
 
 .page-boton.active {
-    background-color: #a0a0a0; 
+    background-color: #a0a0a0;
     color: white;
     font-weight: bold;
 }
+
+/* Modo oscuro */
+.modo-oscuro {
+    background-color: #151515;
+    color: #f4f3f3;
+}
+
+.modo-oscuro a {
+    color: #92c5d9;
+}
+
+.modo-oscuro .fondo-negro {
+    background-color: #1e1e1e;
+}
+
+.modo-oscuro #banner-shop {
+    filter: brightness(0.8);
+}
+
+.modo-oscuro .breadcrumb {
+    filter: brightness(0.8); 
+    background-color: #fff;
+}
+.modo-oscuro .filter-section {
+    border-bottom: 1px solid #444;
+}
+
+.modo-oscuro .filter-section h3,
+.modo-oscuro .titulo {
+    color: #92c5d9;
+}
+
+.modo-oscuro .filter-section label:hover {
+    color: #92c5d9;
+}
+
+.modo-oscuro .price-filter input[type="text"] {
+    background-color: #92c5d9;
+    border: none;
+}
+
+.modo-oscuro .price-filter input[type="range"] {
+    background: #444;
+}
+
+.modo-oscuro .price-filter input[type="range"]::-webkit-slider-thumb {
+    background: #92c5d9;
+}
+
+.modo-oscuro .cardShop {
+    background-color: #151515;
+}
+
+.modo-oscuro .cardShop img {
+    filter: brightness(0.8); 
+}
+.modo-oscuro .cardShop .titulo:hover {
+    color: #92c5d9;
+}
+
+.modo-oscuro .discount-badge {
+    background-color: #17B169;
+}
+
+.modo-oscuro .pagination .page-boton.active {
+    background-color: #444;
+}
+
 
 .siguiente {
     font-size: 1.2rem;
@@ -3302,71 +3502,85 @@ textarea:focus {
     line-height: 42px;
 }
 
-  /* Oculta el checkbox */
-  #theme-toggle {
+/* Oculta el checkbox */
+#theme-toggle {
     display: none;
-  }
-  
-  /* Cambia el color cuando pasas el mouse */
-  .toggle-button:hover {
-    background: #d1d5db;
-  }
+}
 
-  /* Estilos del botón */
+/* Cambia el color cuando pasas el mouse */
+.toggle-button:hover {
+    background: #d1d5db;
+}
+
+/* Estilos del botón */
 .toggle-button {
-    display: flex; /* Permite alinear los iconos dentro del botón */
+    display: flex;
+    /* Permite alinear los iconos dentro del botón */
     align-items: center;
     justify-content: center;
     width: 50px;
     height: 50px;
-    background: #e5e7eb; /* Color de fondo del botón */
-    border-radius: 50%; /* Lo hace redondo */
-    cursor: pointer; /* Cambia el cursor al pasar sobre él */
-    transition: 0.4s; /* Suaviza los cambios de color y rotación */
-    position: fixed; /* Fijado en la pantalla */
-    bottom: 20px; /* Espacio desde la parte inferior */
-    right: 20px; /* Espacio desde la parte derecha */
-    z-index: 1000; /* Asegura que el botón esté encima de otros elementos */
+    background: #e5e7eb;
+    /* Color de fondo del botón */
+    border-radius: 50%;
+    /* Lo hace redondo */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre él */
+    transition: 0.4s;
+    /* Suaviza los cambios de color y rotación */
+    position: fixed;
+    /* Fijado en la pantalla */
+    bottom: 20px;
+    /* Espacio desde la parte inferior */
+    right: 20px;
+    /* Espacio desde la parte derecha */
+    z-index: 1000;
+    /* Asegura que el botón esté encima de otros elementos */
 }
 
-  /* Estilos de los iconos */
-  .icon {
-    position: absolute; /* Se superponen en la misma posición */
+/* Estilos de los iconos */
+.icon {
+    position: absolute;
+    /* Se superponen en la misma posición */
     width: 24px;
     height: 24px;
-    stroke: currentColor; /* Usa el color del texto */
-    transition: 0.4s; /* Suaviza la animación */
-  }
-  
-  /* Oculta el icono de la luna por defecto */
-  .moon {
+    stroke: currentColor;
+    /* Usa el color del texto */
+    transition: 0.4s;
+    /* Suaviza la animación */
+}
+
+/* Oculta el icono de la luna por defecto */
+.moon {
     opacity: 0;
     transform: rotate(-180deg);
-  }
-  
-  /* Cuando se activa el checkbox, cambia el botón y el fondo */
-  #theme-toggle:checked + .toggle-button {
-    background: #374151; /* Color oscuro */
-    transform: rotate(-180deg); /* Rota el botón */
-  }
-  
-  /* Oculta el sol y muestra la luna */
-  #theme-toggle:checked + .toggle-button .sun {
+}
+
+/* Cuando se activa el checkbox, cambia el botón y el fondo */
+#theme-toggle:checked+.toggle-button {
+    background: #374151;
+    /* Color oscuro */
+    transform: rotate(-180deg);
+    /* Rota el botón */
+}
+
+/* Oculta el sol y muestra la luna */
+#theme-toggle:checked+.toggle-button .sun {
     opacity: 0;
     transform: rotate(180deg);
-  }
-  
-  #theme-toggle:checked + .toggle-button .moon {
+}
+
+#theme-toggle:checked+.toggle-button .moon {
     opacity: 1;
     transform: rotate(180deg);
-  }
-  
-  /* Cambia el fondo y el color del texto en modo oscuro */
-  #theme-toggle:checked ~ body {
+}
+
+/* Cambia el fondo y el color del texto en modo oscuro */
+#theme-toggle:checked~body {
     background: #111827;
     color: #f3f4f6;
-  }
-  
+}
+
 
 
 
