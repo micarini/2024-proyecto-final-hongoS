@@ -104,9 +104,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let isDarkMode = body.classList.contains("modo-oscuro");
 
-        for (let i = 0; i < imagenes.length; i++) {
-            imagenes[i].style.filter = isDarkMode ? "brightness(0.7)" : "brightness(1)";
-        }
 
         for (let i = 0; i < titulos.length; i++) {
             titulos[i].style.color = isDarkMode ? "#92c5d9" : "";

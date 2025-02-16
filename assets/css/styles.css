@@ -2186,6 +2186,7 @@ color: #555;
 }
 
 .modo-oscuro .store-locator-store-card-content,
+.modo-oscuro .store-locator-store-card .cover,
 .modo-oscuro .five-icons-foot{
 background-color: darkgray;
 filter: brightness(0.8);
