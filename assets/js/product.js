@@ -149,14 +149,14 @@ document.addEventListener("DOMContentLoaded", function () {
         let icon = button.querySelector(".accordion-icon");
 
         button.addEventListener("click", function () {
-            // If another panel is open, close it
+            // si hay otro panel abierto, lo cierro
             if (activePanel && activePanel !== panel) {
                 activePanel.style.display = "none";
                 activeButton.classList.remove("active");
                 activeButton.querySelector(".accordion-icon").textContent = "+";
             }
 
-            // Toggle current panel
+            // cambio clases del panel actual
             if (panel.style.display === "block") {
                 panel.style.display = "none";
                 icon.textContent = "+";
