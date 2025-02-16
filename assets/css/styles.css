@@ -2103,6 +2103,97 @@ p {
     margin-bottom: 10px;
 }
 
+
+.modo-oscuro {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+.modo-oscuro #banner-store {
+    filter: brightness(0.8);
+}
+
+.modo-oscuro #section1-store-locator h2,
+.modo-oscuro .store-locator-stores h1 {
+color: #555;
+}
+
+.modo-oscuro #section1-store-locator,
+.modo-oscuro .store-locator-stores,
+.modo-oscuro .features-shipping,
+.modo-oscuro .store-locator-store-cards{
+    background-color: #151515;
+}
+
+.modo-oscuro .btn-store-locator {
+    background-color: #4a8faa !important;
+    color: #fff !important;
+}
+
+.modo-oscuro .btn-store-locator:hover {
+    background-color: #76b0c7 !important;
+}
+
+.modo-oscuro .card-store-locator {
+    background-color: darkgray;
+}
+
+.modo-oscuro .card-store-locator h3,
+.modo-oscuro .card-store-locator p{
+    color: #000;
+}
+
+.modo-oscuro .card-store-locator b {
+    color: #92c5d9 
+}
+
+.modo-oscuro .location-button {
+    border-color: #92c5d9 !important;
+    color: #92c5d9 !important;
+}
+
+.modo-oscuro .location-button:hover {
+    background-color: #92c5d9 !important;
+    color: #121212 !important;
+}
+ 
+.modo-oscuro .store-locator-mapa,
+.modo-oscuro .container-store-locator,
+.modo-oscuro .div-btn-store{
+    filter: brightness(0.8);
+}
+.modo-oscuro .imagen-mapa-store-locator {
+   filter: none !important;
+}
+
+.modo-oscuro .feature-item-shipping {
+    background-color: #1c1c1c !important;
+}
+
+.modo-oscuro .feature-item-shipping h3 {
+    color: #f5f5f5 !important;
+}
+
+.modo-oscuro .section5-sl {
+    filter: brightness(0.8);
+}
+.modo-oscuro .icon-item img {
+    filter: brightness(0.8);
+}
+
+.modo-oscuro .icon-item img:hover {
+    opacity: 0.8;
+}
+
+.modo-oscuro .store-locator-store-card-content,
+.modo-oscuro .five-icons-foot{
+background-color: darkgray;
+filter: brightness(0.8);
+}
+
+.modo-oscuro .store-locator-store-card-content p{
+    color: black !important;
+}
 /*CONTACT*/
 
 #banner-contact {
@@ -2682,14 +2773,14 @@ p {
 
 .review-fields {
     display: flex;
-    gap: 10px; /* Space between fields */
+    gap: 10px; 
 }
 
 .review-fields .input-field {
     flex: 1;
     padding: 8px;
     border: 1px solid #ccc;
-    width: 100%; /* Ensures both fields align properly */
+    width: 100%; 
 }
 
 /* Your rating section */
@@ -2805,7 +2896,6 @@ p {
 .modo-oscuro #gridProduct .cardProd1 img,
 .modo-oscuro #gridProduct2 .cardProd2 img {
     filter: brightness(0.8);
-    /* Oscurece las imágenes */
 }
 
 .modo-oscuro .header-blanco {
@@ -2877,7 +2967,6 @@ p {
 
 .filter-section:last-child {
     border-bottom: none;
-    /*le saco la linea entre cada filtro al ultimo*/
 }
 
 .filter-section h3 {
@@ -2909,7 +2998,6 @@ p {
 
 .filter-section li {
     display: flex;
-    /* Alineación en línea entre texto y números */
     justify-content: space-between;
     align-items: center;
     font-size: 1.2em;
@@ -3003,7 +3091,6 @@ p {
 .cardShop {
     position: relative;
     width: 27em;
-    /* Ajusta según el tamaño del producto */
     padding: 15px;
     text-align: center;
 }
@@ -3361,11 +3448,8 @@ p {
 .author-info {
     display: flex;
     flex-direction: column;
-    /* Stack elements vertically */
     align-items: flex-start;
-    /* Align name and date to the left */
     position: relative;
-    /* Needed for Reply button alignment */
     gap: 0.2em;
 }
 
@@ -3453,39 +3537,27 @@ textarea:focus {
 /* Estilos del boton de modo oscuro */
 .toggle-button {
     display: flex;
-    /* Permite alinear los iconos dentro del botón */
     align-items: center;
     justify-content: center;
     width: 50px;
     height: 50px;
     background: #e5e7eb;
-    /* Color de fondo del botón */
     border-radius: 50%;
-    /* Lo hace redondo */
     cursor: pointer;
-    /* Cambia el cursor al pasar sobre él */
     transition: 0.4s;
-    /* Suaviza los cambios de color y rotación */
     position: fixed;
-    /* Fijado en la pantalla */
     bottom: 20px;
-    /* Espacio desde la parte inferior */
     right: 20px;
-    /* Espacio desde la parte derecha */
     z-index: 1000;
-    /* Asegura que el botón esté encima de otros elementos */
 }
 
 /* Estilos de los iconos */
 .icon {
     position: absolute;
-    /* Se superponen en la misma posición */
     width: 24px;
     height: 24px;
-    stroke: currentColor;
-    /* Usa el color del texto */
+    stroke: currentColor; /* Usa el color del texto */
     transition: 0.4s;
-    /* Suaviza la animación */
 }
 
 /* Oculta el icono de la luna por defecto */
@@ -3497,9 +3569,7 @@ textarea:focus {
 /* Cuando se activa el checkbox, cambia el botón y el fondo */
 #theme-toggle:checked+.toggle-button {
     background: #374151;
-    /* Color oscuro */
-    transform: rotate(-180deg);
-    /* Rota el botón */
+    transform: rotate(-180deg); /* Rota el botón */
 }
 
 /* Oculta el sol y muestra la luna */
