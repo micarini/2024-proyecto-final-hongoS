@@ -2611,7 +2611,7 @@ p {
 .divider {
     border: none;
     border-top: 1px solid #e0e0e0;
-    margin: 20px 0;
+    margin: 10px 0;
     width: 100%;
 }
 
@@ -2619,14 +2619,89 @@ p {
     border: none;
     background-color: transparent;
     margin-bottom: 2%;
+    cursor: pointer;
 }
 
-.accordion-boton:hover {
+.accordion-boton:hover, .accordion-boton.active {
     color: #1c1c1c;
 }
 
+.accordion-icon {
+    margin-left: auto;
+}
+
 .prod-accordion {
-    margin-top: 20%;
+    margin-top: 10%;
+    max-width: 600px;
+}
+
+.prod-panel {
+    display: none;
+}
+
+.info-table {
+    border-collapse: collapse;
+    margin-left: 1em; 
+}
+
+.info-table tr:not(:last-child) {
+    border-bottom: 1px solid #e0e0e0; 
+}
+
+.info-table td {
+    padding: 8px 10px; 
+    text-align: left; 
+}
+
+.input-field, .textarea-field {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.textarea-field {
+    height: 100px;
+}
+
+/* Review section container */
+.prod-panel form {
+    max-width: 600px;
+    margin-top: 10px;
+}
+
+/* Name and Email fields in the same row */
+.prod-panel form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.review-fields {
+    display: flex;
+    gap: 10px; /* Space between fields */
+}
+
+.review-fields .input-field {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: 100%; /* Ensures both fields align properly */
+}
+
+/* Your rating section */
+.stars {
+    margin: 10px 0;
+    display: flex;
+    gap: 5px;
+}
+
+/* Review textarea */
+.textarea-field {
+    width: 100%;
+    height: 120px;
+    padding: 8px;
+    border: 1px solid #ccc;
 }
 
 #gridProduct {
@@ -2661,6 +2736,7 @@ p {
 .cardProd2 {
     text-align: center;
     cursor: pointer;
+    font-family: "Source Sans Pro", sans-serif;
 }
 
 .cardProd2 img {
@@ -2670,14 +2746,13 @@ p {
 }
 
 .cardProd2 h3.titulo {
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: 600;
     color: #333;
     justify-content: center;
     align-items: center;
     letter-spacing: 1px;
-    margin-top: 20%;
-    margin-bottom: 10%;
+    margin-top: 5%;
 }
 
 .cardProd2 p.precio {

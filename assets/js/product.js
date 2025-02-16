@@ -138,3 +138,38 @@ const toggleButton = document.getElementById("theme-toggle");
         }
     }
 
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".accordion-boton");
+    let activePanel = null;
+    let activeButton = null;
+
+    for (let i = 0; i < buttons.length; i++) {
+        let button = buttons[i];
+        let panel = button.nextElementSibling;
+        let icon = button.querySelector(".accordion-icon");
+
+        button.addEventListener("click", function () {
+            // If another panel is open, close it
+            if (activePanel && activePanel !== panel) {
+                activePanel.style.display = "none";
+                activeButton.classList.remove("active");
+                activeButton.querySelector(".accordion-icon").textContent = "+";
+            }
+
+            // Toggle current panel
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+                icon.textContent = "+";
+                button.classList.remove("active");
+                activePanel = null;
+                activeButton = null;
+            } else {
+                panel.style.display = "block";
+                icon.textContent = "−";
+                button.classList.add("active");
+                activePanel = panel;
+                activeButton = button;
+            }
+        });
+    }
+});
