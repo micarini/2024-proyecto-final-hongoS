@@ -1885,6 +1885,7 @@ p {
 }
 
 .store-locator-stores {
+    grid-template-columns: 1fr 1fr; 
     padding: 10%;
 }
 
@@ -1903,11 +1904,11 @@ p {
 }
 
 .left-number-locator h1 {
-    font-size: 12em;
+    font-size: 120px; 
+    transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+    z-index: 1; 
     padding-right: 25%;
 }
 
@@ -1917,6 +1918,7 @@ p {
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
+        
 }
 
 .left-number-locator p {
@@ -1931,6 +1933,7 @@ p {
 .right-text-locator {
     width: 480px;
 }
+
 
 .section5-sl {
     max-height: 70em;
