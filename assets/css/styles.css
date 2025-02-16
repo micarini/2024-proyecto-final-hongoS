@@ -2412,7 +2412,6 @@ p {
     padding: 50px;
 }
 
-/* Slider container */
 .slider-sec4-contact {
     max-width: 500px;
 }
@@ -2456,18 +2455,11 @@ p {
     color: #000;
 }
 
-/* Buttons (prev/next) */
-.prev,
-.next {
+.prev-contact, .next-contact {
     color: #4A4A4A;
     font-size: 1.5rem;
     width: 40px;
     height: 40px;
-}
-
-.prev:hover,
-.next:hover {
-    background-color: #ddd;
 }
 
 /*parte que esta entre dos secciones*/

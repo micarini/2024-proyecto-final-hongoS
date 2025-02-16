@@ -69,8 +69,8 @@ function posterior() {
 }
 
 // Botones para controlar el slider
-document.getElementById('prev').addEventListener("click", anterior);
-document.getElementById('next').addEventListener("click", posterior);
+document.getElementById('prev-contact').addEventListener("click", anterior);
+document.getElementById('next-contact').addEventListener("click", posterior);
 
 // Intervalo para que el slider cambie automáticamente cada 3 segundos
 let auto3s;
