@@ -108,8 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-
 const toggleButton = document.getElementById("theme-toggle");
     const body = document.body;
 
@@ -117,7 +115,6 @@ const toggleButton = document.getElementById("theme-toggle");
         body.classList.toggle("modo-oscuro");
         aplicarModoOscuroProductos();
     });
-
 
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".accordion-boton");

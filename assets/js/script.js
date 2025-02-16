@@ -449,26 +449,5 @@ document.addEventListener("DOMContentLoaded", function () {
         aplicarModoOscuroProductos();
     }
 
-    // Aplicar modo oscuro en productos dinámicos
-    function aplicarModoOscuroProductos() {
-        let imagenes = document.querySelectorAll(".galeria .card img");
-        let titulos = document.querySelectorAll(".galeria .card .titulo");
-        let precios = document.querySelectorAll(".galeria .card .precio");
-
-        let isDarkMode = body.classList.contains("modo-oscuro");
-
-        for (let i = 0; i < imagenes.length; i++) {
-            imagenes[i].style.filter = isDarkMode ? "brightness(0.7)" : "brightness(1)";
-        }
-
-        for (let i = 0; i < titulos.length; i++) {
-            titulos[i].style.color = isDarkMode ? "#92c5d9" : "";
-        }
-
-        for (let i = 0; i < precios.length; i++) {
-            precios[i].style.color = isDarkMode ? "#f5f5f5" : "";
-        }
-    }
-
     toggleButton.addEventListener("change", cambiarModoOscuro);
 });
