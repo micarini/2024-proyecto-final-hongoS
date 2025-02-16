@@ -96,23 +96,5 @@ document.addEventListener("DOMContentLoaded", function () {
         aplicarModoOscuroStore();
     }
 
-    // Aplicar modo oscuro a los elementos dinámicos de Store Locator
-    function aplicarModoOscuroStore() {
-        let imagenes = document.querySelectorAll(".imagen-mapa-store-locator, .store-locator-store-card img");
-        let titulos = document.querySelectorAll(".store-locator-store-card h3");
-        let textos = document.querySelectorAll(".store-locator-store-card p");
-
-        let isDarkMode = body.classList.contains("modo-oscuro");
-
-
-        for (let i = 0; i < titulos.length; i++) {
-            titulos[i].style.color = isDarkMode ? "#92c5d9" : "";
-        }
-
-        for (let i = 0; i < textos.length; i++) {
-            textos[i].style.color = isDarkMode ? "#f5f5f5" : "";
-        }
-    }
-
     toggleButton.addEventListener("change", cambiarModoOscuro);
  

@@ -118,25 +118,6 @@ const toggleButton = document.getElementById("theme-toggle");
         aplicarModoOscuroProductos();
     });
 
-    function aplicarModoOscuroProductos() {
-        let imagenes = document.querySelectorAll("#gridProduct .cardProd1 img, #gridProduct2 .cardProd2 img");
-        let titulos = document.querySelectorAll(".cardProd2 .titulo");
-        let precios = document.querySelectorAll(".cardProd2 .precio");
-
-        let isDarkMode = body.classList.contains("modo-oscuro");
-
-        for (let i = 0; i < imagenes.length; i++) {
-            imagenes[i].style.filter = isDarkMode ? "brightness(0.8)" : "brightness(1)";
-        }
-
-        for (let i = 0; i < titulos.length; i++) {
-            titulos[i].style.color = isDarkMode ? "#92c5d9" : "";
-        }
-
-        for (let i = 0; i < precios.length; i++) {
-            precios[i].style.color = isDarkMode ? "#f4f3f3" : "";
-        }
-    }
 
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".accordion-boton");
