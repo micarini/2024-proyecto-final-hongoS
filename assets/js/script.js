@@ -427,27 +427,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /*MODO OSCURO*/
 document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.getElementById("theme-toggle");
+    const themeToggle = document.getElementById("theme-toggle");
     const body = document.body;
 
-    // Verifica si el usuario ya activó el modo oscuro previamente
-    if (localStorage.getItem("modo-oscuro") === "activado") {
+    // Comprobar si el usuario ya tiene un tema guardado en localStorage
+    if (localStorage.getItem("modo-oscuro") === "true") {
         body.classList.add("modo-oscuro");
-        toggleButton.checked = true;
+        themeToggle.checked = true;
     }
 
-    // Función para alternar el modo oscuro
-    function cambiarModoOscuro() {
+    themeToggle.addEventListener("change", function () {
         body.classList.toggle("modo-oscuro");
-
-        if (body.classList.contains("modo-oscuro")) {
-            localStorage.setItem("modo-oscuro", "activado");
-        } else {
-            localStorage.removeItem("modo-oscuro");
-        }
-
-        aplicarModoOscuroProductos();
-    }
-
-    toggleButton.addEventListener("change", cambiarModoOscuro);
+        localStorage.setItem("modo-oscuro", body.classList.contains("modo-oscuro"));
+    });
 });

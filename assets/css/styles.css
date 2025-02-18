@@ -1052,7 +1052,7 @@ nav ul li a.active {
 }
 
 .modo-oscuro .galeria .card .titulo {
-    color: #92c5d9;
+    color: #d39663;
 }
 
 .modo-oscuro .galeria .card .precio {
@@ -1070,7 +1070,7 @@ nav ul li a.active {
 
 .modo-oscuro .instagram-decor {
     background-color: gray;
-    color: #92c5d9;
+    color: #d39663;
 }
 
 #section3 .btn-prod {
@@ -1086,11 +1086,11 @@ nav ul li a.active {
 }
 
 .modo-oscuro #section3 .btn-prod:hover {
-    background-color: #3a7f99;
+    background-color: #d39663;
 }
 
 .modo-oscuro #grid4 h3 {
-    color: #89CFF0;
+    color: #d39663;
 }
 
 .modo-oscuro #grid4 p {
@@ -1618,83 +1618,6 @@ p {
     font-weight: 500;
 }
 
-/*BLOG POST*/
-.main-title h1 {
-    padding: 1.5em;
-}
-
-.post-meta ul li {
-    color: #b7b7b7;
-    font-size: 1.2em;
-    font-weight: 300;
-    position: relative; /* necesario como marco de referencia para las lineas, ya que hacen que despues el position absolute se posicione en relacion a este elemento padre*/
-    padding-left: 1.2em; /* espacio para la linea  */
-}
-
-.post-meta ul li a {
-    text-decoration: none;
-}
-
-.post-meta ul li a:hover {
-    color: white;
-    transition: 0.3s ease;
-}
-
-.post-meta ul li:not(:first-child)::before {
-    /*combinacion de un selector y un pseudo-elemento (aca estoy aplicandole lo siguiente a todos los li excepto el primero, y lo que aplico va "before" osea antes del elemento*/
-    content: ""; /* agrego la linea divisoria */
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    top: 50%; /* posicion inicial al centro */
-    transform: translateY(-50%); /* centrar verticalmente */
-    height: 50%; 
-    width: 1px;
-    background-color: #b7b7b7;
-}
-
-.container-bp {
-    padding: 5em;
-    place-self: center;
-}
-
-.main-content {
-    padding: 3em;
-    width: 90%;
-}
-
-.sidebar-blogp {
-    width: 30%;
-    padding: 2em;
-    box-sizing: border-box;
-}
-
-.preview-image {
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-.txt1-bp h5 {
-    margin-bottom: 0.8em;
-    margin-top: 3em;
-}
-
-.blockquote-bp {
-    max-width: 700px;
-    padding: 1.5em;
-    border-left: 2px solid #ff7f50;
-    font-style: italic;
-    color: #444;
-    text-align: left;
-    margin-top: 3em;
-    margin-bottom: 3em;
-}
-
-.blockquote-bp p:last-child {
-    margin-top: 0.5em;
-}
-
 /*store*/
 .container-store-locator {
     grid-template-columns: repeat(3, 1fr);
@@ -2126,12 +2049,12 @@ color: #555;
 }
 
 .modo-oscuro .btn-store-locator {
-    background-color: #4a8faa !important;
+    background-color: #d39663 !important;
     color: #fff !important;
 }
 
 .modo-oscuro .btn-store-locator:hover {
-    background-color: #76b0c7 !important;
+    background-color: #d39663 !important;
 }
 
 .modo-oscuro .card-store-locator {
@@ -2144,16 +2067,16 @@ color: #555;
 }
 
 .modo-oscuro .card-store-locator b {
-    color: #92c5d9 
+    color: #d39663 
 }
 
 .modo-oscuro .location-button {
-    border-color: #92c5d9 !important;
-    color: #92c5d9 !important;
+    border-color: #d39663 !important;
+    color: #d39663 !important;
 }
 
 .modo-oscuro .location-button:hover {
-    background-color: #92c5d9 !important;
+    background-color: #d39663 !important;
     color: #121212 !important;
 }
  
@@ -2870,18 +2793,18 @@ filter: brightness(0.8);
 .modo-oscuro .add-to-compare,
 .modo-oscuro .social-links a,
 .modo-oscuro .cardProd2 .titulo {
-    color: #92c5d9;
+    color: #d39663;
 }
 
 .modo-oscuro .add-to-cart {
-    border: 2px solid #89CFF0;
+    border: 2px solid #d39663;
     background-color: #1c1c1c;
     color: #f4f3f3;
 }
 
-.modo-oscuro .add-to-cart {
-    background-color: #92c5d9;
-    color: #92c5d9;
+.modo-oscuro .add-to-cart:hover {
+    background-color: #d39663;
+    color: #1c1c1c;
 }
 
 .modo-oscuro .add-to-wishlist:hover,
@@ -3133,7 +3056,7 @@ filter: brightness(0.8);
 /* Modo oscuro */
 
 .modo-oscuro a {
-    color: #92c5d9;
+    color: #d39663;
 }
 
 .modo-oscuro .fondo-negro {
@@ -3145,8 +3068,7 @@ filter: brightness(0.8);
 }
 
 .modo-oscuro .breadcrumb {
-    filter: brightness(0.8); 
-    background-color: #fff;
+    background-color: #1e1e1e;
 }
 .modo-oscuro .filter-section {
     border-bottom: 1px solid #444;
@@ -3154,15 +3076,15 @@ filter: brightness(0.8);
 
 .modo-oscuro .filter-section h3,
 .modo-oscuro .titulo {
-    color: #92c5d9;
+    color: #d39663;
 }
 
 .modo-oscuro .filter-section label:hover {
-    color: #92c5d9;
+    color: #d39663;
 }
 
 .modo-oscuro .price-filter input[type="text"] {
-    background-color: #92c5d9;
+    background-color: #d39663;
     border: none;
 }
 
@@ -3171,7 +3093,7 @@ filter: brightness(0.8);
 }
 
 .modo-oscuro .price-filter input[type="range"]::-webkit-slider-thumb {
-    background: #92c5d9;
+    background: #d39663;
 }
 
 .modo-oscuro .cardShop {
@@ -3204,6 +3126,83 @@ filter: brightness(0.8);
     grid-template-columns: 1fr 1fr;
     gap: 13px;
     align-items: start;
+}
+
+/*BLOG POST*/
+.main-title h1 {
+    padding: 1.5em;
+}
+
+.post-meta ul li {
+    color: #b7b7b7;
+    font-size: 1.2em;
+    font-weight: 300;
+    position: relative; /* necesario como marco de referencia para las lineas, ya que hacen que despues el position absolute se posicione en relacion a este elemento padre*/
+    padding-left: 1.2em; /* espacio para la linea  */
+}
+
+.post-meta ul li a {
+    text-decoration: none;
+}
+
+.post-meta ul li a:hover {
+    color: white;
+    transition: 0.3s ease;
+}
+
+.post-meta ul li:not(:first-child)::before {
+    /*combinacion de un selector y un pseudo-elemento (aca estoy aplicandole lo siguiente a todos los li excepto el primero, y lo que aplico va "before" osea antes del elemento*/
+    content: ""; /* agrego la linea divisoria */
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    top: 50%; /* posicion inicial al centro */
+    transform: translateY(-50%); /* centrar verticalmente */
+    height: 50%; 
+    width: 1px;
+    background-color: #b7b7b7;
+}
+
+.container-bp {
+    padding: 5em;
+    place-self: center;
+}
+
+.main-content {
+    padding: 3em;
+    width: 90%;
+}
+
+.sidebar-blogp {
+    width: 30%;
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+.preview-image {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.txt1-bp h5 {
+    margin-bottom: 0.8em;
+    margin-top: 3em;
+}
+
+.blockquote-bp {
+    max-width: 700px;
+    padding: 1.5em;
+    border-left: 2px solid #ff7f50;
+    font-style: italic;
+    color: #444;
+    text-align: left;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.blockquote-bp p:last-child {
+    margin-top: 0.5em;
 }
 
 .content-wrapper {

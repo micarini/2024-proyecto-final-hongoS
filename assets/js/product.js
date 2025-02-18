@@ -116,6 +116,8 @@ const toggleButton = document.getElementById("theme-toggle");
         aplicarModoOscuroProductos();
     });
 
+
+    
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".accordion-boton");
     let activePanel = null;

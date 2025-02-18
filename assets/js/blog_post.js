@@ -50,22 +50,30 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-/*document.addEventListener("DOMContentLoaded", function() {
-    const themeToggle = document.getElementById("theme-toggle");
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("theme-toggle");
     const body = document.body;
 
-    if (localStorage.getItem("dark-mode") === "enabled") {
-        body.classList.add("dark-mode");
-        themeToggle.checked = true;
+    // Verifica si el usuario ya activó el modo oscuro previamente
+    if (localStorage.getItem("modo-oscuro") === "activado") {
+        body.classList.add("modo-oscuro"); // Activa el modo oscuro en el body
+        toggleButton.checked = true; // Asegura que el checkbox esté marcado
     }
 
-    themeToggle.addEventListener("change", function() {
-        if (themeToggle.checked) {
-            body.classList.add("dark-mode");
-            localStorage.setItem("dark-mode", "enabled");
+    // Función para alternar el modo oscuro
+    function cambiarModoOscuro() {
+        // Alterna la clase 'modo-oscuro' en el body
+        body.classList.toggle("modo-oscuro");
+
+        // Guarda el estado del modo oscuro en localStorage
+        if (body.classList.contains("modo-oscuro")) {
+            localStorage.setItem("modo-oscuro", "activado"); // Guardamos que está activado
         } else {
-            body.classList.remove("dark-mode");
-            localStorage.setItem("dark-mode", "disabled");
+            localStorage.removeItem("modo-oscuro"); // Si se desactiva, removemos el item
         }
-    });
-});*/
+    }
+
+    toggleButton.addEventListener("change", cambiarModoOscuro);
+
+});
+
