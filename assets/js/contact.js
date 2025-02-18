@@ -162,3 +162,15 @@ contactForm.addEventListener("submit", function (event) {
     alert("¡Formulario válido! Enviado correctamente.");
     contactForm.submit();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    toggleButton.addEventListener("change", function () {
+        body.classList.toggle("modo-oscuro");
+        aplicarModoOscuroContact();
+    });
+
+    aplicarModoOscuroContact(); // Aplicar cambios si el usuario ya tenía activado el modo oscuro
+});
