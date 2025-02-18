@@ -54,22 +54,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const toggleButton = document.getElementById("theme-toggle");
     const body = document.body;
 
-    // Verifica si el usuario ya activó el modo oscuro previamente
+    // verifico si el usuario ya activó el modo oscuro previamente
     if (localStorage.getItem("modo-oscuro") === "activado") {
-        body.classList.add("modo-oscuro"); // Activa el modo oscuro en el body
-        toggleButton.checked = true; // Asegura que el checkbox esté marcado
+        body.classList.add("modo-oscuro"); // activo en el body
+        toggleButton.checked = true; // aseguro que el checkbox esté marcado
     }
 
-    // Función para alternar el modo oscuro
     function cambiarModoOscuro() {
-        // Alterna la clase 'modo-oscuro' en el body
+        // alterma la clase 'modo-oscuro' en el body
         body.classList.toggle("modo-oscuro");
 
-        // Guarda el estado del modo oscuro en localStorage
+        // guarda el estado del modo oscuro en localStorage
         if (body.classList.contains("modo-oscuro")) {
-            localStorage.setItem("modo-oscuro", "activado"); // Guardamos que está activado
+            localStorage.setItem("modo-oscuro", "activado"); // guardo que está activo
         } else {
-            localStorage.removeItem("modo-oscuro"); // Si se desactiva, removemos el item
+            localStorage.removeItem("modo-oscuro"); // si se desactiva, removemos el item
         }
     }
 

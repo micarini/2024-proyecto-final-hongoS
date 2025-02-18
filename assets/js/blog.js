@@ -124,3 +124,30 @@ if(document.getElementById("contenedorSlider")){
                 window.location.href = "blog_post.html"; //cambia la URL de la página actual
             });
         });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleButton = document.getElementById("theme-toggle");
+            const body = document.body;
+        
+            // verifico si el usuario ya activó el modo oscuro previamente
+            if (localStorage.getItem("modo-oscuro") === "activado") {
+                body.classList.add("modo-oscuro"); // activo en el body
+                toggleButton.checked = true; // aseguro que el checkbox esté marcado
+            }
+        
+            function cambiarModoOscuro() {
+                // alterma la clase 'modo-oscuro' en el body
+                body.classList.toggle("modo-oscuro");
+        
+                // guarda el estado del modo oscuro en localStorage
+                if (body.classList.contains("modo-oscuro")) {
+                    localStorage.setItem("modo-oscuro", "activado"); // guardo que está activo
+                } else {
+                    localStorage.removeItem("modo-oscuro"); // si se desactiva, removemos el item
+                }
+            }
+        
+            toggleButton.addEventListener("change", cambiarModoOscuro);
+        
+        });
+        
