@@ -1618,6 +1618,67 @@ p {
     font-weight: 500;
 }
 
+/*modo oscuro sidebar*/
+.modo-oscuro .sidebar p,
+.modo-oscuro .sidebar-blogp p {
+    color: #ccc; 
+}
+
+.modo-oscuro .sidebar-section {
+    background-color: #2d2d2d; 
+    border: 1px solid #555; 
+}
+
+.modo-oscuro .tagcloud a {
+    border: 1px solid #444;
+    background-color: #444; 
+    color: #bbb; 
+}
+
+.modo-oscuro .tagcloud a:hover {
+    background-color: #d39663; 
+    color: #fff;
+}
+
+.modo-oscuro .input-mail input[type="email"] {
+    background-color: #555; 
+    color: #eee; 
+    border: 1px solid #777;
+}
+
+.modo-oscuro .input-mail input[type="email"]::placeholder {
+    color: #aaa; 
+}
+
+.modo-oscuro .search-form {
+    background-color: #2d2d2d; 
+    color: #ddd; 
+    border: 1px solid #555;
+}
+
+.modo-oscuro .search-form input[type="text"] {
+    background-color: #2d2d2d; 
+    color: #eee; 
+}
+
+.modo-oscuro .search-form input[type="text"]::placeholder {
+    color: #aaa; 
+}
+
+.modo-oscuro .search-form button {
+    background-color: #2d2d2d; 
+    color: #fff; 
+}
+
+.modo-oscuro .search-form button:hover {
+    background-color: #888; /* Hover con fondo más claro */
+}
+
+.modo-oscuro .search-form i {
+    color: #fff; /* Icono de la lupa blanco en modo oscuro */
+}
+
+
 /*store*/
 .container-store-locator {
     grid-template-columns: repeat(3, 1fr);
