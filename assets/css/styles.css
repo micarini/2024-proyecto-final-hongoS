@@ -1618,6 +1618,44 @@ p {
     font-weight: 500;
 }
 
+/*modo oscuro blog*/ 
+.modo-oscuro .posts, .modo-oscuro .posts article {
+    background-color: #2d2d2d; 
+    color: #ddd; 
+}
+
+.modo-oscuro .posts .fondo-blanco, .modo-oscuro .posts .post-footer {
+    background-color: #2d2d2d !important; /* Fondo oscuro */
+    color: #fff;
+}
+
+.modo-oscuro .posts .post-h2, .modo-oscuro .posts .post-p, .modo-oscuro .posts .post-footer i, .modo-oscuro .posts .quote-text, .modo-oscuro .posts .meta {
+    color: #ccc;
+}
+
+.modo-oscuro .posts .post-btn {
+    background-color: #232323;
+    color: #fff;
+    border: 1px solid #555; 
+}
+
+.modo-oscuro .posts .post-btn:hover {
+    background-color: #888;
+}
+
+.post-imagen, .post-slider, .post-audio, .post-blockquote, .post-video, .post-ytvideo, .post-htmlvideo, .post-gallery {
+    border: 1px solid #555;
+}
+
+.modo-oscuro .posts .post-video video,
+.modo-oscuro .posts .post-ytvideo iframe, .modo-oscuro .posts .post-gallery, .modo-oscuro #main-blog, .modo-oscuro .container-blog, .modo-oscuro .posts .post-blockquote, .modo-oscuro .posts .post-slider {
+    background-color: #2d2d2d;
+}
+
+.modo-oscuro #banner-blog{
+    filter: brightness(0.8);
+}
+
 /*modo oscuro sidebar y un par de cositas*/
 
 body.modo-oscuro {
