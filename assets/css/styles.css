@@ -2674,46 +2674,31 @@ filter: brightness(0.8);
     height: 37.5rem;
 }
 
-/* Modo oscuro para Contact */
+/* modo oscuro contact */
 
-.modo-oscuro #banner-contact,
-.modo-oscuro .card-container-contact,
-.modo-oscuro .container-contact {
+.modo-oscuro .bordeblanco{
+    border: 3px solid #2d2d2d;
+}
+
+.modo-oscuro #banner-contact, .modo-oscuro .card-container-contact, .modo-oscuro .container-contact {
     filter: brightness(0.8);
 }
 
-.modo-oscuro .banner-contact-texto h4,
-.modo-oscuro .card-info-contact h2, 
-.modo-oscuro .card-info-contact h3,
-.modo-oscuro .slide-subtitle,
-.modo-oscuro #prev-contact,
-.modo-oscuro #next-contact{
+.modo-oscuro .banner-contact-texto h4, .modo-oscuro .card-info-contact h2, .modo-oscuro .card-info-contact h3, .modo-oscuro .slide-subtitle, .modo-oscuro #prev-contact, .modo-oscuro #next-contact{
     color: #d39663;
 }
 
-.modo-oscuro #prev-contact,
-.modo-oscuro #next-contact{
-    background-color: #232323;
-}
-
-.modo-oscuro .banner-contact-texto h2,
 .modo-oscuro .section1-contact-h2 {
-    color: #000 !important;
+    color: #fff !important;
 }
 
 .modo-oscuro .breadcrumb a:hover {
     color: #fd9d38;
 }
 
-.modo-oscuro .card-container-contact,
-.modo-oscuro .container-contact,
-.modo-oscuro {
-    background-color: #f4f4f4;
+.modo-oscuro #contact-main, .modo-oscuro .card-container-contact, .modo-oscuro .container-contact, .modo-oscuro .card-info-contact, .modo-oscuro .card-info-contact, .modo-oscuro .sec4-contact, .modo-oscuro #prev-contact, .modo-oscuro #next-contact, .modo-oscuro #sectionvacia{
+    background-color: #2d2d2d;
 }
-
-/*body.modo-oscuro #contact-main{
-    background-color: #f4f4f4;
-}*/ 
 
 .modo-oscuro .section1-contact-h2 {
     color: #ffffff;
@@ -2723,24 +2708,14 @@ filter: brightness(0.8);
     background-color: #232323;
     color: #ffffff;
 }
-.modo-oscuro .card-info-contact {
-    background-color: #2a2a2a;
+
+.modo-oscuro .shop-btn {
+    background-color: #000000;
+    color: #b3b3b3;
 }
 
-.modo-oscuro .sec4-contact {
-    background-color: #232323;
-}
-
-.modo-oscuro .btn-slide,
-.modo-oscuro .shop-btn,
-.modo-oscuro .contact-form button {
-    background-color: #d39663;
-    color: #121212;
-}
-.modo-oscuro .btn-slide:hover,
-y.modo-oscuro .contact-form button:hover,
-.modo-oscuro .shop-btn:hover {
-    background-color: #fd9d38;
+.modo-oscuro .btn-slide:hover, .modo-oscuro .shop-btn:hover {
+    background-color: #b3b3b3;
     color: #000000;
 }
 
@@ -2748,9 +2723,13 @@ y.modo-oscuro .contact-form button:hover,
     color: #b3b3b3;
 }
 
-.modo-oscuro .contact-form input, 
-.modo-oscuro .contact-form textarea {
-    border: 1px solid #d39663;
+.modo-oscuro .sec6-contact h2, .modo-oscuro .play-button i{
+    color: #fff;
+}
+
+.modo-oscuro #formcontact button{
+    color: #000;
+    background-color: #fff;
 }
 
 /*PRODUCT*/
