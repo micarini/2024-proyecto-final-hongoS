@@ -1619,6 +1619,15 @@ p {
 }
 
 /*modo oscuro sidebar y un par de cositas*/
+
+body.modo-oscuro {
+    background-color: #151515 !important;
+}
+
+body[data-page="contact"].modo-oscuro {
+    background-color: white !important; 
+}
+
 .modo-oscuro .sidebar p,
 .modo-oscuro .sidebar-blogp p {
     color: #ccc; 
@@ -1687,19 +1696,19 @@ p {
     background-color: #d39663;
 }
 
-body.modo-oscuro .txt-block,
-body.modo-oscuro .img-container2,
-body.modo-oscuro .img-caption3-bp,
-body.modo-oscuro .img-caption2-bp,
-body.modo-oscuro .img-caption1-bp,
-body.modo-oscuro .preview-image,
+.modo-oscuro .txt-block,
+.modo-oscuro .img-container2,
+.modo-oscuro .img-caption3-bp,
+.modo-oscuro .img-caption2-bp,
+.modo-oscuro .img-caption1-bp,
+.modo-oscuro .preview-image,
 .modo-oscuro .pfp,
 .modo-oscuro .img-fashionweek,
 .modo-oscuro .popular-item-large {
     filter: brightness(0.8);
 }
 
-body.modo-oscuro .img-left-bp figcaption {
+.modo-oscuro .img-left-bp figcaption {
     color: black;
 }
 
@@ -1718,6 +1727,7 @@ body.modo-oscuro .img-left-bp figcaption {
 .modo-oscuro .submit-btn:hover{
     background-color:#ff7f50;
 }
+
 /*store*/
 .container-store-locator {
     grid-template-columns: repeat(3, 1fr);
@@ -2128,7 +2138,7 @@ body.modo-oscuro .img-left-bp figcaption {
 
 
 .modo-oscuro {
-    background-color: #121212;
+    background-color: #121212 !important;
     color: #f5f5f5;
 }
 
@@ -2628,38 +2638,38 @@ filter: brightness(0.8);
 
 /* Modo oscuro para Contact */
 
-body.modo-oscuro #banner-contact,
-body.modo-oscuro .card-container-contact,
-body.modo-oscuro .container-contact {
+.modo-oscuro #banner-contact,
+.modo-oscuro .card-container-contact,
+.modo-oscuro .container-contact {
     filter: brightness(0.8);
 }
 
-body.modo-oscuro .banner-contact-texto h4,
-body.modo-oscuro .card-info-contact h2, 
-body.modo-oscuro .card-info-contact h3,
-body.modo-oscuro .slide-subtitle,
-body.modo-oscuro #prev-contact,
-body.modo-oscuro #next-contact{
+.modo-oscuro .banner-contact-texto h4,
+.modo-oscuro .card-info-contact h2, 
+.modo-oscuro .card-info-contact h3,
+.modo-oscuro .slide-subtitle,
+.modo-oscuro #prev-contact,
+.modo-oscuro #next-contact{
     color: #d39663;
 }
 
-body.modo-oscuro #prev-contact,
-body.modo-oscuro #next-contact{
+.modo-oscuro #prev-contact,
+.modo-oscuro #next-contact{
     background-color: #232323;
 }
 
-body.modo-oscuro .banner-contact-texto h2,
-body.modo-oscuro .section1-contact-h2 {
+.modo-oscuro .banner-contact-texto h2,
+.modo-oscuro .section1-contact-h2 {
     color: #000 !important;
 }
 
-body.modo-oscuro .breadcrumb a:hover {
+.modo-oscuro .breadcrumb a:hover {
     color: #fd9d38;
 }
 
-body.modo-oscuro .card-container-contact,
-body.modo-oscuro .container-contact,
-body.modo-oscuro {
+.modo-oscuro .card-container-contact,
+.modo-oscuro .container-contact,
+.modo-oscuro {
     background-color: #f4f4f4;
 }
 
@@ -2667,41 +2677,41 @@ body.modo-oscuro {
     background-color: #f4f4f4;
 }*/ 
 
-body.modo-oscuro .section1-contact-h2 {
+.modo-oscuro .section1-contact-h2 {
     color: #ffffff;
 }
 
-body.modo-oscuro .card-contact {
+.modo-oscuro .card-contact {
     background-color: #232323;
     color: #ffffff;
 }
-body.modo-oscuro .card-info-contact {
+.modo-oscuro .card-info-contact {
     background-color: #2a2a2a;
 }
 
-body.modo-oscuro .sec4-contact {
+.modo-oscuro .sec4-contact {
     background-color: #232323;
 }
 
-body.modo-oscuro .btn-slide,
-body.modo-oscuro .shop-btn,
-body.modo-oscuro .contact-form button {
+.modo-oscuro .btn-slide,
+.modo-oscuro .shop-btn,
+.modo-oscuro .contact-form button {
     background-color: #d39663;
     color: #121212;
 }
-body.modo-oscuro .btn-slide:hover,
-body.modo-oscuro .contact-form button:hover,
-body.modo-oscuro .shop-btn:hover {
+.modo-oscuro .btn-slide:hover,
+y.modo-oscuro .contact-form button:hover,
+.modo-oscuro .shop-btn:hover {
     background-color: #fd9d38;
     color: #000000;
 }
 
-body.modo-oscuro .text-contact p {
+.modo-oscuro .text-contact p {
     color: #b3b3b3;
 }
 
-body.modo-oscuro .contact-form input, 
-body.modo-oscuro .contact-form textarea {
+.modo-oscuro .contact-form input, 
+.modo-oscuro .contact-form textarea {
     border: 1px solid #d39663;
 }
 

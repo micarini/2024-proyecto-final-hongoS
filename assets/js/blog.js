@@ -1,76 +1,67 @@
-if(document.getElementById("contenedorSlider")){
+if(document.getElementById("contenedorSlider")){ //ponemos el if para que este codigo se ejecute si encuentra el contenedor y no se rompa nada del js
     const sliderBlog = document.getElementById("contenedorSlider");
     const botonIzquierdo = document.getElementById("prev");  
     const botonDerecho = document.getElementById("next");   
     
-    const miArrayImg = [
+    const miArrayImg = [ //array de fotos q pasan en el slider
         "assets/fotos/blog-slider-post.jpg",
         "assets/fotos/blog-slider-2.webp",
         "assets/fotos/blog-slider-post-3.jpg",
         "assets/fotos/blog-slider-post-4.webp",
     ];
     
-    let i = 0;
-    let autoSlide = setInterval(nextImg, 1000); // empiezo auto-sliding
+    let i = 0; //indice para saber qué imagen se está mostrando actualmente
+    let autoSlide = setInterval(nextImg, 1000); //cambia automáticamente la imagen cada 1 segundo
     
     function updateImg() {
-        sliderBlog.style.backgroundImage = `url(${miArrayImg[i]})`;
-        sliderBlog.style.backgroundSize = "cover";  
+        sliderBlog.style.backgroundImage = `url(${miArrayImg[i]})`; //cambia la imagen de fondo del sliderBlog según el índice i
+        sliderBlog.style.backgroundSize = "cover";  //asegura que la imagen cubra todo el espacio 
         sliderBlog.style.backgroundPosition = "center";
     }
     
     function nextImg() {
-        i = (i + 1) % miArrayImg.length;
+        i = (i + 1) % miArrayImg.length; //incrementa i en 1 para mostrar la siguiente imagen. % miArrayImg.length hace que el índice vuelva a 0 cuando llega al final del array, creando un efecto de ciclo infinito.
         updateImg();
     }
     
     function prevImg() {
-        i = (i - 1 + miArrayImg.length) % miArrayImg.length;
+        i = (i - 1 + miArrayImg.length) % miArrayImg.length; //decrementa i en 1 para mostrar la imagen anterior. % miArrayImg.length maneja el caso donde i es negativo, asegurando que el slider siga funcionando en bucle infinito
         updateImg();
     }
     
-    // freno auto-slide permanentemente
+    //freno auto-slide permanentemente cuando el usuario interactúa con los botones
     function stopAutoSlide() {
         clearInterval(autoSlide); 
     }
     
-    botonIzquierdo.addEventListener("click", function() {
+    botonIzquierdo.addEventListener("click", function() { //si toco btn izq va a la imagen anterior
         prevImg();
-        stopAutoSlide(); // freno auto-slide cuando se hace click
+        stopAutoSlide(); //freno auto-slide cuando se hace click
     });
     
-    botonDerecho.addEventListener("click", function() {
+    botonDerecho.addEventListener("click", function() { //si toco btn der va a la imagen siguiente
         nextImg();
         stopAutoSlide(); 
     });
     
-    // inicializo con la primer imagen
+    //inicializo con la primer imagen
     updateImg();
         
 }
 
-    function validateEmail() {
-        const emailInput = document.getElementById("emailInput").value;
-            
-        if (emailInput.includes("@") && emailInput.endsWith(".com")) {
-            alert("¡Correo válido! Formulario enviado.");
-        } else {
-            alert("Por favor, ingresa un correo electrónico válido con '@' y que termine en '.com'.");
-        }
-    }
 
     document.addEventListener("DOMContentLoaded", function () { // domcontentloaded garantiza que el js se ejecute solo después de que toda la estructura HTML esté disponible en el DOM para evitar problemas en los que js intenta manipular elementos que aún no se cargaron.
 
-        // Seleccionamos el formulario del footer
+        //seleccionamos el formulario del footer
         const newsletterForm = document.getElementById("newsletterForm");
         
-        // Agregamos un evento 'submit' al formulario
+        //agregamos un evento 'submit' al formulario
         newsletterForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // Evitar el envío del formulario por defecto
+        event.preventDefault(); //evita el envío del formulario por defecto
         
-        const emailInput = document.getElementById("emailFooter").value;
+        const emailInput = document.getElementById("emailFooter").value; //guardo el valor del input en una variable
         
-        // Validar si el correo contiene "@" y termina con ".com"
+        //validar si el correo contiene "@" y termina con ".com"
         if (emailInput.includes("@") && emailInput.endsWith(".com")) {
             alert("¡Correo válido! Formulario enviado.");
         } else {

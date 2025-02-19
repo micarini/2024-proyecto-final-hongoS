@@ -164,13 +164,17 @@ contactForm.addEventListener("submit", function (event) {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.getElementById("theme-toggle");
+    const themeToggle = document.getElementById("theme-toggle");
     const body = document.body;
 
-    toggleButton.addEventListener("change", function () {
-        body.classList.toggle("modo-oscuro");
-        aplicarModoOscuroContact();
-    });
+    // Comprobar si el usuario ya tiene un tema guardado en localStorage
+    if (localStorage.getItem("modo-oscuro") === "true") {
+        body.classList.add("modo-oscuro");
+        themeToggle.checked = true;
+    }
 
-    aplicarModoOscuroContact(); // Aplicar cambios si el usuario ya tenía activado el modo oscuro
+    themeToggle.addEventListener("change", function () {
+        body.classList.toggle("modo-oscuro");
+        localStorage.setItem("modo-oscuro", body.classList.contains("modo-oscuro"));
+    });
 });

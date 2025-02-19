@@ -1,20 +1,20 @@
-document.addEventListener("DOMContentLoaded", function () { 
+document.addEventListener("DOMContentLoaded", function () {
 
-    // Seleccionamos el formulario del footer
+    //seleccionamos el formulario del footer
     const newsletterForm = document.getElementById("newsletterForm");
-    
-    // Agregamos un evento 'submit' al formulario
+
+    //agregamos un evento 'submit' al formulario
     newsletterForm.addEventListener("submit", function (event) {
-    event.preventDefault(); // Evitar el envío del formulario por defecto
-    
-    const emailInput = document.getElementById("emailFooter").value;
-    
-    // Validar si el correo contiene "@" y termina con ".com"
-    if (emailInput.includes("@") && emailInput.endsWith(".com")) {
-        alert("¡Correo válido! Formulario enviado.");
-    } else {
-        alert("Por favor, ingresa un correo electrónico válido con '@' y que termine en '.com'.");
-    }
+        event.preventDefault(); //evita el envío del formulario por defecto (no recarga la página ni envia los datos al servidor)
+
+        const emailInput = document.getElementById("emailFooter").value; //obtenemos el valor del input del email 
+
+        //validar si el correo contiene "@" y termina con ".com"
+        if (emailInput.includes("@") && emailInput.endsWith(".com")) {
+            alert("¡Correo válido! Formulario enviado.");
+        } else {
+            alert("Por favor, ingresa un correo electrónico válido con '@' y que termine en '.com'.");
+        }
     });
 });
 
@@ -22,17 +22,27 @@ document.addEventListener("DOMContentLoaded", function () {
     const commentForm = document.getElementById("commentsForm");
 
     commentForm.addEventListener("submit", function (event) {
-        event.preventDefault(); 
+        event.preventDefault();
 
-        const nameInput = document.querySelector("input[name='name']").value.trim();
+        const nameInput = document.querySelector("input[name='name']").value.trim(); //obtenemos el valor del input nombre de otra forma ya q son mas, primero selecciona el input especifico, obtiene el valor con value y trim es para eliminar espacios en blanco y al final
         const emailInput = document.querySelector("input[name='email']").value.trim();
         const commentInput = document.querySelector("textarea[name='comment']").value.trim();
 
-        // Validaciones
-        if (nameInput === "") {
+        //expresión regular: solo letras y espacios, mínimo 2 caracteres
+        const nameRegex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{2,}$/;
+
+        //validaciones
+        if (nameInput === "") { //si el nombre esta vacio aparece un alert
             alert("Por favor, ingresa tu nombre.");
             return;
         }
+
+        if (!nameRegex.test(nameInput)) {
+            alert("El nombre debe tener al menos 2 letras y no contener números ni caracteres especiales.");
+            return;
+        } //test() es un método de las expresiones regulares en js. verifica si el texto (nameInput en este caso) cumple con el patrón definido en la expresión regular (nameRegex).
+        //si test(nameInput) es false (nombre no válido), el ! lo convierte en true y se ejecuta el código dentro del if.
+        //si test(nameInput) es true (nombre válido), el ! lo convierte en false y no se ejecuta el bloque dentro del if.
 
         if (!emailInput.includes("@") || !emailInput.endsWith(".com")) {
             alert("Por favor, ingresa un correo electrónico válido con '@' y que termine en '.com'.");
@@ -49,19 +59,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
 document.addEventListener("DOMContentLoaded", function () {
     const toggleButton = document.getElementById("theme-toggle");
     const body = document.body;
 
-    // verifico si el usuario ya activó el modo oscuro previamente
+    // verifico con localStorage si el usuario ya activó el modo oscuro previamente
     if (localStorage.getItem("modo-oscuro") === "activado") {
-        body.classList.add("modo-oscuro"); // activo en el body
+        body.classList.add("modo-oscuro"); //si existe y tiene el valor "activado", se activa el modo oscuro, añadiendo la clase modo-oscuro al body y marcando el checkbox correspondiente.
         toggleButton.checked = true; // aseguro que el checkbox esté marcado
     }
 
     function cambiarModoOscuro() {
-        // alterma la clase 'modo-oscuro' en el body
+        //el método .classList.toggle() agrega o quita la clase modo-oscuro del elemento body. si la clase no está presente, toggle() la agrega. si la clase ya está presente, toggle() la elimina.
         body.classList.toggle("modo-oscuro");
 
         // guarda el estado del modo oscuro en localStorage
@@ -70,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             localStorage.removeItem("modo-oscuro"); // si se desactiva, removemos el item
         }
-    }
+    } //cuando el usuario cambia el estado del modo oscuro (marcando o desmarcando el checkbox), la clase modo-oscuro se alterna en el body. si el modo oscuro está activado, se guarda en localStorage con setItem(), de modo que persista. si se desactiva el modo oscuro, se elimina el valor de localStorage con removeItem().
 
     toggleButton.addEventListener("change", cambiarModoOscuro);
 
