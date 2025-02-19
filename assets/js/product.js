@@ -1,40 +1,40 @@
-if (document.getElementById("product-container")) {
-    const prodContainer = document.querySelector("#product-container");
+if (document.getElementById("product-container")) { //el codigo se ejecuta si encuentra el conteiner
+    const prodContainer = document.querySelector("#product-container"); //lo selecciono y lo guardo
 
-    let gridProduct = document.createElement("div");
-    gridProduct.setAttribute("id", "gridProduct");
-    prodContainer.appendChild(gridProduct);
+    let gridProduct = document.createElement("div"); //creo un div para la grid
+    gridProduct.setAttribute("id", "gridProduct"); //le signo al div un id
+    prodContainer.appendChild(gridProduct); //agrego el div al contenedor
 
-    let imgProduct = [
+    let imgProduct = [ //array de objetos con las rutas de las img
         { img: "assets/fotos/foto8-galeria2.webp" },
         { img: "assets/fotos/foto8-galeria2-imghover.webp" },
         { img: "assets/fotos/foto3-galeria2-imghover.webp" },
         { img: "assets/fotos/foto3-galeria2.webp" },
     ];
 
-    for (let i = 0; i < imgProduct.length; i++) {
-        cardProd1 = document.createElement("div");
-        cardProd1.setAttribute("class", "cardProd1");
+    for (let i = 0; i < imgProduct.length; i++) { //recorro el array
+        cardProd1 = document.createElement("div"); //creo un div para la card
+        cardProd1.setAttribute("class", "cardProd1"); //le asigno una clase a la card
 
-        let img = document.createElement("img");
-        img.setAttribute("src", imgProduct[i].img);
-        img.setAttribute("class", "foto");
+        let img = document.createElement("img"); //creo una img
+        img.setAttribute("src", imgProduct[i].img); //le agrego su ruta correspondiente
+        img.setAttribute("class", "foto"); //le asigno una clase a la img
 
-        cardProd1.appendChild(img);
+        cardProd1.appendChild(img); //agrego la img a la card
 
-        gridProduct.appendChild(cardProd1);
+        gridProduct.appendChild(cardProd1); //agrego la card a la grid
     }
 }
 
 /*GRID YOU MAY ALSO LIKE */
 if (document.getElementById("product-container2")) {
-    const prodContainer2 = document.querySelector("#product-container2");
+    const prodContainer2 = document.querySelector("#product-container2"); //selecciono el container y lo guardo
 
-    let gridProduct2 = document.createElement("div");
-    gridProduct2.setAttribute("id", "gridProduct2");
-    prodContainer2.appendChild(gridProduct2);
+    let gridProduct2 = document.createElement("div"); //creo un div para la grid
+    gridProduct2.setAttribute("id", "gridProduct2"); //le asigno un id a la grid
+    prodContainer2.appendChild(gridProduct2); //agrego la grid al contenedor 
 
-    let productosProd = [
+    let productosProd = [ //array de objetos con todos los datos q tienen que tener las cards
         {
             titulo: "Sampson Wood Chair", precio: "£255.00", img: "assets/fotos/foto4-galeria1.webp",
             imgHover: "assets/fotos/foto4-galeria1-imghover.webp"
@@ -54,54 +54,54 @@ if (document.getElementById("product-container2")) {
     ];
 
 
-    for (let i = 0; i < productosProd.length; i++) {
-        cardProd2 = document.createElement("div");
-        cardProd2.setAttribute("class", "cardProd2");
+    for (let i = 0; i < productosProd.length; i++) { //recorro el array
+        cardProd2 = document.createElement("div"); //creo un div para la card
+        cardProd2.setAttribute("class", "cardProd2"); //le asigno una clase a la card
 
-        let titulo = document.createElement("h3");
-        titulo.setAttribute("class", "titulo");
-        titulo.textContent = productosProd[i].titulo;
+        let titulo = document.createElement("h3"); //creo un h3 para el titulo
+        titulo.setAttribute("class", "titulo"); //le asigno una clase al h3
+        titulo.textContent = productosProd[i].titulo; //le asigno el texto al titulo que esta en el array
 
-        let img = document.createElement("img");
-        img.setAttribute("src", productosProd[i].img);
-        img.setAttribute("class", "foto");
+        let img = document.createElement("img"); //creo una img
+        img.setAttribute("src", productosProd[i].img); //le asigno su ruta correspondiente
+        img.setAttribute("class", "foto"); //le asigno una clase a la img
 
-        let precio = document.createElement("p");
-        precio.setAttribute("class", "precio");
-        precio.textContent = productosProd[i].precio;
+        let precio = document.createElement("p"); //creo un p para el precio
+        precio.setAttribute("class", "precio"); //le asigno una clase al p
+        precio.textContent = productosProd[i].precio; //le asigno el texto al precio que esta en el arrray
 
-        cardProd2.appendChild(img);
-        cardProd2.appendChild(titulo);
-        cardProd2.appendChild(precio);
+        cardProd2.appendChild(img); //agrego la img a la card
+        cardProd2.appendChild(titulo); //agrego el titulo a la card (h3)
+        cardProd2.appendChild(precio); //agrego el precio a la card (p)
 
-        gridProduct2.appendChild(cardProd2);
+        gridProduct2.appendChild(cardProd2); //agrego la card a la grid
 
-        // Evento mouseover para cambiar la imagen
+        //evento mouseover para cambiar la imagen y q aparezca el hover
         img.addEventListener("mouseover", () => {
             img.setAttribute("src", productosProd[i].imgHover);
         });
 
-        // Evento mouseout para restaurar la imagen original
+        //evento mouseout para restaurar la imagen original
         img.addEventListener("mouseout", () => {
             img.setAttribute("src", productosProd[i].img);
         });
     }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Seleccionamos el formulario del footer
+document.addEventListener("DOMContentLoaded", function () { // domcontentloaded garantiza que el js se ejecute solo después de que toda la estructura HTML esté disponible en el DOM para evitar problemas en los que js intenta manipular elementos que aún no se cargaron.
+
+    //seleccionamos el formulario del footer
     const newsletterForm = document.getElementById("newsletterForm");
 
-    // Agregamos un evento 'submit' al formulario
+    //agregamos un evento 'submit' al formulario
     newsletterForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // Evitar el envío del formulario por defecto
+        event.preventDefault(); //evita el envío del formulario por defecto (no recarga la página ni envia los datos al servidor)
 
-        const emailInput = document.getElementById("emailFooter").value;
+        const emailInput = document.getElementById("emailFooter").value; //guardo el valor del input en una variable
 
-        // Validar si el correo contiene "@" y termina con ".com"
+        //validar si el correo contiene "@" y termina con ".com"
         if (emailInput.includes("@") && emailInput.endsWith(".com")) {
             alert("¡Correo válido! Formulario enviado.");
-            // Si necesitas enviar el formulario realmente, quita el event.preventDefault() de arriba
         } else {
             alert("Por favor, ingresa un correo electrónico válido con '@' y que termine en '.com'.");
         }
@@ -109,15 +109,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const toggleButton = document.getElementById("theme-toggle");
-    const body = document.body;
+const body = document.body;
 
-    toggleButton.addEventListener("change", function () {
-        body.classList.toggle("modo-oscuro");
-        aplicarModoOscuroProductos();
-    });
+toggleButton.addEventListener("change", function () {
+    body.classList.toggle("modo-oscuro");
+    aplicarModoOscuroProductos();
+});
 
 
-    
+
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".accordion-boton");
     let activePanel = null;
@@ -152,4 +152,47 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const productForm = document.getElementById("productForm"); //selecciono el form y lo guardo
+
+    productForm.addEventListener("submit", function (event) { //la funcion se ejecuta al tocar submit
+        //event representa el objeto del evento (en este caso, el intento de envío del formulario).
+        event.preventDefault();
+
+        const nameInput = document.querySelector("input[name='name']").value.trim(); //obtenemos el valor del input nombre de otra forma ya q son mas, primero selecciona el input especifico, obtiene el valor con value y trim es para eliminar espacios en blanco y al final
+        const emailInput = document.querySelector("input[name='email']").value.trim();
+        const commentInput = document.querySelector("textarea[name='comment']").value.trim();
+
+        //expresión regular: solo letras y espacios, mínimo 2 caracteres
+        const nameRegex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{2,}$/;
+
+        //validaciones
+        if (nameInput === "") { //si el nombre esta vacio aparece un alert
+            alert("Por favor, ingresa tu nombre.");
+            return;
+        }
+
+        if (!nameRegex.test(nameInput)) {
+            alert("El nombre debe tener al menos 2 letras y no contener números ni caracteres especiales.");
+            return;
+        } //test() es un método de las expresiones regulares en js. verifica si el texto (nameInput en este caso) cumple con el patrón definido en la expresión regular (nameRegex)
+        //si test(nameInput) es false (nombre no válido), el ! lo convierte en true y se ejecuta el código dentro del if.
+        //si test(nameInput) es true (nombre válido), el ! lo convierte en false y no se ejecuta el bloque dentro del if.
+
+        if (!emailInput.includes("@") || !emailInput.endsWith(".com")) {
+            alert("Por favor, ingresa un correo electrónico válido con '@' y que termine en '.com'.");
+            return;
+        }
+
+        if (commentInput === "") {
+            alert("Por favor, ingresa un comentario.");
+            return;
+        }
+
+        alert("¡Formulario válido! Enviado correctamente.");
+        productForm.submit();
+    });
 });

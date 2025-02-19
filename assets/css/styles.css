@@ -1039,7 +1039,7 @@ nav ul li a.active {
     color: #121212;
 }
 
-.modo-oscuro #section3, .modo-oscuro #section6, .modo-oscuro #grid1, #grid2, #grid3 {
+.modo-oscuro #section3, .modo-oscuro #section6, .modo-oscuro #grid1, .modo-oscuro #grid2, .modo-oscuro #grid3 {
     background-color: #000;
 }
 

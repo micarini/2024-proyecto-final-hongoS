@@ -57,7 +57,7 @@ if(document.getElementById("contenedorSlider")){ //ponemos el if para que este c
         
         //agregamos un evento 'submit' al formulario
         newsletterForm.addEventListener("submit", function (event) {
-        event.preventDefault(); //evita el envío del formulario por defecto
+        event.preventDefault(); //evita el envío del formulario por defecto (no recarga la página ni envia los datos al servidor)
         
         const emailInput = document.getElementById("emailFooter").value; //guardo el valor del input en una variable
         
@@ -70,7 +70,8 @@ if(document.getElementById("contenedorSlider")){ //ponemos el if para que este c
         });
     });
 
-        const galleryPostItems = [
+    //ultimo post fotos dinamicas
+        const galleryPostItems = [ //array d objetos con las fotos y las clases
             { class: "div1", imgSrc: "assets/fotos/blog-gallery-1.jpg.webp" },
             { class: "div2", imgSrc: "assets/fotos/blog-gallery-4.jpg.webp" },
             { class: "div3", imgSrc: "assets/fotos/blog-gallery-2.jpg.webp" },
@@ -78,56 +79,60 @@ if(document.getElementById("contenedorSlider")){ //ponemos el if para que este c
             { class: "div5", imgSrc: "assets/fotos/blog-gallery-3.jpg.webp" }
         ];
         
-        const galleryPostContainer = document.querySelector(".gallery-post");
+        const galleryPostContainer = document.querySelector(".gallery-post"); //guardo el container
         
-        for (let i = 0; i < galleryPostItems.length; i++) {
+        for (let i = 0; i < galleryPostItems.length; i++) { //recorro las fotos, las hago divs y les pongo la clase correspondiente de cada foto (div1 a la 1, div2 a la 2)
             const item = galleryPostItems[i];
             const div = document.createElement("div");
             div.className = item.class;
             
-            const img = document.createElement("img");
-            img.src = item.imgSrc;
+            const img = document.createElement("img"); //creo un img
+            img.src = item.imgSrc; //le asigno el src a la img
             
-            div.appendChild(img);
-            galleryPostContainer.appendChild(div);
+            div.appendChild(img); //agrego la img al div 
+            galleryPostContainer.appendChild(div); //agrego al div al contenedor principal
         }
 
         document.addEventListener("DOMContentLoaded", function () {
-            //obtiene la URL de la página actual
+            //obtiene la URL de la página actual sin el dominio. si la URL es https://midominio.com/blog.html, el resultado es /blog.html
             let currentPage = window.location.pathname.split("/").pop();
-    
-            //selecciona todos los enlaces del menú
+            //split("/") divide la cadena en partes separadas por /, obteniendo un array
+           //.pop() obtiene el último elemento del array, que sería "blog.html" en este caso
+
+            //selecciono todos los enlaces del menú
             let menuLinks = document.querySelectorAll("nav ul li a");
     
-            //recorre los enlaces con un bucle for
+            //recorro los enlaces con un for
             for (let i = 0; i < menuLinks.length; i++) {
-                if (menuLinks[i].getAttribute("href") === currentPage) {
+                if (menuLinks[i].getAttribute("href") === currentPage) { //obtiene el valor del href de cada enlace
                     menuLinks[i].classList.add("active"); //agrega la clase "active"
                     break; //sale del bucle cuando encuentra coincidencia
                 }
             }
         });
 
-        const buttons = document.querySelectorAll(".post-btn"); 
+        //redireccion a bp
+        const buttons = document.querySelectorAll(".post-btn"); //selecciono todos los botones con esa clase
         
-        buttons.forEach(function (button) { // foreach es un método de bucle que ejecuta una función para cada elemento de la lista de botones
-            button.addEventListener("click", function () {
-                window.location.href = "blog_post.html"; //cambia la URL de la página actual
+        buttons.forEach(function (button) { //foreach es un método de bucle que ejecuta una función para cada elemento de la lista de botones (recorre la lista de botones y asigna un evento de clic a cada uno)
+            button.addEventListener("click", function () { 
+                window.location.href = "blog_post.html"; //cambia la URL de la página actual y va a bp
             });
         });
 
+        //modo oscuro
         document.addEventListener("DOMContentLoaded", function () {
             const toggleButton = document.getElementById("theme-toggle");
             const body = document.body;
         
-            // verifico si el usuario ya activó el modo oscuro previamente
+            //verifico con localStorage si el usuario ya activó el modo oscuro previamente
             if (localStorage.getItem("modo-oscuro") === "activado") {
-                body.classList.add("modo-oscuro"); // activo en el body
+                body.classList.add("modo-oscuro"); //si existe y tiene el valor "activado", se activa el modo oscuro, añadiendo la clase modo-oscuro al body y marcando el checkbox correspondiente.
                 toggleButton.checked = true; // aseguro que el checkbox esté marcado
             }
         
             function cambiarModoOscuro() {
-                // alterma la clase 'modo-oscuro' en el body
+                //el método .classList.toggle() agrega o quita la clase modo-oscuro del elemento body. si la clase no está presente, toggle() la agrega. si la clase ya está presente, toggle() la elimina.
                 body.classList.toggle("modo-oscuro");
         
                 // guarda el estado del modo oscuro en localStorage
@@ -136,7 +141,7 @@ if(document.getElementById("contenedorSlider")){ //ponemos el if para que este c
                 } else {
                     localStorage.removeItem("modo-oscuro"); // si se desactiva, removemos el item
                 }
-            }
+            } //cuando el usuario cambia el estado del modo oscuro (marcando o desmarcando el checkbox), la clase modo-oscuro se alterna en el body. si el modo oscuro está activado, se guarda en localStorage con setItem(), de modo que persista. si se desactiva el modo oscuro, se elimina el valor de localStorage con removeItem().
         
             toggleButton.addEventListener("change", cambiarModoOscuro);
         
