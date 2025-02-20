@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const subscribeBtn = document.getElementById("btnSubscribe");
 
     subscribeBtn.addEventListener("click", function () {
-        const emailInput = document.getElementById("emailInput").value.trim(); // Obtiene el valor del input y quita espacios extra
+        const emailInput = document.getElementById("emailInput").value.trim(); //obtiene el valor del input y quita espacios extra
 
         if (emailInput.includes("@") && emailInput.endsWith(".com")) {
             alert("¡Correo válido! Formulario enviado.");

@@ -426,18 +426,29 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /*MODO OSCURO*/
-document.addEventListener("DOMContentLoaded", function () {
-    const themeToggle = document.getElementById("theme-toggle");
-    const body = document.body;
 
-    // Comprobar si el usuario ya tiene un tema guardado en localStorage
-    if (localStorage.getItem("modo-oscuro") === "true") {
-        body.classList.add("modo-oscuro");
-        themeToggle.checked = true;
+const toggleButton = document.getElementById("theme-toggle"); //guardo boton
+const body = document.body; //guardo body
+
+// verifico con localStorage si el usuario ya activó el modo oscuro previamente
+if (localStorage.getItem("modo-oscuro") === "activado") {
+  body.classList.add("modo-oscuro"); //si existe y tiene el valor "activado", se activa el modo oscuro, añadiendo la clase modo-oscuro al body y marcando el checkbox correspondiente.
+  toggleButton.checked = true; // aseguro que el checkbox esté marcado
+}
+
+
+//alterna modo oscuro
+function cambiarModoOscuro() {
+    //el método .classList.toggle() agrega o quita la clase modo-oscuro del elemento body. si la clase no está presente, toggle() la agrega. si la clase ya está presente, toggle() la elimina.
+    body.classList.toggle("modo-oscuro");
+  
+    // guarda el estado del modo oscuro en localStorage
+    if (body.classList.contains("modo-oscuro")) {
+      localStorage.setItem("modo-oscuro", "activado");
+    } else {
+      localStorage.removeItem("modo-oscuro");
     }
-
-    themeToggle.addEventListener("change", function () {
-        body.classList.toggle("modo-oscuro");
-        localStorage.setItem("modo-oscuro", body.classList.contains("modo-oscuro"));
-    });
-});
+  
+  } //cuando el usuario cambia el estado del modo oscuro (marcando o desmarcando el checkbox), la clase modo-oscuro se alterna en el body. si el modo oscuro está activado, se guarda en localStorage con setItem(), de modo que persista. si se desactiva el modo oscuro, se elimina el valor de localStorage con removeItem().
+  
+  toggleButton.addEventListener("change", cambiarModoOscuro);

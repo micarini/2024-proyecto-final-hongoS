@@ -1,6 +1,6 @@
 /*SLIDER CONTACT*/
-// Datos del slider
-const sliderTexts = [
+//datos del slider
+const sliderTexts = [ //array de objetos
     {
         number: "01",
         subtitle: "LET'S MAKE SOMETHING BEAUTIFUL",
@@ -24,20 +24,20 @@ const sliderTexts = [
     }
 ];
 
-// Inicializa el índice actual
+//inicializa el índice actual
 let currentInd = 0;
 
-// Referencias a los elementos del slider
+//guardo los elementos del slider
 const slideNumber = document.getElementById('slide-number');
 const slideSubtitle = document.getElementById('slide-subtitle');
 const slideTitle = document.getElementById('slide-title');
 const slideContent = document.getElementById('slide-content');
 const slideButton = document.getElementById('slide-button');
 
-// Referencia al contenedor del slider para manejar el hover
+//contenedor del slider para manejar el hover
 const sliderContainer = document.getElementById('slider-sec4');
 
-// Función para actualizar el contenido del slider
+//función para actualizar el contenido del slider segun en q index este
 function updateContent() {
     const currentText = sliderTexts[currentInd];
     slideNumber.textContent = currentText.number;
@@ -47,64 +47,63 @@ function updateContent() {
     slideButton.textContent = currentText.buttonText;
 }
 
-// Inicializa el contenido del slider al cargar la página
+//inicializa el contenido del slider al cargar la página
 updateContent();
 
-// Función para ir al slide anterior
+//función para ir al slide anterior
 function anterior() {
-    currentInd--;
-    if (currentInd < 0) {
-        currentInd = sliderTexts.length - 1;
+    currentInd--; //resta 1 al índice actual (para ir al slide anterior)
+    if (currentInd < 0) { 
+        currentInd = sliderTexts.length - 1; //si llegamos al primer slide (índice 0), volvemos al último slide
     }
-    updateContent();
+    updateContent(); //llama a la función para actualizar el contenido del slider con el nuevo índice
 }
 
 // Función para ir al siguiente slide
 function posterior() {
-    currentInd++;
-    if (currentInd >= sliderTexts.length) {
-        currentInd = 0;
+    currentInd++; //suma 1 al indice actual para ir al siguiente slide
+    if (currentInd >= sliderTexts.length) { 
+        currentInd = 0; //si estamos en el último slide, volvemos al primer slide
     }
-    updateContent();
+    updateContent(); //llama a la función para actualizar el contenido del slider con el nuevo índice
 }
 
-// Botones para controlar el slider
+//botones para controlar el slider
 document.getElementById('prev-contact').addEventListener("click", anterior);
 document.getElementById('next-contact').addEventListener("click", posterior);
 
-// Intervalo para que el slider cambie automáticamente cada 3 segundos
+//intervalo para que el slider cambie automáticamente cada 3 segundos
 let auto3s;
 function startAuto() {
     auto3s = setInterval(posterior, 3000); // 3000 ms son 3 segundos
 }
 
-// Inicia la automatización al cargar la página
+//inicia la automatización al cargar la página
 startAuto();
 
-// Detiene el intervalo cuando el mouse pasa sobre el slider
+//detiene el intervalo cuando el mouse pasa sobre el slider
 sliderContainer.addEventListener("mouseenter", () => {
     clearInterval(auto3s);
 });
 
-// Reinicia el intervalo cuando el mouse sale del slider
+//reinicia el intervalo cuando el mouse sale del slider
 sliderContainer.addEventListener("mouseleave", () => {
     startAuto();
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Seleccionamos el formulario del footer
+    //formulario del footer
     const newsletterForm = document.getElementById("newsletterForm");
 
-    // Agregamos un evento 'submit' al formulario
+    //evento 'submit' al formulario
     newsletterForm.addEventListener("submit", function (event) {
         event.preventDefault(); // Evitar el envío del formulario por defecto
 
         const emailInput = document.getElementById("emailFooter").value;
 
-        // Validar si el correo contiene "@" y termina con ".com"
+        //valida si el correo contiene "@" y termina con ".com"
         if (emailInput.includes("@") && emailInput.endsWith(".com")) {
             alert("¡Correo válido! Formulario enviado.");
-            // Si necesitas enviar el formulario realmente, quita el event.preventDefault() de arriba
         } else {
             alert("Por favor, ingresa un correo electrónico válido con '@' y que termine en '.com'.");
         }
@@ -112,20 +111,22 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    //obtiene la URL de la página actual
+    //obtiene la URL de la página actual sin el dominio. si la URL es https://midominio.com/blog.html, el resultado es /blog.html
     let currentPage = window.location.pathname.split("/").pop();
-
-    //selecciona todos los enlaces del menú
+    //split("/") divide la cadena en partes separadas por /, obteniendo un array
+   //.pop() obtiene el último elemento del array, que sería "blog.html" en este caso
+  
+    //selecciono todos los enlaces del menú
     let menuLinks = document.querySelectorAll("nav ul li a");
-
-    //recorre los enlaces con un bucle for
+  
+    //recorro los enlaces con un for
     for (let i = 0; i < menuLinks.length; i++) {
-        if (menuLinks[i].getAttribute("href") === currentPage) {
+        if (menuLinks[i].getAttribute("href") === currentPage) { //obtiene el valor del href de cada enlace
             menuLinks[i].classList.add("active"); //agrega la clase "active"
             break; //sale del bucle cuando encuentra coincidencia
         }
     }
-});
+  });
 
 const contactForm = document.getElementById("formcontact");
 
@@ -163,18 +164,30 @@ contactForm.addEventListener("submit", function (event) {
     contactForm.submit();
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const themeToggle = document.getElementById("theme-toggle");
-    const body = document.body;
 
-    // Comprobar si el usuario ya tiene un tema guardado en localStorage
-    if (localStorage.getItem("modo-oscuro") === "true") {
-        body.classList.add("modo-oscuro");
-        themeToggle.checked = true;
+
+const toggleButton = document.getElementById("theme-toggle"); //guardo boton
+const body = document.body; //guardo body
+
+// verifico con localStorage si el usuario ya activó el modo oscuro previamente
+if (localStorage.getItem("modo-oscuro") === "activado") {
+  body.classList.add("modo-oscuro"); //si existe y tiene el valor "activado", se activa el modo oscuro, añadiendo la clase modo-oscuro al body y marcando el checkbox correspondiente.
+  toggleButton.checked = true; // aseguro que el checkbox esté marcado
+}
+
+
+//alterna modo oscuro
+function cambiarModoOscuro() {
+    //el método .classList.toggle() agrega o quita la clase modo-oscuro del elemento body. si la clase no está presente, toggle() la agrega. si la clase ya está presente, toggle() la elimina.
+    body.classList.toggle("modo-oscuro");
+  
+    // guarda el estado del modo oscuro en localStorage
+    if (body.classList.contains("modo-oscuro")) {
+      localStorage.setItem("modo-oscuro", "activado");
+    } else {
+      localStorage.removeItem("modo-oscuro");
     }
-
-    themeToggle.addEventListener("change", function () {
-        body.classList.toggle("modo-oscuro");
-        localStorage.setItem("modo-oscuro", body.classList.contains("modo-oscuro"));
-    });
-});
+  
+  } //cuando el usuario cambia el estado del modo oscuro (marcando o desmarcando el checkbox), la clase modo-oscuro se alterna en el body. si el modo oscuro está activado, se guarda en localStorage con setItem(), de modo que persista. si se desactiva el modo oscuro, se elimina el valor de localStorage con removeItem().
+  
+  toggleButton.addEventListener("change", cambiarModoOscuro);
