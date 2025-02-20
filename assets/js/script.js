@@ -109,27 +109,27 @@ if (document.getElementById("section2")) {
 if (document.getElementById("section3")) {
     let seccion3 = document.querySelector("#section3");
 
-    // Función para crear una galería y agregarla al DOM
+    //función para crear una galería y agregarla al DOM
     function crearGaleria(productos, gridId) {
         let grid = document.createElement("div");
         grid.setAttribute("id", gridId);
         grid.classList.add("galeria");
 
         for (let i = 0; i < productos.length; i++) {
-            // Crear la tarjeta
+            //creo la tarjeta
             let card = document.createElement("div");
             card.setAttribute("class", "card");
 
-            // Contenedor de la imagen
+            //contenedor de la imagen
             let cardImage = document.createElement("div");
             cardImage.className = "card-image";
 
-            // Crear la imagen
+            //creo la imagen
             let img = document.createElement("img");
             img.src = productos[i].img;
             img.className = "foto";
 
-            // Eventos para cambiar la imagen al hacer hover
+            //eventos para cambiar la imagen al hacer hover
             img.addEventListener("mouseover", function (e) {
                 e.target.src = productos[i].imgHover;
             });
@@ -138,14 +138,14 @@ if (document.getElementById("section3")) {
                 e.target.src = productos[i].img;
             });
 
-            // Agregar imagen al contenedor
+            //agrego imagen al contenedor
             cardImage.appendChild(img);
 
-            // Contenedor de los iconos
+            //contenedor de los iconos
             let iconContainer = document.createElement("div");
             iconContainer.className = "card-icons";
 
-            // Iconos
+            //iconos
             let iconCart = document.createElement("i");
             iconCart.className = "fa-solid fa-cart-shopping";
             iconCart.title = "Add to Cart";
@@ -158,39 +158,39 @@ if (document.getElementById("section3")) {
             iconEye.className = "fa-solid fa-eye";
             iconEye.title = "Quick View";
 
-            // Agregar iconos al contenedor
+            //agrego iconos al contenedor
             iconContainer.appendChild(iconCart);
             iconContainer.appendChild(iconHeart);
             iconContainer.appendChild(iconEye);
 
-            // Agregar los iconos y la imagen a la tarjeta
+            //agrego los iconos y la imagen a la tarjeta
             card.appendChild(cardImage);
             card.appendChild(iconContainer);
 
-            // Título del producto
+            //título del producto
             let titulo = document.createElement("h3");
             titulo.className = "titulo";
             titulo.textContent = productos[i].titulo;
 
-            // Precio del producto
+            //precio del producto
             let precio = document.createElement("p");
             precio.className = "precio";
             precio.textContent = productos[i].precio;
 
-            // Agregar título y precio a la tarjeta
+            //agrego título y precio a la tarjeta
             card.appendChild(titulo);
             card.appendChild(precio);
 
-            // Agregar la tarjeta al grid
+            //agrego la tarjeta al grid
             grid.appendChild(card);
         }
 
-        // Agregar el grid a la sección
+        //agrego el grid a la sección
         seccion3.appendChild(grid);
     }
 
 
-    // Datos de productos
+    //datos de productos
     let productos1 = [
         { titulo: "Charcoal Linen Stool", precio: "£510.00", img: "assets/fotos/foto1-galeria1.webp", imgHover: "assets/fotos/foto1-galeria1-imghover.webp" },
         { titulo: "Elton Arm Chair", precio: "£50.00", img: "assets/fotos/foto2-galeria1.webp", imgHover: "assets/fotos/foto2-galeria1-imghover.webp" },
@@ -224,12 +224,12 @@ if (document.getElementById("section3")) {
         { titulo: "Bar Stools", precioOriginal: "", precio: "£255.00", img: "assets/fotos/foto8-bests.webp", imgHover: "assets/fotos/foto8-bests-imghover.webp" }
     ];
 
-    // Crear las tres galerías
+    //creo las tres galerías
     crearGaleria(productos1, "grid1");
     crearGaleria(productos2, "grid2");
     crearGaleria(productos3, "grid3");
 
-    // Función para mostrar la galería seleccionada y ocultar las demás
+    //función para mostrar la galería seleccionada y ocultar las demás
     function mostrarGaleria(id) {
         let galerias = document.querySelectorAll(".galeria");
         for (let i = 0; i < galerias.length; i++) {
@@ -238,14 +238,14 @@ if (document.getElementById("section3")) {
         document.getElementById(id).style.display = "grid";
     }
 
-    // Función para actualizar la clase activa en los botones
+    //función para actualizar la clase activa en los botones
     function actualizarBotonActivo(idBoton) {
         let botones = document.querySelectorAll(".btn-prod");
         botones.forEach((boton) => boton.classList.remove("active"));
         document.getElementById(idBoton).classList.add("active");
     }
 
-    // Asignar eventos a los botones para cambiar entre galerías
+    //asignar eventos a los botones para cambiar entre galerías
     document.getElementById("boton1").addEventListener("click", function () {
         mostrarGaleria("grid1");
         actualizarBotonActivo("boton1");
@@ -261,7 +261,7 @@ if (document.getElementById("section3")) {
         actualizarBotonActivo("boton3");
     });
 
-    // Inicializa la primera galería como visible y el primer botón como activo
+    //inicializa la primera galería como visible y el primer botón como activo
     mostrarGaleria("grid1");
     actualizarBotonActivo("boton1");
 }
@@ -346,12 +346,12 @@ if (document.getElementById("section5")) {
         //ahora agarro el grid y le pongo las cards
         grid4.appendChild(card4); //esta accion tiene que estar adentro del for para que por cada vuelta se inserte la card de cada vuelta
 
-        //Evento mouseover para cambiar la imagen
+        //evento mouseover para cambiar la imagen
         img.addEventListener("mouseover", function () {
             img.setAttribute("src", productos4[i].imgHover);
         });
 
-        // Evento mouseout para restaurar la imagen original
+        //evento mouseout para restaurar la imagen original
         img.addEventListener("mouseout", function () {
             img.setAttribute("src", productos4[i].img);
         });
