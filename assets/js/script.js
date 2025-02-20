@@ -83,15 +83,18 @@ if (document.getElementById("slider")) {
     //inicializa el slider
     updateSlider();
 }
-
+//transicion de fade in cuando el usuario hace scroll
 if (document.getElementById("section2")) {
     const section2 = document.getElementById("section2");
 
     function fadeInOnScroll() {
-        const sectionPosition = section2.getBoundingClientRect().top;
+        const sectionPosition = section2.getBoundingClientRect().top; //sirve para saber qué tan lejos está section2 de la parte superior de la ventana en cada momento.
         const screenPosition = window.innerHeight / 1.3; //sjusta la proporción si es necesario
+        //define cuándo el efecto debe activarse (cuando el usuario ha scrolleado lo suficiente). cuanto menor sea este número, más rápido se activará la animación.
+        //window.innerHeight es la altura total de la ventana.
 
-        if (sectionPosition < screenPosition) {
+        //si es grande, el elemento está fuera de la pantalla (más abajo). si es pequeño o negativo, el elemento ya entró en la pantalla o pasó de largo.
+        if (sectionPosition < screenPosition) { //si section2 entra en la pantalla, agrega la clase "visible".
             section2.classList.add("visible");
         }
     }
