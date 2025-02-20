@@ -6,7 +6,7 @@ if (document.getElementById("shop-container")) {
     gridShop.setAttribute("id", "gridShop");
     shopContainer.appendChild(gridShop);
 
-    let productosShop = [
+    let productosShop = [ //array de objetos de productos
         { titulo: "Zinnia Lamp", precioOriginal: "", precio: "£150.00", img: "assets/fotos/foto1-galeria2.webp", imgHover: "assets/fotos/foto1-galeria2-imghover.webp", color: ["yellow", "silver"], size: ["L", "M"], rating: "3" },
         { titulo: "Black Wood Lamp", precioOriginal: "", precio: "£2500.00", img: "assets/fotos/foto2-galeria2.webp", imgHover: "assets/fotos/foto2-galeria2-imghover.webp", color: ["black", "brown"], size: ["L", "XL"], rating: ["4", "3"] },
         { titulo: "White Metal Lamp", precioOriginal: "", precio: "£150.00", img: "assets/fotos/foto3-galeria2.webp", imgHover: "assets/fotos/foto3-galeria2-imghover.webp", color: ["white", "brown"], size: ["S", "XL"], rating: ["4", "5"] },
@@ -21,18 +21,18 @@ if (document.getElementById("shop-container")) {
         { titulo: "Abbey Wood Stool", precioOriginal: "£400.00", precio: "£390.00", img: "assets/fotos/foto12-galeria-shop.webp", imgHover: "assets/fotos/foto12-galeria-shop-hover.webp", color: ["green", "blue", "black"], size: ["S", "XL"], rating: ["5", "4"] }
     ];
 
-    for (let i = 0; i < productosShop.length; i++) {
+    for (let i = 0; i < productosShop.length; i++) { //recorro el array de productos
         let cardShop = document.createElement("div");
         cardShop.setAttribute("class", "cardShop");
-        cardShop.setAttribute("data-id", i);  // Agregar un identificador único para cada card
-        cardShop.setAttribute("data-color", productosShop[i].color);  // Asignar el color al producto
-        cardShop.setAttribute("data-size", productosShop[i].size);    // Asignar el tamaño al producto
-        cardShop.setAttribute("data-precio", productosShop[i].precio.replace("£", "")); // Asignar el precio al producto
-        cardShop.setAttribute("data-rating", productosShop[i].rating);    // Asignar el rating al producto
+        cardShop.setAttribute("data-id", i);  //agrego un identificador único para cada card
+        cardShop.setAttribute("data-color", productosShop[i].color);  //asigno el color al producto
+        cardShop.setAttribute("data-size", productosShop[i].size);    //asigno el tamaño al producto
+        cardShop.setAttribute("data-precio", productosShop[i].precio.replace("£", "")); //asigno el precio al producto
+        cardShop.setAttribute("data-rating", productosShop[i].rating);  //asigno el rating al producto
 
-        let titulo = document.createElement("h3");
-        titulo.setAttribute("class", "titulo");
-        titulo.textContent = productosShop[i].titulo;
+        let titulo = document.createElement("h3"); //creo el h3 para el titulo
+        titulo.setAttribute("class", "titulo"); //le asigno una clase
+        titulo.textContent = productosShop[i].titulo; //le asigno el texto al titulo
 
         let img = document.createElement("img");
         img.setAttribute("src", productosShop[i].img);
@@ -42,7 +42,7 @@ if (document.getElementById("shop-container")) {
         precio.setAttribute("class", "precio");
         precio.textContent = productosShop[i].precio;
 
-        // Calcular y mostrar el descuento si hay precio original
+        //calculo y muestro el descuento si hay precio original
         if (productosShop[i].precioOriginal) {
             let precioOriginal = parseFloat(productosShop[i].precioOriginal.replace("£", ""));
             let precioDescuento = parseFloat(productosShop[i].precio.replace("£", ""));
@@ -60,43 +60,43 @@ if (document.getElementById("shop-container")) {
         cardShop.appendChild(precio);
         gridShop.appendChild(cardShop);
 
-        // Evento mouseover para cambiar la imagen
+        //evento mouseover para cambiar la imagen
         img.addEventListener("mouseover", () => {
             img.setAttribute("src", productosShop[i].imgHover);
         });
 
-        // Evento mouseout para restaurar la imagen original
+        //evento mouseout para restaurar la imagen original
         img.addEventListener("mouseout", () => {
             img.setAttribute("src", productosShop[i].img);
         });
 
-        // Evento click para redirigir al producto
+        //evento click para redirigir al producto
         cardShop.addEventListener("click", () => {
-            window.location.href = `product.html?id=${i}`;
+            window.location.href = `product.html`; 
         });
     }
 
     let pagination = document.querySelector(".pagination");
     if (pagination) {
-        gridShop.after(pagination);
+        gridShop.after(pagination); //los numeros de las paginas maquetadas
+        //se inserta pagination después de gridShop en el DOM.
     }
 }
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Seleccionamos el formulario del footer
+    //formulario del footer
     const newsletterForm = document.getElementById("newsletterForm");
 
-    // Agregamos un evento 'submit' al formulario
+    //agregamos un evento 'submit' al formulario
     newsletterForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // Evitar el envío del formulario por defecto
+        event.preventDefault(); //evita el envío del formulario por defecto
 
         const emailInput = document.getElementById("emailFooter").value;
 
-        // Validar si el correo contiene "@" y termina con ".com"
+        //valida si el correo contiene "@" y termina con ".com"
         if (emailInput.includes("@") && emailInput.endsWith(".com")) {
             alert("¡Correo válido! Formulario enviado.");
-            // Si necesitas enviar el formulario realmente, quita el event.preventDefault() de arriba
         } else {
             alert("Por favor, ingresa un correo electrónico válido con '@' y que termine en '.com'.");
         }
@@ -104,41 +104,44 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    //obtiene la URL de la página actual
+    //obtiene la URL de la página actual sin el dominio. si la URL es https://midominio.com/blog.html, el resultado es /blog.html
     let currentPage = window.location.pathname.split("/").pop();
-
-    //selecciona todos los enlaces del menú
+    //split("/") divide la cadena en partes separadas por /, obteniendo un array
+   //.pop() obtiene el último elemento del array, que sería "blog.html" en este caso
+  
+    //selecciono todos los enlaces del menú
     let menuLinks = document.querySelectorAll("nav ul li a");
-
-    //recorre los enlaces con un bucle for
+  
+    //recorro los enlaces con un for
     for (let i = 0; i < menuLinks.length; i++) {
-        if (menuLinks[i].getAttribute("href") === currentPage) {
+        if (menuLinks[i].getAttribute("href") === currentPage) { //obtiene el valor del href de cada enlace
             menuLinks[i].classList.add("active"); //agrega la clase "active"
             break; //sale del bucle cuando encuentra coincidencia
         }
     }
-});
+  });
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Seleccionamos todos los inputs de los filtros
+    //selecciono todos los inputs de los filtros
     const filters = {
-        color: document.querySelectorAll(".filter-color input"), // Filtros de color
-        size: document.querySelectorAll(".filter-size input"),   // Filtros de tamaño
-        rating: document.querySelectorAll(".filter-rating input") // Filtros de rating
+        color: document.querySelectorAll(".filter-color input"), //filtros de color
+        size: document.querySelectorAll(".filter-size input"),   //filtros de tamaño
+        rating: document.querySelectorAll(".filter-rating input") //filtros de rating
     };
 
     function applyFilters() {
-        // Obtiene el valor del color seleccionado (si hay uno marcado)
+        //bbtiene el valor del color seleccionado (si hay uno marcado)
         let selectedColor = "";
+         //recorre la lista de filtros de color
         for (let i = 0; i < filters.color.length; i++) {
-            if (filters.color[i].checked) {
-                selectedColor = filters.color[i].value;
-                break;
+            if (filters.color[i].checked) { //si el filtro está marcado (seleccionado)
+                //guarda el valor del color seleccionado
+            break; //sale del bucle después de encontrar el primer color seleccionado
             }
         }
 
-        // Obtiene los tamaños seleccionados (puede haber más de uno)
+        //obtiene los tamaños seleccionados (puede haber más de uno)
         let selectedSizes = [];
         for (let i = 0; i < filters.size.length; i++) {
             if (filters.size[i].checked) {
@@ -146,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        // Obtiene los ratings seleccionados (puede haber más de uno)
+        //obtiene los ratings seleccionados (puede haber más de uno)
         let selectedRatings = [];
         for (let i = 0; i < filters.rating.length; i++) {
             if (filters.rating[i].checked) {
@@ -154,70 +157,72 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        // Selecciona todos los productos dentro del contenedor "gridShop"
+        //selecciona todos los productos dentro del contenedor "gridShop"
         let productos = document.getElementById("gridShop").getElementsByClassName("cardShop");
 
-        // Recorre cada producto para aplicar los filtros
+        //recorre cada producto para aplicar los filtros
         for (let i = 0; i < productos.length; i++) {
-            let producto = productos[i]; // Obtiene el producto actual
+            let producto = productos[i]; //obtiene el producto actual
 
-            // Obtiene los atributos personalizados del producto
-            let colores = producto.getAttribute("data-color").split(","); // Convierte a array
-            let tamaños = producto.getAttribute("data-size").split(","); // Convierte a array
-            let precio = parseInt(producto.getAttribute("data-precio")); // Convierte a número
-            let ratings = producto.getAttribute("data-rating").split(",").map(Number); // Convierte a array de números
+            //obtiene los atributos personalizados del producto
+            let colores = producto.getAttribute("data-color").split(","); //convierte a array
+            let tamaños = producto.getAttribute("data-size").split(","); //convierte a array
+            let precio = parseInt(producto.getAttribute("data-precio")); //convierte a número
+            let ratings = producto.getAttribute("data-rating").split(",").map(Number); //convierte a array de números
+            //se usa .getAttribute("data-..."), que obtiene el valor del atributo HTML como un string. .split(",") separa la cadena en un array de valores usando la coma como delimitador. ARRAY DE STRINGS
 
-            // Inicializa la variable que indica si el producto se muestra
-            let mostrar = true;
+            //inicializa la variable que indica si el producto se muestra
+            let mostrar = true; //se asume inicialmente que el producto debe mostrarse (true). si algún filtro no se cumple, se cambia a false para ocultarlo.
 
-            // Filtra por color (debe estar incluido en la lista de colores del producto)
+            //filtra por color (debe estar incluido en la lista de colores del producto)
             if (selectedColor && !colores.includes(selectedColor)) {
                 mostrar = false;
-            }
+            } //si el usuario ha seleccionado un color (selectedColor tiene valor). se verifica si ese color está en la lista colores del producto (que viene del atributo data-color). si el color seleccionado no está en la lista, se oculta el producto (mostrar = false).
 
-            // Filtra por tamaño (el producto debe tener al menos uno de los tamaños seleccionados)
+            //filtra por tamaño (el producto debe tener al menos uno de los tamaños seleccionados)
             if (selectedSizes.length > 0 && !selectedSizes.some(size => tamaños.includes(size))) {
                 mostrar = false;
-            }
+            } //si el usuario seleccionó al menos un tamaño (selectedSizes.length > 0). se usa .some(...) para verificar si alguno de los tamaños seleccionados está en tamaños (del producto). si ninguno coincide, se oculta el producto (mostrar = false).
+            
 
-            // Filtra por rating (el producto debe tener al menos uno de los ratings seleccionados)
+            //filtra por rating (el producto debe tener al menos uno de los ratings seleccionados)
             if (selectedRatings.length > 0 && !selectedRatings.some(rating => ratings.includes(rating))) {
-                mostrar = false;
-            }
+                mostrar = false; 
+            } //funciona igual que el filtro de tamaño, pero con ratings (selectedRatings). si al menos un rating seleccionado coincide con los ratings del producto, se muestra. si ningún rating coincide, se oculta.
 
-            // Filtra por precio (compara con el valor del input de precio)
+            //filtra por precio (compara con el valor del input de precio)
             let maxPrecio = parseInt(document.querySelector(".filter-price input").value);
             if (precio > maxPrecio) {
                 mostrar = false;
-            }
+            } //se obtiene el precio máximo seleccionado por el usuario (maxPrecio). se convierte a número con parseInt(...). si el precio del producto (precio) es mayor que maxPrecio, se oculta.
 
-            // Si el producto pasa los filtros, se muestra; de lo contrario, se oculta
+            //si el producto pasa los filtros, se muestra; de lo contrario, se oculta
             producto.style.display = mostrar ? "block" : "none";
 
         }
     }
 
-    // Llama a la función para aplicar los filtros inicialmente
+    //llama a la función para aplicar los filtros inicialmente
     applyFilters();
 
-    // Agrega event listeners a los filtros para que se actualicen en tiempo real
+    //agrego event listeners a los filtros para que se actualicen en tiempo real
 
-    // Para el filtro de color
+    //para el filtro de color
     for (let i = 0; i < filters.color.length; i++) {
         filters.color[i].addEventListener("change", applyFilters);
     }
 
-    // Para el filtro de tamaño
+    //para el filtro de tamaño
     for (let i = 0; i < filters.size.length; i++) {
         filters.size[i].addEventListener("change", applyFilters);
     }
 
-    // Para el filtro de rating
+    //para el filtro de rating
     for (let i = 0; i < filters.rating.length; i++) {
         filters.rating[i].addEventListener("change", applyFilters);
     }
 
-    // Agrega un event listener al filtro de precio
+    //agrego un event listener al filtro de precio
     document.querySelector(".filter-price input").addEventListener("input", applyFilters);
 });
 

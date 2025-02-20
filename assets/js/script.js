@@ -1,19 +1,19 @@
 /*HOME*/
 /*SLIDER*/
 if (document.getElementById("slider")) {
-    const sliderContent = [
+    const sliderContent = [ //contenido fotos
         'assets/fotos/furniture-collection1.webp',
         'assets/fotos/furniture-collection2.jpg',
         'assets/fotos/furniture-collection3.jpg'
     ];
 
-    const sliderTexts = [
+    const sliderTexts = [ //textos 
         "Furniture collection",
         "Designer wall clock",
         "Modern hanging"
     ];
 
-    let currentIndex = 0;
+    let currentIndex = 0; //indice del slider q empieza en 0
     const foto = document.getElementById('slider');
     const titulo = document.querySelector('#slider h2'); // selecciona el h2 dentro del slider
     const button1 = document.getElementById('button1');
@@ -21,17 +21,17 @@ if (document.getElementById("slider")) {
     const button3 = document.getElementById('button3');
 
 
-    // Función para actualizar la imagen de fondo
+    //función para actualizar la imagen de fondo
     function updateSlider() {
-        foto.style.backgroundImage = `url(${sliderContent[currentIndex]})`;
+        foto.style.backgroundImage = `url(${sliderContent[currentIndex]})`; //se pone la imagen de fondo que le corresponde al index en el que este
         titulo.textContent = sliderTexts[currentIndex];
 
-        // Eliminar la clase 'active' de todos los botones
+        //eliminar la clase 'active' de todos los botones
         button1.classList.remove('active');
         button2.classList.remove('active');
         button3.classList.remove('active');
 
-        // Agregar la clase 'active' al botón correspondiente
+        //agregar la clase 'active' al botón correspondiente
         if (currentIndex === 0) {
             button1.classList.add('active');
         } else if (currentIndex === 1) {
@@ -39,29 +39,29 @@ if (document.getElementById("slider")) {
         } else if (currentIndex === 2) {
             button3.classList.add('active');
         }
-    }
+    } //así, si currentIndex = 1, por ejemplo: se saca "active" de todos los botones. solo button2 recibe la clase "active".
 
-    // Función para avanzar automáticamente
+    //función para avanzar automáticamente
     function nextSlide() {
         currentIndex = (currentIndex + 1) % sliderContent.length;
-        updateSlider();
+        updateSlider(); //incrementa currentIndex en 1 para pasar a la siguiente imagen. usa el operador % (módulo) para reiniciar el slider cuando llega al final y actualiza la foto y el texto
     }
 
-    // Inicio la automatización del slider cada 3 segundos
+    //inicio la automatización del slider cada 3 segundos
     let autoSlide = setInterval(nextSlide, 3000);
 
-    // Reinicio el intervalo cuando el usuario hace clic en un botón
+    //reinicio el intervalo cuando el usuario hace clic en un botón
     function resetAutoSlide() {
         clearInterval(autoSlide);
         autoSlide = setInterval(nextSlide, 3000);
     }
 
-    // Funciones para cambiar las imágenes
+    //funciones para cambiar las imágenes
     function goToImage01() {
         currentIndex = 0;
         updateSlider();
         resetAutoSlide();
-    }
+    } //cada función asigna un nuevo currentIndex para seleccionar una imagen específica. llama a updateSlider() para cambiar la imagen y el texto. llama a resetAutoSlide() para evitar que el auto-slide interfiera inmediatamente después de la interacción.
 
     function goToImage02() {
         currentIndex = 1;
@@ -75,12 +75,12 @@ if (document.getElementById("slider")) {
         resetAutoSlide();
     }
 
-    // Asignar eventos a los botones
+    //asigno eventos a los botones //evita que varios botones queden marcados al mismo tiempo. solo el botón del slide actual tendrá la clase "active".
     document.getElementById('button1').addEventListener("click", goToImage01);
     document.getElementById('button2').addEventListener("click", goToImage02);
     document.getElementById('button3').addEventListener("click", goToImage03);
 
-    // Inicializa el slider
+    //inicializa el slider
     updateSlider();
 }
 
@@ -89,7 +89,7 @@ if (document.getElementById("section2")) {
 
     function fadeInOnScroll() {
         const sectionPosition = section2.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.3; // Ajusta la proporción si es necesario
+        const screenPosition = window.innerHeight / 1.3; //sjusta la proporción si es necesario
 
         if (sectionPosition < screenPosition) {
             section2.classList.add("visible");
@@ -97,7 +97,7 @@ if (document.getElementById("section2")) {
     }
 
     window.addEventListener("scroll", fadeInOnScroll);
-    fadeInOnScroll(); // Ejecuta una vez por si ya está visible al cargar
+    fadeInOnScroll(); // ejecuta una vez por si ya está visible al cargar
 };
 
 
