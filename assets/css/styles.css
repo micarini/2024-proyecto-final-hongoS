@@ -1074,7 +1074,6 @@ nav ul li a.active {
 }
 
 #section3 .btn-prod {
-    color: #fff;
     border: none;
     padding: 10px 20px;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -1644,7 +1643,7 @@ p {
 }
 
 .post-imagen, .post-slider, .post-audio, .post-blockquote, .post-video, .post-ytvideo, .post-htmlvideo, .post-gallery {
-    border: 1px solid #555;
+    border: 1px solid #e8e8e8;
 }
 
 .modo-oscuro .posts .post-video video,
