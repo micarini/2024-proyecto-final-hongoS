@@ -2924,7 +2924,6 @@ body[data-page="contact"].modo-oscuro {
 
 .prod-accordion {
   margin-top: 10%;
-  max-width: 600px;
 }
 
 .prod-panel {
@@ -4009,6 +4008,8 @@ textarea:focus {
   }
 }
 
+/*responsive product*/
+/*telefono*/
 @media (max-width: 768px) {
   #gridProduct,
   #gridProduct2,
@@ -4038,7 +4039,7 @@ textarea:focus {
     margin-bottom: 3em;
 }
 
- .breadcrumb-prod{
+ .breadcrumb-prod{ /*NO SE HACE*/
     text-align: left;
     align-items: left;
  }
@@ -4049,4 +4050,46 @@ textarea:focus {
     justify-content: center;
  }
 
+}
+
+/*ipad*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+ 
+#gridProduct, .product-side{   
+      width: 95vw;   
+      margin-left: 0%;
+      
+}
+
+.product-section {
+    flex-direction: column;
+    padding: 2em;
+  }
+
+  .product-side {
+    margin-top: 4em;
+  }
+
+ .breadcrumb-prod{ /*NO SE HACE*/
+    text-align: left;
+    align-items: left;
+ }
+
+ .grid-botones {
+    justify-items: left;
+    width: 30%;
+ }
+
+ .add-to-compare{
+    display: none;
+ }
+
+ .quantity-buttons {
+    margin-top: 0%;
+    margin-bottom: 0%;
+ }
+
+ .related-products{
+    margin-top: 3em;
+ }
 }
