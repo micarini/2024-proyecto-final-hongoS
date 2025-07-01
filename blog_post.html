@@ -18,7 +18,7 @@
 
 <body>
     
-    <header id="top" class="relative w100">
+     <header id="top" class="relative w100">
         <!-- HEADER NEGRO -->
         <div class="header-negro flex sb fondo-negro align-c em1">
             <ul class="redes flex row wrap flex-start align-c gap15 no-style">
@@ -28,18 +28,27 @@
                 <li><a href="instagram.html" class="txtblanco em15"><i class="fa-brands fa-instagram"></i></a></li>
             </ul>
             <h4 class="center txtblanco fw500 txt-c">CUSTOMER SUPPORT 0123-456-789</h4>
+            <nav class="menu-wrapper relative"> <!-- responsive -->
+            <button class="menu-toggle-negro" aria-label="Abrir menú">☰ MENU</button> <!-- responsive -->
             <ul class="menu2 flex no-style txt-l">
                 <li><a href="about.html" class="uppercase txtblanco">About</a></li>
                 <li><a href="store.html" class="uppercase txtblanco">Store</a></li>
                 <li><a href="newsletter.html" class="uppercase txtblanco">Newsletter</a></li>
                 <li><a href="faqs.html" class="uppercase txtblanco">FAQs</a></li>
             </ul>
+            </nav>
         </div>
+      
         <!-- HEADER BLANCO -->
         <div class="header-blanco flex sb align-c fondo-blanco">
             <div class="logo-hongo">
                 <img src="assets/fotos/logo-hongo.png" alt="logo hongo">
             </div>
+<!-- boton menu responsive -->
+            <button class="menu-toggle-blanco" aria-label="Abrir menú">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
             <nav class="menu flex align-c txt-c">
                 <ul class="flex no-list-style">
                     <li><a href="index.html" class="fw400">Home</a></li>
@@ -58,6 +67,7 @@
                 </ul>
             </div>
         </div>
+    </header>
 
         <section class="main-title fondo-grisosc w100 txtblanco flex sa align-c borderbox">
             <h1 class="txtblanco fw400 em18">This is a standard post with a preview image</h1>
@@ -69,7 +79,7 @@
                 </ul>
             </div>
         </section>
-    </header>
+    
     
     <main id="main-bp">
         <div class="container-bp flex sa flex-start justify-c w80">

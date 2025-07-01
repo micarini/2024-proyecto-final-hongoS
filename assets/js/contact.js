@@ -191,3 +191,23 @@ function cambiarModoOscuro() {
   } //cuando el usuario cambia el estado del modo oscuro (marcando o desmarcando el checkbox), la clase modo-oscuro se alterna en el body. si el modo oscuro está activado, se guarda en localStorage con setItem(), de modo que persista. si se desactiva el modo oscuro, se elimina el valor de localStorage con removeItem().
   
   toggleButton.addEventListener("change", cambiarModoOscuro);
+
+
+  // Toggle mobile menu visibility
+const toggle = document.querySelector(".menu-toggle-negro");
+const menunegro = document.querySelector(".menu2");
+
+toggle.addEventListener("click", () => {
+  menunegro.classList.toggle("open");
+});
+
+// Toggle white mobile menu visibility
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle2 = document.querySelector(".menu-toggle-blanco");
+  const menublanco = document.querySelector(".menu");
+
+  toggle2.addEventListener("click", () => {
+    menublanco.classList.toggle("open");
+  });
+});

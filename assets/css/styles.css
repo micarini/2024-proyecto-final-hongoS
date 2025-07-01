@@ -4093,3 +4093,92 @@ textarea:focus {
     margin-top: 3em;
  }
 }
+
+/* Esconde menú en móviles */
+.menu2 {
+  display: flex;
+  gap: 15px;
+}
+
+.menu-toggle-negro {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu2 {
+    display: none;
+    flex-direction: column;
+    background: black;
+    padding: 1em;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 200px;
+  }
+
+  .menu2.open {
+    display: flex;
+  }
+
+  .menu-toggle-negro {
+    display: block;
+  }
+
+  .soporte {
+    display: none;
+  }
+}
+
+/* General: escondé el botón en desktop */
+
+.menu{
+   display: flex;
+}
+.menu-toggle-blanco {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8em;
+  color: #1c1c1c;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle-blanco {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 999;
+    text-align: center;
+  }
+
+  .menu ul {
+    flex-direction: column;
+  }
+  .menu.open {
+    display: flex;
+  }
+
+  .menu ul li {
+    padding: 10px 0;
+  }
+
+  .symbols {
+    display: none;
+  }
+}

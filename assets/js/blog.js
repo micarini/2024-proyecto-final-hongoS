@@ -161,3 +161,22 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// Toggle mobile menu visibility
+const toggle = document.querySelector(".menu-toggle-negro");
+const menunegro = document.querySelector(".menu2");
+
+toggle.addEventListener("click", () => {
+  menunegro.classList.toggle("open");
+});
+
+// Toggle white mobile menu visibility
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle2 = document.querySelector(".menu-toggle-blanco");
+  const menublanco = document.querySelector(".menu");
+
+  toggle2.addEventListener("click", () => {
+    menublanco.classList.toggle("open");
+  });
+});
