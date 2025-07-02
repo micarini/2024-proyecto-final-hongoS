@@ -4182,3 +4182,66 @@ textarea:focus {
     display: none;
   }
 }
+
+
+
+/* sidebar y botón responsive shop */
+.sidebar-toggle {
+  display: none;
+  background: white;
+  color: black;
+  border: #000 solid 1px;
+  padding: 12px 100px;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin: 2em auto 2em auto; /* centrado y espacio arriba/abajo */
+  width: max-content;
+}
+
+@media (max-width: 768px) {
+  .sidebar-toggle {
+    display: block;
+     position: static; /* asegura que no sea fixed en mobile */
+  }
+  .sidebar-shop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    max-width: 320px;
+    height: 100vh;
+    background: #fff;
+    z-index: 1002;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    padding: 2em 1em 2em 1.5em;
+    transition: transform 0.3s;
+    transform: translateX(-100%);
+  }
+  .sidebar-shop.open {
+    display: block;
+    transform: translateX(0);
+  }
+  .container-shop {
+    flex-direction: column;
+    gap: 0;
+    padding-top: 2em;
+  }
+  #gridShop {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 0 40px 0;
+  }
+  .cardShop {
+    width: 100%;
+    max-width: 95vw;
+    margin: 0 auto;
+    padding: 1em 0.5em;
+  }
+  .sidebar-shop::after {
+    content: "";
+    display: block;
+    height: 2em;
+  }
+}

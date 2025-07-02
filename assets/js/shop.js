@@ -271,3 +271,26 @@ document.addEventListener("DOMContentLoaded", function () {
     menublanco.classList.toggle("open");
   });
 });
+
+// Sidebar responsive para mobile
+document.addEventListener("DOMContentLoaded", function () {
+  const sidebarBtn = document.querySelector('.sidebar-toggle');
+  const sidebar = document.querySelector('.sidebar-shop');
+
+  if (sidebarBtn && sidebar) {
+    sidebarBtn.addEventListener('click', function () {
+      sidebar.classList.toggle('open');
+    });
+
+    // Cierra la sidebar si se toca fuera de ella
+    document.addEventListener('click', function (e) {
+      if (
+        sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) &&
+        e.target !== sidebarBtn
+      ) {
+        sidebar.classList.remove('open');
+      }
+    });
+  }
+});
