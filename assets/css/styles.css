@@ -4245,3 +4245,10 @@ textarea:focus {
     height: 2em;
   }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #gridShop {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
