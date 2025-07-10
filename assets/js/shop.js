@@ -46,7 +46,7 @@ if (document.getElementById("shop-container")) {
         if (productosShop[i].precioOriginal) {
             let precioOriginal = parseFloat(productosShop[i].precioOriginal.replace("£", ""));
             let precioDescuento = parseFloat(productosShop[i].precio.replace("£", ""));
-            let descuento = Math.round(((precioOriginal - precioDescuento) / precioOriginal) * 100);
+            let descuento = Math.round(((precioOriginal - precioDescuento) / precioOriginal) * 100); //regla de tres simple para calcular el porcentaje
 
             let descuentoBadge = document.createElement("div");
             descuentoBadge.setAttribute("class", "discount-badge");
@@ -76,13 +76,12 @@ if (document.getElementById("shop-container")) {
         });
     }
 
-    let pagination = document.querySelector(".pagination");
+    let pagination = document.querySelector(".pagination"); 
     if (pagination) {
-        gridShop.after(pagination); //los numeros de las paginas maquetadas
+        gridShop.after(pagination); //para visualizar los numeros de las paginas 
         //se inserta pagination después de gridShop en el DOM.
     }
 }
-
 
 document.addEventListener("DOMContentLoaded", function () {
     //formulario del footer
@@ -104,11 +103,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    //obtiene la URL de la página actual sin el dominio. si la URL es https://midominio.com/blog.html, el resultado es /blog.html
+    //obtiene la URL de la página actual sin el dominio. si la URL es https://midominio.com/shop.html, el resultado es /shop.html
     let currentPage = window.location.pathname.split("/").pop();
     //split("/") divide la cadena en partes separadas por /, obteniendo un array
-   //.pop() obtiene el último elemento del array, que sería "blog.html" en este caso
-  
+   //.pop() obtiene el último elemento del array, que sería "shop.html" en este caso
+
     //selecciono todos los enlaces del menú
     let menuLinks = document.querySelectorAll("nav ul li a");
   
@@ -121,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-
+//hago funcionar los filtros de shop
 document.addEventListener("DOMContentLoaded", function () {
     //selecciono todos los inputs de los filtros
     const filters = {
@@ -131,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     function applyFilters() {
-        //bbtiene el valor del color seleccionado (si hay uno marcado)
+        //obtiene el valor del color seleccionado (si hay uno marcado)
         let selectedColor = "";
          //recorre la lista de filtros de color
         for (let i = 0; i < filters.color.length; i++) {
@@ -183,7 +182,6 @@ document.addEventListener("DOMContentLoaded", function () {
             if (selectedSizes.length > 0 && !selectedSizes.some(size => tamaños.includes(size))) {
                 mostrar = false;
             } //si el usuario seleccionó al menos un tamaño (selectedSizes.length > 0). se usa .some(...) para verificar si alguno de los tamaños seleccionados está en tamaños (del producto). si ninguno coincide, se oculta el producto (mostrar = false).
-            
 
             //filtra por rating (el producto debe tener al menos uno de los ratings seleccionados)
             if (selectedRatings.length > 0 && !selectedRatings.some(rating => ratings.includes(rating))) {
@@ -197,7 +195,8 @@ document.addEventListener("DOMContentLoaded", function () {
             } //se obtiene el precio máximo seleccionado por el usuario (maxPrecio). se convierte a número con parseFloat(...). si el precio del producto (precio) es mayor que maxPrecio, se oculta.
 
             //si el producto pasa los filtros, se muestra; de lo contrario, se oculta
-            producto.style.display = mostrar ? "block" : "none";
+            producto.style.display = mostrar ? "block" : "none"; // ? significa "si". si mostrar es true, se muestra el producto (display: block). si mostrar es false, se oculta el producto (display: none).
+            //esto se aplica a cada producto en el gridShop. si cumple con todos los filtros, se muestra; si no, se oculta.
 
         }
     }
@@ -222,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function () {
         filters.rating[i].addEventListener("change", applyFilters);
     }
 
-    //agrego un event listener al filtro de precio
+    //al filtro de precio
     const priceRange = document.getElementById("priceRange");
     const priceText = document.getElementById("priceText");
 
@@ -230,10 +229,9 @@ document.addEventListener("DOMContentLoaded", function () {
         priceText.value = `Price: £0 - £${priceRange.value}`;
         applyFilters(); // actualiza productos
     });
-
 });
 
-
+/*MODO OSCURO*/
 const toggleButton = document.getElementById("theme-toggle"); //guardo boton
 const body = document.body; //guardo body
 
@@ -242,7 +240,6 @@ if (localStorage.getItem("modo-oscuro") === "activado") {
   body.classList.add("modo-oscuro"); //si existe y tiene el valor "activado", se activa el modo oscuro, añadiendo la clase modo-oscuro al body y marcando el checkbox correspondiente.
   toggleButton.checked = true; // aseguro que el checkbox esté marcado
 }
-
 
 //alterna modo oscuro
 function cambiarModoOscuro() {
@@ -260,15 +257,14 @@ function cambiarModoOscuro() {
   
   toggleButton.addEventListener("change", cambiarModoOscuro);
 
-  // Toggle mobile menu visibility
+
+/*modifico en mobile ambos menus del header*/
 const toggle = document.querySelector(".menu-toggle-negro");
 const menunegro = document.querySelector(".menu2");
 
 toggle.addEventListener("click", () => {
   menunegro.classList.toggle("open");
 });
-
-// Toggle white mobile menu visibility
 
 document.addEventListener("DOMContentLoaded", function () {
   const toggle2 = document.querySelector(".menu-toggle-blanco");

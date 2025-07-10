@@ -82,12 +82,12 @@ function startAuto() {
 startAuto();
 
 //detiene el intervalo cuando el mouse pasa sobre el slider
-sliderContainer.addEventListener("mouseenter", () => {
+sliderContainer.addEventListener("mouseenter", () => { //la diferencia entre mouseenter y mouseover es que el primero se activa cuando el mouse entra en el elemento, mientras que mouseover tambien se activa cuando el mouse entra en los elementos hijos del elemento objetivo.
     clearInterval(auto3s);
 });
 
 //reinicia el intervalo cuando el mouse sale del slider
-sliderContainer.addEventListener("mouseleave", () => {
+sliderContainer.addEventListener("mouseleave", () => { //la diferencia entre mouseleave y mouseout es que el primero se activa cuando el mouse sale del elemento, mientras que mouseout tambien se activa cuando el mouse sale de los elementos hijos del elemento objetivo.
     startAuto();
 });
 

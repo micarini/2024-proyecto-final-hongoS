@@ -1,4 +1,4 @@
-if (document.getElementById("product-container")) { //el codigo se ejecuta si encuentra el conteiner
+if (document.getElementById("product-container")) { //el codigo se ejecuta si encuentra el container
     const prodContainer = document.querySelector("#product-container"); //lo selecciono y lo guardo
 
     let gridProduct = document.createElement("div"); //creo un div para la grid
@@ -88,6 +88,7 @@ if (document.getElementById("product-container2")) {
     }
 }
 
+/*verificacion de formulario del footer*/
 document.addEventListener("DOMContentLoaded", function () { // domcontentloaded garantiza que el js se ejecute solo después de que toda la estructura HTML esté disponible en el DOM para evitar problemas en los que js intenta manipular elementos que aún no se cargaron.
 
     //seleccionamos el formulario del footer
@@ -108,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () { // domcontentloaded 
     });
 });
 
-
+/*MODO OSCURO */
 const toggleButton = document.getElementById("theme-toggle"); //guardo boton
 const body = document.body; //guardo body
 
@@ -117,7 +118,6 @@ if (localStorage.getItem("modo-oscuro") === "activado") {
   body.classList.add("modo-oscuro"); //si existe y tiene el valor "activado", se activa el modo oscuro, añadiendo la clase modo-oscuro al body y marcando el checkbox correspondiente.
   toggleButton.checked = true; // aseguro que el checkbox esté marcado
 }
-
 
 //alterna modo oscuro
 function cambiarModoOscuro() {
@@ -135,15 +135,15 @@ function cambiarModoOscuro() {
   
   toggleButton.addEventListener("change", cambiarModoOscuro);
 
-
+/*boton de acordion que abre mas info al tocar alguno de los paneles*/
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".accordion-boton");
-    let activePanel = null;
-    let activeButton = null;
+    let activePanel = null; //inicializo en null para saber si hay un panel actualmente abierto, para poder cerrarlo si se abre otro
+    let activeButton = null; //inicializo en null para poder cambiar el estado del boton activo de + a - o viceversa
 
     for (let i = 0; i < buttons.length; i++) {
         let button = buttons[i];
-        let panel = button.nextElementSibling;
+        let panel = button.nextElementSibling; //obtiene el panel siguiente al botón en el DOM
         let icon = button.querySelector(".accordion-icon");
 
         button.addEventListener("click", function () {
@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
+/*verificacion del formulario dentro de reviews */
 document.addEventListener("DOMContentLoaded", function () {
     const productForm = document.getElementById("productForm"); //selecciono el form y lo guardo
 
@@ -215,21 +215,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Toggle mobile menu visibility
+/*modifico en mobile ambos menus del header*/
 const toggle = document.querySelector('.menu-toggle-negro');
   const menunegro = document.querySelector('.menu2');
 
-  toggle.addEventListener('click', () => {
+toggle.addEventListener('click', () => {
     menunegro.classList.toggle('open');
-  });
+});
 
-// Toggle white mobile menu visibility
+document.addEventListener("DOMContentLoaded", function () {
+    const toggle2 = document.querySelector('.menu-toggle-blanco');
+    const menublanco = document.querySelector('.menu');
 
-   document.addEventListener("DOMContentLoaded", function () {
-const toggle2 = document.querySelector('.menu-toggle-blanco');
-const menublanco = document.querySelector('.menu');
-
-  toggle2.addEventListener('click', () => {
+    toggle2.addEventListener('click', () => {
     menublanco.classList.toggle('open');
   });
 });

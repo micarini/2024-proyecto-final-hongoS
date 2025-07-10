@@ -238,7 +238,7 @@ if (document.getElementById("section3")) {
         document.getElementById(id).style.display = "grid";
     }
 
-    //función para actualizar la clase activa en los botones
+    //función para actualizar la clase activa en los botones de featured products cuando se hace click
     function actualizarBotonActivo(idBoton) {
         let botones = document.querySelectorAll(".btn-prod");
         botones.forEach((boton) => boton.classList.remove("active"));
@@ -261,7 +261,7 @@ if (document.getElementById("section3")) {
         actualizarBotonActivo("boton3");
     });
 
-    //inicializa la primera galería como visible y el primer botón como activo
+    //inicializa la primera galería como visible y el primer botón como activo cuando carga la página
     mostrarGaleria("grid1");
     actualizarBotonActivo("boton1");
 }
@@ -299,8 +299,8 @@ if (document.getElementById("section5")) {
 
     let card4 = document.querySelectorAll('card4');
     for (let i = 0; i < productos4.length; i++) {
-        card4 = document.createElement("div"); //creo el contenedor que sera la card2
-        card4.setAttribute("class", "card4"); //le agrego la clase card2 para poder modificarlas todas juntas
+        card4 = document.createElement("div"); //creo el contenedor que sera la card4
+        card4.setAttribute("class", "card4"); //le agrego la clase card4 para poder modificarlas todas juntas
 
         //creo el titulo
         let titulo = document.createElement("h3");
@@ -359,7 +359,7 @@ if (document.getElementById("section5")) {
 }
 
 
-if (document.getElementsByClassName("gallery")) {
+if (document.getElementsByClassName("gallery")) { //creo la ultima galeria de fotos con las fotos de instagram
     const galleryItems = [
         { url: "https://www.instagram.com/p/B2ByAQ8Hv-9/", imgSrc: "assets/fotos/cactus-almohadon.jpg", alt: "cactus-almohadon" },
         { url: "https://www.instagram.com/p/B2BxnN_nmMY/", imgSrc: "assets/fotos/brazo-cama.jpg", alt: "brazo-cama" },
@@ -373,7 +373,7 @@ if (document.getElementsByClassName("gallery")) {
 
     const galleryContainer = document.querySelector(".gallery");
 
-    for (let i = 0; i < galleryItems.length; i++) {
+    for (let i = 0; i < galleryItems.length; i++) {  //recorro el array galleryItems y creo un elemento <a> de enlance para cada item, y dentro de cada enlace, creo un elemento <img> que contiene la imagen correspondiente. despues, agrego el enlace al contenedor de la galería.
         const item = galleryItems[i];
         const link = document.createElement("a");
         link.href = item.url;
@@ -385,10 +385,10 @@ if (document.getElementsByClassName("gallery")) {
         link.appendChild(img);
         galleryContainer.appendChild(link);
     }
-
 }
 
 
+//funcion de validación del formulario del footer
 document.addEventListener("DOMContentLoaded", function () {
     // selecciono el formulario del footer
     const newsletterForm = document.getElementById("newsletterForm");
@@ -408,13 +408,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
+//creo una funcion para mostrar cual pagina del menu esta activa (se esta mostrando) al comparar la url actual con los enlaces del menú.
 document.addEventListener("DOMContentLoaded", function () {
     //obtiene la URL de la página actual
     //window.location.pathname devuelve la ruta de la URL (por ejemplo, "/pagina1" si estamos en www.misitio.com/pagina1). .split("/") divide esta ruta en un arreglo, separando por cada barra (/). Por ejemplo, si la ruta es "/pagina1", esto devolvería ["", "pagina1"]. .pop() obtiene el último elemento del arreglo (en este caso, "pagina1"), que es el nombre del archivo o la página actual. Es útil para comparar si la URL coincide con algún enlace de la lista del menú.
     let currentPage = window.location.pathname.split("/").pop(); //
-    console.log("window.location" + window.location)
-    console.log("window.location.pathname" + window.location.pathname)
+    console.log("window.location:" + window.location)
+    console.log("window.location.pathname:" + window.location.pathname)
     //selecciona todos los enlaces del menú
     let menuLinks = document.querySelectorAll("nav ul li a");
 
@@ -428,7 +428,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /*MODO OSCURO*/
-
 const toggleButton = document.getElementById("theme-toggle"); //guardo boton
 const body = document.body; //guardo body
 
@@ -437,7 +436,6 @@ if (localStorage.getItem("modo-oscuro") === "activado") {
   body.classList.add("modo-oscuro"); //si existe y tiene el valor "activado", se activa el modo oscuro, añadiendo la clase modo-oscuro al body y marcando el checkbox correspondiente.
   toggleButton.checked = true; // aseguro que el checkbox esté marcado
 }
-
 
 //alterna modo oscuro
 function cambiarModoOscuro() {
@@ -455,15 +453,13 @@ function cambiarModoOscuro() {
   
   toggleButton.addEventListener("change", cambiarModoOscuro);
 
-  // Toggle mobile menu visibility
+/*modifico en mobile ambos menus del header*/
 const toggle = document.querySelector(".menu-toggle-negro");
 const menunegro = document.querySelector(".menu2");
 
 toggle.addEventListener("click", () => {
   menunegro.classList.toggle("open");
 });
-
-// Toggle white mobile menu visibility
 
 document.addEventListener("DOMContentLoaded", function () {
   const toggle2 = document.querySelector(".menu-toggle-blanco");
