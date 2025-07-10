@@ -17,7 +17,7 @@ if (document.getElementById("shop-container")) {
         { titulo: "Fabric Table Lamp", precioOriginal: "£750.00", precio: "£600.00", img: "assets/fotos/foto8-galeria2.webp", imgHover: "assets/fotos/foto8-galeria2-imghover.webp", color: ["red", "silver", "brown", "green"], size: ["XL", "M"], rating: ["3", ""] },
         { titulo: "Lync Cali Wood", precioOriginal: "£400.00", precio: "£390.00", img: "assets/fotos/foto9-galeria-shop.webp", imgHover: "assets/fotos/foto9-galeria-shop-hover.webp", color: ["brown", "black"], size: ["L", "XL", "S"], rating: ["5", "4", "3"] },
         { titulo: "Oyster Round Stool", precioOriginal: "£400.00", precio: "£390.00", img: "assets/fotos/foto10-galeria-shop.webp", imgHover: "assets/fotos/foto10-galeria-shop-hover.webp", color: ["blue", "yellow", "green"], size: ["L", "M"], rating: ["4", "5", "3"] },
-        { titulo: "Anitz Wood Stool", precioOriginal: "£400.00", precio: "£390.00", img: "assets/fotos/foto11-galeria-shop.webp", imgHover: "assets/fotos/foto11-galeria-shop-hover.webp", color: ["red", "black", "yellow"], size: ["S", "M"], rating: ["3", "4"] },
+        { titulo: "Anitz Wood Stool", precioOriginal: "£400.00", precio: "£390.00", img: "assets/fotos/foto11-galeria-shop.webp", imgHover: "assets/fotos/foto11-galeria-shop-hover.webp", color: ["red", "black", "yellow"], size: ["S", "M", "XL"], rating: ["3", "4", "5"] },
         { titulo: "Abbey Wood Stool", precioOriginal: "£400.00", precio: "£390.00", img: "assets/fotos/foto12-galeria-shop.webp", imgHover: "assets/fotos/foto12-galeria-shop-hover.webp", color: ["green", "blue", "black"], size: ["S", "XL"], rating: ["5", "4"] }
     ];
 
@@ -27,7 +27,7 @@ if (document.getElementById("shop-container")) {
         cardShop.setAttribute("data-id", i);  //agrego un identificador único para cada card
         cardShop.setAttribute("data-color", productosShop[i].color);  //asigno el color al producto
         cardShop.setAttribute("data-size", productosShop[i].size);    //asigno el tamaño al producto
-        cardShop.setAttribute("data-precio", productosShop[i].precio.replace("£", "")); //asigno el precio al producto
+        cardShop.setAttribute("data-precio", productosShop[i].precio.replace("£", "")); //asigno el precio al producto y saco el símbolo de la libra para que sea un número  
         cardShop.setAttribute("data-rating", productosShop[i].rating);  //asigno el rating al producto
 
         let titulo = document.createElement("h3"); //creo el h3 para el titulo
@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
          //recorre la lista de filtros de color
         for (let i = 0; i < filters.color.length; i++) {
             if (filters.color[i].checked) { //si el filtro está marcado (seleccionado)
-                //guarda el valor del color seleccionado
+            selectedColor = filters.color[i].value; //guarda el valor del color seleccionado
             break; //sale del bucle después de encontrar el primer color seleccionado
             }
         }
@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
             //obtiene los atributos personalizados del producto
             let colores = producto.getAttribute("data-color").split(","); //convierte a array
             let tamaños = producto.getAttribute("data-size").split(","); //convierte a array
-            let precio = parseInt(producto.getAttribute("data-precio")); //convierte a número
+            let precio = parseFloat(producto.getAttribute("data-precio")); //convierte a número (no uso parseInt porque redondearía para abajo y los precios pueden tener decimales)
             let ratings = producto.getAttribute("data-rating").split(",").map(Number); //convierte a array de números
             //se usa .getAttribute("data-..."), que obtiene el valor del atributo HTML como un string. .split(",") separa la cadena en un array de valores usando la coma como delimitador. ARRAY DE STRINGS
 
@@ -191,10 +191,10 @@ document.addEventListener("DOMContentLoaded", function () {
             } //funciona igual que el filtro de tamaño, pero con ratings (selectedRatings). si al menos un rating seleccionado coincide con los ratings del producto, se muestra. si ningún rating coincide, se oculta.
 
             //filtra por precio (compara con el valor del input de precio)
-            let maxPrecio = parseInt(document.querySelector(".filter-price input").value);
+            let maxPrecio = parseFloat(document.getElementById("priceRange").value);
             if (precio > maxPrecio) {
                 mostrar = false;
-            } //se obtiene el precio máximo seleccionado por el usuario (maxPrecio). se convierte a número con parseInt(...). si el precio del producto (precio) es mayor que maxPrecio, se oculta.
+            } //se obtiene el precio máximo seleccionado por el usuario (maxPrecio). se convierte a número con parseFloat(...). si el precio del producto (precio) es mayor que maxPrecio, se oculta.
 
             //si el producto pasa los filtros, se muestra; de lo contrario, se oculta
             producto.style.display = mostrar ? "block" : "none";
@@ -223,7 +223,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     //agrego un event listener al filtro de precio
-    document.querySelector(".filter-price input").addEventListener("input", applyFilters);
+    const priceRange = document.getElementById("priceRange");
+    const priceText = document.getElementById("priceText");
+
+    priceRange.addEventListener("input", () => {
+        priceText.value = `Price: £0 - £${priceRange.value}`;
+        applyFilters(); // actualiza productos
+    });
+
 });
 
 

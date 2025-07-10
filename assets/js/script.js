@@ -24,7 +24,7 @@ if (document.getElementById("slider")) {
     //función para actualizar la imagen de fondo
     function updateSlider() {
         foto.style.backgroundImage = `url(${sliderContent[currentIndex]})`; //se pone la imagen de fondo que le corresponde al index en el que este
-        titulo.textContent = sliderTexts[currentIndex];
+        titulo.textContent = sliderTexts[currentIndex]; //lo mismo con el titulo
 
         //eliminar la clase 'active' de todos los botones
         button1.classList.remove('active');
@@ -44,7 +44,7 @@ if (document.getElementById("slider")) {
     //función para avanzar automáticamente
     function nextSlide() {
         currentIndex = (currentIndex + 1) % sliderContent.length;
-        updateSlider(); //incrementa currentIndex en 1 para pasar a la siguiente imagen. usa el operador % (módulo) para reiniciar el slider cuando llega al final y actualiza la foto y el texto
+        updateSlider(); //incrementa currentIndex en 1 para pasar a la siguiente imagen. usa el operador % (módulo) para reiniciar el slider cuando llega al final (a la tercer foto) y actualiza la foto y el texto (que vuelva a la posicion 1 indice 0)
     }
 
     //inicio la automatización del slider cada 3 segundos
@@ -75,7 +75,7 @@ if (document.getElementById("slider")) {
         resetAutoSlide();
     }
 
-    //asigno eventos a los botones //evita que varios botones queden marcados al mismo tiempo. solo el botón del slide actual tendrá la clase "active".
+    //asigno eventos a los botones 
     document.getElementById('button1').addEventListener("click", goToImage01);
     document.getElementById('button2').addEventListener("click", goToImage02);
     document.getElementById('button3').addEventListener("click", goToImage03);
@@ -83,17 +83,17 @@ if (document.getElementById("slider")) {
     //inicializa el slider
     updateSlider();
 }
-//transicion de fade in cuando el usuario hace scroll
+//transicion de fade in cuando el usuario hace scroll arriba de la seccion 2
 if (document.getElementById("section2")) {
     const section2 = document.getElementById("section2");
 
     function fadeInOnScroll() {
         const sectionPosition = section2.getBoundingClientRect().top; //sirve para saber qué tan lejos está section2 de la parte superior de la ventana en cada momento.
-        const screenPosition = window.innerHeight / 1.3; //sjusta la proporción si es necesario
+        const screenPosition = window.innerHeight / 1.3; //ajusta la proporción si es necesario
         //define cuándo el efecto debe activarse (cuando el usuario ha scrolleado lo suficiente). cuanto menor sea este número, más rápido se activará la animación.
         //window.innerHeight es la altura total de la ventana.
-
         //si es grande, el elemento está fuera de la pantalla (más abajo). si es pequeño o negativo, el elemento ya entró en la pantalla o pasó de largo.
+
         if (sectionPosition < screenPosition) { //si section2 entra en la pantalla, agrega la clase "visible".
             section2.classList.add("visible");
         }
@@ -131,11 +131,11 @@ if (document.getElementById("section3")) {
 
             //eventos para cambiar la imagen al hacer hover
             img.addEventListener("mouseover", function (e) {
-                e.target.src = productos[i].imgHover;
+                e.target.src = productos[i].imgHover; //target se refiere al elemento que disparó el evento, en este caso la imagen. 
             });
 
             img.addEventListener("mouseout", function (e) {
-                e.target.src = productos[i].img;
+                e.target.src = productos[i].img; //sirve para volver a la imagen original cuando el mouse sale de la imagen.
             });
 
             //agrego imagen al contenedor
